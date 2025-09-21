@@ -1,0 +1,88 @@
+@layer reset, theme, layout, content, components, utilities;
+
+@import "minireset.css" layer(reset);
+
+@import "./variables/colors.css" layer(theme);
+@import "./variables/fonts.css" layer(theme);
+@import "./variables/icons.css" layer(theme);
+@import "./variables/layout.css" layer(theme);
+
+@import "./sections/announcement.css" layer(layout);
+@import "./sections/article-footer.css" layer(layout);
+@import "./sections/article-header.css" layer(layout);
+@import "./sections/article-main.css" layer(layout);
+@import "./sections/back-to-top.css" layer(layout);
+@import "./sections/content.css" layer(layout);
+@import "./sections/footer.css" layer(layout);
+@import "./sections/header-main.css" layer(layout);
+@import "./sections/header-nav.css" layer(layout);
+@import "./sections/search-form.css" layer(layout);
+@import "./sections/search-results.css" layer(layout);
+@import "./sections/sidebar-primary.css" layer(layout);
+@import "./sections/sidebar-secondary.css" layer(layout);
+@import "./sections/skip-to-content.css" layer(layout);
+
+@import "./sphinx/admonition.css" layer(content);
+@import "./sphinx/api.css" layer(content);
+@import "./sphinx/block.css" layer(content);
+@import "./sphinx/code.css" layer(content);
+@import "./sphinx/figure.css" layer(content);
+@import "./sphinx/footnote.css" layer(content);
+@import "./sphinx/list.css" layer(content);
+@import "./sphinx/math.css" layer(content);
+@import "./sphinx/misc.css" layer(content);
+@import "./sphinx/prose.css" layer(content);
+@import "./sphinx/sidebar.css" layer(content);
+@import "./sphinx/table.css" layer(content);
+@import "./sphinx/target.css" layer(content);
+@import "./sphinx/toctree.css" layer(content);
+
+@import "./components/breadcrumb.css" layer(components);
+@import "./components/dropdown.css" layer(components);
+@import "./components/external-links.css" layer(components);
+@import "./components/footer-copyright.css" layer(components);
+@import "./components/header-brand.css" layer(components);
+@import "./components/lang-switcher.css" layer(components);
+@import "./components/related-pages.css" layer(components);
+@import "./components/search-button.css" layer(components);
+@import "./components/sidebar-nav.css" layer(components);
+@import "./components/sidebar-toc.css" layer(components);
+@import "./components/theme-switcher.css" layer(components);
+@import "./components/version-switcher.css" layer(components);
+
+@import "./extensions/copybutton.css";
+@import "./extensions/design.css";
+@import "./extensions/treeview.css";
+
+@import "./utils.css" layer(utilities);
+
+@layer theme {
+  * {
+    scrollbar-color: var(--color-outline) transparent;
+  }
+
+  :root {
+    -webkit-font-smoothing: antialiased;
+    color: var(--color-on-surface);
+    background-color: var(--color-surface);
+    font-family: var(--font-sans);
+    font-size: var(--size-md);
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-padding-top: calc(var(--header-height) + 2.5rem);
+  }
+
+  .bz-overlay {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    opacity: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    background-color: #00000099;
+    transition: opacity ease-in-out 0.25s, visibility ease-in-out 0.25s;
+  }
+}

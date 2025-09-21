@@ -1,0 +1,14 @@
+{
+  "name": "sphinx-breeze-theme",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@types/node": "24.5.2",
+    "minireset.css": "0.0.7",
+    "typescript": "5.9.2",
+    "vite": "7.1.6"
+  }
+}

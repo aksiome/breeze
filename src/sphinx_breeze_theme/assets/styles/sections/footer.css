@@ -1,0 +1,16 @@
+.bz-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--size-xs);
+  min-height: var(--footer-height);
+  padding-block: calc(var(--spacing) * 2);
+  padding-inline: calc(var(--page-width) + (var(--spacing) * 10));
+  background-color: var(--color-surface-variant);
+  border-top: 1px solid var(--color-outline);
+
+  > * {
+    margin-block: calc(var(--spacing) * 2);
+  }
+}

@@ -1,0 +1,18 @@
+.bz-header-brand {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing) * 2);
+  color: var(--color-on-surface-variant);
+  text-decoration: none;
+  font-size: 1.75rem;
+  font-weight: 500;
+
+  > * {
+    height: 2.275rem;
+    line-height: 1.2;
+  }
+
+  &:hover {
+    color: var(--color-primary);
+  }
+}

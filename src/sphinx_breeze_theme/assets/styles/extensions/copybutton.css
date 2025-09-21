@@ -1,0 +1,24 @@
+button.copybtn {
+  color: inherit;
+  border-color: var(--color-outline);
+  background-color: var(--color-surface-variant-bright);
+  top: calc(var(--spacing) * 1.5);
+  right: calc(var(--spacing) * 1.5);
+}
+
+.highlight button.copybtn:hover {
+  background-color: var(--color-surface-variant);
+}
+
+.o-tooltip--left:focus-visible {
+  opacity: 1;
+  outline: auto;
+}
+
+.o-tooltip--left:after {
+  top: 0;
+  translate: calc(var(--spacing) * -1);
+  color: var(--color-on-surface);
+  background-color: transparent;
+  padding-inline: calc(var(--spacing) * 2);
+}

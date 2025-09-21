@@ -1,0 +1,19 @@
+{%- if not meta or "hide-related-pages" not in meta -%}
+<nav class="bz-related-pages" aria-label="Related pages navigation">
+  {%- if prev -%}
+  <a class="bz-related-pages-previous" href="{{ prev.link }}" rel="prev">
+    <span>{{ _("Previous") }}</span>
+    {%- if prev.link == pathto(master_doc) -%}
+    <span class="bz-related-pages-title">{{ _("Home") }}</span>
+    {%- else -%}
+    <span class="bz-related-pages-title">{{ replace_emoji(prev.title) }}</span>
+    {%- endif -%}
+  </a>
+  {%- endif -%} {%- if next -%}
+  <a class="bz-related-pages-next" href="{{ next.link }}" rel="next">
+    <span>{{ _("Next") }}</span>
+    <span class="bz-related-pages-title">{{ replace_emoji(next.title) }}</span>
+  </a>
+  {%- endif -%}
+</nav>
+{%- endif -%}

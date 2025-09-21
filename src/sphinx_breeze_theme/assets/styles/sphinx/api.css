@@ -1,0 +1,124 @@
+dl[class]:not(.option-list, .field-list, .footnote, .glossary, .simple) {
+  dt:first-child {
+    border-radius: 0.25rem 0.25rem 0 0;
+  }
+
+  dt.field-odd,
+  dt.field-even {
+    background-color: color-mix(in oklab, var(--color-surface-container-variant) 75%, transparent);
+    border-bottom: 1px solid var(--color-outline-variant);
+    padding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 3);
+    margin-bottom: calc(var(--spacing) * 2);
+    color: var(--color-on-surface-variant);
+    font-size: var(--size-xs);
+    text-transform: uppercase;
+  }
+
+  > dd, > dd > p {
+    padding-left: calc(var(--spacing) * 2);
+  }
+
+  dl:not(.field-list) {
+    padding-left: calc(var(--spacing) * 5);
+  }
+
+  .sig + dd {
+    clear: right;
+  }
+
+  dl.field-list dd > ul {
+    margin-bottom: calc(var(--spacing) * 4);
+  }
+
+  dl.field-list {
+    display: block;
+    background-color: color-mix(in oklab, var(--color-surface-container-variant) 25%, transparent);
+    border: 1px solid var(--color-outline-variant);
+    border-top: none;
+    border-radius: 0.5rem;
+    > dd {
+      padding-inline: calc(var(--spacing) * 3);
+    }
+  }
+}
+
+dl[class]:not(.option-list, .field-list, .footnote, .glossary, .simple):not(
+    dl[class]:not(.option-list, .field-list, .footnote, .glossary, .simple)
+      dl[class]:not(.option-list, .field-list, .footnote, .glossary, .simple)
+  ) {
+  margin-bottom: calc(var(--spacing) * 10);
+}
+
+dl > dt > a:has(.viewcode-link) {
+  user-select: none;
+  float: right;
+}
+
+.sig {
+  display: block;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  background-color: var(--color-surface-container);
+  border-radius: 0.5rem!important;
+  overflow-y: auto;
+  border: 1px solid var(--color-outline-variant);
+  border-top: 8px solid color-mix(in oklab, var(--color-primary) 25%, transparent);
+  padding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 2);
+  margin: calc(var(--spacing) * 5) 0 calc(var(--spacing) * 3);
+}
+
+.sig-name {
+  font-size: 105%;
+  color: var(--color-on-code);
+}
+
+.sig .property {
+  color: var(--color-on-surface-variant);
+}
+
+.sig-param,
+.sig-return {
+  font-size: var(--size-sm);
+  font-style: normal;
+}
+
+.sig-param .o,
+.sig-return {
+  color: var(--color-on-surface-variant);
+}
+
+.sig-param .n {
+  color: var(--color-sig-param);
+}
+
+.sig-param .n:not(:first-of-type) {
+  font-weight: normal;
+  color: var(--color-on-surface-variant);
+}
+
+.sig-param .default_value {
+  font-weight: bold;
+  font-size: var(--size-xs);
+  color: var(--color-sig-default);
+}
+
+.sig dl {
+  padding-left: 0 !important;
+  margin: 0;
+}
+
+.sig dl dd {
+  padding-left: 0;
+}
+
+.sig dl dd::before {
+  content: "··";
+  color: var(--color-outline-variant);
+  margin-right: calc(var(--spacing) * 1);
+}
+
+.viewcode-block:target {
+  background-color: var(--color-target);
+  margin-inline: calc(var(--spacing) * -2);
+  padding-inline: calc(var(--spacing) * 2);
+}

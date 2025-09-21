@@ -1,0 +1,86 @@
+:root {
+  --color-surface: oklch(0.975 0 0);
+  --color-surface-container: oklch(0.995 0 0);
+  --color-surface-variant: oklch(0.94 0 0);
+  --color-surface-variant-bright: oklch(0.955 0 0);
+  --color-surface-container-variant: oklch(0.925 0 0);
+  --color-on-surface: oklch(0.1 0.000 0);
+  --color-on-surface-variant: oklch(0.4 0.000 0);
+
+  --color-shadow: oklch(0 0 0 / 0.02);
+  --color-outline: oklch(0.6 0.01 264 / 0.25);
+  --color-outline-variant: oklch(0.6 0.01 264 / 0.175);
+
+  --color-code: var(--color-surface-container);
+  --color-on-code: oklch(47.12% 0.176 333.85);
+  --color-target: #f1e1c9;
+  --color-sig-param: oklch(42.338% 0.08332 64.399);
+  --color-sig-default: oklch(52.652% 0.0915 237.385);
+
+  --color-announcement: oklch(54.561% 0.12968 327.148);
+  --color-on-announcement: oklch(0.95 0.01 264);
+
+  --color-primary: oklch(0.6 0.2 264);
+  --color-primary-container: oklch(0.58 0.15 264);
+  --color-admonition: var(--color-primary);
+  --color-attention: oklch(79.5% 0.184 86.047);
+  --color-caution: oklch(66.6% 0.179 58.318);
+  --color-danger: oklch(63.7% 0.237 25.331);
+  --color-error: oklch(63.7% 0.237 25.331);
+  --color-hint: oklch(62.7% 0.194 149.214);
+  --color-info: oklch(58.8% 0.158 241.966);
+  --color-important: oklch(66.6% 0.179 58.318);
+  --color-muted: oklch(0.525 0.02 264);
+  --color-note: oklch(58.8% 0.158 241.966);
+  --color-seealso: oklch(62.7% 0.194 149.214);
+  --color-success: oklch(62.7% 0.194 149.214);
+  --color-tip: oklch(62.7% 0.194 149.214);
+  --color-todo: oklch(55.3% 0.013 58.071);
+  --color-warning: oklch(66.6% 0.179 58.318);
+  --color-versionadded: oklch(62.7% 0.194 149.214);
+  --color-versionchanged: oklch(66.6% 0.179 58.318);
+  --color-deprecated: oklch(66.6% 0.179 58.318);
+  --color-versionremoved: oklch(63.7% 0.237 25.331);
+  --color-on-color: oklch(0.95 0.01 264);
+}
+
+:root[data-theme=dark] {
+  --color-surface: oklch(0.18 0.01 264);
+  --color-surface-container: oklch(0.27 0.0185 260);
+  --color-surface-variant: oklch(0.22 0.015 264);
+  --color-surface-variant-bright: oklch(0.245 0.015 264);
+  --color-surface-container-variant: oklch(0.28 0.0175 264);
+  --color-on-surface: oklch(0.9 0.000 0);
+  --color-on-surface-variant: oklch(0.775 0.000 0);
+
+  --color-shadow: oklch(0.1 0.04 264 / 0.1);
+
+  --color-on-code: #f3c7ee;
+  --color-target: #48433d;
+  --color-sig-param: oklch(62.338% 0.09332 68.399);
+  --color-sig-default: oklch(72.652% 0.0915 237.385);
+
+  --color-announcement: oklch(32.884% 0.11392 327.77);
+  --color-on-announcement: oklch(0.85 0.01 264);
+
+  --color-primary: oklch(0.65 0.15 264);
+  --color-primary-container: oklch(0.5 0.135 264);
+  --color-admonition: var(--color-primary);
+  --color-attention: oklch(79.5% 0.184 86.047);
+  --color-caution: oklch(66.6% 0.179 58.318);
+  --color-danger: oklch(63.7% 0.237 25.331);
+  --color-error: oklch(63.7% 0.237 25.331);
+  --color-hint: oklch(62.7% 0.194 149.214);
+  --color-important: oklch(66.6% 0.179 58.318);
+  --color-muted: oklch(0.575 0.02 264);
+  --color-note: oklch(58.8% 0.158 241.966);
+  --color-seealso: oklch(62.7% 0.194 149.214);
+  --color-success: oklch(62.7% 0.194 149.214);
+  --color-tip: oklch(62.7% 0.194 149.214);
+  --color-todo: oklch(55.3% 0.013 58.071);
+  --color-warning: oklch(66.6% 0.179 58.318);
+  --color-versionadded: oklch(62.7% 0.194 149.214);
+  --color-versionchanged: oklch(66.6% 0.179 58.318);
+  --color-deprecated: oklch(63.7% 0.237 25.331);
+  --color-on-color: oklch(0.96 0.000 0);
+}

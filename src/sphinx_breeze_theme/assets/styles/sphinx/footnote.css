@@ -1,0 +1,15 @@
+a.footnote-reference {
+  font-size: 62.5%;
+  vertical-align: super;
+}
+
+aside.footnote > :not(span) {
+  color: var(--color-on-surface-variant);
+  margin-left: 3ch;
+}
+
+aside.footnote > span {
+  float: left;
+  font-weight: 600;
+  padding-right: var(--spacing);
+}

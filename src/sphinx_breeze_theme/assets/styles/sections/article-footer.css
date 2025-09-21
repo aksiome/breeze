@@ -1,0 +1,6 @@
+.bz-article-footer {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 6);
+  margin-top: calc(var(--spacing) * 12);
+}

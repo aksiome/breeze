@@ -1,0 +1,34 @@
+.bz-theme-switcher {
+  position: relative;
+
+  button {
+    display: flex;
+    align-items: center;
+    padding: .0625rem;
+    width: 2.5rem;
+    height: 1.375rem;
+    color: var(--color-on-surface);
+    background-color: var(--color-surface-container-variant);
+    border: 1px solid var(--color-outline);
+    transition: border-color .1s ease-in-out;
+    border-radius: calc(infinity * 1px);
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--color-primary);
+    }
+  }
+
+  svg {
+    height: 100%;
+    border: 1px solid var(--color-outline);
+    background-color: var(--color-surface);
+    border-radius: calc(infinity * 1px);
+    transition: translate .2s ease-in-out;
+    padding: .125rem;
+  }
+}
+
+:root[data-theme=dark] .bz-theme-switcher svg {
+  translate: 1.125rem;
+}

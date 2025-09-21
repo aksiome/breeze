@@ -1,0 +1,29 @@
+.back-to-top {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--color-primary);
+  background-color: var(--color-surface-container);
+  border: 1px solid var(--color-outline);
+  border-radius: calc(infinity * 1px);
+  box-shadow: 0 .125rem .25rem 0 oklab(0% 0 0/.2);
+  transition: background .15s ease-in-out, color .15s ease-in-out, bottom .25s ease-in-out;
+  padding-inline: calc(var(--spacing) * 4) calc(var(--spacing) * 5);
+  padding-block: calc(var(--spacing) * 2.5);
+  gap: calc(var(--spacing) * 1.5);
+  bottom: -3rem;
+  left: 50vw;
+  translate: -50%;
+  z-index: 999;
+
+  &:hover {
+    color: var(--color-on-color);
+    background-color: var(--color-primary-container);
+  }
+}
+
+.show-back-to-top .back-to-top {
+  bottom: 4rem;
+}

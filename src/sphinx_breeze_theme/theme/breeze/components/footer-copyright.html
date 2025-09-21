@@ -1,0 +1,18 @@
+<div class="bz-footer-copyright">
+  {%- if show_copyright and copyright -%}
+    <p class="bz-copyright">
+      {%- if hasdoc('copyright') -%}
+        © <a href="{{ pathto('copyright') }}">{%- trans copyright=copyright|e -%}Copyright {{ copyright }}{%- endtrans -%}</a>
+      {%- else -%}
+        {%- trans copyright=copyright|e -%}© Copyright {{ copyright }}{%- endtrans -%}
+      {%- endif -%}
+    </p>
+  {%- endif -%}
+  <p>
+    Made with
+    {% if show_sphinx %}
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+    {% endif %}
+    <a href="https://github.com/aksiome/breeze">Breeze theme</a>.
+  </p>
+</div>

@@ -1,0 +1,11 @@
+.bz-footer-copyright {
+  p {
+    margin: 0;
+  }
+  a {
+    color: var(--color-on-surface-variant);
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{%- extends "basic/layout.html" -%}
+
+{%- block css -%}
+  {{ super() }}
+  <noscript>
+    <style>
+      .bz-js-only { display: none !important; }
+    </style>
+  </noscript>
+{%- endblock css -%}
+
+{%- block scripts -%}
+  {{- script() }}
+  <script data-cfasync="false">
+    const mode = localStorage.getItem("breeze-mode") || "auto";
+    document.documentElement.dataset.mode = mode;
+    if (mode === "auto") {
+      const prefers = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+      document.documentElement.dataset.theme = prefers;
+    } else {
+      document.documentElement.dataset.theme = mode;
+    }
+  </script>
+{%- endblock scripts -%}
+
+{%- block extrahead -%}
+  <meta name="docsearch:language" content="{{ language }}"/>
+  <meta name="docsearch:version" content="{{ version }}" />
+  {%- if last_updated %}
+    <meta name="docbuild:last-update" content="{{ last_updated | e }}"/>
+  {%- endif %}
+{%- endblock extrahead -%}
+
+{%- block header -%}
+  {# A button hidden by default to help assistive devices quickly jump to main content #}
+  {# ref: https://www.youtube.com/watch?v=VUR0I5mqq7I #}
+  <div class="skip-to-content">
+    <a href="#main-content">{{ _("Skip to main content") }}</a>
+  </div>
+  <a href="#" class="back-to-top">
+    <svg class="sized" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m5 12 7-7 7 7"/><path d="M12 19V5"/>
+    </svg>
+    <span>{{ _("Back to top") }}</span>
+  </a>
+  {%- include "sections/announcement.html" -%}
+  {%- include "sections/header-main.html" -%}
+  {%- include "sections/header-nav.html" -%}
+{%- endblock header -%}
+
+{%- block content -%}
+  <div class="bz-content">
+    {%- include "sections/sidebar-primary.html" -%}
+    <main id="main-content">
+      {%- block main -%}
+        {%- include "sections/article-header.html" -%}
+        {%- include "sections/article-main.html" -%}
+        {%- include "sections/article-footer.html" -%}
+        {%- include "sections/sidebar-secondary.html" -%}
+      {%- endblock main -%}
+    </main>
+  </div>
+{%- endblock content -%}
+
+{%- block footer -%}
+  {%- include "sections/footer.html" -%}
+{%- endblock footer -%}
+
+{%- block relbar1 -%}{%- endblock -%}
+{%- block relbar2 -%}{%- endblock -%}
+{%- block sidebarsourcelink -%}{%- endblock -%}

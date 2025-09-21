@@ -1,0 +1,68 @@
+img,
+figure,
+object,
+.figure {
+  display: inline-block;
+  margin-block: calc(var(--spacing) * 1.5);
+  &.align-left {
+    clear: left;
+    float: left;
+    margin-right: calc(var(--spacing) * 4);
+  }
+  &.align-right {
+    clear: right;
+    float: right;
+    margin-left: calc(var(--spacing) * 4);
+  }
+  img,
+  figure,
+  object,
+  .figure {
+    margin-block: 0;
+  }
+}
+
+.reference img {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.guilabel {
+  font-size: 0.8em;
+  font-weight: 500;
+  border-radius: 0.25rem;
+  background-color: color-mix(in oklab, var(--color-info) 20%, transparent);
+  border: 1px solid var(--color-info);
+  padding: calc(var(--spacing) * 0.5) calc(var(--spacing) * 1.5);
+}
+
+p.rubric {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--size-lg);
+  color: var(--color-on-surface-variant);
+  border-bottom: 1px solid var(--color-outline);
+  padding-block: calc(var(--spacing) * 2);
+  margin-top: calc(var(--spacing) * 6);
+}
+
+a.reference.download::before {
+  content: "";
+  mask-image: var(--icon-download);
+  background-color: currentColor;
+  display: inline-block;
+  vertical-align: middle;
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+span.highlighted {
+  background-color: var(--color-target);
+}
+
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled),
+button:not(:disabled) {
+  cursor: pointer;
+}

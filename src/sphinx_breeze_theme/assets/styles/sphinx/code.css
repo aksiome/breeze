@@ -1,0 +1,71 @@
+div.highlight,
+div.literal-block-wrapper,
+[class*="highlight-"] {
+  display: flex;
+  position: relative;
+  color: var(--color-on-surface-variant)!important;
+  border-radius: 0.5rem;
+  break-inside: avoid;
+  flex-direction: column;
+  width: unset;
+}
+
+p + div:is(
+  [class*="highlight-"],
+  .literal-block-wrapper
+) {
+  margin-top: 0;
+}
+
+div[class*="highlight-"],
+div.literal-block-wrapper {
+  margin-block: calc(var(--spacing) * 4);
+}
+
+div.code-block-caption + div {
+  margin-block: 0;
+}
+
+.highlight .hll {
+  display: block;
+}
+
+.highlight :is(span.linenos, .gp) {
+  user-select: none;
+  pointer-events: none;
+}
+
+.highlight:has(span.linenos) pre {
+  padding-left: 3.25rem;
+}
+
+.highlight span.linenos {
+  position: absolute;
+  display: inline-block;
+  background-color: var(--color-surface-container)!important;
+  border-right: 1px solid var(--color-outline);
+  color: var(--color-on-surface-variant)!important;
+  text-align: right;
+  left: 1px;
+  width: 2.5rem;
+  padding-inline: 0.5rem;
+}
+
+.literal-block-wrapper {
+  background-color: var(--color-surface-container)!important;
+  border: 1px solid var(--color-outline);
+  border-radius: 0.5rem;
+}
+
+.literal-block-wrapper div[class*="highlight-"] pre {
+  border: none;
+}
+
+.code-block-caption {
+  font-family: var(--font-mono);
+  font-size: var(--size-sm);
+  border-radius: .5rem .5rem 0 0;
+  background-color: var(--color-surface-variant);
+  border-bottom: 1px solid var(--color-outline);
+  padding: calc(var(--spacing) * 2) calc(var(--spacing) * 4);
+}

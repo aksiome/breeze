@@ -1,0 +1,13 @@
+[
+  {
+    "name": "dev",
+    "version": "dev",
+    "url": "/en/master/"
+  },
+  {
+    "name": "latest",
+    "version": "latest",
+    "url": "/en/latest/",
+    "preferred": true
+  }
+]

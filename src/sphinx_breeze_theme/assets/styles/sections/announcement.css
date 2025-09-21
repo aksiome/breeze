@@ -1,0 +1,11 @@
+.bz-announcement {
+  color: var(--color-on-announcement);
+  background-color: var(--color-surface-variant);
+  padding-bottom: calc(var(--spacing) * 1.5);
+  text-align: center;
+
+  .bz-announcement-content {
+    background-color: var(--color-announcement);
+    padding: calc(var(--spacing) * 3);
+  }
+}

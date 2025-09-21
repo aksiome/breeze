@@ -1,0 +1,10 @@
+{%- set content = toctree(maxdepth=-1) -%}
+{%- if content -%}
+<nav class="bz-sidebar-nav" aria-label="Section Navigation">
+  {%- if theme_emojis_sidebar_nav | tobool -%}
+    {{ wrap_emoji(content) }}
+  {%- else -%}
+    {{ replace_emoji(content) }}
+  {%- endif -%}
+</nav>
+{%- endif -%}

@@ -1,0 +1,9 @@
+:root {
+  --header-height: 3.5rem;
+  --tabs-height: 3rem;
+  --footer-height: 5rem;
+  --sidebar-primary-width: 15.5rem;
+  --sidebar-secondary-width: 15.5rem;
+  --spacing: clamp(0.175rem, 0.0625rem + 0.2083vw, 0.25rem);
+  --page-width: calc((100vw - clamp(17.5rem, 100vw, 92rem)) / 2)
+}

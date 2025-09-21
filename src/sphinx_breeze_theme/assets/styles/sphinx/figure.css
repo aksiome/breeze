@@ -1,0 +1,29 @@
+figure {
+  display: flex;
+  flex-flow: column;
+  gap: calc(var(--spacing) * 2);
+}
+
+figure > a,
+figure > a > img,
+figure > img,
+figure > video {
+  margin-inline: auto;
+}
+
+figure figcaption > p,
+figure figcaption .legend > p {
+  color: var(--color-on-surface-variant);
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+figure figcaption a.headerlink {
+  text-decoration: none;
+}
+
+figure figcaption p {
+  display: inline-block;
+  text-align: start;
+}

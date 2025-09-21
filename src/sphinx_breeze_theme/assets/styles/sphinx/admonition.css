@@ -1,0 +1,180 @@
+.admonition,
+.topic,
+div.versionadded,
+div.versionchanged,
+div.deprecated,
+div.versionremoved {
+  overflow: hidden;
+  border-radius: 0.5rem;
+  margin-inline: auto;
+  font-size: var(--size-sm);
+  background-color: color-mix(in oklab, var(--color-surface-container) 75%, transparent);
+  padding: calc(var(--spacing) * 4);
+  padding-bottom: calc(var(--spacing) * 5);
+  margin-block: calc(var(--spacing) * 6);
+  box-shadow: 0 1px 1px var(--color-shadow), 0 2px 2px var(--color-shadow),
+    0 4px 4px var(--color-shadow), 0 8px 8px var(--color-shadow);
+}
+
+div.versionadded,
+div.versionchanged,
+div.deprecated,
+div.versionremoved {
+  padding-block: calc(var(--spacing) * 2);
+  margin-block: calc(var(--spacing) * 2);
+}
+
+.admonition,
+div.versionadded,
+div.versionchanged,
+div.deprecated,
+div.versionremoved {
+  border-left: 3px solid var(--color-admonition);
+}
+
+p.admonition-title {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  font-weight: 500;
+  background-color: color-mix(
+    in oklab,
+    var(--color-admonition) 25%,
+    transparent
+  );
+  margin: calc(var(--spacing) * -4);
+  padding: calc(var(--spacing) * 2);
+  gap: calc(var(--spacing) * 2);
+  margin-bottom: 0;
+}
+
+p.topic-title {
+  font-size: var(--size-lg);
+  font-weight: 600;
+  margin-block: calc(var(--spacing) * -1);
+}
+
+p:where(.admonition-title, .topic-title) + * {
+  margin-top: calc(var(--spacing) * 2);
+}
+
+:where(.admonition, .topic) > :last-child {
+  margin-bottom: calc(var(--spacing) * -2);
+}
+
+:where(div.versionadded, div.versionchanged, div.deprecated, div.versionremoved)
+  > :first-child {
+  margin-bottom: calc(var(--spacing) * -2);
+}
+
+:where(div.versionadded, div.versionchanged, div.deprecated, div.versionremoved)
+  > :last-child {
+  margin-bottom: 0;
+}
+
+:where(div.versionadded, div.versionchanged, div.deprecated, div.versionremoved)
+  > :first-child {
+  margin-top: 0;
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+p.admonition-title::before {
+  content: "";
+  mask-image: var(--icon-admonition);
+  background-color: var(--color-admonition);
+  height: 1rem;
+  width: 1rem;
+}
+
+span.versionmodified {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+  font-style: italic;
+  margin-right: calc(var(--spacing) * 2);
+  gap: calc(var(--spacing) * 2);
+}
+
+span.versionmodified::before {
+  content: "";
+  background-color: var(--color-admonition);
+  mask-image: var(--icon-important);
+  height: 1rem;
+  width: 1rem;
+}
+
+.admonition.attention {
+  --color-admonition: var(--color-attention);
+  --icon-admonition: var(--icon-attention);
+}
+
+.admonition.caution {
+  --color-admonition: var(--color-caution);
+  --icon-admonition: var(--icon-caution);
+}
+
+.admonition.danger {
+  --color-admonition: var(--color-danger);
+  --icon-admonition: var(--icon-danger);
+}
+
+.admonition.error {
+  --color-admonition: var(--color-error);
+  --icon-admonition: var(--icon-error);
+}
+
+.admonition.hint {
+  --color-admonition: var(--color-hint);
+  --icon-admonition: var(--icon-hint);
+}
+
+.admonition.important {
+  --color-admonition: var(--color-important);
+  --icon-admonition: var(--icon-important);
+}
+
+.admonition.note {
+  --color-admonition: var(--color-note);
+  --icon-admonition: var(--icon-note);
+}
+
+.admonition.seealso {
+  --color-admonition: var(--color-seealso);
+  --icon-admonition: var(--icon-seealso);
+}
+
+.admonition.admonition-todo {
+  --color-admonition: var(--color-todo);
+  --icon-admonition: var(--icon-todo);
+}
+
+.admonition.warning {
+  --color-admonition: var(--color-warning);
+  --icon-admonition: var(--icon-warning);
+}
+
+.admonition.tip {
+  --color-admonition: var(--color-tip);
+  --icon-admonition: var(--icon-tip);
+}
+
+div.versionadded {
+  --color-admonition: var(--color-versionadded);
+  --icon-admonition: var(--icon-versionadded);
+}
+
+div.versionchanged {
+  --color-admonition: var(--color-versionchanged);
+  --icon-admonition: var(--icon-versionchanged);
+}
+
+div.deprecated {
+  --color-admonition: var(--color-deprecated);
+  --icon-admonition: var(--icon-deprecated);
+}
+
+div.versionremoved {
+  --color-admonition: var(--color-versionremoved);
+  --icon-admonition: var(--icon-versionremoved);
+}

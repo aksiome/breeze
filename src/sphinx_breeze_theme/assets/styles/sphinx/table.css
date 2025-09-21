@@ -1,0 +1,94 @@
+div.container.table {
+  overflow-x: auto;
+  margin-top: calc(var(--spacing) * 3);
+  margin-bottom: calc(var(--spacing) * 6);
+}
+
+table.docutils {
+  display: table;
+  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: break-word;
+}
+
+table.docutils :is(thead, tbody) {
+  vertical-align: inherit;
+  a.headerlink {
+    vertical-align: middle;
+  }
+}
+
+table.docutils :is(th, td) {
+  border-bottom: 1px solid var(--color-outline);
+  border-right: 1px solid var(--color-outline);
+  padding: calc(var(--spacing) * 2.5);
+  :first-child {
+    margin-top: 0;
+  }
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+table.docutils tr:first-child :is(th, td) {
+  border-top: 1px solid var(--color-outline);
+}
+
+table.docutils :is(th, td):first-child {
+  border-left: 1px solid var(--color-outline);
+}
+
+table.docutils tr:first-child :where(td, th):first-child {
+  border-top-left-radius: 0.5rem;
+}
+
+table.docutils tr:first-child :where(td, th):last-child {
+  border-top-right-radius: 0.5rem;
+}
+
+table.docutils tbody tr:last-child :where(td, th):first-child {
+  border-bottom-left-radius: 0.5rem;
+}
+
+table.docutils tbody tr:last-child :where(td, th):last-child {
+  border-bottom-right-radius: 0.5rem;
+}
+
+table.docutils:has(thead) tbody tr:first-child :where(td, th):first-child {
+  border-top-left-radius: 0;
+}
+
+table.docutils:has(thead) tbody tr:first-child :where(td, th):last-child {
+  border-top-right-radius: 0;
+}
+
+table.docutils thead {
+  background-color: var(--color-surface-variant);
+}
+
+table.docutils th {
+  font-weight: 700;
+  font-size: var(--size-sm);
+  color: var(--color-on-surface-variant);
+}
+
+table.docutils tbody tr {
+  background-color: var(--color-surface-container);
+}
+
+table.docutils tbody tr:nth-child(even) {
+  background-color: color-mix(in oklab, var(--color-surface-container) 82%, var(--color-surface-variant));
+}
+
+table.docutils caption {
+  color: var(--color-on-surface-variant);
+  vertical-align: middle;
+  padding: calc(var(--spacing) * 2.5);
+}
+
+table.docutils :where(figure, img, video) {
+  padding-block: 0;
+}

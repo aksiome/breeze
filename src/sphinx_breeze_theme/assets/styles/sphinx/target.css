@@ -1,0 +1,50 @@
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+dt,
+caption,
+p.caption,
+div.code-block-caption,
+div.math span.eqno {
+  > a.headerlink {
+    opacity: 0;
+    transition: opacity ease-in-out .15s, color ease-in-out .15s;
+  }
+  &:hover > a.headerlink {
+    opacity: 100;
+  }
+
+  a.headerlink:focus-visible {
+    opacity: 100;
+  }
+}
+
+a.headerlink {
+  font-weight: 200;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 8px;
+  user-select: none;
+  margin-left: calc(var(--spacing) * 2);
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+:where(
+    .code-block-caption,
+    div.math span.eqno,
+    table.docutils caption,
+    dl.glossary,
+    .sig,
+
+  )
+  a.headerlink {
+  display: inline-block;
+  text-decoration: none;
+  transform: scale(1.25);
+}

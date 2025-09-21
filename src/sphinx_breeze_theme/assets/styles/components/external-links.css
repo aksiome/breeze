@@ -1,0 +1,23 @@
+.bz-external-links {
+  display: flex;
+  position: relative;
+  align-items: center;
+  gap: calc(var(--spacing) * 3);
+
+  svg {
+    height: 1.1875rem;
+  }
+
+  a {
+    color: var(--color-on-surface-variant);
+    transition: color .1s ease-in-out;
+
+    &:hover {
+      color: var(--color-primary-container);
+    }
+  }
+}
+
+.bz-footer .bz-external-links svg {
+  height: 1.5rem;
+}

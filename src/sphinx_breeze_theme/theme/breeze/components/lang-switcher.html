@@ -1,0 +1,30 @@
+{%- if languages -%}
+<div class="bz-lang-switcher bz-dropdown">
+  <button aria-label="Change language" aria-expanded="false">
+    <svg class="sized" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="m5 8l6 6m-7 0l6-6l2-3M2 5h12M7 2h1m14 20l-5-10l-5 10m2-4h6"
+      />
+    </svg>
+  </button>
+  <div class="bz-dropdown-content" aria-hidden="true">
+    <ul>
+      {%- for lang in languages -%}
+      <li>
+        {%- if language == lang[2] -%}
+          <span class="current">{{ lang[0] }}</span>
+        {%- else -%}
+          <a href="{{ pathto_lang(lang[1]) }}" >{{ lang[0] }}</a>
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</div>
+{%- endif -%}

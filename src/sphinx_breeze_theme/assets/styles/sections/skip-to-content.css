@@ -1,0 +1,25 @@
+.skip-to-content {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  transform: translateY(-100%);
+  height: var(--header-height);
+  background-color: var(--color-surface-variant-bright);
+  transition: transform .15s ease-in-out;
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-on-surface);
+    padding: var(--spacing);
+  }
+
+  &:focus-within {
+    transform: translateY(0%);
+  }
+}

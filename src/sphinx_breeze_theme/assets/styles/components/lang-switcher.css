@@ -1,0 +1,41 @@
+.bz-lang-switcher {
+  button {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    padding-inline: 0;
+    gap: calc(var(--spacing) * 1.5);
+    color: var(--color-on-surface-variant);
+    transition: color 0.1s ease-in-out;
+    border-radius: 0.5rem;
+    background: none;
+    border: none;
+  }
+
+  &:hover button {
+    color: var(--color-primary);
+  }
+
+  button::after {
+    content: "";
+    display: block;
+    background-color: currentColor;
+    mask-image: var(--icon-chevron);
+    transform: rotate(90deg);
+    width: 1em;
+    height: 1em;
+  }
+
+  svg {
+    font-size: 1.15rem;
+  }
+
+  .current {
+    font-weight: bold;
+    color: var(--color-primary);
+  }
+
+  .bz-dropdown-content {
+    right: -1rem;
+  }
+}

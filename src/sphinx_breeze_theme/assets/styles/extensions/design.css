@@ -1,0 +1,121 @@
+:root {
+  --sd-color-primary: var(--color-primary-container);
+  --sd-color-secondary: var(--color-secondary-container);
+  --sd-color-success: var(--color-success);
+  --sd-color-info: var(--color-info);
+  --sd-color-warning: var(--color-warning);
+  --sd-color-danger: var(--color-danger);
+  --sd-color-muted: var(--color-muted);
+
+  --sd-color-primary-highlight: color-mix(in oklab, var(--sd-color-primary) 90%,#000);
+  --sd-color-secondary-highlight: color-mix(in oklab, var(--sd-color-secondary) 90%,#000);
+  --sd-color-success-highlight: color-mix(in oklab, var(--sd-color-success) 90%,#000);
+  --sd-color-info-highlight: color-mix(in oklab, var(--sd-color-info) 90%,#000);
+  --sd-color-warning-highlight: color-mix(in oklab, var(--sd-color-warning) 90%,#000);
+  --sd-color-danger-highlight: color-mix(in oklab, var(--sd-color-danger) 90%,#000);
+  --sd-color-muted-highlight: color-mix(in oklab, var(--sd-color-muted) 90%,#000);
+
+  --sd-color-primary-text: var(--color-on-color);
+  --sd-color-secondary-text: var(--color-on-color);
+  --sd-color-success-text: var(--color-on-color);
+  --sd-color-info-text: var(--color-on-color);
+  --sd-color-warning-text: var(--color-on-color);
+  --sd-color-danger-text: var(--color-on-color);
+  --sd-color-muted-text: var(--color-on-color);
+
+  --sd-color-card-background: var(--color-surface-container);
+  --sd-color-card-border-hover: var(--color-primary);
+  --sd-color-card-border: var(--color-outline-variant);
+}
+
+.sd-shadow-sm {
+  box-shadow:
+    0 1px 1px var(--color-shadow),
+    0 2px 2px var(--color-shadow),
+    0 4px 4px var(--color-shadow),
+    0 8px 8px var(--color-shadow)!important;
+}
+
+.sd-shadow-md {
+  box-shadow:
+    0 1px 1px var(--color-shadow),
+    0 2px 2px var(--color-shadow),
+    0 4px 4px var(--color-shadow),
+    0 8px 8px var(--color-shadow),
+    0 16px 16px var(--color-shadow)!important;
+}
+
+.sd-shadow-lg {
+  box-shadow:
+    0 1px 1px var(--color-shadow),
+    0 2px 2px var(--color-shadow),
+    0 4px 4px var(--color-shadow),
+    0 8px 8px var(--color-shadow),
+    0 16px 16px var(--color-shadow),
+    0 32px 32px var(--color-shadow)!important;
+}
+
+article :is(.sd-card, .sd-btn) {
+  border-radius: .5rem;
+}
+
+article .sd-card-hover:hover .sd-card-title {
+  color: var(--color-primary)
+}
+
+article .sd-tab-set {
+  > input {
+    &:checked + label {
+      color: var(--color-primary);
+      border-bottom: 2px solid var(--color-primary);
+    }
+    &:focus-visible + label {
+      background-color: color-mix(in oklab, var(--color-primary) 25%, transparent);
+    }
+  }
+
+  > label {
+    font-weight: 500;
+    color: var(--color-on-surface-variant);
+    padding: var(--spacing);
+  }
+
+  > label:not(:first-of-type) {
+    margin-left: calc(var(--spacing) * 2);
+  }
+
+  .sd-tab-content {
+    padding-top: 0;
+    box-shadow: none;
+    border: 1px solid var(--color-outline-variant);
+    background-color: color-mix(in oklab, var(--color-surface-variant) 25%, transparent);
+    padding: calc(var(--spacing) * 4);
+    padding-top: calc(var(--spacing) * 5);
+
+    > :first-child > :first-child {
+      margin-top: 0!important;
+    }
+  }
+
+  &:has(label[data-sync-group="code"]) {
+    border-radius: 0.5rem;
+    background-color: var(--color-surface-variant);
+    border: 1px solid var(--color-outline);
+  }
+
+  > label[data-sync-group="code"]:first-of-type {
+    margin-left: calc(var(--spacing) * 3);
+  }
+
+  > label[data-sync-group="code"] + .sd-tab-content {
+    padding: 0;
+    border: none;
+
+    pre {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      border: none;
+      border-top: 1px solid var(--color-outline);
+    }
+  }
+}

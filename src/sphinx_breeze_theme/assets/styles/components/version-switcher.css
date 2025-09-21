@@ -1,0 +1,29 @@
+.bz-version-switcher {
+  button {
+    display: flex;
+    cursor: pointer;
+    height: 1.75rem;
+    align-items: center;
+    gap: calc(var(--spacing) * 1.5);
+    padding-inline: calc(var(--spacing) * 2.5);
+    color: var(--color-on-surface-variant);
+    background-color: var(--color-surface-container-variant);
+    border: 1px solid var(--color-outline-variant);
+    transition: border-color .1s ease-in-out;
+    border-radius: .5rem;
+  }
+
+  &:hover button {
+    border-color: var(--color-primary);
+  }
+
+  button::after {
+    content: "";
+    display: block;
+    background-color: currentColor;
+    mask-image: var(--icon-chevron);
+    transform: rotate(90deg);
+    width: 1em;
+    height: 1em;
+  }
+}

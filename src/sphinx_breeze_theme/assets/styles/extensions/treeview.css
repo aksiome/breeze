@@ -1,0 +1,7 @@
+:root {
+  --treeview-color: color-mix(in oklab, var(--color-on-surface) 17.5%, var(--color-surface));
+}
+
+.treeview {
+  margin-block: calc(var(--spacing) * 3);
+}

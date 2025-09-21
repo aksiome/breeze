@@ -1,0 +1,5 @@
+# Don't include generated files under version control
+*.css
+*.css.map
+*.js
+*.js.map

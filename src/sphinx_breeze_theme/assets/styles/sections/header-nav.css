@@ -1,0 +1,111 @@
+.bz-header-nav {
+  top: 0;
+  position: sticky;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing) * 1.5);
+  color: var(--color-on-surface-variant);
+  height: var(--tabs-height);
+  background-color: var(--color-surface-variant);
+  border-bottom: 1px solid var(--color-outline);
+  padding-inline: calc(var(--page-width) + (var(--spacing) * 5));
+  box-shadow: 0 1px 1px var(--color-shadow), 0 2px 2px var(--color-shadow),
+    0 4px 4px var(--color-shadow), 0 8px 8px var(--color-shadow);
+
+  @media (width > 52rem) {
+    top: calc(var(--header-height) - var(--tabs-height) + 1px);
+  }
+
+  > ul,
+  li {
+    display: flex;
+    height: 100%;
+    align-items: center;
+  }
+
+  > ul {
+    flex: 1;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: calc(var(--spacing) * 1.5);
+    padding-inline: calc(var(--spacing) * 1.5);
+  }
+
+  a {
+    color: inherit;
+    padding-inline: calc(var(--spacing) * 2.5);
+    padding-block: calc(var(--spacing) * 1);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    overflow-wrap: anywhere;
+    white-space: nowrap;
+    transition: background 0.15s ease-in-out;
+
+    &:hover {
+      color: var(--color-primary);
+      background-color: var(--color-surface);
+    }
+  }
+
+  > ul > li.current {
+    position: relative;
+
+    a {
+      color: var(--color-primary);
+      text-shadow: 0.03em 0, -0.03em 0;
+    }
+
+    &::after {
+      content: "";
+      background: var(--color-primary);
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .bz-dropdown-content {
+    right: 0;
+  }
+}
+
+.bz-header-nav-menu {
+  display: none;
+
+  button {
+    border-radius: 0.25rem;
+    background-color: var(--color-surface-container-variant);
+    border: 1px solid var(--color-outline-variant);
+
+    > svg {
+      color: var(--color-on-surface-variant);
+      height: 1.25rem;
+      vertical-align: middle;
+    }
+  }
+}
+
+.bz-header-nav-menu:has(li) {
+  display: block;
+}
+
+.bz-sidebar-primary-toggle {
+  display: none;
+  cursor: pointer;
+  padding-inline: calc(var(--spacing) * 2.5);
+  padding-block: calc(var(--spacing) * 1);
+  font-size: 1.125rem;
+  svg {
+    display: block;
+  }
+}
+
+:has(.bz-sidebar-primary) .bz-sidebar-primary-toggle {
+  @media (width <= 52rem) {
+    display: block;
+  }
+}

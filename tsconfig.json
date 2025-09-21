@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "strict": true,
+    "target": "ES2024",
+    "allowJs": true,
+    "moduleResolution": "node"
+  }
+}

@@ -1,0 +1,48 @@
+.bz-breadcrumb {
+  font-weight: 400;
+  color: var(--color-on-surface);
+}
+
+.bz-breadcrumb a {
+  font-weight: 300;
+  text-decoration: none;
+  color: var(--color-on-surface-variant);
+  &:hover {
+    color: var(--color-primary);
+  }
+}
+
+.bz-breadcrumb li > * {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bz-breadcrumb-home {
+  flex-shrink: 0;
+  svg {
+    display: block;
+    height: 1em;
+  }
+}
+
+.bz-breadcrumb :where(ol, li) {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: calc(var(--spacing) * 2);
+  margin: calc(var(--spacing) * -2);
+}
+
+.bz-breadcrumb li:not(:last-child)::after {
+  display: block;
+  content: "";
+  flex-shrink: 0;
+  background-color: color-mix(in oklab, var(--color-on-surface-variant) 50%, transparent);
+  mask-image: var(--icon-chevron);
+  height: 1.125em;
+  width: 1.125em;
+  margin-bottom: -0.125em;
+}

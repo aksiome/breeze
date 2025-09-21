@@ -1,0 +1,29 @@
+#search-results {
+  border-top: 1px solid var(--color-outline);
+}
+
+#search-results .search-summary {
+  font-weight: 400;
+  color: var(--color-on-surface-variant);
+}
+
+#search-results ul.search > li {
+  padding-top: calc(var(--spacing) * 4);
+}
+
+#search-results ul.search > li + li {
+  border-top: 1px solid var(--color-outline);
+}
+
+#search-results ul.search li > a {
+  color: var(--color-on-surface)!important;
+  font-weight: 600;
+  &:hover {
+    color: var(--color-primary)!important;
+  }
+}
+
+#search-results ul.search p.context {
+  margin-block: calc(var(--spacing) * 2);
+  font-size: var(--size-xs)
+}

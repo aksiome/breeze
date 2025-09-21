@@ -1,0 +1,69 @@
+blockquote {
+  position: relative;
+  border-radius: 0.5rem;
+  background-color: var(--color-surface-container);
+  border-left: 3px solid var(--color-outline);
+  padding: calc(var(--spacing) * 3.5) calc(var(--spacing) * 5);
+  box-shadow: 0 1px 1px var(--color-shadow), 0 2px 2px var(--color-shadow),
+    0 4px 4px var(--color-shadow), 0 8px 8px var(--color-shadow);
+}
+
+blockquote .attribution {
+  font-style: normal;
+  color: var(--color-on-surface-variant);
+}
+
+blockquote p:first-child {
+  margin-top: 0;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+blockquote.epigraph {
+  font-style: italic;
+  font-size: var(--size-xs);
+}
+
+blockquote.pull-quote {
+  font-style: italic;
+  padding-right: calc(var(--spacing) * 12);
+}
+
+blockquote.pull-quote::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 1em;
+  width: 1em;
+  background-color: var(--color-outline);
+  mask-image: var(--icon-blockquote);
+  right: calc(var(--spacing) * 3);
+  top: calc(var(--spacing) * 3);
+}
+
+blockquote.pull-quote::after {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: var(--color-outline-variant);
+  height: calc(100% - var(--spacing) * 16);
+  width: 1px;
+  right: calc(var(--spacing) * 5);
+  top: calc(var(--spacing) * 10);
+}
+
+blockquote.highlights {
+  border-color: var(--color-on-surface-variant);
+}
+
+.line-block {
+  display: block;
+  margin-block: calc(var(--spacing) * 3);
+}
+
+.line-block .line-block {
+  margin-block: 0;
+  margin-left: calc(var(--spacing) * 8);
+}

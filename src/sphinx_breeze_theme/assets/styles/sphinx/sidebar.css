@@ -1,0 +1,49 @@
+div.sidebar,
+aside.sidebar {
+  @media (width > 36rem) {
+    width: 33.33%;
+    float: right;
+    clear: right;
+    margin-left: calc(var(--spacing) * 6);
+  }
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-outline);
+  background-color: var(--color-surface-container);
+  overflow-x: auto;
+  margin-bottom: calc(var(--spacing) * 6);
+  > * {
+    padding-inline: calc(var(--spacing) * 4);
+    &:is(dl, ol, ul) {
+      padding-inline-start: calc(var(--spacing) * 4 + 1rem);
+    }
+  }
+}
+
+.admonition.sidebar,
+.topic.sidebar,
+div.versionadded.sidebar,
+div.versionchanged.sidebar,
+div.deprecated.sidebar,
+div.versionremoved.sidebar {
+  margin-top: 0;
+}
+
+p.sidebar-title {
+  margin: 0;
+  font-size: var(--size-lg);
+  background-color: var(--color-surface-variant);
+  border-bottom: 1px solid var(--color-outline);
+  padding-block: calc(var(--spacing) * 2);
+}
+
+p.sidebar-subtitle {
+  font-weight: 300;
+  color: var(--color-on-surface-variant);
+}
+
+aside.topic,
+div.admonition,
+div.topic,
+blockquote {
+  clear: left;
+}

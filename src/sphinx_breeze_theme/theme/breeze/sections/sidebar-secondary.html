@@ -1,0 +1,15 @@
+{% set remove_sidebar_secondary = meta is defined and meta is not none and 'html_theme.sidebar_secondary.remove' in meta %}
+
+{% set sidebar_content %}
+  {% for tmpl in theme_sidebar_secondary or [] %}
+    {% include tmpl %}
+  {% endfor %}
+{% endset %}
+
+{%- if sidebar_content|trim and not remove_sidebar_secondary -%}
+<label class="bz-sidebar-secondary-overlay bz-overlay" for="bz-sidebar-secondary-toggle"></label>
+<aside class="bz-sidebar-secondary">
+  <input type="checkbox" name="bz-sidebar-secondary-toggle" id="bz-sidebar-secondary-toggle" aria-label="Toggle table of contents sidebar">
+  {{ sidebar_content }}
+</aside>
+{%- endif -%}

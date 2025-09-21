@@ -1,0 +1,17 @@
+:root {
+  --size-xs: 0.85rem;
+  --size-sm: 0.925rem;
+  --size-md: 1rem;
+  --size-lg: clamp(1.2rem, 1.1833rem + 0.0741vw, 1.25rem);
+  --size-xl: clamp(1.44rem, 1.3992rem + 0.1815vw, 1.5625rem);
+  --size-2xl: clamp(1.728rem, 1.653rem + 0.3335vw, 1.9rem);
+  --size-3xl: clamp(2.0736rem, 1.951rem + 0.5449vw, 2.3rem);
+  --size-4xl: clamp(2.4883rem, 2.1734rem + 1.3999vw, 3.4rem);
+
+  --font-brand: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}

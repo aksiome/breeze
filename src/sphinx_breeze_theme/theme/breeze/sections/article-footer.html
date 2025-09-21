@@ -1,0 +1,11 @@
+{% set footer_content %}
+  {% for tmpl in theme_article_footer %}
+    {% include tmpl %}
+  {% endfor %}
+{% endset %}
+
+{%- if title and pagename != root_doc and footer_content|trim -%}
+<footer class="bz-article-footer">
+  {{ footer_content }}
+</footer>
+{%- endif -%}

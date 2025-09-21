@@ -1,0 +1,45 @@
+[build-system]
+requires = ["hatchling", "hatch-build-scripts"]
+build-backend = "hatchling.build"
+
+[project]
+name = "sphinx-breeze-theme"
+description = "A modern Sphinx documentation theme."
+dynamic = ["version"]
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MPL-2.0" }
+dependencies = [
+  "sphinx>=8.2",
+  "sphinxext-opengraph",
+  "beautifulsoup4",
+  "docutils",
+  "emoji",
+  "pygments",
+  "accessible-pygments",
+  "typing-extensions",
+]
+
+[dependency-groups]
+docs = [
+  "myst-parser",
+  "sphinx-copybutton",
+  "sphinx-design",
+  "sphinx-treeview",
+]
+
+[project.entry-points]
+"sphinx.html_themes" = { breeze = "sphinx_breeze_theme" }
+
+[tool.hatch.version]
+path = "src/sphinx_breeze_theme/__init__.py"
+
+[[tool.hatch.build.hooks.build-scripts.scripts]]
+commands = ["npm install", "npm run build"]
+
+[tool.semantic_release]
+allow_zero_version = true
+major_on_zero = false
+version_variables = [
+  "src/sphinx_breeze_theme/__init__.py:__version__"
+]
