@@ -16,6 +16,7 @@ h6 {
 
 h1 {
   font-size: var(--size-4xl);
+  margin-bottom: calc(var(--spacing) * 6);
 }
 
 h2 {
