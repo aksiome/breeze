@@ -42,19 +42,19 @@ table.docutils :is(th, td):first-child {
 }
 
 table.docutils tr:first-child :where(td, th):first-child {
-  border-top-left-radius: 0.5rem;
+  border-top-left-radius: 0.25rem;
 }
 
 table.docutils tr:first-child :where(td, th):last-child {
-  border-top-right-radius: 0.5rem;
+  border-top-right-radius: 0.25rem;
 }
 
 table.docutils tbody tr:last-child :where(td, th):first-child {
-  border-bottom-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.25rem;
 }
 
 table.docutils tbody tr:last-child :where(td, th):last-child {
-  border-bottom-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.25rem;
 }
 
 table.docutils:has(thead) tbody tr:first-child :where(td, th):first-child {

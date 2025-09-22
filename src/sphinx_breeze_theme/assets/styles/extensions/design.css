@@ -55,10 +55,6 @@
     0 32px 32px var(--color-shadow)!important;
 }
 
-article :is(.sd-card, .sd-btn) {
-  border-radius: .5rem;
-}
-
 article .sd-card-hover:hover .sd-card-title {
   color: var(--color-primary)
 }
