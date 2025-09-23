@@ -37,8 +37,6 @@ object,
 }
 
 p.rubric {
-  display: flex;
-  flex-direction: column;
   font-size: var(--size-lg);
   color: var(--color-on-surface-variant);
   border-bottom: 1px solid var(--color-outline);
