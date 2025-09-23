@@ -22,8 +22,8 @@ table.docutils :is(thead, tbody) {
 }
 
 table.docutils :is(th, td) {
-  border-bottom: 1px solid var(--color-outline);
-  border-right: 1px solid var(--color-outline);
+  border-bottom: 1px solid var(--color-outline-variant);
+  border-right: 1px solid var(--color-outline-variant);
   padding: calc(var(--spacing) * 2.5);
   :first-child {
     margin-top: 0;
@@ -33,12 +33,16 @@ table.docutils :is(th, td) {
   }
 }
 
+table.docutils thead tr:last-child th {
+  border-bottom: 2px solid color-mix(in oklab,var(--color-primary) 30%,transparent);
+}
+
 table.docutils tr:first-child :is(th, td) {
-  border-top: 1px solid var(--color-outline);
+  border-top: 1px solid var(--color-outline-variant);
 }
 
 table.docutils :is(th, td):first-child {
-  border-left: 1px solid var(--color-outline);
+  border-left: 1px solid var(--color-outline-variant);
 }
 
 table.docutils tr:first-child :where(td, th):first-child {
@@ -66,7 +70,7 @@ table.docutils:has(thead) tbody tr:first-child :where(td, th):last-child {
 }
 
 table.docutils thead {
-  background-color: var(--color-surface-variant);
+  background-color: color-mix(in oklab, var(--color-surface-container) 25%, var(--color-surface-variant));
 }
 
 table.docutils th {
