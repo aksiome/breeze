@@ -2,7 +2,7 @@ blockquote {
   position: relative;
   border-radius: 0.5rem;
   background-color: var(--color-surface-container);
-  border-left: 3px solid var(--color-outline);
+  border-left: 4px solid var(--color-outline);
   padding: calc(var(--spacing) * 3.5) calc(var(--spacing) * 5);
   box-shadow: 0 1px 1px var(--color-shadow), 0 2px 2px var(--color-shadow),
     0 4px 4px var(--color-shadow), 0 8px 8px var(--color-shadow);
@@ -55,7 +55,7 @@ blockquote.pull-quote::after {
 }
 
 blockquote.highlights {
-  border-color: var(--color-on-surface-variant);
+  border-color: var(--color-muted);
 }
 
 .line-block {
