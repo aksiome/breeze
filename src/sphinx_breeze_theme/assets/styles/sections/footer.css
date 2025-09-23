@@ -13,4 +13,11 @@
   > * {
     margin-block: calc(var(--spacing) * 2);
   }
+
+  a {
+    color: var(--color-on-surface-variant);
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
 }
