@@ -1,4 +1,11 @@
 export const populateVersionSwitchers = (buttons: Array<HTMLButtonElement>): void => {
+  const contentRootRel = document.documentElement.dataset.content_root || "./";
+  const contentRootAbs = new URL(contentRootRel, window.location.href).pathname;
+  const currentPathname = window.location.pathname;
+  const relativePath = currentPathname.startsWith(contentRootAbs)
+    ? currentPathname.slice(contentRootAbs.length)
+    : "";
+
   buttons.forEach(button => {
     const parent = button.parentElement;
     const items = parent?.querySelector(".bz-dropdown-content ul") as HTMLUListElement;
@@ -34,8 +41,36 @@ export const populateVersionSwitchers = (buttons: Array<HTMLButtonElement>): voi
             li.appendChild(span);
           } else {
             const a = document.createElement("a");
-            a.href = entry.url;
+
+            let base = entry.url;
+            if (!base.endsWith("/")) base += "/";
+
+            console.log(relativePath)
+            console.log(base)
+
+            const baseUrlAbs = new URL(entry.url, window.location.href);
+            const targetUrl = new URL(relativePath, baseUrlAbs).href;
+
+            console.log(targetUrl)
+
+            a.href = targetUrl;
             a.textContent = entry.name;
+
+            a.addEventListener("click", (event) => {
+              event.preventDefault();
+              fetch(targetUrl, { method: "HEAD" })
+                .then(res => {
+                  if (res.ok) {
+                    window.location.href = targetUrl;
+                  } else {
+                    window.location.href = base;
+                  }
+                })
+                .catch(() => {
+                  window.location.href = base;
+                });
+            });
+
             li.appendChild(a);
           }
 
