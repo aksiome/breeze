@@ -64,7 +64,7 @@ html_theme_options = {
         "⚠️ You are reading a doc of an undergoing development version. "
         "Information can be out of date and/or change at any time. ⚠️"
     ),
-    "extra_links": [
+    "external_links": [
         {
             "name": "Support me",
             "url": "https://github.com/sponsors/aksiome",
