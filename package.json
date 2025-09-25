@@ -9,6 +9,6 @@
     "@types/node": "24.5.2",
     "minireset.css": "0.0.7",
     "typescript": "5.9.2",
-    "vite": "7.1.6"
+    "vite": "7.1.7"
   }
 }

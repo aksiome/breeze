@@ -87,6 +87,8 @@ html_context = {
     "github_repo": "breeze",
     "languages": [
         ("English", "/en/%s/", "en"),
+        ("Français", "/fr/%s/", "fr"),
+        ("中文", "/zh/%s/", "zh"),
     ],
     "versions": {
         "current": os.environ.get("READTHEDOCS_VERSION", "latest"),

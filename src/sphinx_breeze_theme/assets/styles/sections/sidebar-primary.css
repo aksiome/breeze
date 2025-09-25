@@ -40,18 +40,18 @@
     }
   }
 
-  &:has(#bz-sidebar-primary-toggle:checked) {
+  &:has(#bz-sidebar-primary:checked) {
     left: 0;
     visibility: visible;
   }
 }
 
-#bz-sidebar-primary-toggle {
+#bz-sidebar-primary {
   display: none;
 }
 
-:has(#bz-sidebar-primary-toggle:checked) {
-  .bz-sidebar-primary-overlay {
+:has(#bz-sidebar-primary:checked) {
+  .bz-overlay-primary {
     opacity: 1;
     visibility: visible;
   }

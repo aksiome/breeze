@@ -1,5 +1,3 @@
-
-
 h1,
 h2,
 h3,
@@ -40,8 +38,7 @@ a.headerlink {
     div.math span.eqno,
     table.docutils caption,
     dl.glossary,
-    .sig,
-
+    .sig
   )
   a.headerlink {
   display: inline-block;

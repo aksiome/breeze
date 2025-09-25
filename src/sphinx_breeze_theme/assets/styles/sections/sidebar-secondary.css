@@ -41,18 +41,18 @@
     }
   }
 
-  &:has(#bz-sidebar-secondary-toggle:checked) {
+  &:has(#bz-sidebar-secondary:checked) {
     right: 0;
     visibility: visible;
   }
 }
 
-#bz-sidebar-secondary-toggle {
+#bz-sidebar-secondary {
   display: none;
 }
 
-:has(#bz-sidebar-secondary-toggle:checked) {
-  .bz-sidebar-secondary-overlay {
+:has(#bz-sidebar-secondary:checked) {
+  .bz-overlay-secondary {
     opacity: 1;
     visibility: visible;
   }

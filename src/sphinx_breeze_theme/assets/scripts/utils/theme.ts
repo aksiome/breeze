@@ -24,15 +24,11 @@ export const nextTheme = (): void => {
   }
 };
 
-export const setupThemeSwitchers = (buttons: Array<HTMLButtonElement>): void => {
-  buttons.forEach(button => {
-    button.ariaLabel = `Switch to ${document.documentElement.dataset.theme === "light" ? "dark" : "light"} mode`;
-    button.dataset.tooltip = button.ariaLabel;
-
-    button?.addEventListener('click', () => {
-      nextTheme();
-      button.ariaLabel = `Switch to ${document.documentElement.dataset.theme === "light" ? "dark" : "light"} mode`;
-      button.dataset.tooltip = button.ariaLabel;
-    });
-  });
-};
+const media = window.matchMedia("(prefers-color-scheme: dark)");
+media.addEventListener("change", (e) => {
+  const mode = localStorage.getItem("mode");
+  if (mode === Theme.AUTO) {
+    const preferred = e.matches ? Theme.DARK : Theme.LIGHT;
+    document.documentElement.dataset.theme = preferred;
+  }
+});

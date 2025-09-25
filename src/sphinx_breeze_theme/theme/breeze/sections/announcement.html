@@ -1,7 +1,7 @@
 {% if theme_announcement -%}
-<div class="bz-announcement">
-  <aside class="bz-announcement-content">
-    {% block announcement %} {{ theme_announcement }} {% endblock announcement %}
-  </aside>
-</div>
+<aside class="bz-announcement">
+  {% block announcement %}
+    {{ theme_announcement }}
+  {% endblock announcement %}
+</aside>
 {%- endif %}

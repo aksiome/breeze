@@ -1,7 +1,7 @@
-<nav class="bz-header-nav" aria-label="Primary Navigation">
+<nav class="bz-header-tabs" aria-label="Primary Navigation">
   <label
     class="bz-sidebar-primary-toggle"
-    for="bz-sidebar-primary-toggle"
+    for="bz-sidebar-primary"
     role="button"
     tabindex="0"
   >
@@ -16,13 +16,11 @@
       />
     </svg>
   </label>
-  {%- if theme_emojis_header_nav | tobool -%}
-    {{ wrap_emoji(toctree(maxdepth=1,level=0)) }}
-  {%- else -%}
-    {{ replace_emoji(toctree(maxdepth=1,level=0)) }}
-  {%- endif -%}
-  <div class="bz-header-nav-menu bz-dropdown">
-    <button>
+  {%- if theme_emojis_header_nav | tobool -%} {{
+  wrap_emoji(toctree(maxdepth=1,level=0)) }} {%- else -%} {{
+  replace_emoji(toctree(maxdepth=1,level=0)) }} {%- endif -%}
+  <div class="bz-dropdown">
+    <button aria-haspopup="true" aria-expanded="false">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <g
           fill="none"
@@ -37,6 +35,6 @@
         </g>
       </svg>
     </button>
-    <div class="bz-dropdown-content" aria-hidden="true"><ul></ul></div>
+    <ul role="menu" aria-hidden="true"></ul>
   </div>
 </nav>

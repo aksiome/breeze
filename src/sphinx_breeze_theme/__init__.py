@@ -1,6 +1,6 @@
-__version__ = "0.0.0"
-
 """A modern Sphinx documentation theme."""
+
+__version__ = "0.0.0"
 
 from pathlib import Path
 from typing import Any

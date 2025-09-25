@@ -1,4 +1,4 @@
-.back-to-top {
+.bz-back-to-top {
   display: flex;
   position: fixed;
   align-items: center;
@@ -22,8 +22,8 @@
     color: var(--color-on-color);
     background-color: var(--color-primary-container);
   }
-}
 
-.show-back-to-top .back-to-top {
-  bottom: 4rem;
+  &.active {
+    bottom: 4rem;
+  }
 }

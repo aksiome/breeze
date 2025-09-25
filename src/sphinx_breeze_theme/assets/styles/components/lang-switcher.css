@@ -30,12 +30,7 @@
     font-size: 1.15rem;
   }
 
-  .current {
-    font-weight: bold;
-    color: var(--color-primary);
-  }
-
-  .bz-dropdown-content {
+  ul {
     right: -1rem;
   }
 }

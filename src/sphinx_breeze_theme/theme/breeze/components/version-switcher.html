@@ -2,6 +2,7 @@
 <div class="bz-version-switcher bz-dropdown">
   <button
     aria-label="Change version"
+    aria-haspopup="true"
     aria-expanded="false"
     data-url="{{ versions['url'] }}"
     data-current="{{ versions['current'] }}"
@@ -20,6 +21,6 @@
     </svg>
     <span>{{ versions["current"] }}</span>
   </button>
-  <div class="bz-dropdown-content" aria-hidden="true"><ul></ul></div>
+  <ul role="menu" aria-hidden="true"></ul>
 </div>
 {%- endif -%}
