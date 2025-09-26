@@ -156,7 +156,7 @@ article .sd-tab-set {
     }
   }
 
-  &:has(label[data-sync-group="code"]) {
+  &:has(.sd-tab-content [class*="highlight-"]:only-child) {
     border-radius: 0.5rem;
     background-color: var(--color-surface-variant);
     border: 1px solid var(--color-outline);

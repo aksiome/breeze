@@ -105,3 +105,8 @@ hr {
   border-top: 1px solid var(--color-outline-variant);
   margin: calc(var(--spacing) * 4) 0 calc(var(--spacing) * 6);
 }
+
+abbr {
+  cursor: help;
+  text-decoration: none;
+}

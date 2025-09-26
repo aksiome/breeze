@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+  column-gap: calc(var(--spacing) * 6);
   font-size: var(--size-xs);
   min-height: var(--footer-height);
   padding-block: calc(var(--spacing) * 2);

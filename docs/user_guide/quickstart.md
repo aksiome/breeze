@@ -6,14 +6,18 @@ This is a short step-by-step tutorial to get started with the Sphinx Breeze Them
 
 Install Breeze from [PyPI](https://pypi.org/project/sphinx-breeze-theme/):
 
-:::{tab-set-code}
-```pip
+::::{tab-set}
+:::{tab-item} pip
+```bash
 pip install sphinx-breeze-theme
 ```
-```uv
+:::
+:::{tab-item} uv
+```bash
 uv add --dev sphinx-breeze-theme
 ```
 :::
+::::
 
 ```{hint}
 If you're new to Sphinx, we recommend reading the
