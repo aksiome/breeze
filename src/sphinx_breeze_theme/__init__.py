@@ -5,12 +5,12 @@ __version__ = "0.0.1"
 from pathlib import Path
 from typing import Any
 
-import emoji
+from emoji import replace_emoji
 from docutils import nodes
 from sphinx.application import Sphinx
 from sphinx.builders.dirhtml import DirectoryHTMLBuilder
 
-from sphinx_breeze_theme import pygments, toctree, utils
+from sphinx_breeze_theme import links, pygments, toctree, utils
 
 THEME_PATH = (Path(__file__).parent / "theme" / "breeze").resolve()
 
@@ -21,8 +21,18 @@ def setup(app: Sphinx) -> dict[str, Any]:
 
     app.setup_extension("sphinxext.opengraph")
 
-    app.add_config_value("pygments_dark_style", default="github-dark-high-contrast", rebuild="env", types=[str])
-    app.add_config_value("pygments_light_style", default="a11y-high-contrast-light", rebuild="env", types=[str])
+    app.add_config_value(
+        "pygments_dark_style",
+        default="github-dark-high-contrast",
+        rebuild="env",
+        types=[str],
+    )
+    app.add_config_value(
+        "pygments_light_style",
+        default="a11y-high-contrast-light",
+        rebuild="env",
+        types=[str],
+    )
 
     app.add_html_theme("breeze", str(THEME_PATH))
     app.add_css_file("styles/breeze.css", 700)
@@ -60,22 +70,14 @@ def on_html_page_context(
     context: dict[str, Any],
     doctree: nodes.document,
 ) -> None:
-    context["js_tag"] = utils.replace_js_tag(context["js_tag"])
-    context["toc"] = utils.insert_zero_width_space(utils.simplify_page_toc(context.get("toc", "")))
+    toc = utils.simplify_page_toc(context.get("toc", ""))
+    context["toc"] = utils.insert_zero_width_space(toc)
     context["toctree"] = toctree.create_custom_toctree(app, pagename)
-    context["replace_emoji"] = emoji.replace_emoji
+    context["js_tag"] = utils.replace_js_tag(context["js_tag"])
+    context["edit_link"] = links.create_edit_link(pagename, context)
+    context["lang_link"] = links.create_lang_link(pagename)
+    context["replace_emoji"] = replace_emoji
     context["wrap_emoji"] = utils.wrap_emoji
-
-    def pathto_lang(pattern: str):
-        url = pattern.replace("%s", pagename)
-        if pagename == "index" or pagename.endswith("/index"):
-            if url.endswith("/index/"):
-                url = url.replace("/index/", "/")
-            elif url.endswith("/index.html"):
-                url = url.replace("/index.html", "/")
-        return url
-
-    context["pathto_lang"] = pathto_lang
 
     # Remove a duplicate entry of the theme CSS
     css_files = context.get("css_files", [])

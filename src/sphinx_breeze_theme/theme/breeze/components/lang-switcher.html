@@ -23,7 +23,7 @@
       {%- if language == lang[2] -%}
       <span class="current">{{ lang[0] }}</span>
       {%- else -%}
-      <a href="{{ pathto_lang(lang[1]) }}" role="menuitem">{{ lang[0] }}</a>
+      <a href="{{ lang_link(lang[1]) }}" role="menuitem">{{ lang[0] }}</a>
       {%- endif -%}
     </li>
     {%- endfor -%}
