@@ -38,6 +38,9 @@
     > :nth-child(2) {
       padding-top: calc(var(--spacing) * 8);
     }
+    > :last-child {
+      padding-bottom: calc(var(--spacing) * 8);
+    }
   }
 
   &:has(#bz-sidebar-primary:checked) {
