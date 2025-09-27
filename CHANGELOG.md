@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v0.1.1 (2025-09-27)
+
+### Bug Fixes
+
+- Setup the correct version switcher
+  ([`ebab69c`](https://github.com/aksiome/breeze/commit/ebab69cd17e81feb445e87ff483d6ce76c462910))
+
+### Documentation
+
+- Include the changelog
+  ([`943eb48`](https://github.com/aksiome/breeze/commit/943eb489b74d1925ed8ed8e77827162ded3961d9))
+
+
 ## v0.1.0 (2025-09-27)
 
 ### Bug Fixes
