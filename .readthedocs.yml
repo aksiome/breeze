@@ -13,5 +13,8 @@ build:
       - asdf plugin add uv
       - asdf install uv latest
       - asdf global uv latest
+      - asdf plugin add nodejs
+      - asdf install nodejs latest
+      - asdf global nodejs latest
     install:
       - UV_PROJECT_ENVIRONMENT="${READTHEDOCS_VIRTUALENV_PATH}" uv sync --group docs
