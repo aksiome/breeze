@@ -2,6 +2,38 @@
 
 <!-- version list -->
 
+## v0.1.0 (2025-09-27)
+
+### Bug Fixes
+
+- Add primary sidebar bottom padding
+  ([`449e02e`](https://github.com/aksiome/breeze/commit/449e02e41096085e64f9263bbc3364e5f87834ff))
+
+- Avoid broken label link when sidebar is not rendered
+  ([`56389fb`](https://github.com/aksiome/breeze/commit/56389fb198df5186967b79c13f428eed6c85f917))
+
+- Logo and text vertical alignment
+  ([`05c538e`](https://github.com/aksiome/breeze/commit/05c538eda3f96a26b0a8b9fdbb202e420461c6b5))
+
+### Code Style
+
+- Improve code tabs and footer
+  ([`c46210f`](https://github.com/aksiome/breeze/commit/c46210fa08b3359d15e51e7707ef6078edb65f61))
+
+### Continuous Integration
+
+- Add rtd config
+  ([`b1236a6`](https://github.com/aksiome/breeze/commit/b1236a6d7eac6a6e7b6cbcbeed33b909fb8b1b5e))
+
+### Features
+
+- Add ethical-ads and edit-this-page components
+  ([`f3fa574`](https://github.com/aksiome/breeze/commit/f3fa574d2fc3fd4a327fa08c78486962a05c1dec))
+
+- Improve and add rtd search
+  ([`3ae18f6`](https://github.com/aksiome/breeze/commit/3ae18f69ced78ac0345985d002c7d1d683e48f79))
+
+
 ## v0.0.1 (2025-09-25)
 
 ### Bug Fixes
