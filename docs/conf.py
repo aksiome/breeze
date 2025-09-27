@@ -66,10 +66,6 @@ support_icon = """
 """
 
 html_theme_options = {
-    "announcement": (
-        "⚠️ You are reading a doc of an undergoing development version. "
-        "Information can be out of date and/or change at any time. ⚠️"
-    ),
     "external_links": [
         {
             "name": "Support me",

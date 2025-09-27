@@ -10,6 +10,7 @@ const relative = window.location.pathname.startsWith(root)
   ? window.location.pathname.slice(root.length)
   : "";
 
+const versionCache = new Map<string, Promise<any>>();
 
 defineComponent(".bz-version-switcher", el => {
   const button = el.querySelector("button");
@@ -19,10 +20,17 @@ defineComponent(".bz-version-switcher", el => {
   const url = button?.dataset.url;
   if (!button || !btnSpan || !content || !current || !url) return;
 
-  fetch(url).then(res => {
-    if (!res.ok) throw new Error(`Failed to fetch versions from ${url}`);
-    return res.json();
-  }).then(data => {
+  if (!versionCache.has(url)) {
+    versionCache.set(url, fetch(url).then(res => {
+      if (!res.ok) throw new Error(`Failed to fetch versions from ${url}`);
+      return res.json();
+    }).catch(err => {
+      versionCache.delete(url);
+      throw err;
+    }));
+  }
+
+  versionCache.get(url)!.then(data => {
     if (!Array.isArray(data)) return;
 
     content.innerHTML = "";

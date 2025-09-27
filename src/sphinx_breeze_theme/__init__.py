@@ -2,6 +2,7 @@
 
 __version__ = "0.0.1"
 
+from os import environ
 from pathlib import Path
 from typing import Any
 
@@ -78,6 +79,14 @@ def on_html_page_context(
     context["lang_link"] = links.create_lang_link(pagename)
     context["replace_emoji"] = replace_emoji
     context["wrap_emoji"] = utils.wrap_emoji
+
+    # Inject all the Read the Docs environment variables in the context:
+    # https://docs.readthedocs.io/en/stable/reference/environment-variables.html
+    context['READTHEDOCS'] = environ.get("READTHEDOCS", False) == "True"
+    if context['READTHEDOCS']:
+        for key, value in environ.items():
+            if key.startswith("READTHEDOCS_"):
+                context[key] = value
 
     # Remove a duplicate entry of the theme CSS
     css_files = context.get("css_files", [])

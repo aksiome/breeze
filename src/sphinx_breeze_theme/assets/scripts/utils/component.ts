@@ -39,8 +39,10 @@ const observer = new MutationObserver((mutations) => {
           }
         }
         for (const child of node.querySelectorAll(definitions.map(d => d.selector).join(','))) {
-          const def = definitions.find(d => child.matches(d.selector));
-          if (def) initElement(child as HTMLElement, def);
+          const defs = definitions.filter(d => child.matches(d.selector));
+          for (const def of defs) {
+            initElement(child as HTMLElement, def);
+          }
         }
       }
     }
@@ -52,12 +54,14 @@ const observer = new MutationObserver((mutations) => {
           }
         }
         for (const child of node.querySelectorAll(definitions.map(d => d.selector).join(','))) {
-          const def = definitions.find(d => child.matches(d.selector));
-          if (def) destroyElement(child as HTMLElement, def);
+          const defs = definitions.filter(d => child.matches(d.selector));
+          for (const def of defs) {
+            destroyElement(child as HTMLElement, def);
+          }
         }
       }
     }
   }
 });
 
-observer.observe(document.body, { childList: true, subtree: true });
+observer.observe(document.documentElement, { childList: true, subtree: true });
