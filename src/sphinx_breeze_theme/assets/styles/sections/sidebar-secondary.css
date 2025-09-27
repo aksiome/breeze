@@ -40,11 +40,6 @@
       margin-top: 0!important;
     }
   }
-
-  &:has(#bz-sidebar-secondary:checked) {
-    right: 0;
-    visibility: visible;
-  }
 }
 
 #bz-sidebar-secondary {
@@ -52,6 +47,11 @@
 }
 
 :has(#bz-sidebar-secondary:checked) {
+  .bz-sidebar-secondary {
+    right: 0;
+    visibility: visible;
+  }
+
   .bz-overlay-secondary {
     opacity: 1;
     visibility: visible;

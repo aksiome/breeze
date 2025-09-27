@@ -26,9 +26,8 @@
 {%- block extrahead -%}
   <meta name="docsearch:language" content="{{ language }}"/>
   <meta name="docsearch:version" content="{{ version }}" />
-  {%- if last_updated %}
-    <meta name="docbuild:last-update" content="{{ last_updated | e }}"/>
-  {%- endif %}
+  {%- if last_updated %}<meta name="docbuild:last-update" content="{{ last_updated | e }}"/>{%- endif %}
+  {%- if READTHEDOCS -%}<meta name="readthedocs-addons-api-version" content="1" />{%- endif -%}
 {%- endblock extrahead -%}
 
 {%- block header -%}
@@ -66,6 +65,8 @@
   </a>
   <label class="bz-overlay bz-overlay-primary" for="bz-sidebar-primary"></label>
   <label class="bz-overlay bz-overlay-secondary" for="bz-sidebar-secondary"></label>
+  <input type="checkbox" name="bz-sidebar-primary" id="bz-sidebar-primary" aria-label="Toggle site navigation sidebar">
+  <input type="checkbox" name="bz-sidebar-secondary" id="bz-sidebar-secondary" aria-label="Toggle table of contents sidebar">
 {%- endblock footer -%}
 
 {%- block relbar1 -%}{%- endblock -%}

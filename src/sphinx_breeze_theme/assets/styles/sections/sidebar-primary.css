@@ -35,17 +35,12 @@
     background: none;
     visibility: visible;
 
-    > :nth-child(2) {
+    > :first-child {
       padding-top: calc(var(--spacing) * 8);
     }
     > :last-child {
       padding-bottom: calc(var(--spacing) * 8);
     }
-  }
-
-  &:has(#bz-sidebar-primary:checked) {
-    left: 0;
-    visibility: visible;
   }
 }
 
@@ -54,6 +49,11 @@
 }
 
 :has(#bz-sidebar-primary:checked) {
+  .bz-sidebar-primary {
+    left: 0;
+    visibility: visible;
+  }
+
   .bz-overlay-primary {
     opacity: 1;
     visibility: visible;
