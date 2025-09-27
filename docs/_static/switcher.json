@@ -1,13 +1,13 @@
 [
   {
-    "name": "dev",
-    "version": "dev",
-    "url": "/en/master/"
-  },
-  {
     "name": "latest",
     "version": "latest",
-    "url": "/en/latest/",
+    "url": "/en/latest/"
+  },
+  {
+    "name": "stable",
+    "version": "stable",
+    "url": "/en/stable/",
     "preferred": true
   }
 ]
