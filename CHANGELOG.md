@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v0.1.2 (2025-10-05)
+
+### Bug Fixes
+
+- Secondary sidebar padding with scrollbar
+  ([`be76082`](https://github.com/aksiome/breeze/commit/be76082f4040357311dc97f9a9e2b5e50d6573c4))
+
+### Documentation
+
+- Fix index grid responsiveness
+  ([`60d982b`](https://github.com/aksiome/breeze/commit/60d982b8c269caea3c2bffbdaf6a96f6e29f3168))
+
+
 ## v0.1.1 (2025-09-27)
 
 ### Bug Fixes
