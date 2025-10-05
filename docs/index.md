@@ -31,7 +31,7 @@ A clean, modern, customizable Sphinx documentation theme.
 :::
 ::::
 
-::::{grid} 3
+::::{grid} 1 2 3 3
 :gutter: 3
 
 :::{grid-item-card} ✨ Modern Design  
