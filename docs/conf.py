@@ -77,6 +77,8 @@ html_theme_options = {
 
 # -- Options for theme development -------------------------------------------
 
+version = os.environ.get("READTHEDOCS_VERSION", "latest")
+
 html_css_files = []
 html_js_files = []
 html_static_path = []
@@ -85,11 +87,11 @@ html_context = {
     "github_repo": "breeze",
     "github_version": "main",
     "doc_path": "docs",
-    "current_version": os.environ.get("READTHEDOCS_VERSION", "latest"),
+    "current_version": version,
     "version_switcher": "https://raw.githubusercontent.com/aksiome/breeze/refs/heads/main/docs/_static/switcher.json",
     "languages": [
-        ("English", "/en/%s/", "en"),
-        ("Français", "/fr/%s/", "fr"),
-        ("中文", "/zh/%s/", "zh"),
+        ("English", f"/en/{version}/%s/", "en"),
+        ("Français", f"/fr/{version}/%s/", "fr"),
+        ("中文", f"/zh/{version}/%s/", "zh"),
     ],
 }
