@@ -2,6 +2,19 @@
 
 <!-- version list -->
 
+## v0.2.0 (2025-10-21)
+
+### Documentation
+
+- Fix lang switcher links ([#3](https://github.com/aksiome/breeze/pull/3),
+  [`081ddbc`](https://github.com/aksiome/breeze/commit/081ddbcd7294365e68969c765fa807a2f5835f5c))
+
+### Features
+
+- Cleanup and stabilize CSS variable names ([#5](https://github.com/aksiome/breeze/pull/5),
+  [`fce183b`](https://github.com/aksiome/breeze/commit/fce183b298bdede502b2c400420b9047741200d4))
+
+
 ## v0.1.2 (2025-10-05)
 
 ### Bug Fixes
