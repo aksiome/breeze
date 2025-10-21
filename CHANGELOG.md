@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.2.2 (2025-10-21)
+
+### Bug Fixes
+
+- Style ethical ad components
+  ([`851b15b`](https://github.com/aksiome/breeze/commit/851b15b96f580652ea057605102eca7634afc554))
+
+
 ## v0.2.1 (2025-10-21)
 
 ### Bug Fixes
