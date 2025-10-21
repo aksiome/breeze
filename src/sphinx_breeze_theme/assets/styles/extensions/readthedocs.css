@@ -23,3 +23,24 @@
   --readthedocs-search-result-subheading-color: var(--bz-color-muted);
   --readthedocs-search-result-heading-color: var(--bz-color-muted);
 }
+
+#ethical-ad-placement {
+  .ethical-sidebar a,
+  .ethical-sidebar a:visited,
+  .ethical-sidebar a:hover,
+  .ethical-sidebar a:active,
+  .ethical-footer a,
+  .ethical-footer a:visited,
+  .ethical-footer a:hover,
+  .ethical-footer a:active {
+    color: var(--bz-color-text);
+  }
+
+  .ethical-sidebar,
+  .ethical-footer {
+    background-color: var(--bz-color-surface-4);
+    border: 1px solid var(--bz-color-outline);
+    border-radius: var(--bz-border-radius);
+    color: var(--bz-color-text);
+  }
+}
