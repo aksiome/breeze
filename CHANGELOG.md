@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.2.1 (2025-10-21)
+
+### Bug Fixes
+
+- Start styling rtd components
+  ([`0c0bd9d`](https://github.com/aksiome/breeze/commit/0c0bd9d567b4fbb65d44700415ad055989808870))
+
+
 ## v0.2.0 (2025-10-21)
 
 ### Documentation
