@@ -4,12 +4,15 @@
 
 .emoji {
   margin-left: -3px;
-  text-shadow: -0.5px -0.5px 0 #00000022, 0.5px -0.5px 0 #00000022,
-    -0.5px 0.5px 0 #00000022, 0.5px 0.5px 0 #00000022;
+  text-shadow:
+    -0.5px -0.5px 0 #00000022,
+    0.5px -0.5px 0 #00000022,
+    -0.5px 0.5px 0 #00000022,
+    0.5px 0.5px 0 #00000022;
 }
 
 .rounded {
-  border-radius: calc(infinity * 1px);
+  border-radius: var(--bz-border-radius-full);
 }
 
 .sized {
@@ -17,12 +20,15 @@
   vertical-align: middle;
 }
 
+.muted {
+  color: var(--bz-color-muted);
+}
+
 .align-default {
   width: 100%;
 }
 
-.align-default,
-.align-left {
+.align-default, .align-left {
   text-align: left;
 }
 
@@ -60,23 +66,23 @@ object.align-center,
 
   &::after {
     content: attr(data-tooltip);
-    font-size: 0.825rem;
-    font-family: var(--font-sans);
     position: absolute;
     top: 125%;
     left: 50%;
     opacity: 0;
-    border: 1px solid var(--color-outline-variant);
-    border-radius: 0.5rem;
-    color: var(--color-on-surface);
-    background: var(--color-surface-container);
-    padding-block: calc(var(--spacing) * 1.5);
-    padding-inline: calc(var(--spacing) * 2.5);
+    border-radius: var(--bz-border-radius);
     transform: translateX(-50%);
     translate: 0 -1000vh;
+    color: var(--bz-tooltip-color);
+    font-size: var(--bz-tooltip-font-size);
+    font-family: var(--bz-tooltip-font-family);
+    border: 1px solid var(--bz-tooltip-border-color);
+    background: var(--bz-tooltip-background-color);
+    padding-block: calc(var(--bz-spacing) * 1.5);
+    padding-inline: calc(var(--bz-spacing) * 2.5);
     transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
-    white-space: nowrap;
     pointer-events: none;
+    white-space: nowrap;
   }
 
   &:hover:not(:active, :focus, :focus-visible, :focus-within)::after {

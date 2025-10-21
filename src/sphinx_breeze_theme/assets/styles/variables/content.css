@@ -1,0 +1,380 @@
+
+:root {
+  /* Breeze sections variables */
+
+  --bz-announcement-color: var(--bz-color-text);
+  --bz-announcement-background-color: var(--bz-color-secondary-2);
+  --bz-announcement-font-size: inherit;
+  --bz-announcement-font-family: inherit;
+
+  --bz-skip-to-content-color: var(--bz-color-muted);
+  --bz-skip-to-content-background-color: var(--bz-color-surface-2);
+  --bz-skip-to-content-font-size: inherit;
+  --bz-skip-to-content-font-family: inherit;
+
+  --bz-back-to-top-color: var(--bz-color-primary-5);
+  --bz-back-to-top-color-hover: var(--bz-color-white-5);
+  --bz-back-to-top-border-color: var(--bz-color-outline);
+  --bz-back-to-top-background-color: var(--bz-color-surface-5);
+  --bz-back-to-top-background-color-hover: var(--bz-color-primary-2);
+  --bz-back-to-top-font-size: inherit;
+  --bz-back-to-top-font-family: inherit;
+
+  --bz-header-color: var(--bz-color-muted);
+  --bz-header-border-color: var(--bz-color-outline);
+  --bz-header-background-color: var(--bz-color-surface-1);
+  --bz-header-background-color-variant: var(--bz-color-surface-2);
+  --bz-header-tabs-color: var(--bz-header-color);
+  --bz-header-tabs-color-hover: var(--bz-link-color-hover);
+  --bz-header-tabs-color-active: var(--bz-link-color-hover);
+  --bz-header-tabs-background-color-hover: var(--bz-color-surface-3);
+  --bz-header-font-size: inherit;
+  --bz-header-font-family: inherit;
+  --bz-header-height: 3.5rem;
+  --bz-header-tabs-height: 3rem;
+
+  --bz-footer-color: var(--bz-color-text);
+  --bz-footer-border-color: var(--bz-color-outline);
+  --bz-footer-background-color: var(--bz-color-surface-2);
+  --bz-footer-link-color: var(--bz-link-color);
+  --bz-footer-link-color-hover: var(--bz-link-color-hover);
+  --bz-footer-font-size: var(--bz-size-xs);
+  --bz-footer-font-family: inherit;
+  --bz-footer-height: 5rem;
+
+  --bz-page-color: var(--bz-color-text);
+  --bz-page-background-color: var(--bz-color-surface-3);
+  --bz-page-font-size: var(--bz-size-md);
+  --bz-page-font-family: var(--bz-font-sans);
+  --bz-page-width: calc((100vw - clamp(17.5rem, 100vw, 94rem)) / 2);
+
+  --bz-sidebar-primary-border-color: color-mix(in oklab, var(--bz-color-outline) 75%, transparent);
+  --bz-sidebar-primary-drawer-background-color: var(--bz-color-surface-3);
+  --bz-sidebar-primary-font-size: inherit;
+  --bz-sidebar-primary-font-family: inherit;
+  --bz-sidebar-primary-width: 16rem;
+
+  --bz-sidebar-secondary-border-color: color-mix(in oklab, var(--bz-color-outline) 75%, transparent);
+  --bz-sidebar-secondary-drawer-background-color: var(--bz-color-surface-3);
+  --bz-sidebar-secondary-font-size: inherit;
+  --bz-sidebar-secondary-font-family: inherit;
+  --bz-sidebar-secondary-width: 16rem;
+
+  --bz-search-form-input-color: var(--bz-color-text);
+  --bz-search-form-input-border-color: var(--bz-color-outline);
+  --bz-search-form-input-border-color-focus: var(--bz-color-primary);
+  --bz-search-form-input-background-color: var(--bz-color-surface-4);
+  --bz-search-form-input-font-size: var(--bz-size-sm);
+  --bz-search-form-input-font-family: inherit;
+  --bz-search-form-button-color: var(--bz-color-muted);
+  --bz-search-form-button-border-color: var(--bz-color-outline);
+  --bz-search-form-button-background-color: var(--bz-color-surface-2);
+  --bz-search-form-button-font-size: var(--bz-size-sm);
+  --bz-search-form-button-font-family: var(--bz-font-mono);
+  --bz-search-summary-color: var(--bz-color-muted);
+  --bz-search-summary-font-size: var(--bz-size-xs);
+  --bz-search-summary-font-family: inherit;
+  --bz-search-results-color: var(--bz-color-text);
+  --bz-search-results-border-color: var(--bz-color-outline);
+  --bz-search-results-font-size: var(--bz-size-xs);
+  --bz-search-results-font-family: inherit;
+  --bz-search-results-link-font-size: var(--bz-size-md);
+  --bz-search-results-link-font-family: inherit;
+
+  /* Breeze components variables */
+
+  --bz-breadcrumb-color: var(--bz-color-text);
+  --bz-breadcrumb-link-color: var(--bz-link-color);
+  --bz-breadcrumb-link-color-hover: var(--bz-link-color-hover);
+  --bz-breadcrumb-separator-color: color-mix(in oklab, var(--bz-breadcrumb-link-color) 50%, transparent);
+  --bz-breadcrumb-separator-icon: var(--bz-icon-chevron);
+  --bz-breadcrumb-font-size: inherit;
+  --bz-breadcrumb-font-family: inherit;
+
+  --bz-dropdown-color: var(--bz-color-text);
+  --bz-dropdown-color-hover: var(--bz-link-color-hover);
+  --bz-dropdown-color-active: var(--bz-link-color-hover);
+  --bz-dropdown-border-color: var(--bz-color-outline);
+  --bz-dropdown-background-color: var(--bz-color-surface-4);
+  --bz-dropdown-background-color-hover: var(--bz-color-surface-2);
+  --bz-dropdown-font-size: inherit;
+  --bz-dropdown-font-family: inherit;
+
+  --bz-external-links-color: var(--bz-link-color);
+  --bz-external-links-color-hover: var(--bz-link-color-hover);
+  --bz-external-links-font-size: inherit;
+  --bz-external-links-font-family: inherit;
+
+  --bz-header-brand-color: var(--bz-header-color);
+  --bz-header-brand-color-hover: var(--bz-link-color-hover);
+  --bz-header-brand-font-size: 1.75rem;
+  --bz-header-brand-font-family: var(--bz-font-brand);
+
+  --bz-lang-switcher-color: var(--bz-link-color);
+  --bz-lang-switcher-color-hover: var(--bz-link-color-hover);
+  --bz-lang-switcher-font-size: 1rem;
+
+  --bz-related-pages-icon-color: var(--bz-link-color);
+  --bz-related-pages-icon-color-hover: var(--bz-link-color-hover);
+  --bz-related-pages-label-color: var(--bz-link-color);
+  --bz-related-pages-label-color-hover: var(--bz-link-color);
+  --bz-related-pages-title-color: var(--bz-link-color-hover);
+  --bz-related-pages-title-color-hover: var(--bz-link-color-hover);
+  --bz-related-pages-font-size: var(--bz-size-sm);
+  --bz-related-pages-font-family: inherit;
+
+  --bz-search-button-color: var(--bz-color-muted);
+  --bz-search-button-border-color: var(--bz-color-outline);
+  --bz-search-button-border-color-hover: var(--bz-color-primary);
+  --bz-search-button-background-color: var(--bz-color-surface-3);
+  --bz-search-button-kbd-color: var(--bz-color-muted);
+  --bz-search-button-kbd-border-color: var(--bz-color-outline);
+  --bz-search-button-kbd-background-color: var(--bz-color-surface-2);
+  --bz-search-button-kbd-font-family: var(--bz-font-mono);
+  --bz-search-button-font-size: inherit;
+  --bz-search-button-font-family: inherit;
+
+  --bz-sidebar-nav-color: var(--bz-color-text);
+  --bz-sidebar-nav-color-hover: var(--bz-link-color-hover);
+  --bz-sidebar-nav-color-active: var(--bz-link-color-hover);
+  --bz-sidebar-nav-background-color-hover: var(--bz-color-surface-1);
+  --bz-sidebar-nav-font-size: var(--bz-size-sm);
+  --bz-sidebar-nav-font-family: inherit;
+  --bz-sidebar-nav-caption-color: var(--bz-color-muted);
+  --bz-sidebar-nav-caption-font-size: var(--bz-size-xs);
+  --bz-sidebar-nav-caption-font-family: inherit;
+
+  --bz-sidebar-toc-color: var(--bz-color-text);
+  --bz-sidebar-toc-color-hover: var(--bz-link-color-hover);
+  --bz-sidebar-toc-color-active: var(--bz-link-color-hover);
+  --bz-sidebar-toc-font-size: var(--bz-size-sm);
+  --bz-sidebar-toc-font-family: inherit;
+  --bz-sidebar-toc-caption-color: var(--bz-color-muted);
+  --bz-sidebar-toc-caption-font-size: var(--bz-size-xs);
+  --bz-sidebar-toc-caption-font-family: inherit;
+
+  --bz-theme-switcher-color: var(--bz-color-muted);
+  --bz-theme-switcher-border-color: var(--bz-color-outline);
+  --bz-theme-switcher-border-color-hover: var(--bz-color-primary);
+  --bz-theme-switcher-background-color: var(--bz-color-surface-2);
+  --bz-theme-switcher-icon-border-color: var(--bz-color-outline);
+  --bz-theme-switcher-icon-background-color: var(--bz-color-surface-4);
+
+  --bz-version-switcher-color: var(--bz-color-muted);
+  --bz-version-switcher-border-color: var(--bz-color-outline);
+  --bz-version-switcher-border-color-hover: var(--bz-color-primary);
+  --bz-version-switcher-background-color: var(--bz-color-surface-2);
+  --bz-version-switcher-font-size: var(--bz-size-xs);
+  --bz-version-switcher-font-family: inherit;
+
+  --bz-tooltip-color: var(--bz-color-text);
+  --bz-tooltip-border-color: var(--bz-color-outline);
+  --bz-tooltip-background-color: var(--bz-color-surface-5);
+  --bz-tooltip-font-size: 0.825rem;
+  --bz-tooltip-font-family: inherit;
+
+  /* Sphinx content variables */
+
+  --bz-admonition-color: var(--bz-topic-color);
+  --bz-admonition-icon: var(--bz-icon-abstract);
+  --bz-admonition-accent-color: var(--bz-color-primary);
+  --bz-admonition-background-color: var(--bz-topic-background-color);
+  --bz-admonition-attention-color: var(--bz-color-yellow);
+  --bz-admonition-attention-icon: var(--bz-icon-warn-triangle);
+  --bz-admonition-caution-color: var(--bz-color-orange);
+  --bz-admonition-caution-icon: var(--bz-icon-spark);
+  --bz-admonition-danger-color: var(--bz-color-red);
+  --bz-admonition-danger-icon: var(--bz-icon-spark);
+  --bz-admonition-deprecated-color: var(--bz-color-orange);
+  --bz-admonition-deprecated-icon: var(--bz-icon-warn-circle);
+  --bz-admonition-error-color: var(--bz-color-red);
+  --bz-admonition-error-icon: var(--bz-icon-failure);
+  --bz-admonition-hint-color: var(--bz-color-green);
+  --bz-admonition-hint-icon: var(--bz-icon-lightbulb);
+  --bz-admonition-important-color: var(--bz-color-orange);
+  --bz-admonition-important-icon: var(--bz-icon-warn-circle);
+  --bz-admonition-note-color: var(--bz-color-cyan);
+  --bz-admonition-note-icon: var(--bz-icon-info);
+  --bz-admonition-seealso-color: var(--bz-color-green);
+  --bz-admonition-seealso-icon: var(--bz-icon-arrow-uturn-right);
+  --bz-admonition-tip-color: var(--bz-color-green);
+  --bz-admonition-tip-icon: var(--bz-icon-flame);
+  --bz-admonition-todo-color: var(--bz-color-gray);
+  --bz-admonition-todo-icon: var(--bz-icon-pencil);
+  --bz-admonition-versionadded-color: var(--bz-color-green);
+  --bz-admonition-versionadded-icon: var(--bz-icon-warn-circle);
+  --bz-admonition-versionchanged-color: var(--bz-color-orange);
+  --bz-admonition-versionchanged-icon: var(--bz-icon-warn-circle);
+  --bz-admonition-versionremoved-color: var(--bz-color-red);
+  --bz-admonition-versionremoved-icon: var(--bz-icon-warn-circle);
+  --bz-admonition-warning-color: var(--bz-color-orange);
+  --bz-admonition-warning-icon: var(--bz-icon-warn-triangle);
+  --bz-admonition-title-font-size: inherit;
+  --bz-admonition-title-font-family: inherit;
+
+  --bz-code-color: var(--bz-color-code);
+  --bz-code-border-color: var(--bz-color-outline);
+  --bz-code-background-color: var(--bz-color-surface-5);
+  --bz-code-font-size: 0.875em;
+  --bz-code-font-family: var(--bz-font-mono);
+
+  --bz-code-block-color: var(--bz-color-muted);
+  --bz-code-block-border-color: var(--bz-color-outline);
+  --bz-code-block-background-color: var(--bz-color-surface-5);
+  --bz-code-block-line-number-color: var(--bz-color-muted);
+  --bz-code-block-caption-background-color: var(--bz-color-surface-2);
+  --bz-code-block-caption-color: var(--bz-color-muted);
+  --bz-code-block-caption-font-size: var(--bz-size-sm);
+  --bz-code-block-caption-font-family: var(--bz-font-mono);
+  --bz-code-block-font-size: 0.875em;
+  --bz-code-block-font-family: var(--bz-font-mono);
+
+  --bz-figure-caption-color: var(--bz-color-muted);
+  --bz-figure-caption-font-size: inherit;
+  --bz-figure-caption-font-family: inherit;
+
+  --bz-guilabel-color: var(--bz-color-text);
+  --bz-guilabel-border-color: var(--bz-color-cyan);
+  --bz-guilabel-background-color: color-mix(in oklab, var(--bz-color-cyan) 20%, transparent);
+
+  --bz-kbd-color: var(--bz-color-text);
+  --bz-kbd-border-color: var(--bz-color-outline);
+  --bz-kbd-background-color: var(--bz-color-surface-5);
+  --bz-kbd-font-size: 0.875em;
+  --bz-kbd-font-family: var(--bz-font-mono);
+
+  --bz-line-separator-color: var(--bz-color-outline);
+
+  --bz-link-color: var(--bz-color-muted);
+  --bz-link-color-hover: var(--bz-color-primary-5);
+
+  --bz-list-marker-color: var(--bz-color-gray);
+  --bz-list-marker-font-size: var(--bz-size-xs);
+  --bz-list-marker-font-family: inherit;
+
+  --bz-quote-color: var(--bz-color-text);
+  --bz-quote-background-color: var(--bz-color-surface-4);
+  --bz-quote-accent-color: var(--bz-color-outline);
+  --bz-quote-attribution-color: var(--bz-color-muted);
+  --bz-quote-epigraph-color: var(--bz-quote-accent-color);
+  --bz-quote-highlight-color: var(--bz-color-gray);
+  --bz-quote-pull-color: var(--bz-quote-accent-color);
+  --bz-quote-pull-icon: var(--bz-icon-quote);
+  --bz-quote-font-size: inherit;
+  --bz-quote-font-family: inherit;
+  --bz-quote-attribution-font-size: inherit;
+  --bz-quote-attribution-font-family: inherit;
+  --bz-quote-epigraph-font-size: var(--bz-size-xs);
+  --bz-quote-epigraph-font-family: inherit;
+  --bz-quote-highlight-font-size: inherit;
+  --bz-quote-highlight-font-family: inherit;
+  --bz-quote-pull-font-size: inherit;
+  --bz-quote-pull-font-family: inherit;
+
+  --bz-rubric-color: var(--bz-color-muted);
+  --bz-rubric-font-size: var(--bz-size-lg);
+  --bz-rubric-font-family: inherit;
+
+  --bz-sidebar-color: var(--bz-color-text);
+  --bz-sidebar-border-color: var(--bz-color-outline);
+  --bz-sidebar-background-color: var(--bz-color-surface-5);
+  --bz-sidebar-title-color: var(--bz-color-text);
+  --bz-sidebar-title-background-color: var(--bz-color-surface-2);
+  --bz-sidebar-title-font-size: var(--bz-size-lg);
+  --bz-sidebar-title-font-family: inherit;
+  --bz-sidebar-subtitle-color: var(--bz-color-muted);
+  --bz-sidebar-subtitle-font-size: inherit;
+  --bz-sidebar-subtitle-font-family: inherit;
+
+  --bz-sig-color: var(--bz-color-text);
+  --bz-sig-border-color: var(--bz-color-outline);
+  --bz-sig-background-color: var(--bz-color-surface-5);
+  --bz-sig-accent-color: var(--bz-color-primary);
+  --bz-sig-name-color: var(--bz-color-code);
+  --bz-sig-param-color: var(--bz-color-brown-1);
+  --bz-sig-property-color: var(--bz-color-muted);
+  --bz-sig-type-color: var(--bz-color-muted);
+  --bz-sig-default-color: var(--bz-color-cyan-1);
+  --bz-sig-space-color: var(--bz-color-outline);
+  --bz-sig-font-size: inherit;
+  --bz-sig-font-family: var(--bz-font-mono);
+  --bz-sig-table-color: var(--bz-sig-color);
+  --bz-sig-table-background-color: var(--bz-color-surface-2);
+  --bz-sig-table-head-color: var(--bz-sig-color);
+  --bz-sig-table-head-background-color: var(--bz-color-surface-1);
+  --bz-sig-table-font-size: inherit;
+  --bz-sig-table-font-family: inherit;
+  --bz-sig-table-head-font-size: var(--bz-size-xs);
+  --bz-sig-table-head-font-family: inherit;
+
+  --bz-table-accent-color: var(--bz-color-primary);
+  --bz-table-border-color: var(--bz-color-outline);
+  --bz-table-caption-color: var(--bz-color-muted);
+  --bz-table-head-color: var(--bz-color-text);
+  --bz-table-head-background-color: var(--bz-color-surface-2);
+  --bz-table-odd-color: var(--bz-color-text);
+  --bz-table-odd-background-color: var(--bz-color-surface-4);
+  --bz-table-even-color: var(--bz-color-text);
+  --bz-table-even-background-color: color-mix(in oklab, var(--bz-color-surface-3), var(--bz-color-surface-4));
+  --bz-table-font-size: inherit;
+  --bz-table-font-family: inherit;
+  --bz-table-caption-font-size: inherit;
+  --bz-table-caption-font-family: inherit;
+  --bz-table-head-font-size: var(--bz-size-sm);
+  --bz-table-head-font-family: inherit;
+
+  --bz-target-background-color: var(--bz-color-target);
+
+  --bz-title-color: var(--bz-color-muted);
+  --bz-title-1-font-size: var(--bz-size-4xl);
+  --bz-title-2-font-size: var(--bz-size-3xl);
+  --bz-title-3-font-size: var(--bz-size-2xl);
+  --bz-title-4-font-size: var(--bz-size-xl);
+  --bz-title-5-font-size: var(--bz-size-lg);
+  --bz-title-6-font-size: var(--bz-size-md);
+  --bz-title-font-family: inherit;
+
+  --bz-toctree-caption-color: var(--bz-color-muted);
+  --bz-toctree-caption-font-size: var(--bz-size-2xl);
+  --bz-toctree-caption-font-family: inherit;
+
+  --bz-topic-border-color: var(--bz-color-outline);
+  --bz-topic-background-color: var(--bz-color-surface-4);
+  --bz-topic-font-size: var(--bz-size-sm);
+  --bz-topic-font-family: inherit;
+  --bz-topic-title-font-size: var(--bz-size-lg);
+  --bz-topic-title-font-family: inherit;
+}
+
+:root[data-theme=dark] {
+  --bz-header-background-color: var(--bz-color-surface-3);
+  --bz-header-background-color-variant: var(--bz-color-surface-4);
+  --bz-header-tabs-background-color-hover: var(--bz-color-surface-1);
+
+  --bz-footer-background-color: var(--bz-color-surface-3);
+
+  --bz-page-background-color: var(--bz-color-surface-1);
+
+  --bz-search-button-background-color: var(--bz-color-surface-1);
+  --bz-search-button-kbd-background-color: var(--bz-color-surface-2);
+
+  --bz-sidebar-nav-background-color-hover: var(--bz-color-surface-3);
+
+  --bz-theme-switcher-background-color: var(--bz-color-surface-5);
+  --bz-theme-switcher-icon-background-color: var(--bz-color-surface-2);
+
+  --bz-version-switcher-background-color: var(--bz-color-surface-5);
+
+  --bz-code-block-caption-background-color: var(--bz-color-surface-3);
+
+  --bz-sidebar-title-background-color: var(--bz-color-surface-3);
+
+  --bz-table-head-background-color: var(--bz-color-surface-3);
+  --bz-table-odd-background-color: color-mix(in oklab, var(--bz-color-surface-4), var(--bz-color-surface-5));
+  --bz-table-even-background-color: var(--bz-color-surface-4);
+
+  --bz-sig-param-color: var(--bz-color-brown-5);
+  --bz-sig-default-color: var(--bz-color-cyan-5);
+  --bz-sig-table-background-color: var(--bz-color-surface-2);
+  --bz-sig-table-head-background-color: var(--bz-color-surface-4);
+}

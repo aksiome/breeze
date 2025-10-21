@@ -1,24 +1,28 @@
 .bz-header-tabs {
-  top: 0;
   position: sticky;
-  z-index: 1000;
   display: flex;
+  z-index: 1000;
+  top: 0;
   align-items: center;
-  gap: calc(var(--spacing) * 1.5);
-  color: var(--color-on-surface-variant);
-  height: var(--tabs-height);
-  background-color: var(--color-surface-variant);
-  border-bottom: 1px solid var(--color-outline);
-  padding-inline: calc(var(--page-width) + (var(--spacing) * 5));
-  box-shadow: 0 1px 1px var(--color-shadow), 0 2px 2px var(--color-shadow),
-    0 4px 4px var(--color-shadow), 0 8px 8px var(--color-shadow);
+  gap: calc(var(--bz-spacing) * 1.5);
+  height: var(--bz-header-tabs-height);
+  color: var(--bz-header-tabs-color);
+  font-size: var(--bz-header-font-size);
+  font-family: var(--bz-header-font-family);
+  background-color: var(--bz-header-background-color);
+  border-bottom: 1px solid var(--bz-header-border-color);
+  padding-inline: calc(var(--bz-page-width) + (var(--bz-spacing) * 5));
+  box-shadow:
+    0 1px 1px var(--bz-color-shadow),
+    0 2px 2px var(--bz-color-shadow),
+    0 4px 4px var(--bz-color-shadow),
+    0 8px 8px var(--bz-color-shadow);
 
   @media (width > 52rem) {
-    top: calc(var(--header-height) - var(--tabs-height) + 1px);
+    top: calc(var(--bz-header-height) - var(--bz-header-tabs-height) + 1px);
   }
 
-  > ul,
-  li {
+  > ul, li {
     display: flex;
     height: 100%;
     align-items: center;
@@ -29,23 +33,23 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     white-space: nowrap;
-    gap: calc(var(--spacing) * 1.5);
-    padding-inline: calc(var(--spacing) * 1.5);
+    gap: calc(var(--bz-spacing) * 1.5);
+    padding-inline: calc(var(--bz-spacing) * 1.5);
   }
 
   a {
     color: inherit;
-    padding-inline: calc(var(--spacing) * 2.5);
-    padding-block: calc(var(--spacing) * 1);
-    border-radius: 0.5rem;
+    padding-inline: calc(var(--bz-spacing) * 2.5);
+    padding-block: calc(var(--bz-spacing) * 1);
+    transition: background 0.15s ease-in-out;
+    border-radius: var(--bz-border-radius);
     text-decoration: none;
     overflow-wrap: anywhere;
     white-space: nowrap;
-    transition: background 0.15s ease-in-out;
 
     &:hover {
-      color: var(--color-primary);
-      background-color: var(--color-surface);
+      color: var(--bz-header-tabs-color-hover);
+      background-color: var(--bz-header-tabs-background-color-hover);
     }
   }
 
@@ -53,18 +57,18 @@
     position: relative;
 
     a {
-      color: var(--color-primary);
+      color: var(--bz-header-tabs-color-active);
       text-shadow: 0.03em 0, -0.03em 0;
     }
 
     &::after {
       content: "";
-      background: var(--color-primary);
-      height: 2px;
       position: absolute;
+      height: 2px;
       bottom: 0;
       left: 0;
       right: 0;
+      background: var(--bz-header-tabs-color-active);
     }
   }
 
@@ -80,12 +84,13 @@
     }
 
     button {
+      color: inherit;
       border-radius: 0.25rem;
-      background-color: var(--color-surface-container-variant);
-      border: 1px solid var(--color-outline-variant);
+      background-color: var(--bz-header-background-color-variant);
+      border: 1px solid var(--bz-header-border-color);
 
       > svg {
-        color: var(--color-on-surface-variant);
+        color: inherit;
         height: 1.25rem;
         vertical-align: middle;
       }
@@ -96,9 +101,10 @@
 .bz-sidebar-primary-toggle {
   display: none;
   cursor: pointer;
-  padding-inline: calc(var(--spacing) * 2.5);
-  padding-block: calc(var(--spacing) * 1);
   font-size: 1.125rem;
+  padding-inline: calc(var(--bz-spacing) * 2.5);
+  padding-block: calc(var(--bz-spacing) * 1);
+
   svg {
     display: block;
   }

@@ -3,29 +3,29 @@
 
   button {
     display: flex;
-    align-items: center;
-    padding: .0625rem;
-    width: 2.5rem;
-    height: 1.375rem;
-    color: var(--color-on-surface-variant);
-    background-color: var(--color-surface-container-variant);
-    border: 1px solid var(--color-outline);
-    transition: border-color .1s ease-in-out;
-    border-radius: calc(infinity * 1px);
     cursor: pointer;
+    align-items: center;
+    height: 1.375rem;
+    width: 2.5rem;
+    padding: .0625rem;
+    border-radius: var(--bz-border-radius-full);
+    color: var(--bz-theme-switcher-color);
+    border: 1px solid var(--bz-theme-switcher-border-color);
+    background-color: var(--bz-theme-switcher-background-color);
+    transition: border-color .1s ease-in-out;
 
     &:hover {
-      border-color: var(--color-primary);
+      border-color: var(--bz-theme-switcher-border-color-hover);
     }
   }
 
   svg {
     height: 100%;
-    border: 1px solid var(--color-outline);
-    background-color: var(--color-surface);
-    border-radius: calc(infinity * 1px);
-    transition: translate .2s ease-in-out;
     padding: .125rem;
+    border-radius: var(--bz-border-radius-full);
+    border: 1px solid var(--bz-theme-switcher-icon-border-color);
+    background-color: var(--bz-theme-switcher-icon-background-color);
+    transition: translate .2s ease-in-out;
   }
 }
 

@@ -1,28 +1,28 @@
 .bz-content {
-  min-height: calc(100vh - var(--header-height) - var(--tabs-height) - var(--footer-height));
-  padding-inline: calc(var(--page-width) + (var(--spacing) * 10));
+  min-height: calc(100vh - var(--bz-header-height) - var(--bz-header-tabs-height) - var(--bz-footer-height));
+  padding-inline: calc(var(--bz-page-width) + (var(--bz-spacing) * 10));
 
   @media (width > 52rem) {
     display: flex;
-    gap: calc(var(--spacing) * 10);
+    gap: calc(var(--bz-spacing) * 10);
   }
 
   @media (width > 75rem) {
-    gap: calc(var(--spacing) * 14);
+    gap: calc(var(--bz-spacing) * 14);
   }
 }
 
 #bz-main-content {
-  margin-inline: auto;
-  max-width: 72rem;
-  min-width: 0;
   flex: 1;
-  padding-block: calc(var(--spacing) * 8);
+  min-width: 0;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-block: calc(var(--bz-spacing) * 8);
   overflow-wrap: anywhere;
 
   @media (width > 75rem) {
     flex: 1;
-    column-gap: calc(var(--spacing) * 10);
+    column-gap: calc(var(--bz-spacing) * 10);
     &:has(.bz-sidebar-secondary *) {
       display: grid;
       grid-template-columns: 1fr auto;

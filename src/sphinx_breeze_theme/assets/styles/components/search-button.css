@@ -1,51 +1,51 @@
 .bz-search-button {
   a {
     display: flex;
-    height: 2rem;
-    font-size: 1.125rem;
     align-items: center;
     text-decoration: none;
-    color: var(--color-on-surface-variant);
-    gap: calc(var(--spacing) * 1.5);
-    border-radius: calc(infinity * 1px);
-    border: 0 solid var(--color-outline);
+    border-radius: var(--bz-border-radius-full);
+    gap: calc(var(--bz-spacing) * 1.5);
+    padding-block: .2rem;
+    color: var(--bz-search-button-color);
+    font-size: calc(var(--bz-search-button-font-size) + .2rem);
+    font-family: var(--bz-search-button-font-family);
+    border: 0 solid var(--bz-search-button-border-color);
 
     &:hover {
-      border-color: var(--color-primary);
+      border-color: var(--bz-search-button-border-color-hover);
     }
   }
 
   span {
     display: none;
-    font-size: 0.9rem;
+    font-size: 0.9em;
   }
 
   kbd {
     display: none;
-    opacity: 0.65;
-    color: var(--color-on-surface);
-    background-color: var(--color-surface-variant);
-    padding-inline: calc(var(--spacing) * 1.5);
-    border: 1px solid var(--color-outline-variant);
+    color: var(--bz-search-button-kbd-color);
+    font-size: 0.8em;
+    font-family: var(--bz-search-button-kbd-font-family);
+    border: 1px solid var(--bz-search-button-kbd-border-color);
+    background-color: var(--bz-search-button-kbd-background-color);
+    padding-inline: calc(var(--bz-spacing) * 1.5);
     border-bottom-width: 3px;
     border-right-width: 2px;
-    border-radius: 0.25rem;
-    font-family: var(--font-mono);
-    font-size: 0.875em;
+    border-radius: calc(var(--bz-border-radius) / 2);
     margin-left: 0.75rem;
+    opacity: 0.65;
   }
 
   @media (width > 48rem) {
     a {
-      font-size: 1rem;
       border-width: 1px;
-      background-color: var(--color-surface);
-      padding-inline: calc(var(--spacing) * 3);
+      font-size: var(--bz-search-button-font-size);
+      background-color: var(--bz-search-button-background-color);
       transition: border-color 0.1s ease-in-out;
+      padding-inline: calc(var(--bz-spacing) * 3);
     }
 
-    span,
-    kbd {
+    span, kbd {
       display: block;
     }
   }

@@ -1,48 +1,51 @@
 div.container.table {
   overflow-x: auto;
-  margin-top: calc(var(--spacing) * 3);
-  margin-bottom: calc(var(--spacing) * 6);
+  margin-top: calc(var(--bz-spacing) * 3);
+  margin-bottom: calc(var(--bz-spacing) * 6);
 }
 
 table.docutils {
   display: table;
   overflow: hidden;
-  border-collapse: separate;
-  border-spacing: 0;
   text-align: left;
   vertical-align: top;
+  border-spacing: 0;
+  border-collapse: separate;
   overflow-wrap: break-word;
 }
 
 table.docutils :is(thead, tbody) {
   vertical-align: inherit;
+
   a.headerlink {
     vertical-align: middle;
   }
 }
 
 table.docutils :is(th, td) {
-  border-bottom: 1px solid var(--color-outline-variant);
-  border-right: 1px solid var(--color-outline-variant);
-  padding: calc(var(--spacing) * 2.5);
+  border-bottom: 1px solid var(--bz-table-border-color);
+  border-right: 1px solid var(--bz-table-border-color);
+  padding: calc(var(--bz-spacing) * 2.5);
+
   :first-child {
     margin-top: 0;
   }
+
   :last-child {
     margin-bottom: 0;
   }
 }
 
 table.docutils thead tr:last-child th {
-  border-bottom: 2px solid color-mix(in oklab,var(--color-primary) 30%,transparent);
+  border-bottom: 2px solid color-mix(in oklab,var(--bz-table-accent-color) 25%,transparent);
 }
 
 table.docutils tr:first-child :is(th, td) {
-  border-top: 1px solid var(--color-outline-variant);
+  border-top: 1px solid var(--bz-table-border-color);
 }
 
 table.docutils :is(th, td):first-child {
-  border-left: 1px solid var(--color-outline-variant);
+  border-left: 1px solid var(--bz-table-border-color);
 }
 
 table.docutils tr:first-child :where(td, th):first-child {
@@ -70,27 +73,34 @@ table.docutils:has(thead) tbody tr:first-child :where(td, th):last-child {
 }
 
 table.docutils thead {
-  background-color: color-mix(in oklab, var(--color-surface-container) 25%, var(--color-surface-variant));
+  color: var(--bz-table-head-color);
+  background-color: var(--bz-table-head-background-color);
 }
 
 table.docutils th {
+  font-size: var(--bz-table-head-font-size);
+  font-family: var(--bz-table-head-font-family);
   font-weight: 700;
-  font-size: var(--size-sm);
-  color: var(--color-on-surface-variant);
 }
 
 table.docutils tbody tr {
-  background-color: var(--color-surface-container);
+  color: var(--bz-table-odd-color);
+  font-size: var(--bz-table-font-size);
+  font-family: var(--bz-table-font-family);
+  background-color: var(--bz-table-odd-background-color);
 }
 
 table.docutils tbody tr:nth-child(even) {
-  background-color: color-mix(in oklab, var(--color-surface-container) 82%, var(--color-surface-variant));
+  color: var(--bz-table-even-color);
+  background-color: var(--bz-table-even-background-color);
 }
 
 table.docutils caption {
-  color: var(--color-on-surface-variant);
   vertical-align: middle;
-  padding: calc(var(--spacing) * 2.5);
+  color: var(--bz-table-caption-color);
+  font-size: var(--bz-table-caption-font-size);
+  font-family: var(--bz-table-caption-font-family);
+  padding: calc(var(--bz-spacing) * 2.5);
 }
 
 table.docutils :where(figure, img, video) {

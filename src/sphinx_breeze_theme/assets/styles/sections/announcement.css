@@ -1,7 +1,9 @@
 .bz-announcement {
+  color: var(--bz-announcement-color);
+  font-size: var(--bz-announcement-font-size);
+  font-family: var(--bz-announcement-font-family);
+  background-color: var(--bz-announcement-background-color);
+  border-bottom: 4px solid var(--bz-header-background-color);
+  padding: calc(var(--bz-spacing) * 3);
   text-align: center;
-  background-color: var(--color-announcement);
-  color: var(--color-on-announcement);
-  padding: calc(var(--spacing) * 3);
-  border-bottom: 4px solid var(--color-surface-variant);
 }

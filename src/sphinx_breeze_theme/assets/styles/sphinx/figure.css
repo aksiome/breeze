@@ -1,7 +1,7 @@
 figure {
   display: flex;
   flex-flow: column;
-  gap: calc(var(--spacing) * 2);
+  gap: calc(var(--bz-spacing) * 2);
 }
 
 figure > a,
@@ -13,7 +13,10 @@ figure > video {
 
 figure figcaption > p,
 figure figcaption .legend > p {
-  color: var(--color-on-surface-variant);
+  color: var(--bz-figure-caption-color);
+  font-size: var(--bz-figure-caption-font-size);
+  font-family: var(--bz-figure-caption-font-family);
+
   &:first-child {
     margin-top: 0;
   }

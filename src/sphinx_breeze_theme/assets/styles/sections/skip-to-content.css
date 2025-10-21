@@ -1,22 +1,24 @@
 .bz-skip-to-content {
-  display: flex;
   position: fixed;
+  display: flex;
+  z-index: 10000;
   align-items: center;
   justify-content: center;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10000;
   transform: translateY(-100%);
-  height: var(--header-height);
-  background-color: var(--color-surface-variant-bright);
+  height: var(--bz-header-height);
+  font-size: var(--bz-skip-to-content-font-size);
+  font-family: var(--bz-skip-to-content-font-family);
+  background-color: var(--bz-skip-to-content-background-color);
   transition: transform .15s ease-in-out;
 
   a {
     display: inline-block;
+    color: var(--bz-skip-to-content-color);
+    padding: var(--bz-spacing);
     text-decoration: none;
-    color: var(--color-on-surface);
-    padding: var(--spacing);
   }
 
   &:focus-within {

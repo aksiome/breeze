@@ -3,9 +3,9 @@
 @import "minireset.css" layer(reset);
 
 @import "./variables/colors.css" layer(theme);
+@import "./variables/content.css" layer(theme);
 @import "./variables/fonts.css" layer(theme);
 @import "./variables/icons.css" layer(theme);
-@import "./variables/layout.css" layer(theme);
 
 @import "./sections/announcement.css" layer(layout);
 @import "./sections/article-footer.css" layer(layout);
@@ -51,24 +51,28 @@
 
 @import "./extensions/copybutton.css";
 @import "./extensions/design.css";
+@import "./extensions/readthedocs.css";
 @import "./extensions/treeview.css";
 
 @import "./utils.css" layer(utilities);
 
 @layer theme {
   * {
-    scrollbar-color: var(--color-outline) transparent;
+    scrollbar-color: var(--bz-color-outline) transparent;
   }
 
   :root {
-    -webkit-font-smoothing: antialiased;
-    color: var(--color-on-surface);
-    background-color: var(--color-surface);
-    font-family: var(--font-sans);
-    font-size: var(--size-md);
     overflow-y: scroll;
     scroll-behavior: smooth;
-    scroll-padding-top: calc(var(--header-height) + 3rem);
+    -webkit-font-smoothing: antialiased;
+    color: var(--bz-page-color);
+    font-size: var(--bz-page-font-size);
+    font-family: var(--bz-page-font-family);
+    background-color: var(--bz-page-background-color);
+    scroll-padding-top: calc(var(--bz-header-height) + var(--bz-header-tabs-height));
+    --bz-spacing: clamp(0.175rem, 0.0625rem + 0.2083vw, 0.25rem);
+    --bz-border-radius-full: calc(infinity * 1px);
+    --bz-border-radius: 0.5rem;
   }
 
   .bz-overlay {

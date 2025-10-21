@@ -1,25 +1,24 @@
-div.math,
-span.math {
+div.math, span.math {
   align-items: center;
   max-width: 100%;
-}
-
-div.math {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: calc(var(--spacing) * 6);
 }
 
 span.math {
   display: inline-flex;
 }
 
-div.math mjx-container {
-  flex-grow: 1;
-  overflow: auto;
-  padding: calc(var(--spacing) * 2);
-}
+div.math {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: calc(var(--bz-spacing) * 6);
 
-div.math mjx-assistive-mml {
-  height: 0;
+  mjx-container {
+    flex-grow: 1;
+    overflow: auto;
+    padding: calc(var(--bz-spacing) * 2);
+  }
+
+  mjx-assistive-mml {
+    height: 0;
+  }
 }

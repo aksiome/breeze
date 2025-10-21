@@ -1,8 +1,7 @@
 import { defineComponent } from "../utils/component";
 
-
-defineComponent(".bz-sidebar-drawer", el => {
-  const toggle = el.querySelector("input");
+defineComponent("[data-drawer]", el => {
+  const toggle = document.getElementById(el.dataset?.drawer ?? "") as HTMLInputElement;
   if (!toggle) return;
 
   const label = document.querySelector<HTMLElement>(`label[role="button"][for="${toggle.id}"]`)

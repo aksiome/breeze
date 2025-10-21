@@ -2,18 +2,21 @@
   display: flex;
   position: relative;
   align-items: center;
-  gap: calc(var(--spacing) * 3);
+  gap: calc(var(--bz-spacing) * 3);
+  font-size: var(--bz-external-links-font-size);
+  font-family: var(--bz-external-links-font-family);
 
   svg {
+    display: block;
     height: 1.1875rem;
   }
 
   a {
-    color: var(--color-on-surface-variant);
+    color: var(--bz-external-links-color);
     transition: color .1s ease-in-out;
 
     &:hover {
-      color: var(--color-primary-container);
+      color: var(--bz-external-links-color-hover);
     }
   }
 }

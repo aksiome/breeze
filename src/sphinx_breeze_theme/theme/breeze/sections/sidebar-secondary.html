@@ -7,7 +7,7 @@
 {% endset %}
 
 {%- if sidebar_content|trim and not remove_sidebar_secondary -%}
-<aside class="bz-sidebar-secondary bz-sidebar-drawer">
+<aside class="bz-sidebar-secondary" data-drawer="bz-sidebar-secondary">
   {{ sidebar_content }}
 </aside>
 {%- endif -%}

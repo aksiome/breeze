@@ -3,46 +3,48 @@
   position: relative;
   padding-bottom: 0.5rem;
   margin-bottom: -0.5rem;
+  font-size: var(--bz-dropdown-font-size);
+  font-family: var(--bz-dropdown-font-family);
 
   a {
-    color: var(--color-on-surface);
-    text-decoration: none;
     cursor: pointer;
+    text-decoration: none;
+    color: var(--bz-dropdown-color);
   }
 
   a:hover {
-    color: var(--color-primary);
-    background-color: var(--color-surface-variant);
+    color: var(--bz-dropdown-color-hover);
+    background-color: var(--bz-dropdown-background-color-hover);
   }
 
   li .current {
-    color: var(--color-primary);
     font-weight: 700;
+    color: var(--bz-dropdown-color-active);
   }
 
   li > * {
     display: block;
-    padding-block: calc(var(--spacing) * 1.5);
-    padding-inline: calc(var(--spacing) * 3);
-    border-radius: .5rem;
+    padding-block: calc(var(--bz-spacing) * 1.5);
+    padding-inline: calc(var(--bz-spacing) * 3);
+    border-radius: var(--bz-border-radius);
   }
 
   ul {
+    opacity: 0;
     width: max-content;
     position: absolute;
     margin-top: 0.5rem;
-    opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
-    border: 1px solid var(--color-outline);
-    background-color: var(--color-surface-container);
-    padding: calc(var(--spacing) * 2);
-    border-radius: .5rem;
+    border: 1px solid var(--bz-dropdown-border-color);
+    background-color: var(--bz-dropdown-background-color);
+    padding: calc(var(--bz-spacing) * 2);
+    border-radius: var(--bz-border-radius);
     box-shadow:
-      0 1px 1px var(--color-shadow),
-      0 2px 2px var(--color-shadow),
-      0 4px 4px var(--color-shadow),
-      0 8px 8px var(--color-shadow);
+      0 1px 1px var(--bz-color-shadow),
+      0 2px 2px var(--bz-color-shadow),
+      0 4px 4px var(--bz-color-shadow),
+      0 8px 8px var(--bz-color-shadow);
 
     &[aria-hidden="false"] {
       opacity: 1;

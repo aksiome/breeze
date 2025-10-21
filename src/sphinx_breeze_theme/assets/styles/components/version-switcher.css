@@ -2,28 +2,31 @@
   button {
     display: flex;
     cursor: pointer;
-    height: 1.75rem;
     align-items: center;
-    gap: calc(var(--spacing) * 1.5);
-    padding-inline: calc(var(--spacing) * 2.5);
-    color: var(--color-on-surface-variant);
-    background-color: var(--color-surface-container-variant);
-    border: 1px solid var(--color-outline-variant);
+    line-height: 1;
+    border-radius: var(--bz-border-radius);
+    padding-block: .375rem;
+    padding-inline: calc(var(--bz-spacing) * 2.5);
+    gap: calc(var(--bz-spacing) * 1.5);
+    color: var(--bz-version-switcher-color);
+    font-size: var(--bz-version-switcher-font-size);
+    font-family: var(--bz-version-switcher-font-family);
+    border: 1px solid var(--bz-version-switcher-border-color);
+    background-color: var(--bz-version-switcher-background-color);
     transition: border-color .1s ease-in-out;
-    border-radius: .5rem;
   }
 
   &:hover button {
-    border-color: var(--color-primary);
+    border-color: var(--bz-version-switcher-border-color-hover);
   }
 
   button::after {
     content: "";
     display: block;
-    background-color: currentColor;
-    mask-image: var(--icon-chevron);
+    width: .9rem;
+    height: .9rem;
     transform: rotate(90deg);
-    width: 1em;
-    height: 1em;
+    background-color: currentColor;
+    mask-image: var(--bz-icon-chevron);
   }
 }

@@ -1,14 +1,16 @@
 .bz-breadcrumb {
   font-weight: 400;
-  color: var(--color-on-surface);
+  font-size: var(--bz-breadcrumb-font-size);
+  font-family: var(--bz-breadcrumb-font-family);
+  color: var(--bz-breadcrumb-color);
 }
 
 .bz-breadcrumb a {
   font-weight: 300;
   text-decoration: none;
-  color: var(--color-on-surface-variant);
+  color: var(--bz-breadcrumb-link-color);
   &:hover {
-    color: var(--color-primary);
+    color: var(--bz-breadcrumb-link-color-hover);
   }
 }
 
@@ -32,17 +34,17 @@
   white-space: nowrap;
   flex-wrap: nowrap;
   align-items: center;
-  padding: calc(var(--spacing) * 2);
-  margin: calc(var(--spacing) * -2);
+  padding: calc(var(--bz-spacing) * 2);
+  margin: calc(var(--bz-spacing) * -2);
 }
 
 .bz-breadcrumb li:not(:last-child)::after {
-  display: block;
   content: "";
+  display: block;
   flex-shrink: 0;
-  background-color: color-mix(in oklab, var(--color-on-surface-variant) 50%, transparent);
-  mask-image: var(--icon-chevron);
   height: 1.125em;
   width: 1.125em;
+  background-color: var(--bz-breadcrumb-separator-color);
+  mask-image: var(--bz-breadcrumb-separator-icon);
   margin-bottom: -0.125em;
 }

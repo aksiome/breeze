@@ -1,13 +1,20 @@
+:root {
+  --copybtn-color: var(--bz-color-text);
+  --copybtn-border-color: var(--bz-color-outline);
+  --copybtn-background-color: var(--bz-color-surface-4);
+  --copybtn-background-color-hover: var(--bz-color-surface-2);
+}
+
 button.copybtn {
-  color: inherit;
-  border-color: var(--color-outline);
-  background-color: var(--color-surface-variant-bright);
-  top: calc(var(--spacing) * 1.5);
-  right: calc(var(--spacing) * 1.5);
+  color: var(--copybtn-color);
+  border-color: var(--copybtn-border-color);
+  background-color: var(--copybtn-background-color);
+  top: calc(var(--bz-spacing) * 1.5);
+  right: calc(var(--bz-spacing) * 1.5);
 }
 
 .highlight button.copybtn:hover {
-  background-color: var(--color-surface-variant);
+  background-color: var(--copybtn-background-color-hover);
 }
 
 .o-tooltip--left:focus-visible {
@@ -17,8 +24,9 @@ button.copybtn {
 
 .o-tooltip--left:after {
   top: 0;
-  translate: calc(var(--spacing) * -1);
-  color: var(--color-on-surface);
-  background-color: transparent;
-  padding-inline: calc(var(--spacing) * 2);
+  color: var(--bz-tooltip-color);
+  border-color: var(--bz-tooltip-border-color);
+  background-color: var(--bz-tooltip-background-color);
+  padding-inline: calc(var(--bz-spacing) * 2);
+  translate: calc(var(--bz-spacing) * -1);
 }

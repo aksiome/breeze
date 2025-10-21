@@ -1,43 +1,46 @@
 dl[class]:not(.option-list, .field-list, .footnote, .glossary, .simple) {
-  dt:first-child {
-    border-radius: 0.25rem 0.25rem 0 0;
-  }
-
-  dt.field-odd,
-  dt.field-even {
-    background-color: color-mix(in oklab, var(--color-surface-container-variant) 75%, transparent);
-    border-bottom: 1px solid var(--color-outline-variant);
-    padding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 3);
-    margin-bottom: calc(var(--spacing) * 2);
-    color: var(--color-on-surface-variant);
-    font-size: var(--size-xs);
-    text-transform: uppercase;
-  }
-
-  > dd, > dd > p {
-    padding-left: calc(var(--spacing) * 2);
-  }
-
-  dl:not(.field-list) {
-    padding-left: calc(var(--spacing) * 5);
-  }
-
   .sig + dd {
     clear: right;
   }
 
+  > dd, > dd > p {
+    padding-left: calc(var(--bz-spacing) * 2);
+  }
+
+  dl:not(.field-list) {
+    padding-left: calc(var(--bz-spacing) * 5);
+  }
+
   dl.field-list dd > ul {
-    margin-bottom: calc(var(--spacing) * 4);
+    margin-bottom: calc(var(--bz-spacing) * 4);
   }
 
   dl.field-list {
     display: block;
-    background-color: color-mix(in oklab, var(--color-surface-container-variant) 25%, transparent);
-    border: 1px solid var(--color-outline-variant);
+    border-radius: var(--bz-border-radius);
+    color: var(--bz-sig-table-color);
+    font-size: var(--bz-sig-table-font-size);
+    font-family: var(--bz-sig-table-font-family);
+    border: 1px solid var(--bz-sig-border-color);
+    background-color: var(--bz-sig-table-background-color);
     border-top: none;
-    border-radius: 0.5rem;
     > dd {
-      padding-inline: calc(var(--spacing) * 3);
+      padding-inline: calc(var(--bz-spacing) * 3);
+    }
+  }
+
+  dt.field-odd, dt.field-even {
+    text-transform: uppercase;
+    color: var(--bz-sig-table-head-color);
+    font-size: var(--bz-sig-table-head-font-size);
+    font-family: var(--bz-sig-table-head-font-family);
+    border-bottom: 1px solid var(--bz-sig-border-color);
+    background-color: var(--bz-sig-table-head-background-color);
+    padding: calc(var(--bz-spacing) * 1.5) calc(var(--bz-spacing) * 3);
+    margin-bottom: calc(var(--bz-spacing) * 2);
+
+    &:first-child {
+      border-radius: calc(var(--bz-border-radius) / 2) calc(var(--bz-border-radius) / 2) 0 0;
     }
   }
 }
@@ -46,7 +49,7 @@ dl[class]:not(.option-list, .field-list, .footnote, .glossary, .simple):not(
     dl[class]:not(.option-list, .field-list, .footnote, .glossary, .simple)
       dl[class]:not(.option-list, .field-list, .footnote, .glossary, .simple)
   ) {
-  margin-bottom: calc(var(--spacing) * 10);
+  margin-bottom: calc(var(--bz-spacing) * 10);
 }
 
 dl > dt > a:has(.viewcode-link) {
@@ -56,69 +59,67 @@ dl > dt > a:has(.viewcode-link) {
 
 .sig {
   display: block;
-  font-weight: 600;
-  font-family: var(--font-mono);
-  background-color: var(--color-surface-container);
-  border-radius: 0.5rem!important;
   overflow-y: auto;
-  border: 1px solid var(--color-outline-variant);
-  border-top: 8px solid color-mix(in oklab, var(--color-primary) 25%, transparent);
-  padding: calc(var(--spacing) * 1.5) calc(var(--spacing) * 2);
-  margin: calc(var(--spacing) * 5) 0 calc(var(--spacing) * 3);
+  border-radius: var(--bz-border-radius)!important;
+  color: var(--bz-sig-color);
+  font-size: var(--bz-sig-font-size);
+  font-family: var(--bz-sig-font-family);
+  font-weight: 600;
+  border: 1px solid var(--bz-sig-border-color);
+  background-color: var(--bz-sig-background-color);
+  border-top: 8px solid color-mix(in oklab, var(--bz-sig-accent-color) 25%, transparent);
+  padding: calc(var(--bz-spacing) * 1.5) calc(var(--bz-spacing) * 2);
+  margin: calc(var(--bz-spacing) * 5) 0 calc(var(--bz-spacing) * 3);
 }
 
 .sig-name {
-  font-size: 105%;
-  color: var(--color-on-code);
+  color: var(--bz-sig-name-color);
 }
 
 .sig .property {
-  color: var(--color-on-surface-variant);
+  color: var(--bz-sig-property-color);
 }
 
-.sig-param,
-.sig-return {
-  font-size: var(--size-sm);
+.sig-param, .sig-return {
+  font-size: .9em;
   font-style: normal;
 }
 
-.sig-param .o,
-.sig-return {
-  color: var(--color-on-surface-variant);
+.sig-param .o, .sig-return {
+  color: var(--bz-sig-type-color);
 }
 
 .sig-param .n {
-  color: var(--color-sig-param);
+  color: var(--bz-sig-param-color);
 }
 
 .sig-param .n:not(:first-of-type) {
   font-weight: normal;
-  color: var(--color-on-surface-variant);
+  color: var(--bz-sig-type-color);
 }
 
 .sig-param .default_value {
+  color: var(--bz-sig-default-color);
   font-weight: bold;
-  font-size: var(--size-xs);
-  color: var(--color-sig-default);
 }
 
 .sig dl {
-  padding-left: 0 !important;
   margin: 0;
+  padding-left: 0 !important;
 }
 
 .sig dl dd {
   padding-left: 0;
-}
 
-.sig dl dd::before {
-  content: "··";
-  color: var(--color-outline-variant);
-  margin-right: calc(var(--spacing) * 1);
+  &::before {
+    content: "··";
+    color: var(--bz-sig-space-color);
+    margin-right: calc(var(--bz-spacing) * 1);
+  }
 }
 
 .viewcode-block:target {
-  background-color: var(--color-target);
-  margin-inline: calc(var(--spacing) * -2);
-  padding-inline: calc(var(--spacing) * 2);
+  background-color: var(--bz-target-background-color);
+  margin-inline: calc(var(--bz-spacing) * -2);
+  padding-inline: calc(var(--bz-spacing) * 2);
 }

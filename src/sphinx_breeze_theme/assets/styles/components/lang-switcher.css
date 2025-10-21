@@ -3,31 +3,31 @@
     display: flex;
     cursor: pointer;
     align-items: center;
+    border-radius: var(--bz-border-radius);
     padding-inline: 0;
-    gap: calc(var(--spacing) * 1.5);
-    color: var(--color-on-surface-variant);
-    transition: color 0.1s ease-in-out;
-    border-radius: 0.5rem;
     background: none;
     border: none;
+    gap: calc(var(--bz-spacing) * 1.5);
+    color: var(--bz-lang-switcher-color);
+    transition: color 0.1s ease-in-out;
+
+    &::after {
+      content: "";
+      display: block;
+      width: .9rem;
+      height: .9rem;
+      transform: rotate(90deg);
+      background-color: currentColor;
+      mask-image: var(--bz-icon-chevron);
+    }
   }
 
   &:hover button {
-    color: var(--color-primary);
-  }
-
-  button::after {
-    content: "";
-    display: block;
-    background-color: currentColor;
-    mask-image: var(--icon-chevron);
-    transform: rotate(90deg);
-    width: 1em;
-    height: 1em;
+    color: var(--bz-lang-switcher-color-hover);
   }
 
   svg {
-    font-size: 1.15rem;
+    font-size: var(--bz-lang-switcher-font-size);
   }
 
   ul {

@@ -1,41 +1,45 @@
 .bz-sidebar-secondary {
-  display: block;
   position: fixed;
-  top: 0;
-  height: calc(100vh + 1px);
-  right: calc((var(--sidebar-primary-width) + var(--spacing) * 16) * -1);
-  width: calc(var(--sidebar-primary-width) + var(--spacing) * 16);
-  max-width: 80vw;
-  padding: calc(var(--spacing) * 8);
+  display: block;
   z-index: 10001;
-  overflow-y: auto;
+  visibility: hidden;
   scrollbar-width: thin;
   overflow-wrap: anywhere;
-  background-color: var(--color-surface-variant);
-  border-left: 1px solid var(--color-outline-variant);
+  overflow-y: auto;
+  max-width: 80vw;
+  top: 0;
+  right: calc((var(--bz-sidebar-primary-width) + var(--bz-spacing) * 16) * -1);
+  width: calc(var(--bz-sidebar-primary-width) + var(--bz-spacing) * 16);
+  height: calc(100vh + 1px);
+  padding: calc(var(--bz-spacing) * 8);
+  font-size: var(--bz-sidebar-secondary-font-size);
+  font-family: var(--bz-sidebar-secondary-font-family);
+  border-left: 1px solid var(--bz-sidebar-secondary-border-color);
+  background-color: var(--bz-sidebar-secondary-drawer-background-color);
   transition: right linear 0.2s, visibility linear 0.2s;
-  visibility: hidden;
 
   @media (width > 75rem) {
     position: sticky;
-    align-self: stretch;
-    height: auto;
-    max-height: calc(100vh - var(--header-height) - (var(--spacing) * 16));
-    width: var(--sidebar-secondary-width);
-    top: calc(var(--header-height) + (var(--spacing) * 8));
-    border-left: none;
-    padding: 0;
     z-index: auto;
-    background: none;
+    height: auto;
+    padding: 0;
     visibility: visible;
+    align-self: stretch;
+    max-height: calc(100vh - var(--bz-header-height) - (var(--bz-spacing) * 16));
+    width: var(--bz-sidebar-secondary-width);
+    top: calc(var(--bz-header-height) + (var(--bz-spacing) * 8));
+    border-left: none;
+    background: none;
 
     > * {
-      border-left: 1px solid var(--color-outline-variant);
-      padding-inline: calc(var(--spacing) * 8);
+      border-left: 1px solid var(--bz-sidebar-secondary-border-color);
+      padding-inline: calc(var(--bz-spacing) * 8);
+
       &:not(:last-child) {
-        padding-bottom: calc(var(--spacing) * 6);
+        padding-bottom: calc(var(--bz-spacing) * 6);
       }
     }
+
     > * > :first-child {
       margin-top: 0!important;
     }
@@ -48,12 +52,12 @@
 
 :has(#bz-sidebar-secondary:checked) {
   .bz-sidebar-secondary {
-    right: 0;
     visibility: visible;
+    right: 0;
   }
 
   .bz-overlay-secondary {
-    opacity: 1;
     visibility: visible;
+    opacity: 1;
   }
 }

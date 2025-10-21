@@ -1,45 +1,52 @@
 .bz-header-main {
   position: relative;
   display: flex;
+  z-index: 1001;
+  overflow-x: clip;
   align-items: center;
   justify-content: space-between;
-  height: var(--header-height);
-  background-color: var(--color-surface-variant);
-  padding-inline: calc(var(--page-width) + (var(--spacing) * 6));
-  overflow-x: clip;
-  z-index: 1001;
+  height: var(--bz-header-height);
+  color: var(--bz-header-color);
+  font-size: var(--bz-header-font-size);
+  font-family: var(--bz-header-font-family);
+  background-color: var(--bz-header-background-color);
+  padding-inline: calc(var(--bz-page-width) + (var(--bz-spacing) * 6));
+
+  > * {
+    display: flex;
+    align-items: center;
+    gap: calc(var(--bz-spacing) * 9);
+  }
 
   @media (width > 52rem) {
     position: sticky;
     top: 0;
   }
-
-  > * {
-    display: flex;
-    align-items: center;
-    gap: calc(var(--spacing) * 9);
-  }
 }
 
 .bz-header-end > :not(:first-child)::before {
   content: "";
-  background-color: var(--color-outline);
-  margin-left: calc(var(--spacing) * -4.5);
+  top: 50%;
   width: 1px;
   height: 1em;
   display: block;
   position: absolute;
-  top: 50%;
+  background-color: var(--bz-header-border-color);
+  margin-left: calc(var(--bz-spacing) * -4.5);
   transform: translateY(-50%);
+}
+
+.bz-header-end > .bz-dropdown::before {
+  margin-top: -0.25rem;
 }
 
 @media (width <= 36rem) {
   .bz-header-main {
-    flex-direction: column;
     height: auto;
-    gap: calc(var(--spacing) * 6);
-    padding: calc(var(--spacing) * 6);
-    background-color: var(--color-surface-variant-bright);
-    border-bottom: 1px solid var(--color-outline-variant);
+    flex-direction: column;
+    gap: calc(var(--bz-spacing) * 6);
+    padding: calc(var(--bz-spacing) * 6);
+    background-color: var(--bz-header-background-color-variant);
+    border-bottom: 1px solid var(--bz-header-border-color);
   }
 }

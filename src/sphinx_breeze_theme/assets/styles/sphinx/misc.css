@@ -1,23 +1,20 @@
-img,
-figure,
-object,
-.figure {
+img, figure, object, .figure {
   display: inline-block;
-  margin-block: calc(var(--spacing) * 1.5);
+  margin-block: calc(var(--bz-spacing) * 1.5);
+
   &.align-left {
     clear: left;
     float: left;
-    margin-right: calc(var(--spacing) * 4);
+    margin-right: calc(var(--bz-spacing) * 4);
   }
+
   &.align-right {
     clear: right;
     float: right;
-    margin-left: calc(var(--spacing) * 4);
+    margin-left: calc(var(--bz-spacing) * 4);
   }
-  img,
-  figure,
-  object,
-  .figure {
+
+  img, figure, object, .figure {
     margin-block: 0;
   }
 }
@@ -30,23 +27,25 @@ object,
 .guilabel {
   font-size: 0.8em;
   font-weight: 500;
-  border-radius: 0.25rem;
-  background-color: color-mix(in oklab, var(--color-info) 20%, transparent);
-  border: 1px solid var(--color-info);
-  padding: calc(var(--spacing) * 0.5) calc(var(--spacing) * 1.5);
+  border-radius: calc(var(--bz-border-radius) / 2);
+  color: var(--bz-guilabel-color);
+  border: 1px solid var(--bz-guilabel-border-color);
+  background-color: var(--bz-guilabel-background-color);
+  padding: calc(var(--bz-spacing) * 0.5) calc(var(--bz-spacing) * 1.5);
 }
 
 p.rubric {
-  font-size: var(--size-lg);
-  color: var(--color-on-surface-variant);
-  border-bottom: 1px solid var(--color-outline);
-  padding-block: calc(var(--spacing) * 2);
-  margin-top: calc(var(--spacing) * 6);
+  color: var(--bz-rubric-color);
+  font-size: var(--bz-rubric-font-size);
+  font-family: var(--bz-rubric-font-family);
+  border-bottom: 1px solid var(--bz-rubric-border-color);
+  padding-block: calc(var(--bz-spacing) * 2);
+  margin-top: calc(var(--bz-spacing) * 6);
 }
 
 a.reference.download::before {
   content: "";
-  mask-image: var(--icon-download);
+  mask-image: var(--bz-icon-download);
   background-color: currentColor;
   display: inline-block;
   vertical-align: middle;
@@ -55,7 +54,7 @@ a.reference.download::before {
 }
 
 span.highlighted {
-  background-color: var(--color-target);
+  background-color: var(--bz-target-background-color);
 }
 
 [type="button"]:not(:disabled),
