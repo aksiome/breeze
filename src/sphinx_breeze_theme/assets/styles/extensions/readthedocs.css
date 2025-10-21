@@ -1,42 +1,25 @@
 :root {
-  /* Global variables */
-  --readthedocs-font-size: ;
-
-  /* Flyout menu */
-  --readthedocs-flyout-background-color: ;
-  --readthedocs-flyout-color: ;
-  --readthedocs-flyout-current-version-color: ;
-  --readthedocs-flyout-font-family: ;
-  --readthedocs-flyout-font-size: ;
-  --readthedocs-flyout-header-font-size: ;
-  --readthedocs-flyout-item-link-color: ;
-  --readthedocs-flyout-link-color: ;
-  --readthedocs-flyout-section-heading-color: ;
-
-  /* Notifications */
-  --readthedocs-notification-background-color: ;
-  --readthedocs-notification-color: ;
-  --readthedocs-notification-font-family: ;
-  --readthedocs-notification-font-size: ;
-  --readthedocs-notification-link-color: ;
-  --readthedocs-notification-title-background-color: ;
-  --readthedocs-notification-title-color: ;
-  --readthedocs-notification-toast-font-size: ;
-
-  /* Search */
-  --readthedocs-search-backdrop-color: ;
-  --readthedocs-search-color: ;
-  --readthedocs-search-content-background-color: ;
-  --readthedocs-search-content-border-color: ;
-  --readthedocs-search-filters-border-color: ;
-  --readthedocs-search-font-family: ;
-  --readthedocs-search-font-size: ;
-  --readthedocs-search-footer-background-color: ;
-  --readthedocs-search-footer-code-background-color: ;
-  --readthedocs-search-footer-code-border-color: ;
-  --readthedocs-search-input-background-color: ;
-  --readthedocs-search-result-section-border-color: ;
-  --readthedocs-search-result-section-color: ;
-  --readthedocs-search-result-section-highlight-color: ;
-  --readthedocs-search-result-section-subheading-color: ;
+  --readthedocs-font-size: var(--bz-size-md);
+  --readthedocs-font-family: var(--bz-font-sans);
+  --readthedocs-flyout-background-color: oklch(0.24 0.014 265);
+  --readthedocs-search-color: var(--bz-color-text);
+  --readthedocs-search-link-color: var(--bz-color-muted);
+  --readthedocs-search-content-background-color: var(--bz-color-surface-3);
+  --readthedocs-search-content-border-color: var(--bz-color-outline);
+  --readthedocs-search-filters-border-color: var(--bz-color-outline);
+  --readthedocs-search-footer-color: var(--bz-color-muted);
+  --readthedocs-search-footer-background-color: var(--bz-color-surface-1);
+  --readthedocs-search-footer-code-background-color: var(--bz-color-surface-3);
+  --readthedocs-search-footer-code-border-color: var(--bz-color-outline);
+  --readthedocs-search-input-background-color: var(--bz-color-surface-1);
+  --readthedocs-search-input-border-color: var(--bz-color-outline);
+  --readthedocs-search-result-color: var(--bz-color-text);
+  --readthedocs-search-result-icon-color: var(--bz-color-muted);
+  --readthedocs-search-result-highlight-color: var(--bz-color-primary);
+  --readthedocs-search-result-border-color: var(--bz-color-outline);
+  --readthedocs-search-result-color: var(--bz-color-muted);
+  --readthedocs-search-result-highlight-color: var(--bz-color-muted);
+  --readthedocs-search-result-active-background-color: var(--bz-color-surface-5);
+  --readthedocs-search-result-subheading-color: var(--bz-color-muted);
+  --readthedocs-search-result-heading-color: var(--bz-color-muted);
 }
