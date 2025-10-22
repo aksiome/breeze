@@ -1,7 +1,7 @@
 :root {
   --readthedocs-font-size: var(--bz-size-md);
   --readthedocs-font-family: var(--bz-font-sans);
-  --readthedocs-flyout-background-color: oklch(0.24 0.014 265);
+  --readthedocs-flyout-background-color: oklch(0.3 0.02 265);
   --readthedocs-search-color: var(--bz-color-text);
   --readthedocs-search-link-color: var(--bz-color-muted);
   --readthedocs-search-content-background-color: var(--bz-color-surface-3);

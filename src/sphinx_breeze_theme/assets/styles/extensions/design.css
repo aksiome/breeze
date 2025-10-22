@@ -15,13 +15,13 @@
   --sd-color-danger-highlight: var(--bz-color-red-1);
   --sd-color-muted-highlight: var(--bz-color-gray-1);
 
-  --sd-color-primary-text: var(--bz-color-text);
-  --sd-color-secondary-text: var(--bz-color-text);
-  --sd-color-success-text: var(--bz-color-text);
-  --sd-color-info-text: var(--bz-color-text);
-  --sd-color-warning-text: var(--bz-color-text);
-  --sd-color-danger-text: var(--bz-color-text);
-  --sd-color-muted-text: var(--bz-color-text);
+  --sd-color-primary-text: var(--bz-color-white);
+  --sd-color-secondary-text: var(--bz-color-white);
+  --sd-color-success-text: var(--bz-color-white);
+  --sd-color-info-text: var(--bz-color-white);
+  --sd-color-warning-text: var(--bz-color-white);
+  --sd-color-danger-text: var(--bz-color-white);
+  --sd-color-muted-text: var(--bz-color-white);
 
   --sd-color-card-background: var(--bz-topic-background-color);
   --sd-color-card-border-hover: var(--bz-color-primary);
