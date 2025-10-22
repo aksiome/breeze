@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.2.3 (2025-10-22)
+
+### Bug Fixes
+
+- Wrong sphinx design text color
+  ([`9c4d2c0`](https://github.com/aksiome/breeze/commit/9c4d2c032179890417195ee9b485f5842ced64c4))
+
+
 ## v0.2.2 (2025-10-21)
 
 ### Bug Fixes
