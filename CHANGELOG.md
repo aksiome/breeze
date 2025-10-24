@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.3.0 (2025-10-24)
+
+### Features
+
+- Add option to strip emojis from titles
+  ([`1aaa449`](https://github.com/aksiome/breeze/commit/1aaa44960d937eb9b99f0131d39a2cdb1c70d943))
+
+
 ## v0.2.3 (2025-10-22)
 
 ### Bug Fixes
