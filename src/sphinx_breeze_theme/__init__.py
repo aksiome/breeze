@@ -80,6 +80,9 @@ def on_html_page_context(
     context["replace_emoji"] = replace_emoji
     context["wrap_emoji"] = utils.wrap_emoji
 
+    if context.get("theme_emojis_title", "").lower() != "true":
+        context["title"] = replace_emoji(context["title"])
+
     # Inject all the Read the Docs environment variables in the context:
     # https://docs.readthedocs.io/en/stable/reference/environment-variables.html
     context['READTHEDOCS'] = environ.get("READTHEDOCS", False) == "True"
