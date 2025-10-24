@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.3.1 (2025-10-24)
+
+### Bug Fixes
+
+- Page title emoji stripping
+  ([`9a7af9f`](https://github.com/aksiome/breeze/commit/9a7af9fa0018e6744f333a87d971e13cd160a2bd))
+
+
 ## v0.3.0 (2025-10-24)
 
 ### Features
