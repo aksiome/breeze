@@ -1,4 +1,6 @@
 <a class="bz-header-brand" href="{{ pathto(master_doc) }}">
+  {%- if logo_url -%}
   <img src="{{ logo_url }}" alt="Site Logo" />
+  {%- endif -%}
   <span>{{ docstitle if docstitle else project }}</span>
 </a>
