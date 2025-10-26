@@ -18,6 +18,10 @@
   background-color: var(--bz-sidebar-secondary-drawer-background-color);
   transition: right linear 0.2s, visibility linear 0.2s;
 
+  > *:not(:last-child) {
+    padding-bottom: calc(var(--bz-spacing) * 6);
+  }
+
   @media (width > 75rem) {
     position: sticky;
     z-index: auto;
@@ -34,10 +38,6 @@
     > * {
       border-left: 1px solid var(--bz-sidebar-secondary-border-color);
       padding-inline: calc(var(--bz-spacing) * 8);
-
-      &:not(:last-child) {
-        padding-bottom: calc(var(--bz-spacing) * 6);
-      }
     }
 
     > * > :first-child {
