@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.3.2 (2025-10-26)
+
+### Bug Fixes
+
+- Ensure main navigation collapses to a single toctree
+  ([`0585da7`](https://github.com/aksiome/breeze/commit/0585da7c3c0a05a3e8929fe36e795c710211b66c))
+
+
 ## v0.3.1 (2025-10-24)
 
 ### Bug Fixes
