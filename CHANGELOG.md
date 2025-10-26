@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.4.2 (2025-10-26)
+
+### Bug Fixes
+
+- Content min height when not using tabs
+  ([`a9c77ab`](https://github.com/aksiome/breeze/commit/a9c77abd492351ff76d05cff3bb3aa844c1ce4bb))
+
+
 ## v0.4.1 (2025-10-26)
 
 ### Bug Fixes
