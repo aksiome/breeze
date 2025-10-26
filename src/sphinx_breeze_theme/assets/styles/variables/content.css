@@ -100,6 +100,11 @@
   --bz-dropdown-font-size: inherit;
   --bz-dropdown-font-family: inherit;
 
+  --bz-edit-this-page-color: var(--bz-link-color);
+  --bz-edit-this-page-color-hover: var(--bz-link-color-hover);
+  --bz-edit-this-page-font-size: inherit;
+  --bz-edit-this-page-font-family: inherit;
+
   --bz-external-links-color: var(--bz-link-color);
   --bz-external-links-color-hover: var(--bz-link-color-hover);
   --bz-external-links-font-size: inherit;

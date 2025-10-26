@@ -38,6 +38,7 @@
 
 @import "./components/breadcrumb.css" layer(components);
 @import "./components/dropdown.css" layer(components);
+@import "./components/edit-this-page.css" layer(components);
 @import "./components/external-links.css" layer(components);
 @import "./components/footer-copyright.css" layer(components);
 @import "./components/header-brand.css" layer(components);

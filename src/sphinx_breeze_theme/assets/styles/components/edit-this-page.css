@@ -1,0 +1,11 @@
+.bz-edit-this-page a {
+  color: var(--bz-edit-this-page-color);
+  font-size: var(--bz-edit-this-page-font-size);
+  font-family: var(--bz-edit-this-page-font-family);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+
+  &:hover {
+    color: var(--bz-edit-this-page-color-hover);
+  }
+}
