@@ -1,3 +1,7 @@
+:root:not(:has(.bz-header-tabs)) {
+  --bz-header-tabs-height: 0rem;
+}
+
 .bz-content {
   min-height: calc(100vh - var(--bz-header-height) - var(--bz-header-tabs-height) - var(--bz-footer-height));
   padding-inline: calc(var(--bz-page-width) + (var(--bz-spacing) * 10));
