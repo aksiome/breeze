@@ -16,7 +16,7 @@ def create_custom_toctree(app: Sphinx, pagename: str) -> Callable[..., Optional[
     """Create a callable that generates a custom HTML toctree fragment for a given page."""
 
     @cache
-    def toctree(level: int = 1, **kwargs) -> str | None:
+    def toctree(level: int = 1, merge: bool = False, **kwargs) -> str | None:
         """Generate the toctree HTML fragment for the current page."""
         kwargs.setdefault("collapse", False)
         kwargs.setdefault("titles_only", True)
@@ -30,7 +30,11 @@ def create_custom_toctree(app: Sphinx, pagename: str) -> Callable[..., Optional[
         ):
             html = render_fragment(app.builder, toctree)
             # Add collapse controls unless the toctree is "collapsed"
-            return html if kwargs["collapse"] else add_collapse_controls(html)
+            if kwargs["collapse"]:
+                html = add_collapse_controls(html)
+            if merge:
+                html = merge_toctrees(html)
+            return html
 
     return toctree
 
@@ -72,6 +76,7 @@ def get_toctree_node(
     return result
 
 
+@cache
 def add_collapse_controls(toctree_html: str) -> str:
     """Enhance the toctree HTML with collapsible controls using <details> and <summary>."""
     soup = BeautifulSoup(toctree_html, "html.parser")
@@ -85,3 +90,16 @@ def add_collapse_controls(toctree_html: str) -> str:
         item.append(details)
 
     return str(soup)
+
+
+@cache
+def merge_toctrees(toctree_html: str) -> str:
+    """Merge all <ul> elements into one and remove captions."""
+    soup = BeautifulSoup(toctree_html, "html.parser")
+
+    merged_ul = soup.new_tag("ul")
+    for ul in soup.find_all("ul"):
+        for li in ul.find_all("li", recursive=False):
+            merged_ul.append(li.extract())
+
+    return str(merged_ul)

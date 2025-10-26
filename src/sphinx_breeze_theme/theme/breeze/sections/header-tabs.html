@@ -16,9 +16,11 @@
       />
     </svg>
   </label>
-  {%- if theme_emojis_header_nav | tobool -%} {{
-  wrap_emoji(toctree(maxdepth=1,level=0)) }} {%- else -%} {{
-  replace_emoji(toctree(maxdepth=1,level=0)) }} {%- endif -%}
+  {%- if theme_emojis_header_nav | tobool -%}
+    {{ wrap_emoji(toctree(maxdepth=1,level=0,merge=True)) }}
+  {%- else -%}
+    {{ replace_emoji(toctree(maxdepth=1,level=0,merge=True)) }}
+  {%- endif -%}
   <div class="bz-dropdown">
     <button aria-haspopup="true" aria-expanded="false">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
