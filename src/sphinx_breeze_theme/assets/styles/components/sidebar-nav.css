@@ -2,6 +2,10 @@
   font-size: var(--bz-sidebar-nav-font-size);
   font-family: var(--bz-sidebar-nav-font-family);
 
+  > :first-child {
+    margin-top: 0;
+  }
+
   > p {
     display: flex;
     align-items: center;
@@ -13,10 +17,6 @@
     color: var(--bz-sidebar-nav-caption-color);
     font-size: var(--bz-sidebar-nav-caption-font-size);
     font-family: var(--bz-sidebar-nav-caption-font-family);
-
-    &:first-of-type {
-      margin-top: 0;
-    }
   }
 
   ul ul {

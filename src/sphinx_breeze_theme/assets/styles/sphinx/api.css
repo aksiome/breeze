@@ -57,7 +57,7 @@ dl > dt > a:has(.viewcode-link) {
   float: right;
 }
 
-.sig {
+dt.sig {
   display: block;
   overflow-y: auto;
   border-radius: var(--bz-border-radius)!important;
@@ -70,6 +70,21 @@ dl > dt > a:has(.viewcode-link) {
   border-top: 8px solid color-mix(in oklab, var(--bz-sig-accent-color) 25%, transparent);
   padding: calc(var(--bz-spacing) * 1.5) calc(var(--bz-spacing) * 2);
   margin: calc(var(--bz-spacing) * 5) 0 calc(var(--bz-spacing) * 3);
+
+  dl {
+    margin: 0;
+    padding-left: 0 !important;
+  }
+
+  dl dd {
+    padding-left: 0;
+
+    &::before {
+      content: "··";
+      color: var(--bz-sig-space-color);
+      margin-right: calc(var(--bz-spacing) * 1);
+    }
+  }
 }
 
 .sig-name {
@@ -101,21 +116,6 @@ dl > dt > a:has(.viewcode-link) {
 .sig-param .default_value {
   color: var(--bz-sig-default-color);
   font-weight: bold;
-}
-
-.sig dl {
-  margin: 0;
-  padding-left: 0 !important;
-}
-
-.sig dl dd {
-  padding-left: 0;
-
-  &::before {
-    content: "··";
-    color: var(--bz-sig-space-color);
-    margin-right: calc(var(--bz-spacing) * 1);
-  }
 }
 
 .viewcode-block:target {
