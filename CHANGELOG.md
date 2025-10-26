@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.4.1 (2025-10-26)
+
+### Bug Fixes
+
+- Small style issues (api, sidebar, and header without tabs)
+  ([`150d7c9`](https://github.com/aksiome/breeze/commit/150d7c9fa4cb3685ce710a7e313886b30cb2937f))
+
+
 ## v0.4.0 (2025-10-26)
 
 ### Bug Fixes
