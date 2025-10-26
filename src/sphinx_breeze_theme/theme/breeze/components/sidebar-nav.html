@@ -1,4 +1,9 @@
-{%- set content = toctree(maxdepth=-1) -%}
+{%- if theme_header_tabs | tobool -%}
+{%- set content = toctree(level=1) -%}
+{%- else -%}
+{%- set content = toctree(level=0) -%}
+{%- endif -%}
+
 {%- if content -%}
 <nav class="bz-sidebar-nav" aria-label="Section Navigation">
   {%- if theme_emojis_sidebar_nav | tobool -%}

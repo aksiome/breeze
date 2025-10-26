@@ -16,7 +16,7 @@ def create_custom_toctree(app: Sphinx, pagename: str) -> Callable[..., Optional[
     """Create a callable that generates a custom HTML toctree fragment for a given page."""
 
     @cache
-    def toctree(level: int = 1, merge: bool = False, **kwargs) -> str | None:
+    def toctree(level: int = 0, merge: bool = False, **kwargs) -> str | None:
         """Generate the toctree HTML fragment for the current page."""
         kwargs.setdefault("collapse", False)
         kwargs.setdefault("titles_only", True)
@@ -29,12 +29,11 @@ def create_custom_toctree(app: Sphinx, pagename: str) -> Callable[..., Optional[
             **kwargs,
         ):
             html = render_fragment(app.builder, toctree)
-            # Add collapse controls unless the toctree is "collapsed"
-            if kwargs["collapse"]:
-                html = add_collapse_controls(html)
+
             if merge:
-                html = merge_toctrees(html)
-            return html
+                return merge_toctrees(html)
+            # Add collapse controls unless the toctree is "collapsed"
+            return html if kwargs["collapse"] else add_collapse_controls(html)
 
     return toctree
 

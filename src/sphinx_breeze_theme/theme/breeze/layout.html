@@ -38,7 +38,9 @@
   </div>
   {%- include "sections/announcement.html" -%}
   {%- include "sections/header-main.html" -%}
-  {%- include "sections/header-tabs.html" -%}
+  {%- if theme_header_tabs | tobool -%}
+    {%- include "sections/header-tabs.html" -%}
+  {%- endif -%}
 {%- endblock header -%}
 
 {%- block content -%}
