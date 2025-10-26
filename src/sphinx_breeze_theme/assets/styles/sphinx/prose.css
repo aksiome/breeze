@@ -59,6 +59,11 @@ main a {
   }
 }
 
+pre {
+  overflow: auto;
+  line-height: 1.35;
+}
+
 code, kbd:not(.compound) {
   border-radius: calc(var(--bz-border-radius) / 2);
   padding: calc(var(--bz-spacing) * 0.25) calc(var(--bz-spacing) * 1.5);
