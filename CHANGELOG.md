@@ -2,6 +2,28 @@
 
 <!-- version list -->
 
+## v0.4.0 (2025-10-26)
+
+### Bug Fixes
+
+- Margin below components in mobile secondary sidebar
+  ([`5dbc211`](https://github.com/aksiome/breeze/commit/5dbc21198f7193813754d74a91930ac75c8431db))
+
+- Remove logo img if logo is missing
+  ([`0113afd`](https://github.com/aksiome/breeze/commit/0113afdd5036840c843d10d42ff864f8455a5043))
+
+- Vanilla pre style
+  ([`555aed8`](https://github.com/aksiome/breeze/commit/555aed897b1fc68e2af6bae0f3851c318cb65819))
+
+### Features
+
+- Add a header tabs option to put the whole toctree in the sidebar
+  ([`46fc604`](https://github.com/aksiome/breeze/commit/46fc604c632c7782c096db555d77d55533c9b2bb))
+
+- Style the edit this page component
+  ([`052a62c`](https://github.com/aksiome/breeze/commit/052a62ccce142c26a6addd563daebdc2d7db1089))
+
+
 ## v0.3.2 (2025-10-26)
 
 ### Bug Fixes
