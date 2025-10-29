@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.5.0 (2025-10-29)
+
+### Features
+
+- Support lower sphinx and python versions ([#13](https://github.com/aksiome/breeze/pull/13),
+  [`143094b`](https://github.com/aksiome/breeze/commit/143094b2fd665032ffbf60a2509ddf4822e3a852))
+
+
 ## v0.4.2 (2025-10-26)
 
 ### Bug Fixes
