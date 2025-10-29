@@ -113,7 +113,7 @@
   --bz-header-brand-color: var(--bz-header-color);
   --bz-header-brand-color-hover: var(--bz-link-color-hover);
   --bz-header-brand-font-size: 1.75rem;
-  --bz-header-brand-font-family: var(--bz-font-brand);
+  --bz-header-brand-font-family: sans-serif;
 
   --bz-lang-switcher-color: var(--bz-link-color);
   --bz-lang-switcher-color-hover: var(--bz-link-color-hover);
@@ -136,7 +136,7 @@
   --bz-search-button-kbd-border-color: var(--bz-color-outline);
   --bz-search-button-kbd-background-color: var(--bz-color-surface-2);
   --bz-search-button-kbd-font-family: var(--bz-font-mono);
-  --bz-search-button-font-size: inherit;
+  --bz-search-button-font-size: 1rem;
   --bz-search-button-font-family: inherit;
 
   --bz-sidebar-nav-color: var(--bz-color-text);

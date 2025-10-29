@@ -3,13 +3,13 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    border-radius: var(--bz-border-radius-full);
-    gap: calc(var(--bz-spacing) * 1.5);
+    gap: 0.35rem;
     padding-block: .2rem;
     color: var(--bz-search-button-color);
-    font-size: calc(var(--bz-search-button-font-size) + .2rem);
+    font-size: var(--bz-search-button-font-size);
     font-family: var(--bz-search-button-font-family);
     border: 0 solid var(--bz-search-button-border-color);
+    border-radius: var(--bz-border-radius-full);
 
     &:hover {
       border-color: var(--bz-search-button-border-color-hover);
@@ -28,7 +28,7 @@
     font-family: var(--bz-search-button-kbd-font-family);
     border: 1px solid var(--bz-search-button-kbd-border-color);
     background-color: var(--bz-search-button-kbd-background-color);
-    padding-inline: calc(var(--bz-spacing) * 1.5);
+    padding-inline: .3rem;
     border-bottom-width: 3px;
     border-right-width: 2px;
     border-radius: calc(var(--bz-border-radius) / 2);
@@ -39,10 +39,9 @@
   @media (width > 48rem) {
     a {
       border-width: 1px;
-      font-size: var(--bz-search-button-font-size);
       background-color: var(--bz-search-button-background-color);
       transition: border-color 0.1s ease-in-out;
-      padding-inline: calc(var(--bz-spacing) * 3);
+      padding-inline: 0.6rem;
     }
 
     span, kbd {

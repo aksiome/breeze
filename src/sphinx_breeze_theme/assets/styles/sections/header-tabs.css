@@ -4,14 +4,14 @@
   z-index: 1000;
   top: 0;
   align-items: center;
-  gap: calc(var(--bz-spacing) * 1.5);
+  gap: .25rem;
   height: var(--bz-header-tabs-height);
   color: var(--bz-header-tabs-color);
   font-size: var(--bz-header-font-size);
   font-family: var(--bz-header-font-family);
   background-color: var(--bz-header-background-color);
   border-bottom: 1px solid var(--bz-header-border-color);
-  padding-inline: calc(var(--bz-page-width) + (var(--bz-spacing) * 5));
+  padding-inline: calc(var(--bz-page-width) + clamp(0.75rem, 0.489rem + 1.304vw, 1.5rem));
   box-shadow:
     0 1px 1px var(--bz-color-shadow),
     0 2px 2px var(--bz-color-shadow),
@@ -33,14 +33,13 @@
     flex-wrap: nowrap;
     overflow-x: auto;
     white-space: nowrap;
-    gap: calc(var(--bz-spacing) * 1.5);
-    padding-inline: calc(var(--bz-spacing) * 1.5);
+    gap: .3rem;
   }
 
   a {
     color: inherit;
-    padding-inline: calc(var(--bz-spacing) * 2.5);
-    padding-block: calc(var(--bz-spacing) * 1);
+    padding-inline: .5rem;
+    padding-block: .25rem;
     transition: background 0.15s ease-in-out;
     border-radius: var(--bz-border-radius);
     text-decoration: none;
@@ -101,9 +100,8 @@
 .bz-sidebar-primary-toggle {
   display: none;
   cursor: pointer;
-  font-size: 1.125rem;
-  padding-inline: calc(var(--bz-spacing) * 2.5);
-  padding-block: calc(var(--bz-spacing) * 1);
+  font-size: 1.25rem;
+  padding: .25rem;
 
   svg {
     display: block;

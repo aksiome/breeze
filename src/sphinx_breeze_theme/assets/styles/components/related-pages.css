@@ -13,7 +13,7 @@
   text-decoration: none;
   grid-template-columns: auto 1fr;
   color: var(--bz-related-pages-label-color);
-  column-gap: calc(var(--bz-spacing) * 4);
+  column-gap: clamp(0.75rem, 0.663rem + 0.435vw, 1rem);
 }
 
 .bz-related-pages a::before {

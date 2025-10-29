@@ -4,15 +4,15 @@
     cursor: pointer;
     align-items: center;
     line-height: 1;
-    border-radius: var(--bz-border-radius);
+    gap: .35rem;
     padding-block: .375rem;
-    padding-inline: calc(var(--bz-spacing) * 2.5);
-    gap: calc(var(--bz-spacing) * 1.5);
+    padding-inline: .5rem;
     color: var(--bz-version-switcher-color);
     font-size: var(--bz-version-switcher-font-size);
     font-family: var(--bz-version-switcher-font-family);
-    border: 1px solid var(--bz-version-switcher-border-color);
     background-color: var(--bz-version-switcher-background-color);
+    border: 1px solid var(--bz-version-switcher-border-color);
+    border-radius: var(--bz-border-radius);
     transition: border-color .1s ease-in-out;
   }
 
