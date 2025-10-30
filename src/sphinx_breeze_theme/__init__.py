@@ -18,7 +18,7 @@ THEME_PATH = (Path(__file__).parent / "theme" / "breeze").resolve()
 
 def setup(app: Sphinx) -> dict[str, Any]:
     """Entry point for sphinx theming."""
-    app.require_sphinx("8.2")
+    app.require_sphinx("8.0")
 
     app.setup_extension("sphinxext.opengraph")
 
