@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.5.2 (2025-10-30)
+
+### Bug Fixes
+
+- Build with lower sphinx versions
+  ([`4cd5b6b`](https://github.com/aksiome/breeze/commit/4cd5b6b053e9526fef6fe24e9f9cddfcb91e2ade))
+
+
 ## v0.5.1 (2025-10-30)
 
 ### Bug Fixes
