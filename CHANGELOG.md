@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.5.1 (2025-10-30)
+
+### Bug Fixes
+
+- Improve layout and components spacing ([#14](https://github.com/aksiome/breeze/pull/14),
+  [`adbd94a`](https://github.com/aksiome/breeze/commit/adbd94a9b017145fc602f86676295c83061b77e1))
+
+
 ## v0.5.0 (2025-10-29)
 
 ### Features
