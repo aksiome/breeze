@@ -9,8 +9,8 @@ button.copybtn {
   color: var(--copybtn-color);
   border-color: var(--copybtn-border-color);
   background-color: var(--copybtn-background-color);
-  top: calc(var(--bz-spacing) * 1.5);
-  right: calc(var(--bz-spacing) * 1.5);
+  top: .5rem;
+  right: .5rem;
 }
 
 .highlight button.copybtn:hover {
@@ -27,6 +27,6 @@ button.copybtn {
   color: var(--bz-tooltip-color);
   border-color: var(--bz-tooltip-border-color);
   background-color: var(--bz-tooltip-background-color);
-  padding-inline: calc(var(--bz-spacing) * 2);
-  translate: calc(var(--bz-spacing) * -1);
+  padding-inline: .5rem;
+  translate: -.25rem;
 }

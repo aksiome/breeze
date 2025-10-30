@@ -1,7 +1,7 @@
 div.container.table {
   overflow-x: auto;
-  margin-top: calc(var(--bz-spacing) * 3);
-  margin-bottom: calc(var(--bz-spacing) * 6);
+  margin-top: .75rem;
+  margin-bottom: 1.5rem;
 }
 
 table.docutils {
@@ -25,7 +25,7 @@ table.docutils :is(thead, tbody) {
 table.docutils :is(th, td) {
   border-bottom: 1px solid var(--bz-table-border-color);
   border-right: 1px solid var(--bz-table-border-color);
-  padding: calc(var(--bz-spacing) * 2.5);
+  padding: .5rem .625rem;
 
   :first-child {
     margin-top: 0;
@@ -100,7 +100,7 @@ table.docutils caption {
   color: var(--bz-table-caption-color);
   font-size: var(--bz-table-caption-font-size);
   font-family: var(--bz-table-caption-font-family);
-  padding: calc(var(--bz-spacing) * 2.5);
+  padding: .5rem .625rem;
 }
 
 table.docutils :where(figure, img, video) {

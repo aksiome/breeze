@@ -3,10 +3,10 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  column-gap: calc(var(--bz-spacing) * 6);
+  column-gap: 1.5rem;
   min-height: var(--bz-footer-height);
-  padding-block: calc(var(--bz-spacing) * 2);
-  padding-inline: calc(var(--bz-page-width) + (var(--bz-spacing) * 10));
+  padding-block: .5rem;
+  padding-inline: calc(var(--bz-page-width) + clamp(1.25rem, 1rem + 1.25vw, 2rem));
   color: var(--bz-footer-color);
   font-size: var(--bz-footer-font-size);
   font-family: var(--bz-footer-font-family);
@@ -14,7 +14,7 @@
   border-top: 1px solid var(--bz-footer-border-color);
 
   > * {
-    margin-block: calc(var(--bz-spacing) * 2);
+    margin-block: .5rem;
   }
 
   a {

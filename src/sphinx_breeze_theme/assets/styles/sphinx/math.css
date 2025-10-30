@@ -10,12 +10,12 @@ span.math {
 div.math {
   display: flex;
   flex-direction: row-reverse;
-  gap: calc(var(--bz-spacing) * 6);
+  gap: 1.5rem;
 
   mjx-container {
     flex-grow: 1;
     overflow: auto;
-    padding: calc(var(--bz-spacing) * 2);
+    padding: .5rem;
   }
 
   mjx-assistive-mml {

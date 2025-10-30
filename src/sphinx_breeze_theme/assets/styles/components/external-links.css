@@ -2,7 +2,7 @@
   display: flex;
   position: relative;
   align-items: center;
-  gap: calc(var(--bz-spacing) * 3);
+  gap: clamp(0.5rem, 0.413rem + 0.435vw, 0.75rem);
   font-size: var(--bz-external-links-font-size);
   font-family: var(--bz-external-links-font-family);
 

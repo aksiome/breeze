@@ -1,7 +1,7 @@
 figure {
   display: flex;
   flex-flow: column;
-  gap: calc(var(--bz-spacing) * 2);
+  gap: .5rem;
 }
 
 figure > a,

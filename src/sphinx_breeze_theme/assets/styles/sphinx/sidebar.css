@@ -4,20 +4,20 @@ div.sidebar, aside.sidebar {
   color: var(--bz-sidebar-color);
   border: 1px solid var(--bz-sidebar-border-color);
   background-color: var(--bz-sidebar-background-color);
-  margin-bottom: calc(var(--bz-spacing) * 6);
+  margin-bottom: 1.5rem;
 
   @media (width > 36rem) {
     width: 33.33%;
     float: right;
     clear: right;
-    margin-left: calc(var(--bz-spacing) * 6);
+    margin-left: 1.5rem;
   }
 
   > * {
-    padding-inline: calc(var(--bz-spacing) * 4);
+    padding-inline: 1rem;
 
     &:is(dl, ol, ul) {
-      padding-inline-start: calc(var(--bz-spacing) * 4 + 1rem);
+      padding-inline-start: 2rem;
     }
   }
 }
@@ -38,7 +38,7 @@ p.sidebar-title {
   font-family: var(--bz-sidebar-title-font-family);
   background-color: var(--bz-sidebar-title-background-color);
   border-bottom: 1px solid var(--bz-sidebar-border-color);
-  padding-block: calc(var(--bz-spacing) * 2);
+  padding-block: .5rem;
 }
 
 p.sidebar-subtitle {

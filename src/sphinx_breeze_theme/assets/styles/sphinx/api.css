@@ -4,15 +4,15 @@ dl[class]:not(.option-list, .field-list, .footnote, .glossary, .simple) {
   }
 
   > dd, > dd > p {
-    padding-left: calc(var(--bz-spacing) * 2);
+    padding-left: clamp(0.35rem, 0.3rem + 0.25vw, 0.5rem);
   }
 
   dl:not(.field-list) {
-    padding-left: calc(var(--bz-spacing) * 5);
+    padding-left: clamp(0.5rem, 0.25rem + 1.25vw, 1.25rem);
   }
 
   dl.field-list dd > ul {
-    margin-bottom: calc(var(--bz-spacing) * 4);
+    margin-bottom: 1rem;
   }
 
   dl.field-list {
@@ -25,7 +25,7 @@ dl[class]:not(.option-list, .field-list, .footnote, .glossary, .simple) {
     background-color: var(--bz-sig-table-background-color);
     border-top: none;
     > dd {
-      padding-inline: calc(var(--bz-spacing) * 3);
+      padding-inline: .75rem;
     }
   }
 
@@ -36,11 +36,11 @@ dl[class]:not(.option-list, .field-list, .footnote, .glossary, .simple) {
     font-family: var(--bz-sig-table-head-font-family);
     border-bottom: 1px solid var(--bz-sig-border-color);
     background-color: var(--bz-sig-table-head-background-color);
-    padding: calc(var(--bz-spacing) * 1.5) calc(var(--bz-spacing) * 3);
-    margin-bottom: calc(var(--bz-spacing) * 2);
+    padding: .35rem .7rem;
+    margin-bottom: .5rem;
 
     &:first-child {
-      border-radius: calc(var(--bz-border-radius) / 2) calc(var(--bz-border-radius) / 2) 0 0;
+      border-radius: calc(var(--bz-border-radius) * 0.5) calc(var(--bz-border-radius) * 0.5) 0 0;
     }
   }
 }
@@ -49,7 +49,7 @@ dl[class]:not(.option-list, .field-list, .footnote, .glossary, .simple):not(
     dl[class]:not(.option-list, .field-list, .footnote, .glossary, .simple)
       dl[class]:not(.option-list, .field-list, .footnote, .glossary, .simple)
   ) {
-  margin-bottom: calc(var(--bz-spacing) * 10);
+  margin-bottom: 2.5rem;
 }
 
 dl > dt > a:has(.viewcode-link) {
@@ -68,8 +68,8 @@ dt.sig {
   border: 1px solid var(--bz-sig-border-color);
   background-color: var(--bz-sig-background-color);
   border-top: 8px solid color-mix(in oklab, var(--bz-sig-accent-color) 25%, transparent);
-  padding: calc(var(--bz-spacing) * 1.5) calc(var(--bz-spacing) * 2);
-  margin: calc(var(--bz-spacing) * 5) 0 calc(var(--bz-spacing) * 3);
+  padding: .25rem .5rem;
+  margin: 1.25rem 0 .75rem;
 
   dl {
     margin: 0;
@@ -82,7 +82,7 @@ dt.sig {
     &::before {
       content: "··";
       color: var(--bz-sig-space-color);
-      margin-right: calc(var(--bz-spacing) * 1);
+      margin-right: .25rem;
     }
   }
 }
@@ -120,6 +120,6 @@ dt.sig {
 
 .viewcode-block:target {
   background-color: var(--bz-target-background-color);
-  margin-inline: calc(var(--bz-spacing) * -2);
-  padding-inline: calc(var(--bz-spacing) * 2);
+  margin-inline: -.5rem;
+  padding-inline: .5rem;
 }

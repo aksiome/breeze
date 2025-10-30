@@ -34,8 +34,8 @@
   white-space: nowrap;
   flex-wrap: nowrap;
   align-items: center;
-  padding: calc(var(--bz-spacing) * 2);
-  margin: calc(var(--bz-spacing) * -2);
+  padding: .5rem;
+  margin: -.5rem;
 }
 
 .bz-breadcrumb li:not(:last-child)::after {

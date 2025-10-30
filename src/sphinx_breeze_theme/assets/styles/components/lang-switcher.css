@@ -7,8 +7,9 @@
     padding-inline: 0;
     background: none;
     border: none;
-    gap: calc(var(--bz-spacing) * 1.5);
+    gap: 0.25rem;
     color: var(--bz-lang-switcher-color);
+    font-size: var(--bz-lang-switcher-font-size);
     transition: color 0.1s ease-in-out;
 
     &::after {
@@ -24,10 +25,6 @@
 
   &:hover button {
     color: var(--bz-lang-switcher-color-hover);
-  }
-
-  svg {
-    font-size: var(--bz-lang-switcher-font-size);
   }
 
   ul {

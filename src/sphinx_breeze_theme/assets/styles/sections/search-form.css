@@ -9,7 +9,7 @@
     color: var(--bz-search-form-input-color);
     border: 1px solid var(--bz-search-form-input-border-color);
     background-color: var(--bz-search-form-input-background-color);
-    padding: calc(var(--bz-spacing) * 1.5) calc(var(--bz-spacing) * 3);
+    padding: .35rem .7rem;
 
     &:focus {
       outline: 1px solid var(--bz-search-form-input-border-color-focus);
@@ -18,8 +18,8 @@
 
   button {
     position: absolute;
-    top: calc(var(--bz-spacing) * 1.25);
-    right: calc(var(--bz-spacing) * 1.25);
+    top: .275rem;
+    right: .275rem;
     color: var(--bz-search-form-button-color);
     font-size: var(--bz-search-form-button-font-size);
     font-family: var(--bz-search-form-button-font-family);

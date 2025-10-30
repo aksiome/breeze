@@ -17,6 +17,7 @@
 
 .sized {
   height: 1em;
+  font-size: inherit;
   vertical-align: middle;
 }
 
@@ -70,6 +71,8 @@ object.align-center,
     top: 125%;
     left: 50%;
     opacity: 0;
+    padding-block: 0.35rem;
+    padding-inline: 0.65rem;
     border-radius: var(--bz-border-radius);
     transform: translateX(-50%);
     translate: 0 -1000vh;
@@ -78,8 +81,6 @@ object.align-center,
     font-family: var(--bz-tooltip-font-family);
     border: 1px solid var(--bz-tooltip-border-color);
     background: var(--bz-tooltip-background-color);
-    padding-block: calc(var(--bz-spacing) * 1.5);
-    padding-inline: calc(var(--bz-spacing) * 2.5);
     transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
     pointer-events: none;
     white-space: nowrap;

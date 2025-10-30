@@ -10,5 +10,5 @@ aside.footnote > :not(span) {
 aside.footnote > span {
   float: left;
   font-weight: 600;
-  padding-right: var(--bz-spacing);
+  padding-right: .25rem;
 }

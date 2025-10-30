@@ -13,7 +13,7 @@
 }
 
 #search-results ul.search > li {
-  padding-block: calc(var(--bz-spacing) * 4);
+  padding-block: 1rem;
 }
 
 #search-results ul.search > li + li {
@@ -31,5 +31,5 @@
 }
 
 #search-results ul.search p.context {
-  margin-block: calc(var(--bz-spacing) * 2);
+  margin-block: .5rem;
 }

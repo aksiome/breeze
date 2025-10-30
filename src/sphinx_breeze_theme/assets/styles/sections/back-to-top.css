@@ -16,9 +16,8 @@
   border: 1px solid var(--bz-back-to-top-border-color);
   box-shadow: 0 .125rem .25rem 0 oklab(0% 0 0/.2);
   transition: background .15s ease-in-out, color .15s ease-in-out, bottom .25s ease-in-out;
-  padding-inline: calc(var(--bz-spacing) * 4) calc(var(--bz-spacing) * 5);
-  padding-block: calc(var(--bz-spacing) * 2.5);
-  gap: calc(var(--bz-spacing) * 1.5);
+  padding: .5rem 1.25rem .5rem 1rem;
+  gap: .35rem;
 
   &:hover {
     color: var(--bz-back-to-top-color-hover);

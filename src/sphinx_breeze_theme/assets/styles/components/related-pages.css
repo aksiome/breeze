@@ -1,5 +1,6 @@
 .bz-related-pages {
   display: flex;
+  gap: 1rem;
   justify-content: space-between;
   font-size: var(--bz-related-pages-font-size);
   font-family: var(--bz-related-pages-font-family);
@@ -7,13 +8,14 @@
 
 .bz-related-pages a {
   display: grid;
+  min-width: 6rem;
   align-self: center;
   align-items: center;
   font-weight: normal;
   text-decoration: none;
   grid-template-columns: auto 1fr;
   color: var(--bz-related-pages-label-color);
-  column-gap: calc(var(--bz-spacing) * 4);
+  column-gap: clamp(0.75rem, 0.663rem + 0.435vw, 1rem);
 }
 
 .bz-related-pages a::before {

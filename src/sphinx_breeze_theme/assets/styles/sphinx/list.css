@@ -1,7 +1,7 @@
 article {
   dl, ol, ul {
-    margin-top: calc(var(--bz-spacing) * 3);
-    margin-bottom: calc(var(--bz-spacing) * 6);
+    margin-top: .75rem;
+    margin-bottom: 1.5rem;
   }
 
   ul, ol {
@@ -9,9 +9,9 @@ article {
   }
 
   :is(ul, ol) :is(ul, ol) {
-    margin-top: calc(var(--bz-spacing) * 1);
-    margin-bottom: calc(var(--bz-spacing) * 2);
-    padding-inline-start: calc(var(--bz-spacing) * 5);
+    margin-top: .25rem;
+    margin-bottom: .5rem;
+    padding-inline-start: 1.25rem;
   }
 
   ul {
@@ -27,7 +27,7 @@ article {
   }
 
   li {
-    padding-left: calc(var(--bz-spacing) * 0.5);
+    padding-left: .125rem;
   }
 
   li::marker {
@@ -38,15 +38,16 @@ article {
 
   li > p {
     line-height: 1.4;
-    margin-top: calc(var(--bz-spacing) * 1.5);
+    margin-top: .5rem;
+    margin-bottom: .75rem;
   }
 
   li > p:last-child {
-    margin-top: calc(var(--bz-spacing) * 1);
+    margin-top: .25rem;
   }
 
   li > p:first-child {
-    margin-block: calc(var(--bz-spacing) * 1);
+    margin-block: .25rem;
   }
 
   ol.arabic {
@@ -73,35 +74,35 @@ article {
     font-weight: 500;
 
     &:has(kbd) {
-      padding-bottom: calc(var(--bz-spacing) * 0.5);
+      padding-bottom: .125rem;
     }
   }
 
   dd {
-    padding-left: calc(var(--bz-spacing) * 6);
+    padding-left: 1.5rem;
   }
 
   dd > p {
     line-height: 1.4;
-    margin-block: calc(var(--bz-spacing) * 2);
+    margin-block: .5rem;
   }
 
   dd > :first-child {
-    margin-top: calc(var(--bz-spacing) * 1);
+    margin-top: .25rem;
   }
 
   dd > :last-child {
-    margin-bottom: calc(var(--bz-spacing) * 2.5);
+    margin-bottom: .75rem;
   }
 
   dl dt .classifier:before {
     content: ":";
-    margin-inline: calc(var(--bz-spacing) * 1);
+    margin-inline: .25rem;
   }
 
   .hlist tr {
     display: flex;
     align-items: baseline;
-    gap: calc(var(--bz-spacing) * 4);
+    gap: 1rem;
   }
 }

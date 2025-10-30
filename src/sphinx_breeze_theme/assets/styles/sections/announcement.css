@@ -4,6 +4,6 @@
   font-family: var(--bz-announcement-font-family);
   background-color: var(--bz-announcement-background-color);
   border-bottom: 4px solid var(--bz-header-background-color);
-  padding: calc(var(--bz-spacing) * 3);
+  padding: .75rem;
   text-align: center;
 }

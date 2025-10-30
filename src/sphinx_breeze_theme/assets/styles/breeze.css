@@ -71,7 +71,6 @@
     font-family: var(--bz-page-font-family);
     background-color: var(--bz-page-background-color);
     scroll-padding-top: calc(var(--bz-header-height) + var(--bz-header-tabs-height));
-    --bz-spacing: clamp(0.175rem, 0.0625rem + 0.2083vw, 0.25rem);
     --bz-border-radius-full: calc(infinity * 1px);
     --bz-border-radius: 0.5rem;
   }
