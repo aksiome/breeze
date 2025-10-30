@@ -3,5 +3,5 @@
 }
 
 .treeview {
-  margin-block: calc(var(--bz-spacing) * 3);
+  margin-block: .75rem;
 }

@@ -11,7 +11,7 @@
   font-family: var(--bz-header-font-family);
   background-color: var(--bz-header-background-color);
   border-bottom: 1px solid var(--bz-header-border-color);
-  padding-inline: calc(var(--bz-page-width) + clamp(0.75rem, 0.489rem + 1.304vw, 1.5rem));
+  padding-inline: calc(var(--bz-page-width) + clamp(0.75rem, 0.45rem + 1.5vw, 1.5rem));
   box-shadow:
     0 1px 1px var(--bz-color-shadow),
     0 2px 2px var(--bz-color-shadow),

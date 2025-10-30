@@ -1,17 +1,17 @@
 img, figure, object, .figure {
   display: inline-block;
-  margin-block: calc(var(--bz-spacing) * 1.5);
+  margin-block: .5rem;
 
   &.align-left {
     clear: left;
     float: left;
-    margin-right: calc(var(--bz-spacing) * 4);
+    margin-right: 1rem;
   }
 
   &.align-right {
     clear: right;
     float: right;
-    margin-left: calc(var(--bz-spacing) * 4);
+    margin-left: 1rem;
   }
 
   img, figure, object, .figure {
@@ -31,7 +31,7 @@ img, figure, object, .figure {
   color: var(--bz-guilabel-color);
   border: 1px solid var(--bz-guilabel-border-color);
   background-color: var(--bz-guilabel-background-color);
-  padding: calc(var(--bz-spacing) * 0.5) calc(var(--bz-spacing) * 1.5);
+  padding: .125rem .3rem;
 }
 
 p.rubric {
@@ -39,8 +39,7 @@ p.rubric {
   font-size: var(--bz-rubric-font-size);
   font-family: var(--bz-rubric-font-family);
   border-bottom: 1px solid var(--bz-rubric-border-color);
-  padding-block: calc(var(--bz-spacing) * 2);
-  margin-top: calc(var(--bz-spacing) * 6);
+  margin-top: 1.5rem;
 }
 
 a.reference.download::before {

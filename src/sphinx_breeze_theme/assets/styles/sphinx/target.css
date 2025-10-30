@@ -21,7 +21,7 @@ a.headerlink {
   text-decoration-thickness: 1px;
   text-underline-offset: 8px;
   user-select: none;
-  margin-left: calc(var(--bz-spacing) * 2);
+  margin-left: .5rem;
 
   &:hover {
     color: var(--bz-link-color-hover);

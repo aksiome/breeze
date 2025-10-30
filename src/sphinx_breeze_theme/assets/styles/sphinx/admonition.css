@@ -9,9 +9,8 @@ div.versionremoved {
   margin-inline: auto;
   font-size: var(--bz-topic-font-size);
   font-family: var(--bz-topic-font-family);
-  padding: calc(var(--bz-spacing) * 4);
-  padding-bottom: calc(var(--bz-spacing) * 5);
-  margin-block: calc(var(--bz-spacing) * 6);
+  padding: 1rem .9rem 1.25rem;
+  margin-block: 1.5rem;
   box-shadow:
     0 1px 1px var(--bz-color-shadow),
     0 2px 2px var(--bz-color-shadow),
@@ -38,8 +37,7 @@ div.versionadded,
 div.versionchanged,
 div.deprecated,
 div.versionremoved {
-  padding-block: calc(var(--bz-spacing) * 2);
-  margin-block: calc(var(--bz-spacing) * 2);
+  padding-block: .5rem;
 }
 
 p.admonition-title {
@@ -50,9 +48,9 @@ p.admonition-title {
   font-size: var(--bz-admonition-title-font-size);
   font-family: var(--bz-admonition-title-font-family);
   background-color: color-mix(in oklab, var(--bz-admonition-accent-color) 25%, transparent);
-  margin: calc(var(--bz-spacing) * -4);
-  padding: calc(var(--bz-spacing) * 2);
-  gap: calc(var(--bz-spacing) * 2);
+  margin: -1rem -.9rem;
+  padding: .5rem;
+  gap: .4rem;
   margin-bottom: 0;
 }
 
@@ -60,27 +58,24 @@ p.topic-title {
   font-weight: 600;
   font-size: var(--bz-topic-title-font-size);
   font-family: var(--bz-topic-title-font-family);
-  margin-block: calc(var(--bz-spacing) * -1);
+  margin-top: -.25rem;
 }
 
 p:where(.admonition-title, .topic-title) + * {
-  margin-top: calc(var(--bz-spacing) * 2);
+  margin-top: .5rem;
 }
 
 :where(.admonition, .topic) > :last-child {
-  margin-bottom: calc(var(--bz-spacing) * -2);
-}
-
-:where(div.versionadded, div.versionchanged, div.deprecated, div.versionremoved) > :first-child {
-  margin-bottom: calc(var(--bz-spacing) * -2);
+  margin-bottom: -.5rem;
 }
 
 :where(div.versionadded, div.versionchanged, div.deprecated, div.versionremoved) > :last-child {
-  margin-bottom: 0;
+  margin-bottom: .25rem;
 }
 
 :where(div.versionadded, div.versionchanged, div.deprecated, div.versionremoved) > :first-child {
   margin-top: 0;
+  margin-bottom: 0;
   display: inline-flex;
   flex-wrap: wrap;
 }
@@ -98,8 +93,8 @@ span.versionmodified {
   align-items: center;
   font-weight: 500;
   font-style: italic;
-  margin-right: calc(var(--bz-spacing) * 2);
-  gap: calc(var(--bz-spacing) * 2);
+  margin-right: .5rem;
+  gap: .5rem;
 }
 
 span.versionmodified::before {

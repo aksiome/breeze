@@ -4,11 +4,10 @@
   z-index: 500;
   align-items: center;
   justify-content: space-between;
-  gap: calc(var(--bz-spacing) * 4);
-  margin-top: calc(var(--bz-spacing) * -4);
-  margin-inline: calc(var(--bz-spacing) * -2);
-  padding-block: calc(var(--bz-spacing) * 4);
-  padding-inline: calc(var(--bz-spacing) * 1);
+  gap: 1rem;
+  margin-top: -1.75rem;
+  margin-inline: -.25rem;
+  padding: 1rem .25rem;
   background: linear-gradient(to bottom, var(--bz-page-background-color) 90%, transparent);
   top: var(--bz-header-tabs-height);
 
@@ -17,6 +16,7 @@
   }
 
   @media (width > 52rem) {
+    margin-top: -1.25rem;
     top: var(--bz-header-height);
   }
 }
@@ -25,8 +25,7 @@
   display: none;
   cursor: pointer;
   flex-shrink: 0;
-  font-size: 1.125rem;
-  padding-block: var(--bz-spacing);
+  font-size: 1.25rem;
 
   svg {
     display: block;

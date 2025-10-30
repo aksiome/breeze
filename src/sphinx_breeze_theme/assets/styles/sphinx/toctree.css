@@ -5,5 +5,5 @@
   color: var(--bz-toctree-caption-color);
   font-size: var(--bz-toctree-caption-font-size);
   font-family: var(--bz-toctree-caption-font-family);
-  margin-block: calc(var(--bz-spacing) * 7.5) calc(var(--bz-spacing) * 4);
+  margin-block: 2rem 1rem;
 }

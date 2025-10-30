@@ -2,7 +2,7 @@
 :root {
   /* Breeze sections variables */
 
-  --bz-announcement-color: var(--bz-color-text);
+  --bz-announcement-color: var(--bz-color-white);
   --bz-announcement-background-color: var(--bz-color-secondary-2);
   --bz-announcement-font-size: inherit;
   --bz-announcement-font-family: inherit;
@@ -58,7 +58,7 @@
   --bz-sidebar-secondary-drawer-background-color: var(--bz-color-surface-3);
   --bz-sidebar-secondary-font-size: inherit;
   --bz-sidebar-secondary-font-family: inherit;
-  --bz-sidebar-secondary-width: 16rem;
+  --bz-sidebar-secondary-width: 17rem;
 
   --bz-search-form-input-color: var(--bz-color-text);
   --bz-search-form-input-border-color: var(--bz-color-outline);

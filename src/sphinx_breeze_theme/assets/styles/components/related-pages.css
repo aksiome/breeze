@@ -1,5 +1,6 @@
 .bz-related-pages {
   display: flex;
+  gap: 1rem;
   justify-content: space-between;
   font-size: var(--bz-related-pages-font-size);
   font-family: var(--bz-related-pages-font-family);
@@ -7,6 +8,7 @@
 
 .bz-related-pages a {
   display: grid;
+  min-width: 6rem;
   align-self: center;
   align-items: center;
   font-weight: normal;

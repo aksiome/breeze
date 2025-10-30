@@ -15,7 +15,7 @@ div.highlight, div.literal-block-wrapper, [class*="highlight-"] {
     font-family: var(--bz-code-block-font-family);
     border: 1px solid var(--bz-code-block-border-color);
     background-color: var(--bz-code-block-background-color);
-    padding: calc(var(--bz-spacing) * 4);
+    padding: 1rem;
   }
 }
 
@@ -24,7 +24,7 @@ p + div:is([class*="highlight-"], .literal-block-wrapper) {
 }
 
 div[class*="highlight-"], div.literal-block-wrapper {
-  margin-block: calc(var(--bz-spacing) * 4);
+  margin-block: 1rem;
 }
 
 div.code-block-caption + div {
@@ -73,5 +73,5 @@ div.code-block-caption + div {
   font-family: var(--bz-code-block-caption-font-family);
   border-bottom: 1px solid var(--bz-code-block-border-color);
   background-color: var(--bz-code-block-caption-background-color);
-  padding: calc(var(--bz-spacing) * 2) calc(var(--bz-spacing) * 4);
+  padding: .5rem 1rem;
 }

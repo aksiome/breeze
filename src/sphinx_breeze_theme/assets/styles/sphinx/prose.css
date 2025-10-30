@@ -1,10 +1,9 @@
 h1, h2, h3, h4, h5, h6 {
   font-weight: 300;
-  line-height: 1.25;
   border-radius: var(--bz-border-radius);
   color: var(--bz-title-color);
   font-family: var(--bz-title-font-family);
-  margin-block: calc(var(--bz-spacing) * 4);
+  margin-block: 1rem;
 
   + p {
     margin-top: 0;
@@ -13,29 +12,35 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: var(--bz-title-1-font-size);
-  margin-bottom: calc(var(--bz-spacing) * 6);
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
 }
 
 h2 {
   font-size: var(--bz-title-2-font-size);
-  margin-top: calc(var(--bz-spacing) * 10);
+  line-height: 1.275;
+  margin-top: 2.5rem;
 }
 
 h3 {
   font-size: var(--bz-title-3-font-size);
-  margin-top: calc(var(--bz-spacing) * 7.5);
+  line-height: 1.35;
+  margin-top: 2rem;
 }
 
 h4 {
   font-size: var(--bz-title-4-font-size);
+  line-height: 1.425;
 }
 
 h5 {
   font-size: var(--bz-title-5-font-size);
+  line-height: 1.5;
 }
 
 h6 {
   font-size: var(--bz-title-6-font-size);
+  line-height: 1.625;
 }
 
 strong {
@@ -44,7 +49,7 @@ strong {
 
 p, blockquote {
   line-height: 1.6;
-  margin-block: calc(var(--bz-spacing) * 4);
+  margin-block: 1rem;
 }
 
 main a {
@@ -66,7 +71,7 @@ pre {
 
 code, kbd:not(.compound) {
   border-radius: calc(var(--bz-border-radius) / 2);
-  padding: calc(var(--bz-spacing) * 0.25) calc(var(--bz-spacing) * 1.5);
+  padding: .125rem .3rem;
 }
 
 code {
@@ -95,5 +100,5 @@ abbr {
 hr {
   border: none;
   border-top: 1px solid var(--bz-line-separator-color);
-  margin: calc(var(--bz-spacing) * 4) 0 calc(var(--bz-spacing) * 6);
+  margin: 1rem 0 1.5rem;
 }
