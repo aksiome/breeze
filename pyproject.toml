@@ -4,7 +4,8 @@ build-backend = "hatchling.build"
 
 [project]
 name = "sphinx-breeze-theme"
-description = "A modern Sphinx documentation theme."
+description = "A modern, accessible, and responsive Sphinx documentation theme."
+authors = [{ name = "Aksiome", email = "54895777+aksiome@users.noreply.github.com" }]
 dynamic = ["version"]
 readme = "README.md"
 requires-python = ">=3.10"
@@ -19,6 +20,36 @@ dependencies = [
   "accessible-pygments",
   "typing-extensions",
 ]
+keywords = [
+  "sphinx",
+  "theme",
+  "documentation",
+  "sphinx-theme",
+  "html-theme",
+  "design",
+  "breeze"
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Framework :: Sphinx",
+  "Framework :: Sphinx :: Theme",
+  "License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Documentation",
+  "Topic :: Software Development :: Documentation",
+  "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/aksiome/breeze"
+Repository = "https://github.com/aksiome/breeze"
+Documentation = "https://sphinx-breeze-theme.readthedocs.io/"
+Issues = "https://github.com/aksiome/breeze/issues"
 
 [dependency-groups]
 docs = [
