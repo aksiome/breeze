@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.5.3 (2025-11-02)
+
+### Bug Fixes
+
+- Update python version in rtd configuration
+  ([`36ed1d4`](https://github.com/aksiome/breeze/commit/36ed1d4bf4fbb721150dd9d8f856ade1304228fe))
+
+
 ## v0.5.2 (2025-10-30)
 
 ### Bug Fixes
