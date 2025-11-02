@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.5.4 (2025-11-02)
+
+### Bug Fixes
+
+- Rtd config for real and add project metadata
+  ([`f22d5b5`](https://github.com/aksiome/breeze/commit/f22d5b56099cdb60f38f40f5e76ec962341da47e))
+
+
 ## v0.5.3 (2025-11-02)
 
 ### Bug Fixes
