@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v0.5.5 (2025-11-02)
+
+### Bug Fixes
+
+- Sphinx treeview version dependency
+  ([`8ead4c5`](https://github.com/aksiome/breeze/commit/8ead4c53b942ad95bee0e13a752d3ccb3eb15c4c))
+
+
 ## v0.5.4 (2025-11-02)
 
 ### Bug Fixes
