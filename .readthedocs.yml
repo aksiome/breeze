@@ -17,4 +17,6 @@ build:
       - asdf install nodejs latest
       - asdf global nodejs latest
     install:
-      - UV_PROJECT_ENVIRONMENT="${READTHEDOCS_VIRTUALENV_PATH}" uv sync --group docs
+      - UV_PROJECT_ENVIRONMENT="${READTHEDOCS_VIRTUALENV_PATH}" \
+        UV_PROJECT_PYTHON="3.13" \
+        uv sync --group docs
