@@ -83,13 +83,13 @@
 
   /* Breeze components variables */
 
-  --bz-breadcrumb-color: var(--bz-color-text);
-  --bz-breadcrumb-link-color: var(--bz-link-color);
-  --bz-breadcrumb-link-color-hover: var(--bz-link-color-hover);
-  --bz-breadcrumb-separator-color: color-mix(in oklab, var(--bz-breadcrumb-link-color) 50%, transparent);
-  --bz-breadcrumb-separator-icon: var(--bz-icon-chevron);
-  --bz-breadcrumb-font-size: inherit;
-  --bz-breadcrumb-font-family: inherit;
+  --bz-breadcrumbs-color: var(--bz-color-text);
+  --bz-breadcrumbs-link-color: var(--bz-link-color);
+  --bz-breadcrumbs-link-color-hover: var(--bz-link-color-hover);
+  --bz-breadcrumbs-separator-color: color-mix(in oklab, var(--bz-breadcrumbs-link-color) 50%, transparent);
+  --bz-breadcrumbs-separator-icon: var(--bz-icon-chevron);
+  --bz-breadcrumbs-font-size: inherit;
+  --bz-breadcrumbs-font-family: inherit;
 
   --bz-dropdown-color: var(--bz-color-text);
   --bz-dropdown-color-hover: var(--bz-link-color-hover);

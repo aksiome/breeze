@@ -1,0 +1,50 @@
+.bz-breadcrumbs {
+  font-weight: 400;
+  font-size: var(--bz-breadcrumbs-font-size);
+  font-family: var(--bz-breadcrumbs-font-family);
+  color: var(--bz-breadcrumbs-color);
+}
+
+.bz-breadcrumbs a {
+  font-weight: 300;
+  text-decoration: none;
+  color: var(--bz-breadcrumbs-link-color);
+  &:hover {
+    color: var(--bz-breadcrumbs-link-color-hover);
+  }
+}
+
+.bz-breadcrumbs li > * {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.bz-breadcrumbs-home {
+  flex-shrink: 0;
+  svg {
+    display: block;
+    height: 1em;
+  }
+}
+
+.bz-breadcrumbs :where(ol, li) {
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding: .5rem;
+  margin: -.5rem;
+}
+
+.bz-breadcrumbs li:not(:last-child)::after {
+  content: "";
+  display: block;
+  flex-shrink: 0;
+  height: 1.125em;
+  width: 1.125em;
+  background-color: var(--bz-breadcrumbs-separator-color);
+  mask-image: var(--bz-breadcrumbs-separator-icon);
+  margin-bottom: -0.125em;
+}

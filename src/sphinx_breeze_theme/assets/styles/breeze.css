@@ -36,7 +36,7 @@
 @import "./sphinx/target.css" layer(content);
 @import "./sphinx/toctree.css" layer(content);
 
-@import "./components/breadcrumb.css" layer(components);
+@import "./components/breadcrumbs.css" layer(components);
 @import "./components/dropdown.css" layer(components);
 @import "./components/edit-this-page.css" layer(components);
 @import "./components/external-links.css" layer(components);

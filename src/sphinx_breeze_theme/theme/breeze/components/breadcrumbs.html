@@ -1,7 +1,7 @@
-{%- if pagename != 'index' or parents -%}
-<nav class="bz-breadcrumb" aria-label="Breadcrumb">
+{%- if pagename != 'index' or parents and (not meta or "hide-breadcrumbs" not in meta) -%}
+<nav class="bz-breadcrumbs" aria-label="Breadcrumb">
   <ol>
-    <li class="bz-breadcrumb-home">
+    <li class="bz-breadcrumbs-home">
       <a href="{{ pathto('index') }}">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -17,11 +17,11 @@
       </a>
     </li>
     {%- for item in parents -%}
-    <li class="bz-breadcrumb-parent">
+    <li class="bz-breadcrumbs-parent">
       <a href="{{ item.link }}">{{ replace_emoji(item.title) }}</a>
     </li>
     {%- endfor -%}
-    <li class="bz-breadcrumb-current">
+    <li class="bz-breadcrumbs-current">
       <span>{{ replace_emoji(title) }}</span>
     </li>
   </ol>
