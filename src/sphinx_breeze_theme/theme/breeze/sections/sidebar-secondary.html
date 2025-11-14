@@ -1,12 +1,10 @@
-{% set remove_sidebar_secondary = meta is defined and meta is not none and 'html_theme.sidebar_secondary.remove' in meta %}
-
 {% set sidebar_content %}
   {% for tmpl in theme_sidebar_secondary or [] %}
     {% include tmpl %}
   {% endfor %}
 {% endset %}
 
-{%- if sidebar_content|trim and not remove_sidebar_secondary -%}
+{%- if sidebar_content|trim and (not meta or "hide-sidebar-secondary" not in meta) -%}
 <aside class="bz-sidebar-secondary" data-drawer="bz-sidebar-secondary">
   {{ sidebar_content }}
 </aside>

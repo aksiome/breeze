@@ -4,7 +4,7 @@
   {% endfor %}
 {% endset %}
 
-{%- if sidebar_content|trim -%}
+{%- if sidebar_content|trim and (not meta or "hide-sidebar-primary" not in meta) -%}
 <aside class="bz-sidebar-primary" data-drawer="bz-sidebar-primary">
   {{ sidebar_content }}
 </aside>
