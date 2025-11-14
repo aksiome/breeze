@@ -46,7 +46,8 @@
   --bz-page-background-color: var(--bz-color-surface-3);
   --bz-page-font-size: var(--bz-size-md);
   --bz-page-font-family: var(--bz-font-sans);
-  --bz-page-width: calc((100vw - clamp(17.5rem, 100vw, 94rem)) / 2);
+  --bz-page-padding: calc((100vw - clamp(17.5rem, 100vw, var(--bz-page-width))) / 2);
+  --bz-page-width: 94rem;
 
   --bz-sidebar-primary-border-color: color-mix(in oklab, var(--bz-color-outline) 75%, transparent);
   --bz-sidebar-primary-drawer-background-color: var(--bz-color-surface-3);

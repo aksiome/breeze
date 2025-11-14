@@ -4,7 +4,7 @@
 
 .bz-content {
   min-height: calc(100vh - var(--bz-header-height) - var(--bz-header-tabs-height) - var(--bz-footer-height));
-  padding-inline: calc(var(--bz-page-width) + clamp(1.5rem, 1.375rem + 0.625vw, 2rem));
+  padding-inline: calc(var(--bz-page-padding) + clamp(1.5rem, 1.375rem + 0.625vw, 2rem));
 
   @media (width > 52rem) {
     display: flex;

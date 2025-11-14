@@ -7,6 +7,11 @@
       .bz-js-only { display: none !important; }
     </style>
   </noscript>
+  {% if meta and "content-width" in meta %}
+    <style>
+      #bz-main-content { max-width: {{ meta["content-width"] }}; }
+    </style>
+  {%- endif -%}
 {%- endblock css -%}
 
 {%- block scripts -%}

@@ -6,7 +6,7 @@
   column-gap: 1.5rem;
   min-height: var(--bz-footer-height);
   padding-block: .5rem;
-  padding-inline: calc(var(--bz-page-width) + clamp(1.25rem, 1rem + 1.25vw, 2rem));
+  padding-inline: calc(var(--bz-page-padding) + clamp(1.25rem, 1rem + 1.25vw, 2rem));
   color: var(--bz-footer-color);
   font-size: var(--bz-footer-font-size);
   font-family: var(--bz-footer-font-family);
