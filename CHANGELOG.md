@@ -2,6 +2,25 @@
 
 <!-- version list -->
 
+## v0.6.0 (2025-11-14)
+
+### Bug Fixes
+
+- Rename breadcrumb to breadcrumbs
+  ([`4e8081c`](https://github.com/aksiome/breeze/commit/4e8081c9fcc8496731a9c26eb503b6b0311d562b))
+
+- Secondary sidebar inline padding
+  ([`80bd4aa`](https://github.com/aksiome/breeze/commit/80bd4aa2413ce19ca5f4e8c39d416e179dd78117))
+
+### Features
+
+- Add content-width meta option
+  ([`369be71`](https://github.com/aksiome/breeze/commit/369be71bb5f9e5d6c878e046fb312c6b0546199a))
+
+- Add hide-sidebar-[primary|secondary] option
+  ([`72f63ef`](https://github.com/aksiome/breeze/commit/72f63ef9d5ad1be36d6858d29629fe20b37e0cde))
+
+
 ## v0.5.5 (2025-11-02)
 
 ### Bug Fixes
