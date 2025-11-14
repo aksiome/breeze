@@ -37,7 +37,7 @@
   content: "";
   top: 50%;
   width: 1px;
-  height: .75em;
+  height: 1em;
   display: block;
   position: absolute;
   background-color: var(--bz-header-border-color);

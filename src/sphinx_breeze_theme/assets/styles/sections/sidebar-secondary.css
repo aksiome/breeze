@@ -37,7 +37,11 @@
 
     > * {
       border-left: 1px solid var(--bz-sidebar-secondary-border-color);
-      padding-left: 2rem;
+      padding-inline: 2rem;
+    }
+
+    > .bz-sidebar-toc {
+      padding-right: 0;
     }
 
     > * > :first-child {
