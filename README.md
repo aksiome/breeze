@@ -2,22 +2,20 @@
 
 A modern Sphinx theme built with TypeScript and Vite. 
 
+
+
 [demo](https://sphinx-breeze-theme.readthedocs.io/en/stable/)
 
+## Installation
 
-# Setup
+Install Breeze from [PyPI](https://pypi.org/project/sphinx-breeze-theme/):
 
-pip:
-```
+pip
+```bash
 pip install sphinx-breeze-theme
 ```
 
-uv:
-```
+uv
+```bash
 uv add --dev sphinx-breeze-theme
-```
-
-Update ``conf.py``:
-```
-html_theme = "breeze"
 ```
