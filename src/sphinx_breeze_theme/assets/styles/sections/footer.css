@@ -13,6 +13,11 @@
   background-color: var(--bz-footer-background-color);
   border-top: 1px solid var(--bz-footer-border-color);
 
+  @media (width <= 36rem) {
+    text-align: center;
+    flex-direction: column;
+  }
+
   > * {
     margin-block: .5rem;
   }
