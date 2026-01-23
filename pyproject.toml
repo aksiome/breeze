@@ -56,7 +56,7 @@ docs = [
   "myst-parser",
   "sphinx-copybutton",
   "sphinx-design",
-  "sphinx-treeview",
+  "sphinx-treeview ; python_version >= '3.11'",
 ]
 
 [project.entry-points]
