@@ -1,4 +1,4 @@
-# 🪧 Announcement banners
+# 🪧 Announcement
 
 Display an announcement banner at the top of every page to highlight important information.
 

@@ -1,3 +1,7 @@
+---
+hide-sidebar-secondary: true
+---
+
 # Kitchen Sink
 
 ````{note}
