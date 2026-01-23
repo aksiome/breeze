@@ -17,7 +17,7 @@
   --bz-color-surface: oklch(0.96 0 0);
   --bz-color-shadow: oklch(0 0 0 / 0.02);
   --bz-color-text: oklch(0.1 0.005 265);
-  --bz-color-muted: oklch(0.45 0.005 265);
+  --bz-color-muted: oklch(0.425 0.005 265);
   --bz-color-target: oklch(0.9 0.035 75);
 
   --bz-color-primary: var(--bz-color-blue);
@@ -29,7 +29,7 @@
   --bz-color-surface: oklch(0.22 0.014 265);
   --bz-color-shadow: oklch(0.1 0.02 265 / 0.1);
   --bz-color-text: oklch(0.9 0.005 265);
-  --bz-color-muted: oklch(0.75 0.005 265);
+  --bz-color-muted: oklch(0.775 0.005 265);
   --bz-color-target: oklch(0.4 0.0125 75);
 }
 
@@ -106,11 +106,11 @@
   --bz-color-yellow-4: oklch(from var(--bz-color-yellow) calc(l + 0.025) calc(c + 0.0025) h);
   --bz-color-yellow-5: oklch(from var(--bz-color-yellow) calc(l + 0.05) calc(c + 0.005) h);
 
-  --bz-color-surface-1: oklch(from var(--bz-color-surface) calc(l - 0.04) calc(c - 0.005) h);
-  --bz-color-surface-2: oklch(from var(--bz-color-surface) calc(l - 0.02) calc(c - 0.0025) h);
+  --bz-color-surface-1: oklch(from var(--bz-color-surface) calc(l - 0.045) calc(c - 0.005) h);
+  --bz-color-surface-2: oklch(from var(--bz-color-surface) calc(l - 0.0225) calc(c - 0.0025) h);
   --bz-color-surface-3: var(--bz-color-surface);
-  --bz-color-surface-4: oklch(from var(--bz-color-surface) calc(l + 0.02) calc(c + 0.0025) h);
-  --bz-color-surface-5: oklch(from var(--bz-color-surface) calc(l + 0.04) calc(c + 0.005) h);
+  --bz-color-surface-4: oklch(from var(--bz-color-surface) calc(l + 0.0225) calc(c + 0.0025) h);
+  --bz-color-surface-5: oklch(from var(--bz-color-surface) calc(l + 0.045) calc(c + 0.005) h);
 
   --bz-color-primary-1: oklch(from var(--bz-color-primary) calc(l - 0.05) calc(c - 0.005) h);
   --bz-color-primary-2: oklch(from var(--bz-color-primary) calc(l - 0.025) calc(c - 0.0025) h);

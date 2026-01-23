@@ -3,8 +3,14 @@ a.footnote-reference {
   vertical-align: super;
 }
 
+aside.footnote {
+  font-size: var(--bz-size-sm);
+  color: var(--bz-color-muted);
+}
+
 aside.footnote > :not(span) {
   margin-left: 3ch;
+  margin-block: .325rem;
 }
 
 aside.footnote > span {
