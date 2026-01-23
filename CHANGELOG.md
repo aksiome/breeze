@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file.
 
 <!-- version list -->
 
+## v0.6.1 (2026-01-23)
+
+### 🎨 Styling
+
+- **sphinx-design**: Update badges and dropdown colors to match the theme
+  ([`d96c301`](https://github.com/aksiome/breeze/commit/d96c301124c22bc0112f44e17952083d3d9f32b8))
+- **footer**: Wrap and center content on mobile devices
+  ([`172a885`](https://github.com/aksiome/breeze/commit/172a8855d7b40b132a4ea55a1f77ed03d3bc100e))
+- **theme**: Adjust color contrast
+  ([`f5bf64c`](https://github.com/aksiome/breeze/commit/f5bf64cca33ef75020284e0f12a4f1e1b031c061))
+- **layout**: Spacing and size tweaks
+  ([`b7fad54`](https://github.com/aksiome/breeze/commit/b7fad5424de53f32364f88e1928c145b7822b646))
+
+### 📚 Documentation
+
+- Minor layout and naming tweaks
+  ([`c7abd8e`](https://github.com/aksiome/breeze/commit/c7abd8e1274dfb4f7d913b6a3fc775ae85512626))
+- Simple user guide
+  ([`b3fdb05`](https://github.com/aksiome/breeze/commit/b3fdb05166352fcfc632d572a4ea4d30875f8dca))
+
 ## v0.6.0 (2025-11-14)
 
 ### ✨ Features
