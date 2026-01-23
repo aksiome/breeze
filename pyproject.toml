@@ -56,7 +56,7 @@ docs = [
   "myst-parser",
   "sphinx-copybutton",
   "sphinx-design",
-  "sphinx-treeview ; python_version >= '3.11'",
+  "sphinx-treeview",
 ]
 
 [project.entry-points]
@@ -74,3 +74,15 @@ major_on_zero = false
 version_variables = [
   "src/sphinx_breeze_theme/__init__.py:__version__"
 ]
+
+[tool.semantic_release.changelog]
+template_dir = ".github/templates"
+exclude_commit_patterns = ["^chore"]
+
+[tool.semantic_release.changelog.default_templates]
+changelog_file = "CHANGELOG.md"
+
+[tool.semantic_release.commit_parser_options]
+allowed_tags = ["feat", "fix", "ui", "docs", "chore", "style", "refactor", "perf", "ci", "build", "test"]
+minor_tags = ["feat"]
+patch_tags = ["fix", "ui"]
