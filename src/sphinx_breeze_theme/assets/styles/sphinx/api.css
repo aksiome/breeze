@@ -68,7 +68,7 @@ dt.sig {
   border: 1px solid var(--bz-sig-border-color);
   background-color: var(--bz-sig-background-color);
   border-top: 8px solid color-mix(in oklab, var(--bz-sig-accent-color) 25%, transparent);
-  padding: .25rem .5rem;
+  padding: .3rem .5rem .4rem;
   margin: 1.25rem 0 .75rem;
 
   dl {

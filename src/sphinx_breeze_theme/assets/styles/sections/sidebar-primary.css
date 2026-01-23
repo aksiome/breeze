@@ -23,6 +23,7 @@
 
   > * {
     padding-right: 2rem;
+    padding-left: 3px;
   }
 
   @media (width > 52rem) {

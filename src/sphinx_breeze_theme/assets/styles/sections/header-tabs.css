@@ -34,6 +34,8 @@
     overflow-x: auto;
     white-space: nowrap;
     gap: .3rem;
+    padding-inline: 4px;
+    margin-inline: -4px;
   }
 
   a {

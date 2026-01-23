@@ -9,7 +9,7 @@ div.versionremoved {
   margin-inline: auto;
   font-size: var(--bz-topic-font-size);
   font-family: var(--bz-topic-font-family);
-  padding: 1rem .9rem 1.25rem;
+  padding: 1rem .9rem 1.5rem;
   margin-block: 1.5rem;
   box-shadow:
     0 1px 1px var(--bz-color-shadow),
@@ -30,7 +30,7 @@ div.deprecated,
 div.versionremoved {
   color: var(--bz-admonition-color);
   background-color: var(--bz-admonition-background-color);
-  border-left: 3px solid var(--bz-admonition-accent-color);
+  border-left: 4px solid var(--bz-admonition-accent-color);
 }
 
 div.versionadded,
@@ -84,8 +84,9 @@ p.admonition-title::before {
   content: "";
   mask-image: var(--bz-admonition-icon);
   background-color: var(--bz-admonition-accent-color);
-  height: 1rem;
-  width: 1rem;
+  margin-block: -.075rem;
+  height: 1.15rem;
+  width: 1.15rem;
 }
 
 span.versionmodified {

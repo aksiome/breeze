@@ -23,8 +23,8 @@ p + div:is([class*="highlight-"], .literal-block-wrapper) {
   margin-top: 0;
 }
 
-div[class*="highlight-"], div.literal-block-wrapper {
-  margin-block: 1rem;
+div:where([class*="highlight-"]:not(:last-child), .literal-block-wrapper:not(:last-child)) {
+  margin-block: 1.5rem;
 }
 
 div.code-block-caption + div {
@@ -50,7 +50,8 @@ div.code-block-caption + div {
   left: 1px;
   width: 2.5rem;
   text-align: right;
-  padding-inline: 0.5rem;
+  font-family: var(--bz-page-font-family);
+  padding-inline: 0.5rem!important;
   color: var(--bz-code-block-line-number-color)!important;
   border-right: 1px solid var(--bz-code-block-border-color);
   background-color: var(--bz-code-block-background-color)!important;

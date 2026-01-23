@@ -41,7 +41,7 @@
     }
 
     > .bz-sidebar-toc {
-      padding-right: 0;
+      padding-right: 3px;
     }
 
     > * > :first-child {

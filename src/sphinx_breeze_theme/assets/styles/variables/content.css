@@ -268,7 +268,7 @@
   --bz-quote-pull-icon: var(--bz-icon-quote);
   --bz-quote-font-size: inherit;
   --bz-quote-font-family: inherit;
-  --bz-quote-attribution-font-size: inherit;
+  --bz-quote-attribution-font-size: var(--bz-size-xs);
   --bz-quote-attribution-font-family: inherit;
   --bz-quote-epigraph-font-size: var(--bz-size-xs);
   --bz-quote-epigraph-font-family: inherit;
