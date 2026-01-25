@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { execSync } from 'child_process';
 
 
 export default defineConfig({
@@ -13,5 +14,13 @@ export default defineConfig({
         assetFileNames: 'styles/[name].[ext]'
       }
     }
-  }
+  },
+  plugins: [
+    {
+      name: 'generate-icons',
+      buildStart() {
+        execSync('node scripts/generate-icons.js', { stdio: 'inherit' });
+      }
+    }
+  ]
 });

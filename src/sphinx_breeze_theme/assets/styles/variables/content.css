@@ -27,7 +27,7 @@
   --bz-header-tabs-color: var(--bz-header-color);
   --bz-header-tabs-color-hover: var(--bz-link-color-hover);
   --bz-header-tabs-color-active: var(--bz-link-color-hover);
-  --bz-header-tabs-background-color-hover: var(--bz-color-surface-4);
+  --bz-header-tabs-background-color-hover: var(--bz-color-surface-3);
   --bz-header-font-size: inherit;
   --bz-header-font-family: inherit;
   --bz-header-height: 3.5rem;
@@ -143,7 +143,7 @@
   --bz-sidebar-nav-color: var(--bz-color-text);
   --bz-sidebar-nav-color-hover: var(--bz-link-color-hover);
   --bz-sidebar-nav-color-active: var(--bz-link-color-hover);
-  --bz-sidebar-nav-background-color-hover: var(--bz-color-surface-1);
+  --bz-sidebar-nav-background-color-hover: var(--bz-color-surface-2);
   --bz-sidebar-nav-font-size: var(--bz-size-sm);
   --bz-sidebar-nav-font-family: inherit;
   --bz-sidebar-nav-caption-color: var(--bz-color-muted);

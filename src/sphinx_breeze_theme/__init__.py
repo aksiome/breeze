@@ -11,7 +11,7 @@ from docutils import nodes
 from sphinx.application import Sphinx
 from sphinx.builders.dirhtml import DirectoryHTMLBuilder
 
-from sphinx_breeze_theme import links, pygments, toctree, utils
+from sphinx_breeze_theme import icons, links, pygments, toctree, utils
 
 THEME_PATH = (Path(__file__).parent / "theme" / "breeze").resolve()
 
@@ -57,6 +57,8 @@ def setup(app: Sphinx) -> dict[str, Any]:
 def on_builder_inited(app: Sphinx) -> None:
     utils.set_default_config(app, "html_permalinks_icon", "#")
     utils.set_default_config(app, "python_maximum_signature_line_length", 60)
+    opts = app.config.html_theme_options
+    opts["external_links"] = links.process_links(opts.get("external_links", []))
 
 
 def on_build_finished(app: Sphinx, exception=None) -> None:
@@ -73,12 +75,13 @@ def on_html_page_context(
 ) -> None:
     toc = utils.simplify_page_toc(context.get("toc", ""))
     context["toc"] = utils.insert_zero_width_space(toc)
-    context["toctree"] = toctree.create_custom_toctree(app, pagename)
     context["js_tag"] = utils.replace_js_tag(context["js_tag"])
+    context["toctree"] = toctree.create_custom_toctree(app, pagename)
     context["edit_link"] = links.create_edit_link(pagename, context)
     context["lang_link"] = links.create_lang_link(pagename)
-    context["replace_emoji"] = replace_emoji
+    context["get_icon"] = icons.get_icon
     context["wrap_emoji"] = utils.wrap_emoji
+    context["replace_emoji"] = replace_emoji
 
     if context.get("title") and context.get("theme_emojis_title", "").lower() != "true":
         context["title"] = replace_emoji(context["title"])

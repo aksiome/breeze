@@ -1,14 +1,16 @@
 {
   "name": "sphinx-breeze-theme",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "build": "vite build"
   },
   "devDependencies": {
-    "@types/node": "24.5.2",
+    "@primer/octicons": "19.21.2",
+    "@types/node": "25.0.10",
     "minireset.css": "0.0.7",
-    "typescript": "5.9.2",
-    "vite": "7.1.7"
+    "simple-icons": "^16.6.1",
+    "typescript": "5.9.3",
+    "vite": "7.3.1"
   }
 }
