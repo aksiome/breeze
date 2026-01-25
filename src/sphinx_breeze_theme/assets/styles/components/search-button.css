@@ -1,4 +1,6 @@
 .bz-search-button {
+  position: relative;
+
   a {
     display: flex;
     align-items: center;
