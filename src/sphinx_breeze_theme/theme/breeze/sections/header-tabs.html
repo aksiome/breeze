@@ -1,3 +1,4 @@
+{%- if not meta or "hide-header-tabs" not in meta -%}
 <nav class="bz-header-tabs" aria-label="Primary Navigation">
   <label
     class="bz-sidebar-primary-toggle"
@@ -40,3 +41,4 @@
     <ul role="menu" aria-hidden="true"></ul>
   </div>
 </nav>
+{%- endif -%}
