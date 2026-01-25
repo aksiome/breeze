@@ -2,6 +2,9 @@ div.container.table {
   overflow-x: auto;
   margin-top: .75rem;
   margin-bottom: 1.5rem;
+  padding-inline: .2rem;
+  padding-bottom: .5rem;
+  margin-inline: -0.1rem;
 }
 
 table.docutils {
