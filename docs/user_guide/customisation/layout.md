@@ -62,7 +62,7 @@ html_theme_options = {
 
 Control layout per-page using file frontmatter (MyST) or meta directive (RST).
 
-### Hide sidebars
+### Hide sections
 
 ::::{tab-set}
 :::{tab-item} MyST
@@ -70,6 +70,7 @@ Control layout per-page using file frontmatter (MyST) or meta directive (RST).
 ---
 hide-sidebar-primary: true
 hide-sidebar-secondary: true
+hide-header-tabs: true
 ---
 ```
 :::
@@ -77,25 +78,7 @@ hide-sidebar-secondary: true
 ```rst
 :hide-sidebar-primary: true
 :hide-sidebar-secondary: true
-```
-:::
-::::
-
-### Custom content width
-
-Set a custom maximum width for page content:
-
-::::{tab-set}
-:::{tab-item} MyST
-```yaml
----
-content-width: 50rem
----
-```
-:::
-:::{tab-item} RST
-```rst
-:content-width: 50rem
+:hide-header-tabs: true
 ```
 :::
 ::::
@@ -117,6 +100,25 @@ hide-related-pages: true
 ```rst
 :hide-breadcrumbs: true
 :hide-related-pages: true
+```
+:::
+::::
+
+### Custom content width
+
+Set a custom maximum width for page content:
+
+::::{tab-set}
+:::{tab-item} MyST
+```yaml
+---
+content-width: 50rem
+---
+```
+:::
+:::{tab-item} RST
+```rst
+:content-width: 50rem
 ```
 :::
 ::::

@@ -1,6 +1,12 @@
 ---
 hide-sidebar-secondary: true
+content-width: 64rem
 ---
+
+```{image} _static/logo.png
+:height: 10rem
+:align: right
+```
 
 # Sphinx Breeze Theme
 
@@ -14,6 +20,7 @@ A clean, modern, customizable Sphinx documentation theme.
 
 ```{button-link} user_guide/quickstart.html
 :color: primary
+:class: rounded
 :shadow:
 
 🚀 Get Started
@@ -23,10 +30,10 @@ A clean, modern, customizable Sphinx documentation theme.
 :columns: auto
 
 ```{button-link} https://github.com/aksiome/breeze
-:color: muted
+:color: secondary
 :outline:
 
-🔗 View on GitHub
+{octicon}`mark-github` View on GitHub
 ```
 :::
 ::::
@@ -71,6 +78,16 @@ Scales smoothly for large documentation sets with intuitive navigation.
 :::
 ::::
 
+
+## Showcases
+
+:::{list-table}
+*   - ```{image} https://docs.mcbookshelf.dev/en/latest/_static/logo-bookshelf.png
+      :width: 64px
+      :target: https://docs.mcbookshelf.dev/
+      ```
+    - [Bookshelf](https://docs.mcbookshelf.dev/) is a library datapack for Minecraft. It's modular, so mapmakers can pick only the parts they need. This helps them create complex systems more easily.
+:::
 
 ```{toctree}
 :hidden:

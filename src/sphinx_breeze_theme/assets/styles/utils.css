@@ -12,7 +12,7 @@
 }
 
 .rounded {
-  border-radius: var(--bz-border-radius-full);
+  border-radius: var(--bz-border-radius-full)!important;
 }
 
 .sized {

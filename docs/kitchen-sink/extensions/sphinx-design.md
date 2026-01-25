@@ -1,5 +1,4 @@
-# Sphinx Design
-
+# sphinx-design
 
 ## Badges
 
