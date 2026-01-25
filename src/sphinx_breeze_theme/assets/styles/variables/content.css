@@ -22,12 +22,12 @@
 
   --bz-header-color: var(--bz-color-muted);
   --bz-header-border-color: var(--bz-color-outline);
-  --bz-header-background-color: var(--bz-color-surface-1);
-  --bz-header-background-color-variant: var(--bz-color-surface-2);
+  --bz-header-background-color: var(--bz-color-surface-2);
+  --bz-header-background-color-variant: var(--bz-color-surface-3);
   --bz-header-tabs-color: var(--bz-header-color);
   --bz-header-tabs-color-hover: var(--bz-link-color-hover);
   --bz-header-tabs-color-active: var(--bz-link-color-hover);
-  --bz-header-tabs-background-color-hover: var(--bz-color-surface-3);
+  --bz-header-tabs-background-color-hover: var(--bz-color-surface-4);
   --bz-header-font-size: inherit;
   --bz-header-font-family: inherit;
   --bz-header-height: 3.5rem;
@@ -162,14 +162,14 @@
   --bz-theme-switcher-color: var(--bz-color-muted);
   --bz-theme-switcher-border-color: var(--bz-color-outline);
   --bz-theme-switcher-border-color-hover: var(--bz-color-primary);
-  --bz-theme-switcher-background-color: var(--bz-color-surface-2);
+  --bz-theme-switcher-background-color: var(--bz-color-surface-1);
   --bz-theme-switcher-icon-border-color: var(--bz-color-outline);
   --bz-theme-switcher-icon-background-color: var(--bz-color-surface-4);
 
   --bz-version-switcher-color: var(--bz-color-muted);
   --bz-version-switcher-border-color: var(--bz-color-outline);
   --bz-version-switcher-border-color-hover: var(--bz-color-primary);
-  --bz-version-switcher-background-color: var(--bz-color-surface-2);
+  --bz-version-switcher-background-color: var(--bz-color-surface-1);
   --bz-version-switcher-font-size: var(--bz-size-xs);
   --bz-version-switcher-font-family: inherit;
 
@@ -305,9 +305,9 @@
   --bz-sig-font-size: inherit;
   --bz-sig-font-family: var(--bz-font-mono);
   --bz-sig-table-color: var(--bz-sig-color);
-  --bz-sig-table-background-color: var(--bz-color-surface-2);
+  --bz-sig-table-background-color: color-mix(in oklab, var(--bz-color-surface-3), var(--bz-color-surface-2));
   --bz-sig-table-head-color: var(--bz-sig-color);
-  --bz-sig-table-head-background-color: var(--bz-color-surface-1);
+  --bz-sig-table-head-background-color: var(--bz-color-surface-2);
   --bz-sig-table-font-size: inherit;
   --bz-sig-table-font-family: inherit;
   --bz-sig-table-head-font-size: var(--bz-size-xs);

@@ -15,19 +15,19 @@
   --sd-color-danger-highlight: var(--bz-color-red-1);
   --sd-color-muted-highlight: var(--bz-color-gray-1);
 
-  --sd-color-primary-text: var(--bz-color-white);
-  --sd-color-secondary-text: var(--bz-color-white);
-  --sd-color-success-text: var(--bz-color-white);
-  --sd-color-info-text: var(--bz-color-white);
-  --sd-color-warning-text: var(--bz-color-white);
-  --sd-color-danger-text: var(--bz-color-white);
-  --sd-color-muted-text: var(--bz-color-white);
+  --sd-color-primary-text: var(--bz-color-white-5);
+  --sd-color-secondary-text: var(--bz-color-white-5);
+  --sd-color-success-text: var(--bz-color-white-5);
+  --sd-color-info-text: var(--bz-color-white-5);
+  --sd-color-warning-text: var(--bz-color-white-5);
+  --sd-color-danger-text: var(--bz-color-white-5);
+  --sd-color-muted-text: var(--bz-color-white-5);
 
   --sd-color-card-background: var(--bz-topic-background-color);
   --sd-color-card-border-hover: var(--bz-color-primary);
   --sd-color-card-border: var(--bz-topic-border-color);
 
-  --sd-color-tabs-border: color-mix(in oklab, var(--bz-color-primary) 10%, var(--bz-color-outline));
+  --sd-color-tabs-border: color-mix(in oklab, var(--bz-color-primary) 20%, #88888822);
   --sd-color-tabs-label-active: var(--bz-color-primary-5);
   --sd-color-tabs-label-inactive: var(--bz-color-muted);
   --sd-color-tabs-label-hover: var(--bz-color-primary-5);
@@ -207,9 +207,9 @@ details.sd-dropdown summary.sd-summary-title {
     background-color: color-mix(in oklab, var(--bz-bg-dark) 70%, transparent)!important;
   }
   &.sd-bg-black {
-    background-color: color-mix(in oklab, var(--bz-color-black) 70%, transparent)!important;
+    background-color: color-mix(in oklab, var(--bz-color-black-1) 70%, transparent)!important;
   }
   &.sd-bg-white {
-    background-color: color-mix(in oklab, var(--bz-color-white) 70%, transparent)!important;
+    background-color: color-mix(in oklab, var(--bz-color-white-5) 70%, transparent)!important;
   }
 }
