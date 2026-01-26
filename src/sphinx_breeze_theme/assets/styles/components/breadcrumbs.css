@@ -1,4 +1,5 @@
 .bz-breadcrumbs {
+  width: 100%;
   font-weight: 400;
   font-size: var(--bz-breadcrumbs-font-size);
   font-family: var(--bz-breadcrumbs-font-family);
@@ -36,6 +37,7 @@
   align-items: center;
   padding: .5rem;
   margin: -.5rem;
+  max-width: 100%;
 }
 
 .bz-breadcrumbs li:not(:last-child)::after {
