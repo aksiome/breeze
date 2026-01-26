@@ -18,7 +18,7 @@ A clean, modern, customizable Sphinx documentation theme.
 :::{grid-item}
 :columns: auto
 
-```{button-link} user_guide/quickstart.html
+```{button-ref} user_guide/quickstart
 :color: primary
 :class: rounded
 :shadow:

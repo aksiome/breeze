@@ -34,6 +34,7 @@
     visibility: visible;
     align-self: stretch;
     max-height: calc(100vh - var(--bz-header-height));
+    padding-bottom: var(--bz-header-tabs-height);
     width: var(--bz-sidebar-primary-width);
     top: var(--bz-header-height);
     background: none;
@@ -43,7 +44,7 @@
     }
 
     > :last-child {
-      padding-bottom: 2rem;
+      padding-bottom: 1rem;
     }
   }
 }
