@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 <!-- version list -->
 
+## v0.7.3 (2026-01-26)
+
+### 🐛 Bug Fixes
+
+- Header separator z-index
+  ([`1171ada`](https://github.com/aksiome/breeze/commit/1171ada3df2f44c40923f0c6429a181df05c3cb2))
+
 ## v0.7.2 (2026-01-26)
 
 ### 🐛 Bug Fixes
