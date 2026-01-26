@@ -96,7 +96,7 @@ object.align-center,
 
 .bz-header-separator {
   position: sticky;
-  z-index: 1000;
+  z-index: 999;
   border: none;
   height: 9px;
   margin: -8px 0 0 0;
