@@ -4,6 +4,36 @@ All notable changes to this project will be documented in this file.
 
 <!-- version list -->
 
+## v0.7.0 (2026-01-26)
+
+### ✨ Features
+
+- Add external link icon
+  ([`fae7ba0`](https://github.com/aksiome/breeze/commit/fae7ba0905e273ecd4e627333e5dd5b5a02f9ab7))
+- Auto-detect external links icons and names
+  ([`285989c`](https://github.com/aksiome/breeze/commit/285989c53ffc8700b85d09b4d0acf13a13ff6a11))
+- **layout**: Add hide-header-tabs page option
+  ([`eeb6bde`](https://github.com/aksiome/breeze/commit/eeb6bdee3e63525e7ed0bf5eb28e8fc8f20c9340))
+
+### 🐛 Bug Fixes
+
+- **ui**: Show mobile burger icon when tabs are disabled
+  ([`57697d1`](https://github.com/aksiome/breeze/commit/57697d10aaea6eeb10d47d9a931f9939ca52ddd2))
+
+### 🎨 Styling
+
+- **theme**: Adjust light theme colors
+  ([`c021dac`](https://github.com/aksiome/breeze/commit/c021dac70880c3a93a44ac300d3df1daf20a4275))
+- **table**: Add small padding to better center the scrollbar on wide tables
+  ([`1e00066`](https://github.com/aksiome/breeze/commit/1e00066bf2a5e2e9f3f6c81a63b99308bea27e02))
+
+### 📚 Documentation
+
+- Fix include path errors
+  ([`a07d232`](https://github.com/aksiome/breeze/commit/a07d2329b159baebdf9a116dfc191ea2a4d26075))
+- Add logo and improve index
+  ([`e2b860f`](https://github.com/aksiome/breeze/commit/e2b860fcf1fc656036f60be6be105cc66a65f75c))
+
 ## v0.6.1 (2026-01-23)
 
 ### 🎨 Styling
