@@ -10,7 +10,7 @@
   margin-inline: -1.5rem;
   padding: 1rem 1.25rem .75rem;
   background: color-mix(in oklab, var(--bz-page-background-color) 90%, transparent);
-  backdrop-filter: blur(.4rem);
+  backdrop-filter: blur(.4rem) saturate(150%) brightness(1.05);
   top: var(--bz-header-tabs-height);
 
   > * {

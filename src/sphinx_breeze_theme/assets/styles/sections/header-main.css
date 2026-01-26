@@ -11,7 +11,7 @@
   font-family: var(--bz-header-font-family);
   background-color: var(--bz-header-background-color);
   padding-inline: calc(var(--bz-page-padding) + clamp(1rem, 0.826rem + 0.87vw, 1.5rem));
-  backdrop-filter: blur(.75rem);
+  backdrop-filter: blur(.75rem) saturate(150%) brightness(1.05);
 
   > * {
     display: flex;

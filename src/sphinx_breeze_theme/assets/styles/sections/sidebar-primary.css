@@ -20,7 +20,7 @@
   background-color: var(--bz-sidebar-primary-drawer-background-color);
   border-right: 1px solid var(--bz-sidebar-primary-border-color);
   transition: left linear 0.2s, visibility linear 0.2s;
-  backdrop-filter: blur(.5rem);
+  backdrop-filter: blur(.5rem) saturate(150%) brightness(1.05);
 
   > * {
     padding-right: 2rem;
@@ -29,6 +29,7 @@
 
   @media (width > 52rem) {
     position: sticky;
+    backdrop-filter: none;
     z-index: auto;
     height: auto;
     padding: 0;

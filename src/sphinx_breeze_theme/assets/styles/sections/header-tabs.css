@@ -11,7 +11,7 @@
   font-family: var(--bz-header-font-family);
   background-color: var(--bz-header-background-color);
   padding-inline: calc(var(--bz-page-padding) + clamp(0.75rem, 0.45rem + 1.5vw, 1.5rem));
-  backdrop-filter: blur(.75rem);
+  backdrop-filter: blur(.75rem) saturate(150%) brightness(1.05);
 
   @media (width > 52rem) {
     position: relative;
