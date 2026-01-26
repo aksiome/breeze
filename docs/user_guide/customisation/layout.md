@@ -40,6 +40,16 @@ html_theme_options = {
 }
 ```
 
+:::{note}
+Components are often designed for a **specific layout slot** and may rely on
+the surrounding structure, spacing, or behavior of that slot.
+
+If a component does not work as expected when placed in a different slot,
+this does not necessarily indicate a bug.  
+If you believe a component *should* be usable in another slot, please open an
+issue to discuss the intended usage.
+:::
+
 ### Available components
 
 | Component | Description |
