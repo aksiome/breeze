@@ -20,6 +20,7 @@
   background-color: var(--bz-sidebar-primary-drawer-background-color);
   border-right: 1px solid var(--bz-sidebar-primary-border-color);
   transition: left linear 0.2s, visibility linear 0.2s;
+  backdrop-filter: blur(.5rem);
 
   > * {
     padding-right: 2rem;

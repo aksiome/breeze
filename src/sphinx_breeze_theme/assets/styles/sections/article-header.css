@@ -7,9 +7,10 @@
   justify-content: space-between;
   gap: 1rem;
   margin-top: -1.75rem;
-  margin-inline: -.25rem;
-  padding: 1rem .25rem;
-  background: linear-gradient(to bottom, var(--bz-page-background-color) 90%, transparent);
+  margin-inline: -1.5rem;
+  padding: 1rem 1.25rem .75rem;
+  background: color-mix(in oklab, var(--bz-page-background-color) 90%, transparent);
+  backdrop-filter: blur(.4rem);
   top: var(--bz-header-tabs-height);
 
   > * {

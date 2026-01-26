@@ -22,12 +22,12 @@
 
   --bz-header-color: var(--bz-color-muted);
   --bz-header-border-color: var(--bz-color-outline);
-  --bz-header-background-color: var(--bz-color-surface-2);
-  --bz-header-background-color-variant: var(--bz-color-surface-3);
+  --bz-header-background-color: color-mix(in oklab, var(--bz-color-surface-3) 80%, transparent);
+  --bz-header-background-color-variant: color-mix(in oklab, var(--bz-color-surface-4), var(--bz-color-surface-3));
   --bz-header-tabs-color: var(--bz-header-color);
   --bz-header-tabs-color-hover: var(--bz-link-color-hover);
   --bz-header-tabs-color-active: var(--bz-link-color-hover);
-  --bz-header-tabs-background-color-hover: var(--bz-color-surface-3);
+  --bz-header-tabs-background-color-hover: var(--bz-color-surface-2);
   --bz-header-font-size: inherit;
   --bz-header-font-family: inherit;
   --bz-header-height: 3.5rem;
@@ -49,14 +49,16 @@
   --bz-page-padding: calc((100vw - clamp(17.5rem, 100vw, var(--bz-page-width))) / 2);
   --bz-page-width: 94rem;
 
+  --bz-overlay-background-color: #eeeeee88;
+
   --bz-sidebar-primary-border-color: color-mix(in oklab, var(--bz-color-outline) 75%, transparent);
-  --bz-sidebar-primary-drawer-background-color: var(--bz-color-surface-3);
+  --bz-sidebar-primary-drawer-background-color: color-mix(in oklab, var(--bz-color-surface-4) 85%, transparent);
   --bz-sidebar-primary-font-size: inherit;
   --bz-sidebar-primary-font-family: inherit;
   --bz-sidebar-primary-width: 16rem;
 
   --bz-sidebar-secondary-border-color: color-mix(in oklab, var(--bz-color-outline) 75%, transparent);
-  --bz-sidebar-secondary-drawer-background-color: var(--bz-color-surface-3);
+  --bz-sidebar-secondary-drawer-background-color: color-mix(in oklab, var(--bz-color-surface-4) 85%, transparent);
   --bz-sidebar-secondary-font-size: inherit;
   --bz-sidebar-secondary-font-family: inherit;
   --bz-sidebar-secondary-width: 17rem;
@@ -132,7 +134,7 @@
   --bz-search-button-color: var(--bz-color-muted);
   --bz-search-button-border-color: var(--bz-color-outline);
   --bz-search-button-border-color-hover: var(--bz-color-primary);
-  --bz-search-button-background-color: var(--bz-color-surface-3);
+  --bz-search-button-background-color: var(--bz-color-surface-4);
   --bz-search-button-kbd-color: var(--bz-color-muted);
   --bz-search-button-kbd-border-color: var(--bz-color-outline);
   --bz-search-button-kbd-background-color: var(--bz-color-surface-2);
@@ -162,14 +164,14 @@
   --bz-theme-switcher-color: var(--bz-color-muted);
   --bz-theme-switcher-border-color: var(--bz-color-outline);
   --bz-theme-switcher-border-color-hover: var(--bz-color-primary);
-  --bz-theme-switcher-background-color: var(--bz-color-surface-1);
+  --bz-theme-switcher-background-color: var(--bz-color-surface-2);
   --bz-theme-switcher-icon-border-color: var(--bz-color-outline);
   --bz-theme-switcher-icon-background-color: var(--bz-color-surface-4);
 
   --bz-version-switcher-color: var(--bz-color-muted);
   --bz-version-switcher-border-color: var(--bz-color-outline);
   --bz-version-switcher-border-color-hover: var(--bz-color-primary);
-  --bz-version-switcher-background-color: var(--bz-color-surface-1);
+  --bz-version-switcher-background-color: var(--bz-color-surface-2);
   --bz-version-switcher-font-size: var(--bz-size-xs);
   --bz-version-switcher-font-family: inherit;
 
@@ -353,13 +355,17 @@
 }
 
 :root[data-theme=dark] {
-  --bz-header-background-color: var(--bz-color-surface-3);
+  --bz-header-background-color: color-mix(in oklab, var(--bz-color-surface-3) 87.5%, transparent);
   --bz-header-background-color-variant: var(--bz-color-surface-4);
   --bz-header-tabs-background-color-hover: var(--bz-color-surface-1);
 
   --bz-footer-background-color: var(--bz-color-surface-3);
 
   --bz-page-background-color: var(--bz-color-surface-1);
+
+  --bz-overlay-background-color: #00000088;
+  --bz-sidebar-primary-drawer-background-color: color-mix(in oklab, var(--bz-color-surface-2) 85%, transparent);
+  --bz-sidebar-secondary-drawer-background-color: color-mix(in oklab, var(--bz-color-surface-2) 85%, transparent);
 
   --bz-search-button-background-color: var(--bz-color-surface-1);
   --bz-search-button-kbd-background-color: var(--bz-color-surface-2);

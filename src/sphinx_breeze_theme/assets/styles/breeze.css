@@ -85,7 +85,8 @@
     left: 0;
     right: 0;
     z-index: 10000;
-    background-color: #00000099;
+    backdrop-filter: blur(.1rem);
+    background-color: var(--bz-overlay-background-color);
     transition: opacity ease-in-out 0.25s, visibility ease-in-out 0.25s;
   }
 }

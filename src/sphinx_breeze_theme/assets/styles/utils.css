@@ -93,3 +93,22 @@ object.align-center,
     transition-delay: 500ms;
   }
 }
+
+.bz-header-separator {
+  position: sticky;
+  z-index: 1000;
+  border: none;
+  height: 9px;
+  margin: -8px 0 0 0;
+  top: calc(var(--bz-header-tabs-height) - 8px);
+  border-bottom: 1px solid var(--bz-header-border-color);
+  box-shadow:
+    0 1px 1px var(--bz-color-shadow),
+    0 2px 2px var(--bz-color-shadow),
+    0 4px 4px var(--bz-color-shadow),
+    0 8px 8px var(--bz-color-shadow);
+
+  @media (width > 52rem) {
+    top: calc(var(--bz-header-height) - 8px);
+  }
+}

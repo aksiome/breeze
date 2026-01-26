@@ -17,6 +17,7 @@
   border-left: 1px solid var(--bz-sidebar-secondary-border-color);
   background-color: var(--bz-sidebar-secondary-drawer-background-color);
   transition: right linear 0.2s, visibility linear 0.2s;
+  backdrop-filter: blur(.5rem);
 
   > *:not(:last-child) {
     padding-bottom: 2rem;
