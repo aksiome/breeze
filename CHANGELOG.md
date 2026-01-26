@@ -4,6 +4,25 @@ All notable changes to this project will be documented in this file.
 
 <!-- version list -->
 
+## v0.7.2 (2026-01-26)
+
+### 🐛 Bug Fixes
+
+- **breadcrumbs**: Prevent overflow on large paths
+  ([`338a284`](https://github.com/aksiome/breeze/commit/338a284ae4c3bbc02c2f431c9babfac0679c0ac0))
+
+### 🎨 Styling
+
+- **layout**: Add frosted glass effect
+  ([`43da22d`](https://github.com/aksiome/breeze/commit/43da22d7fb75387ff56870b02008f5c8052c770b))
+
+### 📚 Documentation
+
+- Add edit this page component
+  ([`c1cda1c`](https://github.com/aksiome/breeze/commit/c1cda1c730baa238fc72e64a3bd5bd7ce3827b1f))
+- Clarify layout component usage
+  ([`7579441`](https://github.com/aksiome/breeze/commit/75794411e40afbaa507a5ececbc34bdc7efc8852))
+
 ## v0.7.1 (2026-01-26)
 
 ### 🐛 Bug Fixes
