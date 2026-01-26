@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 <!-- version list -->
 
+## v0.7.1 (2026-01-26)
+
+### 🐛 Bug Fixes
+
+- Type hint causing build failure
+  ([`9a3fa82`](https://github.com/aksiome/breeze/commit/9a3fa8239751a0c2887ccfa892d620d8b46dd90a))
+
 ## v0.7.0 (2026-01-26)
 
 ### ✨ Features
