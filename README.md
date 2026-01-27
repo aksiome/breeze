@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/_static/logo.png" alt="Breeze" width="100" height="100">
+  <img src="https://raw.githubusercontent.com/aksiome/breeze/refs/heads/main/docs/_static/logo.png" alt="Breeze" width="100" height="100">
 </p>
 
 <h1 align="center">Breeze</h1>
@@ -9,9 +9,9 @@
 </p>
 
 <p align="center">
-  <a href="https://pypi.org/project/sphinx-breeze-theme/"><img src="https://img.shields.io/pypi/v/sphinx-breeze-theme?color=%2334D058" alt="PyPI version"></a>
-  <a href="https://pypistats.org/packages/sphinx-breeze-theme"><img src="https://img.shields.io/pypi/dm/sphinx-breeze-theme.svg" alt="Downloads"/></a>
-  <a href="https://sphinx-breeze-theme.readthedocs.io/"><img src="https://img.shields.io/readthedocs/sphinx-breeze-theme" alt="Documentation"></a>
+  <a href="https://pypi.org/project/sphinx-breeze-theme/"><img src="https://img.shields.io/pypi/v/sphinx-breeze-theme?logo=python&amp;color=blue&amp;logoColor=white&amp;label=PyPI" alt="PyPI version"></a>
+  <a href="https://sphinx-breeze-theme.readthedocs.io/"><img src="https://img.shields.io/readthedocs/sphinx-breeze-theme?logo=readthedocs&amp;logoColor=white" alt="Documentation"></a>
+  <a href="https://pypistats.org/packages/sphinx-breeze-theme"><img src="https://img.shields.io/pypi/dm/sphinx-breeze-theme.svg?color=yellow" alt="Downloads"/></a>
   <a href="https://github.com/aksiome/breeze/blob/main/LICENSE"><img src="https://img.shields.io/pypi/l/sphinx-breeze-theme" alt="License"></a>
 </p>
 
@@ -23,9 +23,9 @@
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/_static/screenshot-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="docs/_static/screenshot-light.png">
-    <img alt="Breeze theme screenshot" src="docs/_static/screenshot-light.png">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/aksiome/breeze/refs/heads/main/docs/_static/screenshot-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/aksiome/breeze/refs/heads/main/docs/_static/screenshot-light.png">
+    <img alt="Breeze theme screenshot" src="https://raw.githubusercontent.com/aksiome/breeze/refs/heads/main/docs/_static/screenshot-light.png">
   </picture>
 </p>
 
