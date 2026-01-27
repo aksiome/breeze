@@ -8,33 +8,52 @@ from collections.abc import Callable
 from urllib.parse import urlparse
 
 
-COMMON_LINKS = {
-    "github.com":        ("GitHub", "mark-github"),
-    "gitlab.com":        ("GitLab", "gitlab"),
-    "bitbucket.org":     ("Bitbucket", "bitbucket"),
-    "sourcehut.org":     ("SourceHut", "sourcehut"),
-    "youtube.com":       ("YouTube", "youtube"),
-    "facebook.com":      ("Facebook", "facebook"),
-    "instagram.com":     ("Instagram", "instagram"),
-    "reddit.com":        ("Reddit", "reddit"),
-    "tiktok.com":        ("TikTok", "tiktok"),
-    "twitch.tv":         ("Twitch", "twitch"),
-    "snapchat.com":      ("Snapchat", "snapchat"),
-    "medium.com":        ("Medium", "medium"),
-    "stackoverflow.com": ("Stack Overflow", "stackoverflow"),
-    "discord.gg":        ("Discord", "discord"),
-    "discord.com":       ("Discord", "discord"),
-    "matrix.to":         ("Matrix", "matrix"),
-    "telegram.org":      ("Telegram", "telegram"),
-    "gitter.im":         ("Gitter", "gitter"),
-    "patreon.com":       ("Patreon", "patreon"),
-    "opencollective.com":("Open Collective", "opencollective"),
-    "ko-fi.com":         ("Ko-fi", "kofi"),
-    "pypi.org":          ("PyPI", "pypi"),
-    "npmjs.com":         ("npm", "npm"),
-    "crates.io":         ("crates.io", "package-dependencies"),
-    "readthedocs.org":   ("Read the Docs", "book"),
-    "docs.rs":           ("docs.rs", "rust"),
+KNOWN_DOMAINS = {
+    # Code hosting
+    "bitbucket.org":      ("Bitbucket", "bitbucket"),
+    "github.com":         ("GitHub", "mark-github"),
+    "gitlab.com":         ("GitLab", "gitlab"),
+
+    # Package registries
+    "pypi.org":           ("PyPI", "pypi"),
+    "npmjs.com":          ("npm", "npm"),
+    "crates.io":          ("crates.io", "package-dependencies"),
+    "packagist.org":      ("Packagist", "packagist"),
+    "rubygems.org":       ("RubyGems", "rubygems"),
+    "nuget.org":          ("NuGet", "nuget"),
+    "search.maven.org":   ("Maven Central", "apachemaven"),
+    "mvnrepository.com":  ("Maven Repository", "apachemaven"),
+
+    # Documentation
+    "readthedocs.org":    ("Read the Docs", "readthedocs"),
+    "docs.rs":            ("docs.rs", "docsdotrs"),
+    "gitbook.io":         ("GitBook", "gitbook"),
+    "github.io":          ("GitHub Pages", "githubpages"),
+
+    # Social media
+    "youtube.com":        ("YouTube", "youtube"),
+    "facebook.com":       ("Facebook", "facebook"),
+    "instagram.com":      ("Instagram", "instagram"),
+    "reddit.com":         ("Reddit", "reddit"),
+    "tiktok.com":         ("TikTok", "tiktok"),
+    "twitch.tv":          ("Twitch", "twitch"),
+    "snapchat.com":       ("Snapchat", "snapchat"),
+    "twitter.com":        ("X (Twitter)", "x"),
+    "x.com":              ("X (Twitter)", "x"),
+
+    # Community
+    "discord.com":        ("Discord", "discord"),
+    "discord.gg":         ("Discord", "discord"),
+    "telegram.org":       ("Telegram", "telegram"),
+    "gitter.im":          ("Gitter", "gitter"),
+    "stackoverflow.com":  ("Stack Overflow", "stackoverflow"),
+    "medium.com":         ("Medium", "medium"),
+
+    # Funding
+    "patreon.com":        ("Patreon", "patreon"),
+    "opencollective.com": ("Open Collective", "opencollective"),
+    "ko-fi.com":          ("Ko-fi", "kofi"),
+    "buymeacoffee.com":   ("Buy Me a Coffee", "buymeacoffee"),
 }
 
 
@@ -104,7 +123,7 @@ def lookup_defaults(url: str):
     parsed = urlparse(url)
     domain = parsed.netloc.lower()
 
-    if domain in COMMON_LINKS:
-        return COMMON_LINKS[domain]
+    if domain in KNOWN_DOMAINS:
+        return KNOWN_DOMAINS[domain]
 
     return domain or url, "link"

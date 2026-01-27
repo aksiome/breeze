@@ -64,12 +64,12 @@ html_theme_options = {
 
 These domains automatically get appropriate names and icons:
 
-- **Code hosting**: GitHub, GitLab, Bitbucket, SourceHut
-- **Package registries**: PyPI, npm, crates.io
-- **Documentation**: Read the Docs, docs.rs
-- **Social media**: YouTube, Facebook, Instagram, Reddit, TikTok, Twitch, Snapchat
-- **Community**: Discord, Matrix, Telegram, Gitter, Stack Overflow, Medium
-- **Funding**: Patreon, Open Collective, Ko-fi
+- **Code hosting**: GitHub, GitLab, Bitbucket
+- **Package registries**: PyPI, npm, crates.io, Packagist, RubyGems, NuGet, Maven Central, Maven Repository
+- **Documentation**: Read the Docs, docs.rs, GitBook, GitHub Pages
+- **Social media**: YouTube, Facebook, Instagram, Reddit, TikTok, Twitch, Snapchat, X (Twitter)
+- **Community**: Discord, Telegram, Gitter, Stack Overflow, Medium
+- **Funding**: Patreon, Open Collective, Ko-fi, Buy Me a Coffee
 
 ## Custom icons
 
