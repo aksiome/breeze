@@ -21,7 +21,7 @@
   min-width: 0;
   max-width: 72rem;
   margin-inline: auto;
-  padding-block: 2rem;
+  padding-block: 3rem;
   overflow-wrap: anywhere;
 
   @media (width > 75rem) {

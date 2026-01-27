@@ -38,11 +38,11 @@
     max-height: calc(100vh - var(--bz-header-height));
     padding-bottom: var(--bz-header-tabs-height);
     width: var(--bz-sidebar-primary-width);
-    top: var(--bz-header-height);
+    top: calc(var(--bz-header-height) - 1rem);
     background: none;
 
     > :first-child {
-      padding-top: 2rem;
+      padding-top: 3rem;
     }
 
     > :last-child {
