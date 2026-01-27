@@ -4,6 +4,30 @@ All notable changes to this project will be documented in this file.
 
 <!-- version list -->
 
+## v0.8.0 (2026-01-27)
+
+### ✨ Features
+
+- Update external links known domains
+  ([`e14c24c`](https://github.com/aksiome/breeze/commit/e14c24c79e710d3caff596b1234a4226cb2d0aca))
+
+### 🐛 Bug Fixes
+
+- **sidebar**: Correct chevron alignment
+  ([`c3c2878`](https://github.com/aksiome/breeze/commit/c3c2878586e79bbbd5f091182b4601faafff2e81))
+
+### 🎨 Styling
+
+- **api**: Scrollable signature blocks and source icon
+  ([`e090e4a`](https://github.com/aksiome/breeze/commit/e090e4ae8c7371f0c3467f9e1165efd20e469b4b))
+- **layout**: Slightly improve the frosted glass effect
+  ([`35d0c51`](https://github.com/aksiome/breeze/commit/35d0c5148bc01b65e122a15c38edf2b0241ddc38))
+
+### 📚 Documentation
+
+- Improve readme structure and visuals
+  ([`bc23101`](https://github.com/aksiome/breeze/commit/bc231018d6e4fe78ba8dba49764817d44fe61c2b))
+
 ## v0.7.3 (2026-01-26)
 
 ### 🐛 Bug Fixes
