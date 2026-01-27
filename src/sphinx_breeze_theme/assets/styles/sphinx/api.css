@@ -54,12 +54,54 @@ dl[class]:not(.option-list, .field-list, .footnote, .glossary, .simple):not(
 
 dl > dt > a:has(.viewcode-link) {
   user-select: none;
-  float: right;
+  z-index: 1;
+  position: sticky;
+  right: -.5rem;
+  margin-right: -.5rem;
+  padding: .25rem .5rem;
+  left: calc(100% - 1.65rem);
+  background-color: var(--bz-sig-background-color);
+
+  span {
+    position: absolute;
+    opacity: 0;
+    overflow: hidden;
+  }
+
+  &::before {
+    content: "";
+    vertical-align: middle;
+    display: inline-block;
+    mask-image: var(--bz-icon-source-code);
+    background-color: currentColor;
+    height: 1.15rem;
+    width: 1.15rem;
+  }
+
+  &::after, &::after {
+    content: "source";
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    transition: opacity ease-in-out .15s, right ease-in-out .15s;
+  }
+
+  &:hover::after, &:focus::after {
+    opacity: 1;
+    right: 2rem;
+  }
+
+  + .headerlink {
+    margin-left: -1.25rem;
+    margin-right: 2rem;
+  }
 }
 
 dt.sig {
   display: block;
-  overflow-y: auto;
+  position: relative;
+  overflow: auto;
+  text-wrap: nowrap;
   border-radius: var(--bz-border-radius)!important;
   color: var(--bz-sig-color);
   font-size: var(--bz-sig-font-size);
@@ -74,6 +116,15 @@ dt.sig {
   dl {
     margin: 0;
     padding-left: 0 !important;
+  }
+
+  a:has(.viewcode-link) {
+    opacity: 0;
+    transition: opacity ease-in-out .15s;
+  }
+
+  &:hover a:has(.viewcode-link) {
+    opacity: 1;
   }
 
   dl dd {
