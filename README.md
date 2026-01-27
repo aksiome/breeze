@@ -1,42 +1,72 @@
-# Breeze - A Modern Sphinx Theme
+<p align="center">
+  <img src="docs/_static/logo.png" alt="Breeze" width="100" height="100">
+</p>
 
-A modern Sphinx theme built with TypeScript and Vite. 
+<h1 align="center">Breeze</h1>
+
+<p align="center">
+  <strong>A clean and modern Sphinx theme with polished API docs</strong>
+</p>
+
+<p align="center">
+  <a href="https://pypi.org/project/sphinx-breeze-theme/"><img src="https://img.shields.io/pypi/v/sphinx-breeze-theme?color=%2334D058" alt="PyPI version"></a>
+  <a href="https://pypistats.org/packages/sphinx-breeze-theme"><img src="https://img.shields.io/pypi/dm/sphinx-breeze-theme.svg" alt="Downloads"/></a>
+  <a href="https://sphinx-breeze-theme.readthedocs.io/"><img src="https://img.shields.io/readthedocs/sphinx-breeze-theme" alt="Documentation"></a>
+  <a href="https://github.com/aksiome/breeze/blob/main/LICENSE"><img src="https://img.shields.io/pypi/l/sphinx-breeze-theme" alt="License"></a>
+</p>
+
+<p align="center">
+  <a href="https://sphinx-breeze-theme.readthedocs.io/">Live Demo</a> ·
+  <a href="https://sphinx-breeze-theme.readthedocs.io/en/stable/user_guide/quickstart.html">Get Started</a> ·
+  <a href="https://sphinx-breeze-theme.readthedocs.io/en/stable/kitchen-sink/">Kitchen Sink</a>
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/_static/screenshot-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="docs/_static/screenshot-light.png">
+    <img alt="Breeze theme screenshot" src="docs/_static/screenshot-light.png">
+  </picture>
+</p>
 
 
+## Why Breeze?
 
-[demo](https://sphinx-breeze-theme.readthedocs.io/en/stable/)
+- **Clear and readable** — Tuned typography and spacing that lets your content breathe
+- **Polished API docs** — First-class autodoc styling that's easy to navigate
+- **Accessible** — WCAG-friendly colors and syntax highlighting out of the box
+- **Adaptive** — Works on any device with light & dark themes
+- **Built to scale** — Multiple layouts, built-in components, and flexible customization
 
 ## Installation
 
-Install Breeze from [PyPI](https://pypi.org/project/sphinx-breeze-theme/):
+Requires Python 3.10+ and Sphinx 8.0+.
 
-pip
 ```bash
 pip install sphinx-breeze-theme
 ```
 
-uv
-```bash
-uv add --dev sphinx-breeze-theme
-```
+## Quickstart
 
-## Setup
+Add to your `conf.py`:
 
-Update ``conf.py``:
 ```python
 html_theme = "breeze"
 ```
 
-Customise header:
-```python
-html_context = {
-    "github_user": "aksiome",
-    "github_repo": "breeze",
-    ...
-}
-```
+That's it! For customization options, see the [documentation](https://sphinx-breeze-theme.readthedocs.io/).
 
-## Documentation
+## Acknowledgements
 
-- official sphinx [tutorial](https://www.sphinx-doc.org/en/master/tutorial/)
-- MyST markdown [documentation](https://myst-parser.readthedocs.io/)
+Breeze draws inspiration from other great projects:
+
+- [PyData Sphinx Theme](https://github.com/pydata/pydata-sphinx-theme) — Three-column layout with toctree tabs in the header
+- [Material for MkDocs](https://github.com/squidfunk/mkdocs-material) — Overall aesthetic and modern visual direction
+- [Shibuya](https://github.com/lepture/shibuya) — Polish, extension support ideas, and configuration patterns
+- [VitePress](https://github.com/vuejs/vitepress) — UI component inspiration
+- [Furo](https://github.com/pradyunsg/furo) — Implementation reference for Sphinx code
+- [Lutra](https://github.com/pradyunsg/lutra) — A three-column theme that inspired this project
+
+## License
+
+This project is licensed under the [MPL-2.0](LICENSE) License.
