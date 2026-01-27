@@ -2,7 +2,7 @@
   <img src="https://raw.githubusercontent.com/aksiome/breeze/refs/heads/main/docs/_static/logo.png" alt="Breeze" width="100" height="100">
 </p>
 
-<h1 align="center">Breeze</h1>
+<h1 align="center">Sphinx Breeze Theme</h1>
 
 <p align="center">
   <strong>A clean and modern Sphinx theme with polished API docs</strong>
