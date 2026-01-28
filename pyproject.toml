@@ -72,6 +72,7 @@ commands = ["npm install", "npm run build"]
 [tool.semantic_release]
 allow_zero_version = true
 major_on_zero = false
+commit_message = "chore(release): {version}"
 version_variables = [
   "src/sphinx_breeze_theme/__init__.py:__version__"
 ]
