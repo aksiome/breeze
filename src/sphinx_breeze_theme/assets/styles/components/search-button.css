@@ -26,7 +26,7 @@
   kbd {
     display: none;
     color: var(--bz-search-button-kbd-color);
-    font-size: 0.8em;
+    font-size: 0.7em;
     font-family: var(--bz-search-button-kbd-font-family);
     border: 1px solid var(--bz-search-button-kbd-border-color);
     background-color: var(--bz-search-button-kbd-background-color);

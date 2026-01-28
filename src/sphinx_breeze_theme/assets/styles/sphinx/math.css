@@ -14,7 +14,8 @@ div.math {
 
   mjx-container {
     flex-grow: 1;
-    overflow: auto;
+    overflow-x: auto;
+    overflow-y: clip;
     padding: .5rem;
   }
 

@@ -116,7 +116,7 @@
   --bz-header-brand-color: var(--bz-header-color);
   --bz-header-brand-color-hover: var(--bz-link-color-hover);
   --bz-header-brand-font-size: 1.75rem;
-  --bz-header-brand-font-family: sans-serif;
+  --bz-header-brand-font-family: var(--bz-font-brand);
 
   --bz-lang-switcher-color: var(--bz-link-color);
   --bz-lang-switcher-color-hover: var(--bz-link-color-hover);
@@ -304,7 +304,7 @@
   --bz-sig-type-color: var(--bz-color-muted);
   --bz-sig-default-color: var(--bz-color-cyan-1);
   --bz-sig-space-color: var(--bz-color-outline);
-  --bz-sig-font-size: inherit;
+  --bz-sig-font-size: var(--bz-size-sm);
   --bz-sig-font-family: var(--bz-font-mono);
   --bz-sig-table-color: var(--bz-sig-color);
   --bz-sig-table-background-color: color-mix(in oklab, var(--bz-color-surface-3), var(--bz-color-surface-2));

@@ -51,6 +51,6 @@ Additional CSS variables for the header brand:
   --bz-header-brand-font-size: 1.75rem;
   --bz-header-brand-color: var(--bz-header-color);
   --bz-header-brand-color-hover: var(--bz-link-color-hover);
-  --bz-header-brand-font-family: sans-serif;
+  --bz-header-brand-font-family: var(--bz-font-brand);
 }
 ```

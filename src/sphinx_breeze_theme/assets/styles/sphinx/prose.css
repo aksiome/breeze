@@ -1,5 +1,5 @@
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 300;
+  font-weight: 200;
   border-radius: var(--bz-border-radius);
   color: var(--bz-title-color);
   font-family: var(--bz-title-font-family);

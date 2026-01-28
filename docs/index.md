@@ -4,7 +4,7 @@ content-width: 64rem
 ---
 
 ```{image} _static/logo.png
-:height: 10rem
+:height: 8.5rem
 :align: right
 ```
 
@@ -66,7 +66,7 @@ Adjust colors and styles using CSS variables to fit your project or brand.
 :::
 
 :::{grid-item-card}
-🗂 Flexible Layouts
+🧩 Flexible Layouts
 ^^^
 Choose from multiple page arrangements to present your content your way.  
 :::
