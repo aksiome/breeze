@@ -36,10 +36,15 @@
     margin-top: 0.5rem;
     visibility: hidden;
     transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
-    border: 1px solid var(--bz-dropdown-border-color);
-    background-color: var(--bz-dropdown-background-color);
     padding: 0.4rem;
     border-radius: var(--bz-border-radius);
+    border: 1px solid var(--bz-dropdown-border-color);
+    background: linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--bz-dropdown-background-color) 100%, #ffffff11 4%) 0%,
+      color-mix(in oklab, var(--bz-dropdown-background-color) 100%, transparent 4%) 50%,
+      color-mix(in oklab, var(--bz-dropdown-background-color) 100%, #00000011 4%) 100%
+    );
     box-shadow:
       0 1px 1px var(--bz-color-shadow),
       0 2px 2px var(--bz-color-shadow),

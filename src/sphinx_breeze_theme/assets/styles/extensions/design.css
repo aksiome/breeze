@@ -181,35 +181,144 @@ details.sd-dropdown summary.sd-summary-title {
 
   &.sd-bg-primary {
     background-color: color-mix(in oklab, var(--sd-color-primary) 70%, transparent)!important;
+    box-shadow:
+      inset 0 2px 0 color-mix(in oklab, var(--sd-color-primary) 20%, white 2%),
+      inset 0 -1px 0 color-mix(in oklab, var(--sd-color-primary) 20%, black 3%),
+      inset 1px 0 0 color-mix(in oklab, var(--sd-color-primary) 20%, white 1%),
+      inset -2px 0 0 color-mix(in oklab, var(--sd-color-primary) 20%, black 2%);
   }
   &.sd-bg-secondary {
     background-color: color-mix(in oklab, var(--sd-color-secondary) 70%, transparent)!important;
+    box-shadow:
+      inset 0 2px 0 color-mix(in oklab, var(--sd-color-secondary) 20%, white 2%),
+      inset 0 -1px 0 color-mix(in oklab, var(--sd-color-secondary) 20%, black 3%),
+      inset 1px 0 0 color-mix(in oklab, var(--sd-color-secondary) 20%, white 1%),
+      inset -2px 0 0 color-mix(in oklab, var(--sd-color-secondary) 20%, black 2%);
   }
   &.sd-bg-success {
     background-color: color-mix(in oklab, var(--sd-color-success) 70%, transparent)!important;
+    box-shadow:
+      inset 0 2px 0 color-mix(in oklab, var(--sd-color-success) 20%, white 2%),
+      inset 0 -1px 0 color-mix(in oklab, var(--sd-color-success) 20%, black 3%),
+      inset 1px 0 0 color-mix(in oklab, var(--sd-color-success) 20%, white 1%),
+      inset -2px 0 0 color-mix(in oklab, var(--sd-color-success) 20%, black 2%);
   }
   &.sd-bg-info {
     background-color: color-mix(in oklab, var(--sd-color-info) 70%, transparent)!important;
+    box-shadow:
+      inset 0 2px 0 color-mix(in oklab, var(--sd-color-info) 20%, white 2%),
+      inset 0 -1px 0 color-mix(in oklab, var(--sd-color-info) 20%, black 3%),
+      inset 1px 0 0 color-mix(in oklab, var(--sd-color-info) 20%, white 1%),
+      inset -2px 0 0 color-mix(in oklab, var(--sd-color-info) 20%, black 2%);
   }
   &.sd-bg-warning {
     background-color: color-mix(in oklab, var(--sd-color-warning) 70%, transparent)!important;
+    box-shadow:
+      inset 0 2px 0 color-mix(in oklab, var(--sd-color-warning) 20%, white 2%),
+      inset 0 -1px 0 color-mix(in oklab, var(--sd-color-warning) 20%, black 3%),
+      inset 1px 0 0 color-mix(in oklab, var(--sd-color-warning) 20%, white 1%),
+      inset -2px 0 0 color-mix(in oklab, var(--sd-color-warning) 20%, black 2%);
   }
   &.sd-bg-danger {
     background-color: color-mix(in oklab, var(--sd-color-danger) 70%, transparent)!important;
+    box-shadow:
+      inset 0 2px 0 color-mix(in oklab, var(--sd-color-danger) 20%, white 2%),
+      inset 0 -1px 0 color-mix(in oklab, var(--sd-color-danger) 20%, black 3%),
+      inset 1px 0 0 color-mix(in oklab, var(--sd-color-danger) 20%, white 1%),
+      inset -2px 0 0 color-mix(in oklab, var(--sd-color-danger) 20%, black 2%);
   }
   &.sd-bg-muted {
     background-color: color-mix(in oklab, var(--sd-color-muted) 70%, transparent)!important;
+    box-shadow:
+      inset 0 2px 0 color-mix(in oklab, var(--sd-color-muted) 20%, white 2%),
+      inset 0 -1px 0 color-mix(in oklab, var(--sd-color-muted) 20%, black 3%),
+      inset 1px 0 0 color-mix(in oklab, var(--sd-color-muted) 20%, white 1%),
+      inset -2px 0 0 color-mix(in oklab, var(--sd-color-muted) 20%, black 2%);
   }
   &.sd-bg-light {
     background-color: color-mix(in oklab, var(--bz-bg-light) 70%, transparent)!important;
+    box-shadow:
+      inset 0 2px 0 color-mix(in oklab, var(--sd-color-light) 20%, white 2%),
+      inset 0 -1px 0 color-mix(in oklab, var(--sd-color-light) 20%, black 3%),
+      inset 1px 0 0 color-mix(in oklab, var(--sd-color-light) 20%, white 1%),
+      inset -2px 0 0 color-mix(in oklab, var(--sd-color-light) 20%, black 2%);
   }
   &.sd-bg-dark {
     background-color: color-mix(in oklab, var(--bz-bg-dark) 70%, transparent)!important;
+    box-shadow:
+      inset 0 2px 0 color-mix(in oklab, var(--sd-color-dark) 20%, white 2%),
+      inset 0 -1px 0 color-mix(in oklab, var(--sd-color-dark) 20%, black 3%),
+      inset 1px 0 0 color-mix(in oklab, var(--sd-color-dark) 20%, white 1%),
+      inset -2px 0 0 color-mix(in oklab, var(--sd-color-dark) 20%, black 2%);
   }
   &.sd-bg-black {
     background-color: color-mix(in oklab, var(--bz-color-black-1) 70%, transparent)!important;
+    box-shadow:
+      inset 0 2px 0 color-mix(in oklab, var(--sd-color-black-1) 20%, white 2%),
+      inset 0 -1px 0 color-mix(in oklab, var(--sd-color-black-1) 20%, black 3%),
+      inset 1px 0 0 color-mix(in oklab, var(--sd-color-black-1) 20%, white 1%),
+      inset -2px 0 0 color-mix(in oklab, var(--sd-color-black-1) 20%, black 2%);
   }
   &.sd-bg-white {
     background-color: color-mix(in oklab, var(--bz-color-white-5) 70%, transparent)!important;
+    box-shadow:
+      inset 0 2px 0 color-mix(in oklab, var(--sd-color-white-5) 20%, white 2%),
+      inset 0 -1px 0 color-mix(in oklab, var(--sd-color-white-5) 20%, black 3%),
+      inset 1px 0 0 color-mix(in oklab, var(--sd-color-white-5) 20%, white 1%),
+      inset -2px 0 0 color-mix(in oklab, var(--sd-color-white-5) 20%, black 2%);
   }
+}
+
+.sd-card {
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--sd-color-card-background) 100%, white 1%) 0%,
+    var(--sd-color-card-background) 50%,
+    color-mix(in oklab, var(--sd-color-card-background) 100%, black 1%) 100%
+  );
+  box-shadow:
+    inset 0 2px 0 color-mix(in oklab, var(--sd-color-card-background) 100%, white 4%),
+    inset 0 -1px 0 color-mix(in oklab, var(--sd-color-card-background) 100%, black 6%),
+    inset 1px 0 0 color-mix(in oklab, var(--sd-color-card-background) 100%, white 2%),
+    inset -2px 0 0 color-mix(in oklab, var(--sd-color-card-background) 100%, black 3%);
+}
+
+
+.sd-card.sd-shadow-sm {
+  box-shadow:
+    0 1px 1px var(--bz-color-shadow),
+    0 2px 2px var(--bz-color-shadow),
+    0 4px 4px var(--bz-color-shadow),
+    0 8px 8px var(--bz-color-shadow),
+    inset 0 2px 0 color-mix(in oklab, var(--sd-color-card-background) 100%, white 4%),
+    inset 0 -1px 0 color-mix(in oklab, var(--sd-color-card-background) 100%, black 6%),
+    inset 1px 0 0 color-mix(in oklab, var(--sd-color-card-background) 100%, white 2%),
+    inset -2px 0 0 color-mix(in oklab, var(--sd-color-card-background) 100%, black 3%) !important;
+}
+
+.sd-card.sd-shadow-md {
+  box-shadow:
+    0 1px 1px var(--bz-color-shadow),
+    0 2px 2px var(--bz-color-shadow),
+    0 4px 4px var(--bz-color-shadow),
+    0 8px 8px var(--bz-color-shadow),
+    0 16px 16px var(--bz-color-shadow),
+    inset 0 2px 0 color-mix(in oklab, var(--sd-color-card-background) 100%, white 4%),
+    inset 0 -1px 0 color-mix(in oklab, var(--sd-color-card-background) 100%, black 6%),
+    inset 1px 0 0 color-mix(in oklab, var(--sd-color-card-background) 100%, white 2%),
+    inset -2px 0 0 color-mix(in oklab, var(--sd-color-card-background) 100%, black 3%) !important;
+}
+
+.sd-card.sd-shadow-lg {
+  box-shadow:
+    0 1px 1px var(--bz-color-shadow),
+    0 2px 2px var(--bz-color-shadow),
+    0 4px 4px var(--bz-color-shadow),
+    0 8px 8px var(--bz-color-shadow),
+    0 16px 16px var(--bz-color-shadow),
+    0 32px 32px var(--bz-color-shadow),
+    inset 0 2px 0 color-mix(in oklab, var(--sd-color-card-background) 100%, white 4%),
+    inset 0 -1px 0 color-mix(in oklab, var(--sd-color-card-background) 100%, black 6%),
+    inset 1px 0 0 color-mix(in oklab, var(--sd-color-card-background) 100%, white 2%),
+    inset -2px 0 0 color-mix(in oklab, var(--sd-color-card-background) 100%, black 3%) !important;
 }

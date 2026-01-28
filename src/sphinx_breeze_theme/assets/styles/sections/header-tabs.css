@@ -9,7 +9,7 @@
   color: var(--bz-header-tabs-color);
   font-size: var(--bz-header-font-size);
   font-family: var(--bz-header-font-family);
-  background-color: var(--bz-header-background-color);
+  background: color-mix(in oklab, var(--bz-header-background-color) 100%, black 1%);
   padding-inline: calc(var(--bz-page-padding) + clamp(0.75rem, 0.45rem + 1.5vw, 1.5rem));
   backdrop-filter: blur(.75rem) saturate(150%) brightness(1.05);
 
@@ -45,7 +45,12 @@
 
     &:hover {
       color: var(--bz-header-tabs-color-hover);
-      background-color: var(--bz-header-tabs-background-color-hover);
+      background: linear-gradient(
+        180deg,
+        color-mix(in oklab, var(--bz-header-tabs-background-color-hover) 100%, white 1%) 0%,
+        var(--bz-header-tabs-background-color-hover) 50%,
+        color-mix(in oklab, var(--bz-header-tabs-background-color-hover) 100%, black 1%) 100%
+      );
     }
   }
 

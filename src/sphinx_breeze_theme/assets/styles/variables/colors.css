@@ -16,7 +16,7 @@
   --bz-color-outline: oklch(0.6 0.01 264 / 0.2);
   --bz-color-surface: oklch(0.975 0 0);
   --bz-color-shadow: oklch(0 0 0 / 0.02);
-  --bz-color-text: oklch(0.1 0.005 265);
+  --bz-color-text: oklch(0.075 0.005 265);
   --bz-color-muted: oklch(0.425 0.005 265);
   --bz-color-target: oklch(0.9 0.035 75);
 

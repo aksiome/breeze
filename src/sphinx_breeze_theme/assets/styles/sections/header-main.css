@@ -9,9 +9,14 @@
   color: var(--bz-header-color);
   font-size: var(--bz-header-font-size);
   font-family: var(--bz-header-font-family);
-  background-color: var(--bz-header-background-color);
   padding-inline: calc(var(--bz-page-padding) + clamp(1rem, 0.826rem + 0.87vw, 1.5rem));
   backdrop-filter: blur(.75rem) saturate(150%) brightness(1.05);
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--bz-header-background-color) 100%, white 1%) 0%,
+    var(--bz-header-background-color) 50%,
+    color-mix(in oklab, var(--bz-header-background-color) 100%, black 1%) 100%
+  );
 
   > * {
     display: flex;

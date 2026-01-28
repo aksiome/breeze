@@ -10,8 +10,13 @@
   color: var(--bz-footer-color);
   font-size: var(--bz-footer-font-size);
   font-family: var(--bz-footer-font-family);
-  background-color: var(--bz-footer-background-color);
   border-top: 1px solid var(--bz-footer-border-color);
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--bz-footer-background-color) 100%, white 1%) 0%,
+    var(--bz-footer-background-color) 50%,
+    color-mix(in oklab, var(--bz-footer-background-color) 100%, black 1%) 100%
+  );
 
   @media (width <= 36rem) {
     text-align: center;

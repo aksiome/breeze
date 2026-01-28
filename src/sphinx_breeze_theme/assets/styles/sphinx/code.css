@@ -9,13 +9,18 @@ div.highlight, div.literal-block-wrapper, [class*="highlight-"] {
 
   pre {
     overflow: auto;
+    padding: 1rem;
     line-height: 1.35!important;
     border-radius: var(--bz-border-radius);
     font-size: var(--bz-code-block-font-size);
     font-family: var(--bz-code-block-font-family);
     border: 1px solid var(--bz-code-block-border-color);
-    background-color: var(--bz-code-block-background-color);
-    padding: 1rem;
+    background: linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--bz-code-block-background-color) 100%, white 1%) 0%,
+      var(--bz-code-block-background-color) 50%,
+      color-mix(in oklab, var(--bz-code-block-background-color) 100%, black 1%) 100%
+    );
   }
 }
 
@@ -54,13 +59,23 @@ div.code-block-caption + div {
   padding-inline: 0.5rem!important;
   color: var(--bz-code-block-line-number-color)!important;
   border-right: 1px solid var(--bz-code-block-border-color);
-  background-color: var(--bz-code-block-background-color)!important;
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--bz-code-block-background-color) 100%, white 1%) 0%,
+    var(--bz-code-block-background-color) 50%,
+    color-mix(in oklab, var(--bz-code-block-background-color) 100%, black 1%) 100%
+  );
 }
 
 .literal-block-wrapper {
   border-radius: var(--bz-border-radius);
   border: 1px solid var(--bz-code-block-border-color);
-  background-color: var(--bz-code-block-background-color)!important;
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--bz-code-block-background-color) 100%, white 1%) 0%,
+    var(--bz-code-block-background-color) 50%,
+    color-mix(in oklab, var(--bz-code-block-background-color) 100%, black 1%) 100%
+  );
 }
 
 .literal-block-wrapper div[class*="highlight-"] pre {
@@ -68,11 +83,16 @@ div.code-block-caption + div {
 }
 
 .code-block-caption {
+  padding: .5rem 1rem;
   border-radius: var(--bz-border-radius) .5rem 0 0;
   color: var(--bz-code-block-caption-color);
   font-size: var(--bz-code-block-caption-font-size);
   font-family: var(--bz-code-block-caption-font-family);
   border-bottom: 1px solid var(--bz-code-block-border-color);
-  background-color: var(--bz-code-block-caption-background-color);
-  padding: .5rem 1rem;
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--bz-code-block-caption-background-color) 100%, white 1%) 0%,
+    var(--bz-code-block-caption-background-color) 50%,
+    color-mix(in oklab, var(--bz-code-block-caption-background-color) 100%, black 1%) 100%
+  );
 }

@@ -35,9 +35,14 @@ dl[class]:not(.option-list, .field-list, .footnote, .glossary, .simple) {
     font-size: var(--bz-sig-table-head-font-size);
     font-family: var(--bz-sig-table-head-font-family);
     border-bottom: 1px solid var(--bz-sig-border-color);
-    background-color: var(--bz-sig-table-head-background-color);
     padding: .35rem .7rem;
     margin-bottom: .5rem;
+    background: linear-gradient(
+      180deg,
+      color-mix(in oklab, var(--bz-sig-table-head-background-color) 100%, white 1%) 0%,
+      var(--bz-sig-table-head-background-color) 50%,
+      color-mix(in oklab, var(--bz-sig-table-head-background-color) 100%, black 1%) 100%
+    );
 
     &:first-child {
       border-radius: calc(var(--bz-border-radius) * 0.5) calc(var(--bz-border-radius) * 0.5) 0 0;
@@ -107,11 +112,16 @@ dt.sig {
   font-size: var(--bz-sig-font-size);
   font-family: var(--bz-sig-font-family);
   font-weight: 600;
-  border: 1px solid var(--bz-sig-border-color);
-  background-color: var(--bz-sig-background-color);
-  border-top: 8px solid color-mix(in oklab, var(--bz-sig-accent-color) 25%, transparent);
   padding: .3rem .5rem .4rem;
   margin: 1.25rem 0 .75rem;
+  border: 1px solid var(--bz-sig-border-color);
+  border-top: 8px solid color-mix(in oklab, var(--bz-sig-accent-color) 25%, transparent);
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--bz-sig-background-color) 100%, white 1%) 0%,
+    var(--bz-sig-background-color) 50%,
+    color-mix(in oklab, var(--bz-sig-background-color) 100%, black 1%) 100%
+  );
 
   dl {
     margin: 0;
@@ -146,12 +156,12 @@ dt.sig {
   color: var(--bz-sig-property-color);
 }
 
-.sig-param, .sig-return {
-  font-size: .9em;
+.sig-param, .sig-return, .sig .optional {
+  font-size: .925em;
   font-style: normal;
 }
 
-.sig-param .o, .sig-return {
+.sig-param .o, .sig-return, .sig .optional {
   color: var(--bz-sig-type-color);
 }
 
