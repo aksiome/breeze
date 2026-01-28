@@ -67,6 +67,8 @@ Breeze draws inspiration from other great projects:
 - [Furo](https://github.com/pradyunsg/furo) — Implementation reference for Sphinx code
 - [Lutra](https://github.com/pradyunsg/lutra) — A three-column theme that inspired this project
 
+This project is tested with BrowserStack. Shoutout to them for supporting OSS projects!
+
 ## License
 
 This project is licensed under the [MPL-2.0](LICENSE) License.
