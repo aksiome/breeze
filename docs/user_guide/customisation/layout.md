@@ -151,9 +151,9 @@ Control emoji display in different areas:
 
 ```python
 html_theme_options = {
-    "emojis_title": False,        # Page titles
+    "emojis_title": False,        # Page titles (navigator tab)
     "emojis_header_nav": False,   # Header navigation
-    "emojis_sidebar_nav": True,   # Sidebar navigation
+    "emojis_sidebar_nav": False,  # Sidebar navigation
     "emojis_sidebar_toc": False,  # Table of contents
 }
 ```
