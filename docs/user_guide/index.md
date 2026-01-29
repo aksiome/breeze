@@ -19,5 +19,6 @@ quickstart
 customisation/announcement
 customisation/branding
 customisation/styling
+customisation/light-dark
 customisation/layout
 ```

@@ -17,7 +17,7 @@
 {%- block scripts -%}
   {{- script() }}
   <script data-cfasync="false">
-    const mode = localStorage.getItem("breeze-mode") || "auto";
+    const mode = localStorage.getItem("breeze-mode") || "{{ theme_default_mode }}";
     document.documentElement.dataset.mode = mode;
     if (mode === "auto") {
       const prefers = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
