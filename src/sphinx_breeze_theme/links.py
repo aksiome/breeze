@@ -87,8 +87,8 @@ def create_edit_link(pagename: str, context: dict) -> Callable[[], str | None]:
         doc_path = context.get("doc_path", "").removesuffix("/")
         file_path = f"{doc_path}/{file_name}" if doc_path else file_name
 
-        if source_url := context.get("source_url"):
-            return str(source_url).replace("%s", file_path)
+        if source_edit_url := context.get("source_edit_url"):
+            return str(source_edit_url).replace("%s", file_path)
 
         for provider, template in default_provider_urls.items():
             user = context.get(f"{provider}_user")

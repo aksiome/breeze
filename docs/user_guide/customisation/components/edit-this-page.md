@@ -54,7 +54,7 @@ For self-hosted instances or other providers, use a custom URL pattern with `%s`
 
 ```python
 html_context = {
-    "source_url": "https://git.example.com/user/repo/edit/main/docs/%s",
+    "source_edit_url": "https://git.example.com/user/repo/edit/main/docs/%s",
 }
 ```
 
