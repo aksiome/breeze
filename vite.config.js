@@ -3,6 +3,7 @@ import { execSync } from 'child_process';
 
 
 export default defineConfig({
+  base: './',
   build: {
     outDir: 'src/sphinx_breeze_theme/theme/breeze/static',
     emptyOutDir: false,
@@ -11,7 +12,12 @@ export default defineConfig({
       output: {
         entryFileNames: 'scripts/[name].js',
         chunkFileNames: 'scripts/[name].js',
-        assetFileNames: 'styles/[name].[ext]'
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.names?.some(name => /\.(woff2?|ttf|eot)$/.test(name))) {
+            return 'fonts/[name].[ext]';
+          }
+          return 'styles/[name].[ext]';
+        }
       }
     }
   },
