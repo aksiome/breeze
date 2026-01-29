@@ -4,6 +4,41 @@ All notable changes to this project will be documented in this file.
 
 <!-- version list -->
 
+## v0.9.0 (2026-01-29)
+
+### ✨ Features
+
+- Add default_mode theme option
+  ([`377d29e`](https://github.com/aksiome/breeze/commit/377d29eff1e6c2d7200ca2aa7828058aa4675546))
+- Add repository stats component
+  ([`4d4380a`](https://github.com/aksiome/breeze/commit/4d4380aa950b6ec03a3a015a9385096d4ea8aaf3))
+- Bundle theme fonts for consistent typography
+  ([`0d005e5`](https://github.com/aksiome/breeze/commit/0d005e510e5781db0ceadc4661e736683108535e))
+
+### 🐛 Bug Fixes
+
+- **a11y**: Add aria labels to navigation elements and adjust colors
+  ([`9f64981`](https://github.com/aksiome/breeze/commit/9f64981609715fa3e7e6df20c0e314091f2ccff7))
+- Default emojis_sidebar_nav to false for consistency
+  ([`2470948`](https://github.com/aksiome/breeze/commit/2470948da455484dcf22a6bf91838f8fde47d33d))
+
+### 🎨 Styling
+
+- Apply frosted glass effect to tiles
+  ([`fa6ff53`](https://github.com/aksiome/breeze/commit/fa6ff5379b5c05a79f94fd4efc0d0822ec94a7f2))
+- **layout**: Increase spacing between header and content
+  ([`47e1866`](https://github.com/aksiome/breeze/commit/47e18666a7cfe2490773086c482dad17e137a0e4))
+
+### ♻️ Refactoring
+
+- Rename source_url to source_edit_url for clarity
+  ([`48c5db0`](https://github.com/aksiome/breeze/commit/48c5db0b1dcc3a88a4b03af65fe0b781bf0da18e))
+
+### 📚 Documentation
+
+- Restructure user guide
+  ([`ce4bd80`](https://github.com/aksiome/breeze/commit/ce4bd80229cfd5632f174b6889ccb92c4a66ff37))
+
 ## v0.8.0 (2026-01-27)
 
 ### ✨ Features
