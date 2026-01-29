@@ -29,6 +29,7 @@ def create_custom_toctree(app: Sphinx, pagename: str) -> Callable[..., Optional[
             **kwargs,
         ):
             html = render_fragment(app.builder, toctree)
+            html = add_aria_attributes(html)
 
             if merge:
                 return merge_toctrees(html)
@@ -76,6 +77,17 @@ def get_toctree_node(
 
 
 @cache
+def add_aria_attributes(toctree_html: str) -> str:
+    """Add required ARIA attributes for accessibility."""
+    soup = BeautifulSoup(toctree_html, "html.parser")
+
+    for caption in soup.select('p.caption[role="heading"]'):
+        caption["aria-level"] = "2"
+
+    return str(soup)
+
+
+@cache
 def add_collapse_controls(toctree_html: str) -> str:
     """Enhance the toctree HTML with collapsible controls using <details> and <summary>."""
     soup = BeautifulSoup(toctree_html, "html.parser")
@@ -84,7 +96,11 @@ def add_collapse_controls(toctree_html: str) -> str:
         details = soup.new_tag("details")
         if "current" in item.get("class", []):
             details["open"] = ""
-        details.append(soup.new_tag("summary"))
+
+        summary = soup.new_tag("summary")
+        summary["aria-label"] = "Toggle submenu"
+
+        details.append(summary)
         details.append(item.find("ul").extract())
         item.append(details)
 

@@ -4,29 +4,134 @@
 
 {bdg}`plain badge`
 
-{bdg-primary}`primary`,
-{bdg-secondary}`secondary`,
-{bdg-success}`success`,
-{bdg-info}`info`,
-{bdg-warning}`warning`,
-{bdg-danger}`danger`,
-{bdg-light}`light`,
-{bdg-muted}`muted`,
-{bdg-dark}`dark`,
-{bdg-white}`white`,
-{bdg-black}`black`
+{bdg-primary}`primary`
+{bdg-secondary}`secondary`
+{bdg-success}`success`
+{bdg-info}`info`
+{bdg-warning}`warning`
+{bdg-danger}`danger`
+{bdg-muted}`muted`
 
-{bdg-primary-line}`primary-line`,
-{bdg-secondary-line}`secondary-line`,
-{bdg-success-line}`success-line`,
-{bdg-info-line}`info-line`,
-{bdg-warning-line}`warning-line`,
-{bdg-danger-line}`danger-line`,
-{bdg-light-line}`light-line`,
-{bdg-muted-line}`muted-line`,
-{bdg-dark-line}`dark-line`,
-{bdg-white-line}`white-line`,
-{bdg-black-line}`black-line`
+{bdg-primary-line}`primary-line`
+{bdg-secondary-line}`secondary-line`
+{bdg-success-line}`success-line`
+{bdg-info-line}`info-line`
+{bdg-warning-line}`warning-line`
+{bdg-danger-line}`danger-line`
+{bdg-muted-line}`muted-line`
+
+## Buttons
+
+::::{grid} auto
+:gutter: 2
+
+:::{grid-item}
+```{button-link} https://example.com
+Plain button
+```
+:::
+::::
+
+::::{grid} auto
+:gutter: 2
+
+:::{grid-item}
+```{button-link} https://example.com
+:color: primary
+primary
+```
+:::
+:::{grid-item}
+```{button-link} https://example.com
+:color: secondary
+secondary
+```
+:::
+:::{grid-item}
+```{button-link} https://example.com
+:color: success
+success
+```
+:::
+:::{grid-item}
+```{button-link} https://example.com
+:color: info
+info
+```
+:::
+:::{grid-item}
+```{button-link} https://example.com
+:color: warning
+warning
+```
+:::
+:::{grid-item}
+```{button-link} https://example.com
+:color: danger
+danger
+```
+:::
+:::{grid-item}
+```{button-link} https://example.com
+:color: muted
+muted
+```
+:::
+::::
+
+::::{grid} auto
+:gutter: 2
+
+:::{grid-item}
+```{button-link} https://example.com
+:color: primary
+:outline:
+primary-outline
+```
+:::
+:::{grid-item}
+```{button-link} https://example.com
+:color: secondary
+:outline:
+secondary-outline
+```
+:::
+:::{grid-item}
+```{button-link} https://example.com
+:color: success
+:outline:
+success-outline
+```
+:::
+:::{grid-item}
+```{button-link} https://example.com
+:color: info
+:outline:
+info-outline
+```
+:::
+:::{grid-item}
+```{button-link} https://example.com
+:color: warning
+:outline:
+warning-outline
+```
+:::
+:::{grid-item}
+```{button-link} https://example.com
+:color: danger
+:outline:
+danger-outline
+```
+:::
+:::{grid-item}
+```{button-link} https://example.com
+:color: muted
+:outline:
+muted-outline
+```
+:::
+::::
 
 
 ## Card

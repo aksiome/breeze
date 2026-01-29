@@ -12,7 +12,7 @@
   --bz-skip-to-content-font-size: inherit;
   --bz-skip-to-content-font-family: inherit;
 
-  --bz-back-to-top-color: var(--bz-color-primary-5);
+  --bz-back-to-top-color: var(--bz-color-primary-2);
   --bz-back-to-top-color-hover: var(--bz-color-white-5);
   --bz-back-to-top-border-color: var(--bz-color-outline);
   --bz-back-to-top-background-color: var(--bz-color-surface-5);
@@ -254,7 +254,7 @@
   --bz-line-separator-color: var(--bz-color-outline);
 
   --bz-link-color: var(--bz-color-muted);
-  --bz-link-color-hover: var(--bz-color-primary-5);
+  --bz-link-color-hover: var(--bz-color-primary-2);
 
   --bz-list-marker-color: var(--bz-color-gray);
   --bz-list-marker-font-size: var(--bz-size-xs);
@@ -362,10 +362,14 @@
   --bz-footer-background-color: var(--bz-color-surface-3);
 
   --bz-page-background-color: var(--bz-color-surface-1);
+  --bz-link-color-hover: var(--bz-color-primary-5);
 
   --bz-overlay-background-color: #00000088;
   --bz-sidebar-primary-drawer-background-color: color-mix(in oklab, var(--bz-color-surface-2) 85%, transparent);
   --bz-sidebar-secondary-drawer-background-color: color-mix(in oklab, var(--bz-color-surface-2) 85%, transparent);
+
+  --bz-back-to-top-color: var(--bz-color-primary-5);
+  --bz-back-to-top-background-color: var(--bz-color-surface-3);
 
   --bz-search-button-background-color: var(--bz-color-surface-1);
   --bz-search-button-kbd-background-color: var(--bz-color-surface-2);

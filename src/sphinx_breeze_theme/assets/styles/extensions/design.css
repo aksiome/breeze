@@ -1,16 +1,24 @@
 :root {
-  --sd-color-primary: var(--bz-color-primary-3);
-  --sd-color-secondary: var(--bz-color-secondary-3);
-  --sd-color-success: var(--bz-color-green-3);
-  --sd-color-info: var(--bz-color-blue-3);
-  --sd-color-warning: var(--bz-color-orange-3);
-  --sd-color-danger: var(--bz-color-red-3);
-  --sd-color-muted: var(--bz-color-gray-3);
+  --sd-color-primary: var(--bz-color-primary);
+  --sd-color-secondary: var(--bz-color-secondary);
+  --sd-color-success: var(--bz-color-green);
+  --sd-color-info: var(--bz-color-cyan);
+  --sd-color-warning: var(--bz-color-orange);
+  --sd-color-danger: var(--bz-color-red);
+  --sd-color-muted: var(--bz-color-gray);
+
+  --sd-color-primary-outline: var(--bz-color-primary-1);
+  --sd-color-secondary-outline: var(--bz-color-secondary-1);
+  --sd-color-success-outline: var(--bz-color-green-1);
+  --sd-color-info-outline: var(--bz-color-cyan-1);
+  --sd-color-warning-outline: var(--bz-color-orange-1);
+  --sd-color-danger-outline: var(--bz-color-red-1);
+  --sd-color-muted-outline: var(--bz-color-gray-1);
 
   --sd-color-primary-highlight: var(--bz-color-primary-1);
   --sd-color-secondary-highlight: var(--bz-color-secondary-1);
   --sd-color-success-highlight: var(--bz-color-green-1);
-  --sd-color-info-highlight: var(--bz-color-blue-1);
+  --sd-color-info-highlight: var(--bz-color-cyan-1);
   --sd-color-warning-highlight: var(--bz-color-orange-1);
   --sd-color-danger-highlight: var(--bz-color-red-1);
   --sd-color-muted-highlight: var(--bz-color-gray-1);
@@ -28,7 +36,7 @@
   --sd-color-card-border: var(--bz-topic-border-color);
 
   --sd-color-tabs-border: color-mix(in oklab, var(--bz-color-primary) 20%, #88888822);
-  --sd-color-tabs-label-active: var(--bz-color-primary-5);
+  --sd-color-tabs-label-active: var(--bz-color-primary-1);
   --sd-color-tabs-label-inactive: var(--bz-color-muted);
   --sd-color-tabs-label-hover: var(--bz-color-primary-5);
   --sd-color-tabs-background: var(--bz-color-surface-1);
@@ -39,9 +47,59 @@
 }
 
 :root[data-theme=dark] {
+  --sd-color-primary-outline: var(--bz-color-primary-5);
+  --sd-color-secondary-outline: var(--bz-color-secondary-5);
+  --sd-color-success-outline: var(--bz-color-green-5);
+  --sd-color-info-outline: var(--bz-color-cyan-5);
+  --sd-color-warning-outline: var(--bz-color-orange-5);
+  --sd-color-danger-outline: var(--bz-color-red-5);
+  --sd-color-muted-outline: var(--bz-color-gray-5);
+
+  --sd-color-tabs-label-active: var(--bz-color-primary-5);
   --sd-color-tabs-background: var(--bz-color-surface-3);
   --sd-color-tabs-background-active: color-mix(in oklab, var(--bz-color-surface-1), var(--bz-color-surface-2));
 }
+
+.sd-btn:not([class*="outline"]), .sd-badge:not([class*="outline"]) {
+  border: 1px solid var(--bz-color-outline);
+  background-color: var(--bz-color-surface-5);
+}
+
+.sd-outline-primary, .sd-btn-outline-primary {
+  color: var(--sd-color-primary-outline)!important;
+  border-color: var(--sd-color-primary-outline)!important;
+}
+
+.sd-outline-secondary, .sd-btn-outline-secondary {
+  color: var(--sd-color-secondary-outline)!important;
+  border-color: var(--sd-color-secondary-outline)!important;
+}
+
+.sd-outline-success, .sd-btn-outline-success {
+  color: var(--sd-color-success-outline)!important;
+  border-color: var(--sd-color-success-outline)!important;
+}
+
+.sd-outline-info, .sd-btn-outline-info {
+  color: var(--sd-color-info-outline)!important;
+  border-color: var(--sd-color-info-outline)!important;
+}
+
+.sd-outline-warning, .sd-btn-outline-warning {
+  color: var(--sd-color-warning-outline)!important;
+  border-color: var(--sd-color-warning-outline)!important;
+}
+
+.sd-outline-danger, .sd-btn-outline-danger {
+  color: var(--sd-color-danger-outline)!important;
+  border-color: var(--sd-color-danger-outline)!important;
+}
+
+.sd-outline-muted, .sd-btn-outline-muted {
+  color: var(--sd-color-muted-outline)!important;
+  border-color: var(--sd-color-muted-outline)!important;
+}
+
 
 .sd-shadow-sm {
   box-shadow:
@@ -73,6 +131,7 @@
 article .sd-tab-set {
   > input {
     &:checked + label {
+      text-shadow: .001em 0 0 currentColor, -.001em 0 0 currentColor;
       background-color: var(--sd-color-tabs-background-active);
       border: 1px solid var(--sd-color-tabs-border);
       padding-top: calc(.25rem + 3px);
