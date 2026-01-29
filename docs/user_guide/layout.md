@@ -1,4 +1,4 @@
-# 📱 Layout and components
+# 📱 Theme Layout
 
 Breeze provides a flexible layout system with configurable component slots.
 
@@ -87,20 +87,21 @@ issue to discuss the intended usage.
 
 | Component | Description |
 |-----------|-------------|
+| `breadcrumbs.html` | Breadcrumb navigation |
+| [`edit-this-page.html`](components/edit-this-page.md) | Edit on GitHub/GitLab link |
+| [`external-links.html`](components/external-links.md) | External link buttons |
+| `footer-copyright.html` | Copyright notice |
 | `header-brand.html` | Logo and site title |
-| `version-switcher.html` | Documentation version dropdown |
+| [`lang-switcher.html`](components/lang-switcher.md) | Language selector dropdown |
+| `related-pages.html` | Previous/next page links |
+| [`repo-stats.html`](components/repo-stats.md) | Repository stars and forks |
 | `search-button.html` | Search trigger button |
-| `lang-switcher.html` | Language selector dropdown |
-| `theme-switcher.html` | Light/dark mode toggle |
-| `external-links.html` | External link buttons |
+| `sidebar-ethical-ads.html` | Read the Docs ads placeholder |
 | `sidebar-nav.html` | Main navigation tree |
 | `sidebar-toc.html` | Page table of contents |
-| `sidebar-ethical-ads.html` | Read the Docs ads placeholder |
-| `repo-stats.html` | Repository stars and forks |
-| `edit-this-page.html` | Edit on GitHub/GitLab link |
-| `breadcrumbs.html` | Breadcrumb navigation |
-| `related-pages.html` | Previous/next page links |
-| `footer-copyright.html` | Copyright notice |
+| `theme-switcher.html` | Light/dark mode toggle |
+| [`version-switcher.html`](components/version-switcher.md) | Documentation version dropdown |
+
 
 ## Page-level options
 

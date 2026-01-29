@@ -10,6 +10,7 @@ hide-sidebar-secondary: true
 :titlesonly:
 
 quickstart
+layout
 ```
 
 ```{toctree}
@@ -20,5 +21,4 @@ customisation/announcement
 customisation/branding
 customisation/styling
 customisation/light-dark
-customisation/layout
 ```
