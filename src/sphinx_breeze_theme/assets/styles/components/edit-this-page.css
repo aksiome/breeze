@@ -6,6 +6,13 @@
   text-underline-offset: 4px;
 
   &:hover {
+    text-decoration: underline;
     color: var(--bz-edit-this-page-color-hover);
+  }
+
+  svg {
+    height: .85em;
+    width: .85em;
+    vertical-align: middle;
   }
 }

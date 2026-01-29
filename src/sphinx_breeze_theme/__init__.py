@@ -79,7 +79,7 @@ def on_html_page_context(
     context["toctree"] = toctree.create_custom_toctree(app, pagename)
     context["edit_link"] = links.create_edit_link(pagename, context)
     context["lang_link"] = links.create_lang_link(pagename)
-    context["get_icon"] = icons.get_icon
+    context["icon"] = icons.render_icon
     context["wrap_emoji"] = utils.wrap_emoji
     context["replace_emoji"] = replace_emoji
 

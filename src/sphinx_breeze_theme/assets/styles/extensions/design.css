@@ -342,7 +342,6 @@ details.sd-dropdown summary.sd-summary-title {
     inset -2px 0 0 color-mix(in oklab, var(--sd-color-card-background) 100%, black 3%);
 }
 
-
 .sd-card.sd-shadow-sm {
   box-shadow:
     0 1px 1px var(--bz-color-shadow),

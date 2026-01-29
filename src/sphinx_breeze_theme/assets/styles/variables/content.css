@@ -131,6 +131,14 @@
   --bz-related-pages-font-size: var(--bz-size-sm);
   --bz-related-pages-font-family: inherit;
 
+  --bz-repo-stats-background: color-mix(in oklab, var(--bz-color-surface-4), var(--bz-color-surface-3));
+  --bz-repo-stats-background-hover: var(--bz-color-surface-3);
+  --bz-repo-stats-border-color: var(--bz-color-outline);
+  --bz-repo-stats-color: var(--bz-color-text);
+  --bz-repo-stats-color-variant: var(--bz-color-muted);
+  --bz-repo-stats-font-size: var(--bz-size-sm);
+  --bz-repo-stats-font-family: inherit;
+
   --bz-search-button-color: var(--bz-color-muted);
   --bz-search-button-border-color: var(--bz-color-outline);
   --bz-search-button-border-color-hover: var(--bz-color-primary);
@@ -380,6 +388,9 @@
   --bz-theme-switcher-icon-background-color: var(--bz-color-surface-2);
 
   --bz-version-switcher-background-color: var(--bz-color-surface-5);
+
+  --bz-repo-stats-background: var(--bz-color-surface-2);
+  --bz-repo-stats-background-hover: var(--bz-color-surface-1);
 
   --bz-code-block-caption-background-color: var(--bz-color-surface-3);
 

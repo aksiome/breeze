@@ -6,23 +6,56 @@ Breeze provides a flexible layout system with configurable component slots.
 
 The page layout consists of these main regions:
 
-```
-┌─────────────────────────────────────────────────────┐
-│                   announcement                      │
-├─────────────────────────────────────────────────────┤
-│  header start           │           header end      │
-├─────────────────────────────────────────────────────┤
-│                    header tabs                      │
-├──────────┬──────────────────────────────┬───────────┤
-│          │        article header        │           │
-│ sidebar  │                              │  sidebar  │
-│ primary  │          content             │ secondary │
-│          │                              │           │
-│          │        article footer        │           │
-├──────────┴──────────────────────────────┴───────────┤
-│                       footer                        │
-└─────────────────────────────────────────────────────┘
-```
+::::{grid} 12
+:gutter: 2
+:class-container: sd-text-center
+
+:::{grid-item-card}
+:columns: 6
+
+`header_start`
+:::
+
+:::{grid-item-card}
+:columns: 6
+
+`header_end`
+:::
+
+:::{grid-item-card}
+:columns: 12
+
+`header_tabs`
+:::
+
+:::{grid-item-card}
+:columns: 4
+
+`sidebar_primary`
+:::
+
+:::{grid-item-card}
+:columns: 4
+
+`article_header`
+
+**content**
+
+`article_footer`
+:::
+
+:::{grid-item-card}
+:columns: 4
+
+`sidebar_secondary`
+:::
+
+:::{grid-item-card}
+:columns: 12
+
+`footer`
+:::
+::::
 
 ## Component slots
 
@@ -33,7 +66,7 @@ html_theme_options = {
     "header_start": ["header-brand.html", "version-switcher.html"],
     "header_end": ["search-button.html", "theme-switcher.html"],
     "sidebar_primary": ["sidebar-nav.html"],
-    "sidebar_secondary": ["sidebar-toc.html", "edit-this-page.html"],
+    "sidebar_secondary": ["sidebar-toc.html", "repo-stats.html", "edit-this-page.html", "sidebar-ethical-ads.html"],
     "article_header": ["breadcrumbs.html"],
     "article_footer": ["related-pages.html"],
     "footer": ["footer-copyright.html"],
@@ -63,6 +96,7 @@ issue to discuss the intended usage.
 | `sidebar-nav.html` | Main navigation tree |
 | `sidebar-toc.html` | Page table of contents |
 | `sidebar-ethical-ads.html` | Read the Docs ads placeholder |
+| `repo-stats.html` | Repository stars and forks |
 | `edit-this-page.html` | Edit on GitHub/GitLab link |
 | `breadcrumbs.html` | Breadcrumb navigation |
 | `related-pages.html` | Previous/next page links |

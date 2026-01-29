@@ -10,7 +10,7 @@
     {% if link.html %}
       {{ link.html }}
     {% else %}
-      {{ get_icon(link.icon, icon_size or "16") }}
+      {{ icon(link.icon, icon_size or "16") }}
     {% endif %}
     </a>
   {% endfor %}

@@ -1,6 +1,7 @@
 import "./back-to-top"
 import "./dropdown"
 import "./label-button"
+import "./repo-stats"
 import "./responsive-tabs"
 import "./search-button"
 import "./sidebar-drawer"

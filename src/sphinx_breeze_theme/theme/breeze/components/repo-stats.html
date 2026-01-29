@@ -1,0 +1,36 @@
+{% if github_user and github_repo %}
+  {% set repo_provider = "github" %}
+  {% set repo_icon = "mark-github" %}
+  {% set repo_user = github_user %}
+  {% set repo_name = github_repo %}
+{% elif gitlab_user and gitlab_repo %}
+  {% set repo_provider = "gitlab" %}
+  {% set repo_icon = "git" %}
+  {% set repo_user = gitlab_user %}
+  {% set repo_name = gitlab_repo %}
+{% endif %}
+
+{% if repo_provider %}
+<div class="bz-repo-stats">
+  <a
+    data-provider="{{ repo_provider }}"
+    data-user="{{ repo_user }}"
+    data-repo="{{ repo_name }}"
+    href="https://{{ repo_provider }}.com/{{ repo_user }}/{{ repo_name }}"
+    aria-label="{{ repo_user }}/{{ repo_name }} repository"
+  >
+    {{ icon(repo_icon, "24") }}
+    <span>{{ repo_user }}/{{ repo_name }}</span>
+    <div class="bz-repo-stats-row">
+      <span class="bz-repo-stats-item">
+        {{ icon("star", "16") }}
+        <span data-stat="stars">-</span>
+      </span>
+      <span class="bz-repo-stats-item">
+        {{ icon("repo-forked", "16") }}
+        <span data-stat="forks">-</span>
+      </span>
+    </div>
+  </a>
+</div>
+{% endif %}

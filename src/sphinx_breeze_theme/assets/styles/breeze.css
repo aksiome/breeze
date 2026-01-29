@@ -44,6 +44,7 @@
 @import "./components/header-brand.css" layer(components);
 @import "./components/lang-switcher.css" layer(components);
 @import "./components/related-pages.css" layer(components);
+@import "./components/repo-stats.css" layer(components);
 @import "./components/search-button.css" layer(components);
 @import "./components/sidebar-nav.css" layer(components);
 @import "./components/sidebar-toc.css" layer(components);
