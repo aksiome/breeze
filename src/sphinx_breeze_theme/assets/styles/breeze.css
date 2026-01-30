@@ -66,12 +66,13 @@
   :root {
     overflow-y: scroll;
     scroll-behavior: smooth;
-    -webkit-font-smoothing: antialiased;
-    color: var(--bz-page-color);
+    font-weight: 350;
     font-size: var(--bz-page-font-size);
     font-family: var(--bz-page-font-family);
+    color: var(--bz-page-color);
     background-color: var(--bz-page-background-color);
     scroll-padding-top: calc(var(--bz-header-height) + var(--bz-header-tabs-height));
+    -webkit-font-smoothing: antialiased;
     --bz-border-radius-full: calc(infinity * 1px);
     --bz-border-radius: 0.5rem;
   }
