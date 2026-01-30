@@ -4,9 +4,10 @@
     grid-template-columns: auto 1fr;
     grid-template-rows: auto auto;
     align-items: center;
+    max-width: 14rem;
     column-gap: 0.5rem;
     row-gap: 0.25rem;
-    padding: 0.5rem 0.75rem;
+    padding: 0.5rem 1rem 0.5rem 0.75rem;
     border: 1px solid var(--bz-repo-stats-border-color);
     border-radius: var(--bz-border-radius);
     color: var(--bz-repo-stats-color);
@@ -28,6 +29,13 @@
         var(--bz-repo-stats-background-hover) 50%,
         color-mix(in oklab, var(--bz-repo-stats-background-hover) 100%, black 1%) 100%
       );
+    }
+
+    > span {
+      font-size: clamp(0.85em, calc(1em - (var(--bz-repo-stats-name-length) - 16.5) * 0.04em), 1em);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
     }
 
     svg {
@@ -69,14 +77,14 @@
 }
 
 [class^="bz-sidebar-"] > .bz-repo-stats:has(+ .bz-edit-this-page),
-[class^="bz-sidebar-"] > .bz-edit-this-page:has(+ .bz-repo-stats)  {
+[class^="bz-sidebar-"] > .bz-edit-this-page:has(+ .bz-repo-stats) {
   padding-bottom: 0.375rem;
 }
 
 [class^="bz-sidebar-"] > .bz-repo-stats + .bz-edit-this-page,
-[class^="bz-sidebar-"] > .bz-edit-this-page:has(+ .bz-repo-stats)  {
+[class^="bz-sidebar-"] > .bz-edit-this-page:has(+ .bz-repo-stats) {
   font-size: var(--bz-repo-stats-font-size);
-  text-indent: .5rem;
+  text-indent: 0.5rem;
   a {
     text-decoration: none;
   }
