@@ -1,4 +1,4 @@
-import { defineComponent } from "../utils/component";
+import { defineComponent } from "../component";
 
 defineComponent("[data-drawer]", el => {
   const toggle = document.getElementById(el.dataset?.drawer ?? "");

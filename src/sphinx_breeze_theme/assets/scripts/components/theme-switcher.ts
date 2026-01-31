@@ -1,5 +1,5 @@
-import { defineComponent } from "../utils/component";
-import { Theme, nextTheme } from "../utils/theme";
+import { defineComponent } from "../component";
+import { Theme, nextTheme } from "../theme";
 
 
 defineComponent(".bz-theme-switcher", el => {

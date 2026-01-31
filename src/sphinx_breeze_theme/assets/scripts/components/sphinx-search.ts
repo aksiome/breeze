@@ -1,4 +1,4 @@
-import { defineComponent } from "../utils/component";
+import { defineComponent } from "../component";
 
 // Sphinx search global object type declaration
 declare const Search: {

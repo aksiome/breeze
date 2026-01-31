@@ -1,4 +1,4 @@
-import { defineComponent } from "../utils/component";
+import { defineComponent } from "../component";
 
 
 defineComponent(".bz-search-button", el => {

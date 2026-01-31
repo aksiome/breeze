@@ -1,6 +1,6 @@
 import "../styles/breeze.css";
 
-import "./utils/component"
-import "./utils/shortcuts"
-import "./utils/theme"
+import "./component"
+import "./shortcuts"
+import "./theme"
 import "./components"
