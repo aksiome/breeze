@@ -76,6 +76,8 @@ html_theme_options = {
 
 version = os.environ.get("READTHEDOCS_VERSION", "latest")
 
+templates_path = ["_templates"]
+
 html_css_files = []
 html_js_files = []
 html_static_path = []
