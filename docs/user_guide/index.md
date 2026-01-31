@@ -10,6 +10,7 @@ hide-sidebar-secondary: true
 :titlesonly:
 
 quickstart
+markup
 layout
 ```
 

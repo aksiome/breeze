@@ -1,7 +1,3 @@
-.rounded {
-  border-radius: var(--bz-border-radius-full)!important;
-}
-
 .centered {
   text-align: center;
 }

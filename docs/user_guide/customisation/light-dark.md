@@ -22,66 +22,6 @@ Users can override this using the theme switcher, which saves their preference t
 
 ## Theme-specific content
 
-Use CSS classes to show or hide content based on the active theme.
+Use the `.only-light` and `.only-dark` utility classes to show or hide content based on the active theme.
 
-### Only in dark mode
-
-::::{tab-set}
-:::{tab-item} MyST
-````
-```{image} logo-dark.png
-:class: only-dark
-```
-````
-:::
-:::{tab-item} RST
-```rst
-.. image:: logo-dark.png
-   :class: only-dark
-```
-:::
-::::
-
-### Only in light mode
-
-::::{tab-set}
-:::{tab-item} MyST
-````
-```{image} logo-light.png
-:class: only-light
-```
-````
-:::
-:::{tab-item} RST
-```rst
-.. image:: logo-light.png
-   :class: only-light
-```
-:::
-::::
-
-### Combining both
-
-Display different images for each theme:
-
-::::{tab-set}
-:::{tab-item} MyST
-````
-```{image} logo-light.png
-:class: only-light
-```
-```{image} logo-dark.png
-:class: only-dark
-```
-````
-:::
-:::{tab-item} RST
-```rst
-.. image:: logo-light.png
-   :class: only-light
-
-.. image:: logo-dark.png
-   :class: only-dark
-```
-:::
-::::
+See [Markup](../markup.md#theme-visibility) for usage examples.

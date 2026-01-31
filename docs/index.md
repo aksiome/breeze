@@ -20,7 +20,7 @@ A clean, modern, customizable Sphinx documentation theme.
 
 ```{button-ref} user_guide/quickstart
 :color: primary
-:class: rounded
+:class: sd-rounded-pill
 :shadow:
 
 🚀 Get Started
