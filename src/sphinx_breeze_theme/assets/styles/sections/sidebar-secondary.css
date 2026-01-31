@@ -16,8 +16,10 @@
   font-family: var(--bz-sidebar-secondary-font-family);
   border-left: 1px solid var(--bz-sidebar-secondary-border-color);
   background-color: var(--bz-sidebar-secondary-drawer-background-color);
-  transition: right linear 0.2s, visibility linear 0.2s;
   backdrop-filter: blur(.5rem) saturate(150%) brightness(1.05);
+  transition:
+    right var(--bz-transition-slow) linear,
+    visibility var(--bz-transition-slow) linear;
 
   > *:not(:last-child) {
     padding-bottom: 2rem;

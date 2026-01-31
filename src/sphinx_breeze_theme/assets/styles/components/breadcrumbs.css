@@ -10,6 +10,7 @@
   font-weight: 300;
   text-decoration: none;
   color: var(--bz-breadcrumbs-link-color);
+
   &:hover {
     color: var(--bz-breadcrumbs-link-color-hover);
   }
@@ -23,6 +24,7 @@
 
 .bz-breadcrumbs-home {
   flex-shrink: 0;
+
   svg {
     display: block;
     height: 1em;
@@ -32,8 +34,8 @@
 .bz-breadcrumbs :where(ol, li) {
   display: flex;
   overflow: hidden;
-  white-space: nowrap;
   flex-wrap: nowrap;
+  white-space: nowrap;
   align-items: center;
   padding: .5rem;
   margin: -.5rem;

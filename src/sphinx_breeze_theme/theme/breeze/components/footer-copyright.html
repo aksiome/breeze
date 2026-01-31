@@ -9,10 +9,12 @@
     </p>
   {%- endif -%}
   <p>
-    Made with
+    {% set sphinx_link %}<a href="https://www.sphinx-doc.org/">Sphinx</a>{% endset %}
+    {% set breeze_link %}<a href="https://github.com/aksiome/breeze">Breeze theme</a>{% endset %}
     {% if show_sphinx %}
-    <a href="https://www.sphinx-doc.org/">Sphinx</a> and
+      {% trans sphinx_link=sphinx_link, breeze_link=breeze_link %}Made with {{ sphinx_link }} and {{ breeze_link }}.{% endtrans %}
+    {% else %}
+      {% trans breeze_link=breeze_link %}Made with {{ breeze_link }}.{% endtrans %}
     {% endif %}
-    <a href="https://github.com/aksiome/breeze">Breeze theme</a>.
   </p>
 </div>

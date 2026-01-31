@@ -4,7 +4,9 @@ div.code-block-caption,
 div.math span.eqno {
   > a.headerlink {
     opacity: 0;
-    transition: opacity ease-in-out .15s, color ease-in-out .15s;
+    transition:
+      opacity var(--bz-transition-normal) var(--bz-transition-ease),
+      color var(--bz-transition-normal) var(--bz-transition-ease);
   }
 
   &:hover > a.headerlink {

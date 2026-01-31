@@ -14,10 +14,13 @@
   color: var(--bz-back-to-top-color);
   background-color: var(--bz-back-to-top-background-color);
   border: 1px solid var(--bz-back-to-top-border-color);
-  box-shadow: 0 .125rem .25rem 0 oklab(0% 0 0/.2);
-  transition: background .15s ease-in-out, color .15s ease-in-out, bottom .25s ease-in-out;
+  box-shadow: var(--bz-shadow-lg);
   padding: .5rem 1.25rem .5rem 1rem;
   gap: .35rem;
+  transition:
+    background var(--bz-transition-normal) var(--bz-transition-ease),
+    color var(--bz-transition-normal) var(--bz-transition-ease),
+    bottom var(--bz-transition-slow) var(--bz-transition-ease);
 
   &:hover {
     color: var(--bz-back-to-top-color-hover);
@@ -26,5 +29,10 @@
 
   &.active {
     bottom: 4rem;
+  }
+
+  svg {
+    height: 1em;
+    vertical-align: middle;
   }
 }

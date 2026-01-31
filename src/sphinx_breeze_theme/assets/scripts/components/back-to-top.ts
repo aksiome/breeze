@@ -11,6 +11,20 @@ defineComponent(".bz-back-to-top", el => {
     lastScrollY = currentScrollY;
   }
 
-  window.addEventListener("scroll", update);
-  return () => window.removeEventListener("scroll", update)
+  const throttledUpdate = (() => {
+    let ticking = false;
+    return () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          update();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+  })();
+
+  window.addEventListener("scroll", throttledUpdate);
+
+  return () => window.removeEventListener("scroll", throttledUpdate)
 });

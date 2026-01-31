@@ -35,21 +35,17 @@
     font-weight: 400;
     padding: .3rem .5rem;
     color: var(--bz-sidebar-nav-color-active);
-    transition: background-color ease-in-out .15s, text-shadow ease-in-out .15s;
+    transition:
+      background-color var(--bz-transition-ease) .15s,
+      text-shadow var(--bz-transition-ease) .15s;
 
     &:hover {
       color: var(--bz-sidebar-nav-color-hover) !important;
       background-color: var(--bz-sidebar-nav-background-color-hover);
-      background: linear-gradient(
-        180deg,
-        color-mix(in oklab, var(--bz-sidebar-nav-background-color-hover) 100%, white 1%) 0%,
-        var(--bz-sidebar-nav-background-color-hover) 50%,
-        color-mix(in oklab, var(--bz-sidebar-nav-background-color-hover) 100%, black 1%) 100%
-      );
     }
 
     &.current {
-      text-shadow: 0.03em 0 0 currentColor, -0.03em 0 0 currentColor;
+      text-shadow: var(--bz-bold-text-shadow);
     }
   }
 
@@ -78,7 +74,7 @@
     &::after {
       mask-image: var(--bz-icon-chevron);
       background-color: var(--bz-sidebar-nav-color);
-      transition: transform ease-in-out .15s;
+      transition: transform var(--bz-transition-normal) var(--bz-transition-ease);
     }
 
     &:hover::before {

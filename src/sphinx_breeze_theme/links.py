@@ -106,7 +106,7 @@ def process_links(links: list[dict[str, str] | str]) -> list[dict[str, str]]:
     for link in links:
         data = {"url": link} if isinstance(link, str) else dict(link)
 
-        name, icon = lookup_defaults(data["url"])
+        name, icon = _lookup_defaults(data["url"])
         data.setdefault("name", name)
         data.setdefault("icon", icon)
 
@@ -115,7 +115,7 @@ def process_links(links: list[dict[str, str] | str]) -> list[dict[str, str]]:
     return processed
 
 
-def lookup_defaults(url: str):
+def _lookup_defaults(url: str) -> tuple[str, str]:
     """Lookup default name and icon for a given URL."""
     if url.startswith("mailto:"):
         return "Email", "mail"

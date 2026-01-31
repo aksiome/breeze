@@ -1,0 +1,34 @@
+
+[data-tooltip] {
+  position: relative;
+
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    top: 125%;
+    left: 50%;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    padding-block: 0.35rem;
+    padding-inline: 0.65rem;
+    border-radius: var(--bz-border-radius);
+    transform: translateX(-50%);
+    translate: 0 -1000vh;
+    color: var(--bz-tooltip-color);
+    font-size: var(--bz-tooltip-font-size);
+    font-family: var(--bz-tooltip-font-family);
+    border: 1px solid var(--bz-tooltip-border-color);
+    background: var(--bz-tooltip-background-color);
+    transition:
+      opacity var(--bz-transition-normal) var(--bz-transition-ease),
+      transform var(--bz-transition-normal) var(--bz-transition-ease);
+  }
+
+  &:hover:not(:active, :focus, :focus-visible, :focus-within)::after {
+    opacity: 1;
+    translate: 0;
+    transform: translateX(-50%) translateY(0.75rem);
+    transition-delay: 500ms;
+  }
+}

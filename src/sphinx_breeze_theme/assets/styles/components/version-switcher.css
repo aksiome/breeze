@@ -13,7 +13,12 @@
     background-color: var(--bz-version-switcher-background-color);
     border: 1px solid var(--bz-version-switcher-border-color);
     border-radius: var(--bz-border-radius);
-    transition: border-color .1s ease-in-out;
+    transition: border-color var(--bz-transition-fast) var(--bz-transition-ease);
+
+    svg {
+      height: 1em;
+      vertical-align: middle;
+    }
   }
 
   &:hover button {

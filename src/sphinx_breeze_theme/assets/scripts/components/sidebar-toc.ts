@@ -13,7 +13,21 @@ defineComponent(".bz-sidebar-toc", el => {
     anchors.forEach(anchor => anchor.classList.toggle("current", anchor.hash === `#${active?.id}`));
   };
 
+  const throttledUpdate = (() => {
+    let ticking = false;
+    return () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          update();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+  })();
+
   update();
-  window.addEventListener("scroll", update)
-  return () => window.removeEventListener("scroll", update)
+  window.addEventListener("scroll", throttledUpdate)
+
+  return () => window.removeEventListener("scroll", throttledUpdate)
 });

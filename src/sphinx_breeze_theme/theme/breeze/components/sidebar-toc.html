@@ -1,5 +1,5 @@
 {%- if toc|striptags|trim != "" -%}
-<nav class="bz-sidebar-toc" aria-label="Table of contents">
+<nav class="bz-sidebar-toc" aria-label="{{ _('Table of contents') }}">
   <p>{{ _("On this page") }}</p>
   {%- if theme_emojis_sidebar_toc | tobool -%}
     {{ wrap_emoji(toc) }}

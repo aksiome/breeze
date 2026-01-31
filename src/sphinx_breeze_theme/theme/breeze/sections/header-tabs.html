@@ -1,5 +1,5 @@
 {%- if not meta or "hide-header-tabs" not in meta -%}
-<nav class="bz-header-tabs" aria-label="Primary Navigation">
+<nav class="bz-header-tabs" aria-label="{{ _('Primary Navigation') }}">
   {%- include 'partials/sidebar-primary-toggle.html' -%}
   {%- if theme_emojis_header_nav | tobool -%}
     {{ wrap_emoji(toctree(maxdepth=1,level=0,merge=True)) }}

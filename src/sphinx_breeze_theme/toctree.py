@@ -1,7 +1,7 @@
 """Methods to transform the toctree from Sphinx's toctree function's output."""
 
-from functools import cache
-from typing import Callable, Optional
+from functools import lru_cache
+from typing import Callable
 
 from bs4 import BeautifulSoup
 from docutils import nodes
@@ -12,16 +12,16 @@ from sphinx.environment.adapters.toctree import TocTree
 from sphinx_breeze_theme.utils import render_fragment
 
 
-def create_custom_toctree(app: Sphinx, pagename: str) -> Callable[..., Optional[str]]:
+def create_custom_toctree(app: Sphinx, pagename: str) -> Callable[..., str | None]:
     """Create a callable that generates a custom HTML toctree fragment for a given page."""
 
-    @cache
+    @lru_cache(maxsize=128)
     def toctree(level: int = 0, merge: bool = False, **kwargs) -> str | None:
         """Generate the toctree HTML fragment for the current page."""
         kwargs.setdefault("collapse", False)
         kwargs.setdefault("titles_only", True)
 
-        if toctree := get_toctree_node(
+        if toctree := _get_toctree_node(
             app=app,
             level=level,
             docname=pagename,
@@ -29,17 +29,17 @@ def create_custom_toctree(app: Sphinx, pagename: str) -> Callable[..., Optional[
             **kwargs,
         ):
             html = render_fragment(app.builder, toctree)
-            html = add_aria_attributes(html)
+            html = _add_aria_attributes(html)
 
             if merge:
-                return merge_toctrees(html)
+                return _merge_toctrees(html)
             # Add collapse controls unless the toctree is "collapsed"
-            return html if kwargs["collapse"] else add_collapse_controls(html)
+            return html if kwargs["collapse"] else _add_collapse_controls(html)
 
     return toctree
 
 
-def get_toctree_node(
+def _get_toctree_node(
     app: Sphinx,
     level: int,
     docname: str,
@@ -76,8 +76,8 @@ def get_toctree_node(
     return result
 
 
-@cache
-def add_aria_attributes(toctree_html: str) -> str:
+@lru_cache(maxsize=128)
+def _add_aria_attributes(toctree_html: str) -> str:
     """Add required ARIA attributes for accessibility."""
     soup = BeautifulSoup(toctree_html, "html.parser")
 
@@ -87,8 +87,8 @@ def add_aria_attributes(toctree_html: str) -> str:
     return str(soup)
 
 
-@cache
-def add_collapse_controls(toctree_html: str) -> str:
+@lru_cache(maxsize=128)
+def _add_collapse_controls(toctree_html: str) -> str:
     """Enhance the toctree HTML with collapsible controls using <details> and <summary>."""
     soup = BeautifulSoup(toctree_html, "html.parser")
 
@@ -107,8 +107,8 @@ def add_collapse_controls(toctree_html: str) -> str:
     return str(soup)
 
 
-@cache
-def merge_toctrees(toctree_html: str) -> str:
+@lru_cache(maxsize=128)
+def _merge_toctrees(toctree_html: str) -> str:
     """Merge all <ul> elements into one and remove captions."""
     soup = BeautifulSoup(toctree_html, "html.parser")
 

@@ -1,4 +1,6 @@
 .bz-footer {
+  --bz-surface: var(--bz-footer-background-color);
+
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -11,12 +13,6 @@
   font-size: var(--bz-footer-font-size);
   font-family: var(--bz-footer-font-family);
   border-top: 1px solid var(--bz-footer-border-color);
-  background: linear-gradient(
-    180deg,
-    color-mix(in oklab, var(--bz-footer-background-color) 100%, white 1%) 0%,
-    var(--bz-footer-background-color) 50%,
-    color-mix(in oklab, var(--bz-footer-background-color) 100%, black 1%) 100%
-  );
 
   @media (width <= 36rem) {
     text-align: center;

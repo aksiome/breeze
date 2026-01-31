@@ -26,7 +26,7 @@
   background-color: currentColor;
   mask-image: var(--bz-related-pages-icon);
   color: var(--bz-related-pages-icon-color);
-  transition: transform ease-in-out .1s;
+  transition: transform var(--bz-transition-fast) var(--bz-transition-ease);
 }
 
 .bz-related-pages-title {
@@ -39,9 +39,10 @@
 }
 
 .bz-related-pages-next {
+  --bz-related-pages-icon: var(--bz-icon-arrow-right);
+
   direction: rtl;
   unicode-bidi: plaintext;
-  --bz-related-pages-icon: var(--bz-icon-arrow-right);
 }
 
 .bz-related-pages a:hover {

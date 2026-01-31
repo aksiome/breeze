@@ -23,6 +23,9 @@ function formatNumber(num: number): string {
 
 async function fetchGitHubStats(user: string, repo: string): Promise<RepoStats> {
   const response = await fetch(`https://api.github.com/repos/${user}/${repo}`);
+  if (!response.ok) {
+    throw new Error(`HTTP ${response.status}`);
+  }
   const data = await response.json();
 
   return {
@@ -34,6 +37,9 @@ async function fetchGitHubStats(user: string, repo: string): Promise<RepoStats> 
 async function fetchGitLabStats(user: string, repo: string): Promise<RepoStats> {
   const projectPath = encodeURIComponent(`${user}/${repo}`);
   const response = await fetch(`https://gitlab.com/api/v4/projects/${projectPath}`);
+  if (!response.ok) {
+    throw new Error(`HTTP ${response.status}`);
+  }
   const data = await response.json();
 
   return {

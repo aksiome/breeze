@@ -315,7 +315,7 @@
   --bz-sig-font-size: var(--bz-size-sm);
   --bz-sig-font-family: var(--bz-font-mono);
   --bz-sig-table-color: var(--bz-sig-color);
-  --bz-sig-table-background-color: color-mix(in oklab, var(--bz-color-surface-3), var(--bz-color-surface-2));
+  --bz-sig-table-background-color: var(--bz-color-surface-3);
   --bz-sig-table-head-color: var(--bz-sig-color);
   --bz-sig-table-head-background-color: var(--bz-color-surface-2);
   --bz-sig-table-font-size: inherit;

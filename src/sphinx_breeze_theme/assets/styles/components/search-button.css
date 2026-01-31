@@ -23,6 +23,11 @@
     font-size: 0.9em;
   }
 
+  svg {
+    height: 1em;
+    vertical-align: middle;
+  }
+
   kbd {
     display: none;
     color: var(--bz-search-button-kbd-color);
@@ -42,7 +47,7 @@
     a {
       border-width: 1px;
       background-color: var(--bz-search-button-background-color);
-      transition: border-color 0.1s ease-in-out;
+      transition: border-color var(--bz-transition-fast) var(--bz-transition-ease);
       padding-inline: 0.6rem;
     }
 

@@ -9,7 +9,7 @@
   color: var(--bz-header-tabs-color);
   font-size: var(--bz-header-font-size);
   font-family: var(--bz-header-font-family);
-  background: color-mix(in oklab, var(--bz-header-background-color) 100%, black 1%);
+  background: oklch(from var(--bz-header-background-color, transparent) calc(l - 0.012) c h) 100%;
   padding-inline: calc(var(--bz-page-padding) + clamp(0.75rem, 0.45rem + 1.5vw, 1.5rem));
   backdrop-filter: blur(.75rem) saturate(150%) brightness(1.05);
 
@@ -37,7 +37,7 @@
     color: inherit;
     padding-inline: .5rem;
     padding-block: .25rem;
-    transition: background 0.15s ease-in-out;
+    transition: background var(--bz-transition-normal) var(--bz-transition-ease);
     border-radius: var(--bz-border-radius);
     text-decoration: none;
     overflow-wrap: anywhere;
@@ -45,12 +45,7 @@
 
     &:hover {
       color: var(--bz-header-tabs-color-hover);
-      background: linear-gradient(
-        180deg,
-        color-mix(in oklab, var(--bz-header-tabs-background-color-hover) 100%, white 1%) 0%,
-        var(--bz-header-tabs-background-color-hover) 50%,
-        color-mix(in oklab, var(--bz-header-tabs-background-color-hover) 100%, black 1%) 100%
-      );
+      background-color: var(--bz-header-tabs-background-color-hover);
     }
   }
 
@@ -59,7 +54,7 @@
 
     a {
       color: var(--bz-header-tabs-color-active);
-      text-shadow: 0.03em 0, -0.03em 0;
+      text-shadow: var(--bz-bold-text-shadow);
     }
 
     &::after {
@@ -107,6 +102,8 @@
 
   svg {
     display: block;
+    height: 1em;
+    color: var(--bz-color-muted);
   }
 }
 

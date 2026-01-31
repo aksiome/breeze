@@ -12,7 +12,7 @@
   font-size: var(--bz-skip-to-content-font-size);
   font-family: var(--bz-skip-to-content-font-family);
   background-color: var(--bz-skip-to-content-background-color);
-  transition: transform .15s ease-in-out;
+  transition: transform var(--bz-transition-normal) var(--bz-transition-ease);
 
   a {
     display: inline-block;

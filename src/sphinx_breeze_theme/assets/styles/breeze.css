@@ -2,10 +2,12 @@
 
 @import "minireset.css" layer(reset);
 
+@import "./common.css" layer(theme);
 @import "./variables/colors.css" layer(theme);
 @import "./variables/content.css" layer(theme);
 @import "./variables/fonts.css" layer(theme);
 @import "./variables/icons.css" layer(theme);
+@import "./variables/utils.css" layer(theme);
 
 @import "./sections/announcement.css" layer(layout);
 @import "./sections/article-footer.css" layer(layout);
@@ -51,44 +53,10 @@
 @import "./components/theme-switcher.css" layer(components);
 @import "./components/version-switcher.css" layer(components);
 
-@import "./extensions/copybutton.css";
+@import "./utilities/user.css" layer(utilities);
+@import "./utilities/tooltip.css" layer(utilities);
+
 @import "./extensions/design.css";
+@import "./extensions/copybutton.css";
 @import "./extensions/readthedocs.css";
 @import "./extensions/treeview.css";
-
-@import "./utils.css" layer(utilities);
-
-@layer theme {
-  * {
-    scrollbar-color: var(--bz-color-outline) transparent;
-  }
-
-  :root {
-    overflow-y: scroll;
-    scroll-behavior: smooth;
-    font-weight: 350;
-    font-size: var(--bz-page-font-size);
-    font-family: var(--bz-page-font-family);
-    color: var(--bz-page-color);
-    background-color: var(--bz-page-background-color);
-    scroll-padding-top: calc(var(--bz-header-height) + var(--bz-header-tabs-height));
-    -webkit-font-smoothing: antialiased;
-    --bz-border-radius-full: calc(infinity * 1px);
-    --bz-border-radius: 0.5rem;
-  }
-
-  .bz-overlay {
-    display: block;
-    position: fixed;
-    visibility: hidden;
-    opacity: 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 10000;
-    backdrop-filter: blur(.1rem);
-    background-color: var(--bz-overlay-background-color);
-    transition: opacity ease-in-out 0.25s, visibility ease-in-out 0.25s;
-  }
-}

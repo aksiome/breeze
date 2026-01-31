@@ -13,7 +13,7 @@
 
   a {
     color: var(--bz-external-links-color);
-    transition: color .1s ease-in-out;
+    transition: color var(--bz-transition-fast) var(--bz-transition-ease);
 
     &:hover {
       color: var(--bz-external-links-color-hover);

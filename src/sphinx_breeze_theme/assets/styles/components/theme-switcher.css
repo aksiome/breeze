@@ -12,7 +12,7 @@
     color: var(--bz-theme-switcher-color);
     border: 1px solid var(--bz-theme-switcher-border-color);
     background-color: var(--bz-theme-switcher-background-color);
-    transition: border-color .1s ease-in-out;
+    transition: border-color var(--bz-transition-fast) var(--bz-transition-ease);
 
     &:hover {
       border-color: var(--bz-theme-switcher-border-color-hover);
@@ -25,7 +25,7 @@
     border-radius: var(--bz-border-radius-full);
     border: 1px solid var(--bz-theme-switcher-icon-border-color);
     background-color: var(--bz-theme-switcher-icon-background-color);
-    transition: translate .2s ease-in-out;
+    transition: translate var(--bz-transition-slow) var(--bz-transition-ease);
   }
 }
 

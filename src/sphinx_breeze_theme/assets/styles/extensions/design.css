@@ -7,13 +7,13 @@
   --sd-color-danger: var(--bz-color-red);
   --sd-color-muted: var(--bz-color-gray);
 
-  --sd-color-primary-outline: var(--bz-color-primary-1);
-  --sd-color-secondary-outline: var(--bz-color-secondary-1);
-  --sd-color-success-outline: var(--bz-color-green-1);
-  --sd-color-info-outline: var(--bz-color-cyan-1);
-  --sd-color-warning-outline: var(--bz-color-orange-1);
-  --sd-color-danger-outline: var(--bz-color-red-1);
-  --sd-color-muted-outline: var(--bz-color-gray-1);
+  --sd-color-primary-contrast: var(--bz-color-primary-1);
+  --sd-color-secondary-contrast: var(--bz-color-secondary-1);
+  --sd-color-success-contrast: var(--bz-color-green-1);
+  --sd-color-info-contrast: var(--bz-color-cyan-1);
+  --sd-color-warning-contrast: var(--bz-color-orange-1);
+  --sd-color-danger-contrast: var(--bz-color-red-1);
+  --sd-color-muted-contrast: var(--bz-color-gray-1);
 
   --sd-color-primary-highlight: var(--bz-color-primary-1);
   --sd-color-secondary-highlight: var(--bz-color-secondary-1);
@@ -44,20 +44,69 @@
 
   --sd-fontsize-dropdown: var(--bz-topic-font-size);
   --sd-fontsize-dropdown-title: var(--bz-topic-font-size);
+  --sd-fontweight-dropdown-title: 600;
 }
 
 :root[data-theme=dark] {
-  --sd-color-primary-outline: var(--bz-color-primary-5);
-  --sd-color-secondary-outline: var(--bz-color-secondary-5);
-  --sd-color-success-outline: var(--bz-color-green-5);
-  --sd-color-info-outline: var(--bz-color-cyan-5);
-  --sd-color-warning-outline: var(--bz-color-orange-5);
-  --sd-color-danger-outline: var(--bz-color-red-5);
-  --sd-color-muted-outline: var(--bz-color-gray-5);
+  --sd-color-primary-contrast: var(--bz-color-primary-5);
+  --sd-color-secondary-contrast: var(--bz-color-secondary-5);
+  --sd-color-success-contrast: var(--bz-color-green-5);
+  --sd-color-info-contrast: var(--bz-color-cyan-5);
+  --sd-color-warning-contrast: var(--bz-color-orange-5);
+  --sd-color-danger-contrast: var(--bz-color-red-5);
+  --sd-color-muted-contrast: var(--bz-color-gray-5);
 
   --sd-color-tabs-label-active: var(--bz-color-primary-5);
   --sd-color-tabs-background: var(--bz-color-surface-3);
   --sd-color-tabs-background-active: color-mix(in oklab, var(--bz-color-surface-1), var(--bz-color-surface-2));
+}
+
+.sd-card {
+  --bz-surface: var(--sd-color-card-background);
+}
+
+.sd-outline-primary, .sd-btn-outline-primary {
+  --sd-color-contrast: var(--sd-color-primary-contrast);
+}
+
+.sd-outline-secondary, .sd-btn-outline-secondary {
+  --sd-color-contrast: var(--sd-color-secondary-contrast);
+}
+
+.sd-outline-success, .sd-btn-outline-success {
+  --sd-color-contrast: var(--sd-color-success-contrast);
+}
+
+.sd-outline-info, .sd-btn-outline-info {
+  --sd-color-contrast: var(--sd-color-info-contrast);
+}
+
+.sd-outline-warning, .sd-btn-outline-warning {
+  --sd-color-contrast: var(--sd-color-warning-contrast);
+}
+
+.sd-outline-danger, .sd-btn-outline-danger {
+  --sd-color-contrast: var(--sd-color-danger-contrast);
+}
+
+.sd-outline-muted, .sd-btn-outline-muted {
+  --sd-color-contrast: var(--sd-color-muted-contrast);
+}
+
+.sd-shadow-sm {
+  box-shadow: var(--bz-shadow-sm), var(--bz-inset-shadow, 0 0 0 transparent)!important;
+}
+
+.sd-shadow-md {
+  box-shadow: var(--bz-shadow-md), var(--bz-inset-shadow, 0 0 0 transparent)!important;
+}
+
+.sd-shadow-lg {
+  box-shadow: var(--bz-shadow-lg), var(--bz-inset-shadow, 0 0 0 transparent)!important;
+}
+
+.sd-font-weight-bold {
+  font-weight: 600!important;
 }
 
 .sd-btn:not([class*="outline"]), .sd-badge:not([class*="outline"]) {
@@ -65,73 +114,47 @@
   background-color: var(--bz-color-surface-5);
 }
 
-.sd-outline-primary, .sd-btn-outline-primary {
-  color: var(--sd-color-primary-outline)!important;
-  border-color: var(--sd-color-primary-outline)!important;
+.sd-btn:where([class*="outline"]), .sd-badge:where([class*="outline"]) {
+  color: var(--sd-color-contrast, var(--bz-color-surface-5))!important;
+  border-color: var(--sd-color-contrast, var(--bz-color-surface-5))!important;
 }
 
-.sd-outline-secondary, .sd-btn-outline-secondary {
-  color: var(--sd-color-secondary-outline)!important;
-  border-color: var(--sd-color-secondary-outline)!important;
-}
+details.sd-dropdown summary.sd-summary-title {
+  padding: .35em .6em .35em 1em;
 
-.sd-outline-success, .sd-btn-outline-success {
-  color: var(--sd-color-success-outline)!important;
-  border-color: var(--sd-color-success-outline)!important;
-}
-
-.sd-outline-info, .sd-btn-outline-info {
-  color: var(--sd-color-info-outline)!important;
-  border-color: var(--sd-color-info-outline)!important;
-}
-
-.sd-outline-warning, .sd-btn-outline-warning {
-  color: var(--sd-color-warning-outline)!important;
-  border-color: var(--sd-color-warning-outline)!important;
-}
-
-.sd-outline-danger, .sd-btn-outline-danger {
-  color: var(--sd-color-danger-outline)!important;
-  border-color: var(--sd-color-danger-outline)!important;
-}
-
-.sd-outline-muted, .sd-btn-outline-muted {
-  color: var(--sd-color-muted-outline)!important;
-  border-color: var(--sd-color-muted-outline)!important;
-}
-
-
-.sd-shadow-sm {
-  box-shadow:
-    0 1px 1px var(--bz-color-shadow),
-    0 2px 2px var(--bz-color-shadow),
-    0 4px 4px var(--bz-color-shadow),
-    0 8px 8px var(--bz-color-shadow) !important;
-}
-
-.sd-shadow-md {
-  box-shadow:
-    0 1px 1px var(--bz-color-shadow),
-    0 2px 2px var(--bz-color-shadow),
-    0 4px 4px var(--bz-color-shadow),
-    0 8px 8px var(--bz-color-shadow),
-    0 16px 16px var(--bz-color-shadow) !important;
-}
-
-.sd-shadow-lg {
-  box-shadow:
-    0 1px 1px var(--bz-color-shadow),
-    0 2px 2px var(--bz-color-shadow),
-    0 4px 4px var(--bz-color-shadow),
-    0 8px 8px var(--bz-color-shadow),
-    0 16px 16px var(--bz-color-shadow),
-    0 32px 32px var(--bz-color-shadow) !important;
+  &.sd-bg-primary {
+    --bz-surface: color-mix(in oklab, var(--sd-color-primary) 70%, transparent);
+  }
+  &.sd-bg-secondary {
+    --bz-surface: color-mix(in oklab, var(--sd-color-secondary) 70%, transparent);
+  }
+  &.sd-bg-success {
+    --bz-surface: color-mix(in oklab, var(--sd-color-success) 70%, transparent);
+  }
+  &.sd-bg-info {
+    --bz-surface: color-mix(in oklab, var(--sd-color-info) 70%, transparent);
+  }
+  &.sd-bg-warning {
+    --bz-surface: color-mix(in oklab, var(--sd-color-warning) 70%, transparent)!important;
+  }
+  &.sd-bg-danger {
+    --bz-surface: color-mix(in oklab, var(--sd-color-danger) 70%, transparent)!important;
+  }
+  &.sd-bg-muted {
+    --bz-surface: color-mix(in oklab, var(--sd-color-muted) 70%, transparent)!important;
+  }
+  &.sd-bg-black {
+    --bz-surface: color-mix(in oklab, var(--bz-color-black-1) 70%, transparent)!important;
+  }
+  &.sd-bg-white {
+    --bz-surface: color-mix(in oklab, var(--bz-color-white-5) 70%, transparent)!important;
+  }
 }
 
 article .sd-tab-set {
   > input {
     &:checked + label {
-      text-shadow: .001em 0 0 currentColor, -.001em 0 0 currentColor;
+      text-shadow: var(--bz-thin-text-shadow);
       background-color: var(--sd-color-tabs-background-active);
       border: 1px solid var(--sd-color-tabs-border);
       padding-top: calc(.25rem + 3px);
@@ -233,150 +256,4 @@ article .sd-tab-set {
       }
     }
   }
-}
-
-details.sd-dropdown summary.sd-summary-title {
-  padding: .35em .6em .35em 1em;
-
-  &.sd-bg-primary {
-    background-color: color-mix(in oklab, var(--sd-color-primary) 70%, transparent)!important;
-    box-shadow:
-      inset 0 2px 0 color-mix(in oklab, var(--sd-color-primary) 20%, white 2%),
-      inset 0 -1px 0 color-mix(in oklab, var(--sd-color-primary) 20%, black 3%),
-      inset 1px 0 0 color-mix(in oklab, var(--sd-color-primary) 20%, white 1%),
-      inset -2px 0 0 color-mix(in oklab, var(--sd-color-primary) 20%, black 2%);
-  }
-  &.sd-bg-secondary {
-    background-color: color-mix(in oklab, var(--sd-color-secondary) 70%, transparent)!important;
-    box-shadow:
-      inset 0 2px 0 color-mix(in oklab, var(--sd-color-secondary) 20%, white 2%),
-      inset 0 -1px 0 color-mix(in oklab, var(--sd-color-secondary) 20%, black 3%),
-      inset 1px 0 0 color-mix(in oklab, var(--sd-color-secondary) 20%, white 1%),
-      inset -2px 0 0 color-mix(in oklab, var(--sd-color-secondary) 20%, black 2%);
-  }
-  &.sd-bg-success {
-    background-color: color-mix(in oklab, var(--sd-color-success) 70%, transparent)!important;
-    box-shadow:
-      inset 0 2px 0 color-mix(in oklab, var(--sd-color-success) 20%, white 2%),
-      inset 0 -1px 0 color-mix(in oklab, var(--sd-color-success) 20%, black 3%),
-      inset 1px 0 0 color-mix(in oklab, var(--sd-color-success) 20%, white 1%),
-      inset -2px 0 0 color-mix(in oklab, var(--sd-color-success) 20%, black 2%);
-  }
-  &.sd-bg-info {
-    background-color: color-mix(in oklab, var(--sd-color-info) 70%, transparent)!important;
-    box-shadow:
-      inset 0 2px 0 color-mix(in oklab, var(--sd-color-info) 20%, white 2%),
-      inset 0 -1px 0 color-mix(in oklab, var(--sd-color-info) 20%, black 3%),
-      inset 1px 0 0 color-mix(in oklab, var(--sd-color-info) 20%, white 1%),
-      inset -2px 0 0 color-mix(in oklab, var(--sd-color-info) 20%, black 2%);
-  }
-  &.sd-bg-warning {
-    background-color: color-mix(in oklab, var(--sd-color-warning) 70%, transparent)!important;
-    box-shadow:
-      inset 0 2px 0 color-mix(in oklab, var(--sd-color-warning) 20%, white 2%),
-      inset 0 -1px 0 color-mix(in oklab, var(--sd-color-warning) 20%, black 3%),
-      inset 1px 0 0 color-mix(in oklab, var(--sd-color-warning) 20%, white 1%),
-      inset -2px 0 0 color-mix(in oklab, var(--sd-color-warning) 20%, black 2%);
-  }
-  &.sd-bg-danger {
-    background-color: color-mix(in oklab, var(--sd-color-danger) 70%, transparent)!important;
-    box-shadow:
-      inset 0 2px 0 color-mix(in oklab, var(--sd-color-danger) 20%, white 2%),
-      inset 0 -1px 0 color-mix(in oklab, var(--sd-color-danger) 20%, black 3%),
-      inset 1px 0 0 color-mix(in oklab, var(--sd-color-danger) 20%, white 1%),
-      inset -2px 0 0 color-mix(in oklab, var(--sd-color-danger) 20%, black 2%);
-  }
-  &.sd-bg-muted {
-    background-color: color-mix(in oklab, var(--sd-color-muted) 70%, transparent)!important;
-    box-shadow:
-      inset 0 2px 0 color-mix(in oklab, var(--sd-color-muted) 20%, white 2%),
-      inset 0 -1px 0 color-mix(in oklab, var(--sd-color-muted) 20%, black 3%),
-      inset 1px 0 0 color-mix(in oklab, var(--sd-color-muted) 20%, white 1%),
-      inset -2px 0 0 color-mix(in oklab, var(--sd-color-muted) 20%, black 2%);
-  }
-  &.sd-bg-light {
-    background-color: color-mix(in oklab, var(--bz-bg-light) 70%, transparent)!important;
-    box-shadow:
-      inset 0 2px 0 color-mix(in oklab, var(--sd-color-light) 20%, white 2%),
-      inset 0 -1px 0 color-mix(in oklab, var(--sd-color-light) 20%, black 3%),
-      inset 1px 0 0 color-mix(in oklab, var(--sd-color-light) 20%, white 1%),
-      inset -2px 0 0 color-mix(in oklab, var(--sd-color-light) 20%, black 2%);
-  }
-  &.sd-bg-dark {
-    background-color: color-mix(in oklab, var(--bz-bg-dark) 70%, transparent)!important;
-    box-shadow:
-      inset 0 2px 0 color-mix(in oklab, var(--sd-color-dark) 20%, white 2%),
-      inset 0 -1px 0 color-mix(in oklab, var(--sd-color-dark) 20%, black 3%),
-      inset 1px 0 0 color-mix(in oklab, var(--sd-color-dark) 20%, white 1%),
-      inset -2px 0 0 color-mix(in oklab, var(--sd-color-dark) 20%, black 2%);
-  }
-  &.sd-bg-black {
-    background-color: color-mix(in oklab, var(--bz-color-black-1) 70%, transparent)!important;
-    box-shadow:
-      inset 0 2px 0 color-mix(in oklab, var(--sd-color-black-1) 20%, white 2%),
-      inset 0 -1px 0 color-mix(in oklab, var(--sd-color-black-1) 20%, black 3%),
-      inset 1px 0 0 color-mix(in oklab, var(--sd-color-black-1) 20%, white 1%),
-      inset -2px 0 0 color-mix(in oklab, var(--sd-color-black-1) 20%, black 2%);
-  }
-  &.sd-bg-white {
-    background-color: color-mix(in oklab, var(--bz-color-white-5) 70%, transparent)!important;
-    box-shadow:
-      inset 0 2px 0 color-mix(in oklab, var(--sd-color-white-5) 20%, white 2%),
-      inset 0 -1px 0 color-mix(in oklab, var(--sd-color-white-5) 20%, black 3%),
-      inset 1px 0 0 color-mix(in oklab, var(--sd-color-white-5) 20%, white 1%),
-      inset -2px 0 0 color-mix(in oklab, var(--sd-color-white-5) 20%, black 2%);
-  }
-}
-
-.sd-card {
-  background: linear-gradient(
-    180deg,
-    color-mix(in oklab, var(--sd-color-card-background) 100%, white 1%) 0%,
-    var(--sd-color-card-background) 50%,
-    color-mix(in oklab, var(--sd-color-card-background) 100%, black 1%) 100%
-  );
-  box-shadow:
-    inset 0 2px 0 color-mix(in oklab, var(--sd-color-card-background) 100%, white 4%),
-    inset 0 -1px 0 color-mix(in oklab, var(--sd-color-card-background) 100%, black 6%),
-    inset 1px 0 0 color-mix(in oklab, var(--sd-color-card-background) 100%, white 2%),
-    inset -2px 0 0 color-mix(in oklab, var(--sd-color-card-background) 100%, black 3%);
-}
-
-.sd-card.sd-shadow-sm {
-  box-shadow:
-    0 1px 1px var(--bz-color-shadow),
-    0 2px 2px var(--bz-color-shadow),
-    0 4px 4px var(--bz-color-shadow),
-    0 8px 8px var(--bz-color-shadow),
-    inset 0 2px 0 color-mix(in oklab, var(--sd-color-card-background) 100%, white 4%),
-    inset 0 -1px 0 color-mix(in oklab, var(--sd-color-card-background) 100%, black 6%),
-    inset 1px 0 0 color-mix(in oklab, var(--sd-color-card-background) 100%, white 2%),
-    inset -2px 0 0 color-mix(in oklab, var(--sd-color-card-background) 100%, black 3%) !important;
-}
-
-.sd-card.sd-shadow-md {
-  box-shadow:
-    0 1px 1px var(--bz-color-shadow),
-    0 2px 2px var(--bz-color-shadow),
-    0 4px 4px var(--bz-color-shadow),
-    0 8px 8px var(--bz-color-shadow),
-    0 16px 16px var(--bz-color-shadow),
-    inset 0 2px 0 color-mix(in oklab, var(--sd-color-card-background) 100%, white 4%),
-    inset 0 -1px 0 color-mix(in oklab, var(--sd-color-card-background) 100%, black 6%),
-    inset 1px 0 0 color-mix(in oklab, var(--sd-color-card-background) 100%, white 2%),
-    inset -2px 0 0 color-mix(in oklab, var(--sd-color-card-background) 100%, black 3%) !important;
-}
-
-.sd-card.sd-shadow-lg {
-  box-shadow:
-    0 1px 1px var(--bz-color-shadow),
-    0 2px 2px var(--bz-color-shadow),
-    0 4px 4px var(--bz-color-shadow),
-    0 8px 8px var(--bz-color-shadow),
-    0 16px 16px var(--bz-color-shadow),
-    0 32px 32px var(--bz-color-shadow),
-    inset 0 2px 0 color-mix(in oklab, var(--sd-color-card-background) 100%, white 4%),
-    inset 0 -1px 0 color-mix(in oklab, var(--sd-color-card-background) 100%, black 6%),
-    inset 1px 0 0 color-mix(in oklab, var(--sd-color-card-background) 100%, white 2%),
-    inset -2px 0 0 color-mix(in oklab, var(--sd-color-card-background) 100%, black 3%) !important;
 }

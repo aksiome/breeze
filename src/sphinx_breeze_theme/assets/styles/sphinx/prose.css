@@ -57,8 +57,10 @@ main a {
   color: var(--bz-link-color);
   text-decoration: underline;
   text-underline-offset: 4px;
+
   &:hover {
     color: var(--bz-link-color-hover);
+
     code {
       color: var(--bz-link-color-hover);
     }
@@ -98,7 +100,7 @@ abbr {
   text-decoration: none;
 }
 
-hr {
+main hr {
   border: none;
   border-top: 1px solid var(--bz-line-separator-color);
   margin: 1rem 0 1.5rem;

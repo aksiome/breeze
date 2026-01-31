@@ -16,16 +16,7 @@
 
 {%- block scripts -%}
   {{- script() }}
-  <script data-cfasync="false">
-    const mode = localStorage.getItem("breeze-mode") || "{{ theme_default_mode }}";
-    document.documentElement.dataset.mode = mode;
-    if (mode === "auto") {
-      const prefers = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
-      document.documentElement.dataset.theme = prefers;
-    } else {
-      document.documentElement.dataset.theme = mode;
-    }
-  </script>
+  {%- include 'partials/theme-mode-scripts.html' -%}
 {%- endblock scripts -%}
 
 {%- block extrahead -%}
@@ -33,6 +24,7 @@
   <meta name="docsearch:version" content="{{ version }}" />
   {%- if last_updated %}<meta name="docbuild:last-update" content="{{ last_updated | e }}"/>{%- endif %}
   {%- if READTHEDOCS -%}<meta name="readthedocs-addons-api-version" content="1" />{%- endif -%}
+  {%- include "partials/extra-head.html" -%}
 {%- endblock extrahead -%}
 
 {%- block header -%}
@@ -66,15 +58,16 @@
 {%- block footer -%}
   {%- include "sections/footer.html" -%}
   <a href="#" class="bz-back-to-top">
-    <svg class="sized" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
       <path d="m5 12 7-7 7 7"/><path d="M12 19V5"/>
     </svg>
     <span>{{ _("Back to top") }}</span>
   </a>
   <label class="bz-overlay bz-overlay-primary" for="bz-sidebar-primary"></label>
   <label class="bz-overlay bz-overlay-secondary" for="bz-sidebar-secondary"></label>
-  <input type="checkbox" name="bz-sidebar-primary" id="bz-sidebar-primary" aria-label="Toggle site navigation sidebar">
-  <input type="checkbox" name="bz-sidebar-secondary" id="bz-sidebar-secondary" aria-label="Toggle table of contents sidebar">
+  <input type="checkbox" name="bz-sidebar-primary" id="bz-sidebar-primary" aria-label="{{ _('Toggle section navigation') }}">
+  <input type="checkbox" name="bz-sidebar-secondary" id="bz-sidebar-secondary" aria-label="{{ _('Toggle table of contents') }}">
+  {%- include "partials/extra-foot.html" -%}
 {%- endblock footer -%}
 
 {%- block relbar1 -%}{%- endblock -%}

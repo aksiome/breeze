@@ -1,30 +1,34 @@
 import { defineComponent } from "../utils/component";
 
 defineComponent("[data-drawer]", el => {
-  const toggle = document.getElementById(el.dataset?.drawer ?? "") as HTMLInputElement;
-  if (!toggle) return;
+  const toggle = document.getElementById(el.dataset?.drawer ?? "");
+  if (!(toggle instanceof HTMLInputElement)) return;
 
   const label = document.querySelector<HTMLElement>(`label[role="button"][for="${toggle.id}"]`)
 
+  const linkHandlers = new Map<HTMLAnchorElement, (e: KeyboardEvent) => void>();
+
   el.querySelectorAll<HTMLAnchorElement>('a[href]').forEach(link => {
-    link.addEventListener('keydown', e => {
+    const handleLinkKeydown = (e: KeyboardEvent) => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault();
         toggle.checked = false;
         link.click();
       }
-    });
+    };
+    linkHandlers.set(link, handleLinkKeydown);
+    link.addEventListener('keydown', handleLinkKeydown);
   });
 
-  toggle.addEventListener('change', () => {
+  const handleToggleChange = () => {
     if (toggle.checked) {
       const focusable = getFocusableElements(el);
       if (focusable.length === 0) return;
       setTimeout(() => focusable[0].focus(), 10);
     }
-  });
+  };
 
-  el.addEventListener('keydown', e => {
+  const handleKeydown = (e: KeyboardEvent) => {
     if (!toggle.checked) return;
     if (e.key === 'Escape') {
       toggle.checked = false;
@@ -46,7 +50,18 @@ defineComponent("[data-drawer]", el => {
         }
       }
     }
-  });
+  };
+
+  toggle.addEventListener('change', handleToggleChange);
+  el.addEventListener('keydown', handleKeydown);
+
+  return () => {
+    linkHandlers.forEach((handler, link) => {
+      link.removeEventListener('keydown', handler);
+    });
+    toggle.removeEventListener('change', handleToggleChange);
+    el.removeEventListener('keydown', handleKeydown);
+  };
 });
 
 

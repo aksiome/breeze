@@ -1,5 +1,10 @@
 import { defineComponent } from "../utils/component";
 
+interface VersionEntry {
+  version: string;
+  name: string;
+  url: string;
+}
 
 const root = new URL(
   document.documentElement.dataset.content_root || "./",
@@ -10,7 +15,7 @@ const relative = window.location.pathname.startsWith(root)
   ? window.location.pathname.slice(root.length)
   : "";
 
-const versionCache = new Map<string, Promise<any>>();
+const versionCache = new Map<string, Promise<VersionEntry[]>>();
 
 defineComponent(".bz-version-switcher", el => {
   const button = el.querySelector("button");
@@ -19,6 +24,8 @@ defineComponent(".bz-version-switcher", el => {
   const current = button?.dataset.current;
   const url = button?.dataset.url;
   if (!button || !btnSpan || !content || !current || !url) return;
+
+  const linkHandlers = new Map<HTMLAnchorElement, (event: MouseEvent) => void>();
 
   if (!versionCache.has(url)) {
     versionCache.set(url, fetch(url).then(res => {
@@ -51,13 +58,22 @@ defineComponent(".bz-version-switcher", el => {
         link.role = "menuitem";
         link.textContent = entry.name;
 
-        link.addEventListener("click", (event) => {
+        const handleClick = (event: MouseEvent) => {
           event.preventDefault();
           fetch(target, { method: "HEAD" })
             .then(res => window.location.href = res.ok ? target : entry.url)
             .catch(() => window.location.href = entry.url);
-        });
+        };
+
+        linkHandlers.set(link, handleClick);
+        link.addEventListener("click", handleClick);
       }
     });
   }).catch(err => console.error("Version switcher error:", err));
+
+  return () => {
+    linkHandlers.forEach((handler, link) => {
+      link.removeEventListener("click", handler);
+    });
+  };
 });

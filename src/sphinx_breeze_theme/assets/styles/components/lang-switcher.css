@@ -10,7 +10,7 @@
     gap: 0.25rem;
     color: var(--bz-lang-switcher-color);
     font-size: var(--bz-lang-switcher-font-size);
-    transition: color 0.1s ease-in-out;
+    transition: color var(--bz-transition-fast) var(--bz-transition-ease);
 
     &::after {
       content: "";
@@ -20,6 +20,11 @@
       transform: rotate(90deg);
       background-color: currentColor;
       mask-image: var(--bz-icon-chevron);
+    }
+
+    svg {
+      height: 1em;
+      vertical-align: middle;
     }
   }
 

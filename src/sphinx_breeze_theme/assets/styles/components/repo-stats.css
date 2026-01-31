@@ -1,5 +1,7 @@
 .bz-repo-stats {
   a {
+    --bz-surface: var(--bz-repo-stats-background);
+
     display: inline-grid;
     grid-template-columns: auto 1fr;
     grid-template-rows: auto auto;
@@ -14,21 +16,10 @@
     text-decoration: none;
     font-size: var(--bz-repo-stats-font-size);
     font-family: var(--bz-repo-stats-font-family);
-    transition: background 0.2s ease-in-out;
-    background: linear-gradient(
-      180deg,
-      color-mix(in oklab, var(--bz-repo-stats-background) 100%, white 1%) 0%,
-      var(--bz-repo-stats-background) 50%,
-      color-mix(in oklab, var(--bz-repo-stats-background) 100%, black 1%) 100%
-    );
+    transition: background var(--bz-transition-slow) var(--bz-transition-ease);
 
     &:hover {
-      background: linear-gradient(
-        180deg,
-        color-mix(in oklab, var(--bz-repo-stats-background-hover) 100%, white 1%) 0%,
-        var(--bz-repo-stats-background-hover) 50%,
-        color-mix(in oklab, var(--bz-repo-stats-background-hover) 100%, black 1%) 100%
-      );
+      --bz-surface: var(--bz-repo-stats-background-hover);
     }
 
     > span {
@@ -85,6 +76,7 @@
 [class^="bz-sidebar-"] > .bz-edit-this-page:has(+ .bz-repo-stats) {
   font-size: var(--bz-repo-stats-font-size);
   text-indent: 0.5rem;
+
   a {
     text-decoration: none;
   }

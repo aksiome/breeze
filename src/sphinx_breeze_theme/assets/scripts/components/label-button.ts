@@ -11,10 +11,14 @@ defineComponent("label[role=button][for]", el => {
     el.setAttribute("tabindex", "0");
   }
 
-  el.addEventListener('keydown', (event: KeyboardEvent) => {
+  const handleKeydown = (event: KeyboardEvent) => {
     if (event.key === 'Enter' || event.key === ' ') {
       target.click?.();
       event.preventDefault();
     }
-  });
+  };
+
+  el.addEventListener('keydown', handleKeydown);
+
+  return () => el.removeEventListener('keydown', handleKeydown);
 });

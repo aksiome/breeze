@@ -39,4 +39,6 @@ defineComponent(".bz-header-tabs", el => {
   }, {root: tabs, threshold: 1});
 
   items.forEach(el => observer.observe(el));
+
+  return () => observer.disconnect();
 });

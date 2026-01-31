@@ -47,14 +47,14 @@
     margin-left: -.5rem;
     padding: .265rem .5rem;
     color: var(--bz-sidebar-toc-color-active);
-    transition: text-shadow ease-in-out .15s;
+    transition: text-shadow var(--bz-transition-normal) var(--bz-transition-ease);
 
     &:hover {
       color: var(--bz-sidebar-toc-color-hover) !important;
     }
 
     &.current {
-      text-shadow: 0.03em 0 0 currentColor, -0.03em 0 0 currentColor;
+      text-shadow: var(--bz-bold-text-shadow);
     }
   }
 }

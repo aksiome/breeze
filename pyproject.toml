@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "sphinx-breeze-theme"
-description = "A modern, accessible, and responsive Sphinx documentation theme."
+description = "A clean and modern Sphinx theme with polished API docs."
 authors = [{ name = "Aksiome", email = "54895777+aksiome@users.noreply.github.com" }]
 dynamic = ["version"]
 readme = "README.md"

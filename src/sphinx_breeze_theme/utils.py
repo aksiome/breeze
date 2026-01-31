@@ -64,10 +64,14 @@ def simplify_page_toc(html: str) -> str:
 
 def insert_zero_width_space(
     html: str,
-    before: list = ["."],
-    after: list = ["_",":"],
+    before: list[str] | None = None,
+    after: list[str] | None = None,
 ) -> str:
     """Insert a zero-width space (U+200B) before or after each specified separator character."""
+    if before is None:
+        before = ["."]
+    if after is None:
+        after = ["_", ":"]
     soup = BeautifulSoup(html, "html.parser")
     for text_node in soup.find_all(string=True):
         new_text = str(text_node)
@@ -83,7 +87,7 @@ def insert_zero_width_space(
 def wrap_emoji(text: str) -> str:
     """Wrap emojis in a `span` container"""
     return "".join(
-        f'<span class="emoji">{token.chars}</span>'
+        f'<span class="bz-emoji">{token.chars}</span>'
         if isinstance(token.value, emoji.EmojiMatch) else token.chars
         for token in emoji.analyze(text, non_emoji=True, join_emoji=True)
     )

@@ -1,5 +1,5 @@
 {%- if not meta or "hide-related-pages" not in meta -%}
-<nav class="bz-related-pages" aria-label="Related pages navigation">
+<nav class="bz-related-pages" aria-label="{{ _('Related pages navigation') }}">
   {%- if prev -%}
   <a class="bz-related-pages-previous" href="{{ prev.link }}" rel="prev">
     <span>{{ _("Previous") }}</span>

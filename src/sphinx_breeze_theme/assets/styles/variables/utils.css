@@ -1,0 +1,32 @@
+:root {
+  --bz-transition-fast: 0.1s;
+  --bz-transition-normal: 0.15s;
+  --bz-transition-slow: 0.2s;
+  --bz-transition-ease: ease-in-out;
+  --bz-border-radius-full: calc(infinity * 1px);
+  --bz-border-radius: 0.5rem;
+
+  --bz-bold-text-shadow: 0.03em 0 0 currentColor, -0.03em 0 0 currentColor;
+  --bz-thin-text-shadow: 0.001em 0 0 currentColor, -0.001em 0 0 currentColor;
+
+  --bz-shadow-sm:
+    0 1px 1px var(--bz-color-shadow),
+    0 2px 2px var(--bz-color-shadow),
+    0 4px 4px var(--bz-color-shadow),
+    0 8px 8px var(--bz-color-shadow);
+
+  --bz-shadow-md:
+    0 1px 1px var(--bz-color-shadow),
+    0 2px 2px var(--bz-color-shadow),
+    0 4px 4px var(--bz-color-shadow),
+    0 8px 8px var(--bz-color-shadow),
+    0 16px 16px var(--bz-color-shadow);
+
+  --bz-shadow-lg:
+    0 1px 1px var(--bz-color-shadow),
+    0 2px 2px var(--bz-color-shadow),
+    0 4px 4px var(--bz-color-shadow),
+    0 8px 8px var(--bz-color-shadow),
+    0 16px 16px var(--bz-color-shadow),
+    0 32px 32px var(--bz-color-shadow);
+}

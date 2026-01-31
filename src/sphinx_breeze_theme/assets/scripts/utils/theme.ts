@@ -26,7 +26,7 @@ export const nextTheme = (): void => {
 
 const media = window.matchMedia("(prefers-color-scheme: dark)");
 media.addEventListener("change", (e) => {
-  const mode = localStorage.getItem("mode");
+  const mode = localStorage.getItem("breeze-mode");
   if (mode === Theme.AUTO) {
     const preferred = e.matches ? Theme.DARK : Theme.LIGHT;
     document.documentElement.dataset.theme = preferred;

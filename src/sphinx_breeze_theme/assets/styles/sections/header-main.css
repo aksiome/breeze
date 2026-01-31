@@ -11,12 +11,8 @@
   font-family: var(--bz-header-font-family);
   padding-inline: calc(var(--bz-page-padding) + clamp(1rem, 0.826rem + 0.87vw, 1.5rem));
   backdrop-filter: blur(.75rem) saturate(150%) brightness(1.05);
-  background: linear-gradient(
-    180deg,
-    color-mix(in oklab, var(--bz-header-background-color) 100%, white 1%) 0%,
-    var(--bz-header-background-color) 50%,
-    color-mix(in oklab, var(--bz-header-background-color) 100%, black 1%) 100%
-  );
+  --bz-surface: var(--bz-header-background-color);
+
 
   > * {
     display: flex;
@@ -63,11 +59,12 @@
 
 @media (width <= 36rem) {
   .bz-header-main {
-    height: auto;
-    flex-direction: column;
+    --bz-surface: var(--bz-header-background-color-variant);
+
     gap: 1rem;
     padding: 1rem;
-    background-color: var(--bz-header-background-color-variant);
+    height: auto;
+    flex-direction: column;
     border-bottom: 1px solid var(--bz-header-border-color);
 
     .bz-header-start .bz-sidebar-primary-toggle {

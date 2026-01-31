@@ -15,12 +15,7 @@ div.highlight, div.literal-block-wrapper, [class*="highlight-"] {
     font-size: var(--bz-code-block-font-size);
     font-family: var(--bz-code-block-font-family);
     border: 1px solid var(--bz-code-block-border-color);
-    background: linear-gradient(
-      180deg,
-      color-mix(in oklab, var(--bz-code-block-background-color) 100%, white 1%) 0%,
-      var(--bz-code-block-background-color) 50%,
-      color-mix(in oklab, var(--bz-code-block-background-color) 100%, black 1%) 100%
-    );
+    background-color: var(--bz-code-block-background-color);
   }
 }
 
@@ -52,6 +47,7 @@ div.code-block-caption + div {
 .highlight span.linenos {
   position: absolute;
   display: inline-block;
+  opacity: 0.95;
   left: 1px;
   width: 2.5rem;
   text-align: right;
@@ -59,23 +55,13 @@ div.code-block-caption + div {
   padding-inline: 0.5rem!important;
   color: var(--bz-code-block-line-number-color)!important;
   border-right: 1px solid var(--bz-code-block-border-color);
-  background: linear-gradient(
-    180deg,
-    color-mix(in oklab, var(--bz-code-block-background-color) 100%, white 1%) 0%,
-    var(--bz-code-block-background-color) 50%,
-    color-mix(in oklab, var(--bz-code-block-background-color) 100%, black 1%) 100%
-  );
+  background-color: var(--bz-code-block-background-color)!important;
 }
 
 .literal-block-wrapper {
   border-radius: var(--bz-border-radius);
   border: 1px solid var(--bz-code-block-border-color);
-  background: linear-gradient(
-    180deg,
-    color-mix(in oklab, var(--bz-code-block-background-color) 100%, white 1%) 0%,
-    var(--bz-code-block-background-color) 50%,
-    color-mix(in oklab, var(--bz-code-block-background-color) 100%, black 1%) 100%
-  );
+  background-color: var(--bz-code-block-background-color);
 }
 
 .literal-block-wrapper div[class*="highlight-"] pre {
@@ -83,16 +69,12 @@ div.code-block-caption + div {
 }
 
 .code-block-caption {
+  --bz-surface: var(--bz-code-block-caption-background-color);
+
   padding: .5rem 1rem;
-  border-radius: var(--bz-border-radius) .5rem 0 0;
+  border-radius: var(--bz-border-radius) var(--bz-border-radius) 0 0;
   color: var(--bz-code-block-caption-color);
   font-size: var(--bz-code-block-caption-font-size);
   font-family: var(--bz-code-block-caption-font-family);
   border-bottom: 1px solid var(--bz-code-block-border-color);
-  background: linear-gradient(
-    180deg,
-    color-mix(in oklab, var(--bz-code-block-caption-background-color) 100%, white 1%) 0%,
-    var(--bz-code-block-caption-background-color) 50%,
-    color-mix(in oklab, var(--bz-code-block-caption-background-color) 100%, black 1%) 100%
-  );
 }

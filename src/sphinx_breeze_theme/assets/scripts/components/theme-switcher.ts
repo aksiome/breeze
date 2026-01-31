@@ -14,9 +14,13 @@ defineComponent(".bz-theme-switcher", el => {
     button.dataset.tooltip = button.ariaLabel;
   }
 
-  update();
-  button.addEventListener('click', () => {
+  const handleClick = () => {
     nextTheme();
     update();
-  });
+  };
+
+  update();
+  button.addEventListener('click', handleClick);
+
+  return () => button.removeEventListener('click', handleClick);
 });

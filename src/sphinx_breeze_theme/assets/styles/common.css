@@ -1,0 +1,117 @@
+* {
+  scrollbar-color: var(--bz-color-outline) transparent;
+}
+
+:root {
+  font-size: var(--bz-page-font-size);
+  font-family: var(--bz-page-font-family);
+  font-weight: 350;
+  color: var(--bz-page-color);
+  background-color: var(--bz-page-background-color);
+  scroll-padding-top: calc(var(--bz-header-height) + var(--bz-header-tabs-height));
+  scroll-behavior: smooth;
+  overflow-y: scroll;
+  -webkit-font-smoothing: antialiased;
+}
+
+.bz-emoji {
+  margin-left: -3px;
+  text-shadow:
+    -0.5px -0.5px 0 #00000022,
+    0.5px -0.5px 0 #00000022,
+    -0.5px 0.5px 0 #00000022,
+    0.5px 0.5px 0 #00000022;
+}
+
+.bz-header-separator {
+  position: sticky;
+  z-index: 999;
+  border: none;
+  height: 9px;
+  margin: -8px 0 0 0;
+  top: calc(var(--bz-header-tabs-height) - 8px);
+  border-bottom: 1px solid var(--bz-header-border-color);
+  box-shadow: var(--bz-shadow-sm);
+
+  @media (width > 52rem) {
+    top: calc(var(--bz-header-height) - 8px);
+  }
+}
+
+.bz-overlay {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  backdrop-filter: blur(.1rem);
+  background-color: var(--bz-overlay-background-color);
+  transition:
+    opacity var(--bz-transition-ease) 0.25s,
+    visibility var(--bz-transition-ease) 0.25s;
+}
+
+.admonition,
+.bz-dropdown ul,
+.bz-footer,
+.bz-header-main,
+.bz-repo-stats a,
+.code-block-caption,
+.sd-card,
+.topic,
+aside.sidebar,
+blockquote,
+details.sd-dropdown summary.sd-summary-title,
+div.deprecated,
+div.sidebar,
+div.versionadded,
+div.versionchanged,
+div.versionremoved,
+dl[class]:not(.option-list,.field-list,.footnote,.glossary,.simple) dl.field-list,
+dl[class]:not(.option-list, .field-list, .footnote, .glossary, .simple) dt:where(.field-odd, .field-even),
+dt.sig,
+p.admonition-title,
+p.sidebar-title {
+  background: linear-gradient(
+    180deg,
+    oklch(from var(--bz-surface, transparent) calc(l + 0.002) c h) 0%,
+    oklch(from var(--bz-surface, transparent) calc(l - 0.005) c h) 50%,
+    oklch(from var(--bz-surface, transparent) calc(l - 0.012) c h) 100%
+  )!important;
+}
+
+.admonition,
+.sd-card,
+.topic,
+blockquote,
+details.sd-dropdown summary.sd-summary-title,
+div.deprecated,
+div.versionadded,
+div.versionchanged,
+div.versionremoved,
+dl[class]:not(.option-list,.field-list,.footnote,.glossary,.simple) dl.field-list,
+dl[class]:not(.option-list, .field-list, .footnote, .glossary, .simple) dt:where(.field-odd, .field-even),
+p.admonition-title,
+p.sidebar-title {
+  --bz-inset-shadow:
+    inset 0 2px 0 oklch(from var(--bz-surface) calc(l + 0.5) c h / 0.04),
+    inset 0 1px 0 oklch(from var(--bz-surface) calc(l - 0.5) c h / 0.08),
+    inset 0 -1px 0 oklch(from var(--bz-surface) calc(l - 0.5) c h / 0.06),
+    inset 1px 0 0 oklch(from var(--bz-surface) calc(l + 0.5) c h / 0.04),
+    inset -2px 0 0 oklch(from var(--bz-surface) calc(l - 0.5) c h / 0.04)!important;
+
+  > * {
+    --bz-shadow: 0 0 0 transparent;
+    --bz-inset-shadow: 0 0 0 transparent;
+  }
+
+  &:not([class*="sd-shadow-"]) {
+    box-shadow:
+      var(--bz-shadow, 0 0 0 transparent),
+      var(--bz-inset-shadow, 0 0 0 transparent)!important;
+  }
+}

@@ -16,20 +16,24 @@ dl[class]:not(.option-list, .field-list, .footnote, .glossary, .simple) {
   }
 
   dl.field-list {
+    --bz-surface: var(--bz-sig-table-background-color);
+
     display: block;
     border-radius: var(--bz-border-radius);
     color: var(--bz-sig-table-color);
     font-size: var(--bz-sig-table-font-size);
     font-family: var(--bz-sig-table-font-family);
     border: 1px solid var(--bz-sig-border-color);
-    background-color: var(--bz-sig-table-background-color);
     border-top: none;
+
     > dd {
       padding-inline: .75rem;
     }
   }
 
   dt.field-odd, dt.field-even {
+    --bz-surface: var(--bz-sig-table-head-background-color);
+
     text-transform: uppercase;
     color: var(--bz-sig-table-head-color);
     font-size: var(--bz-sig-table-head-font-size);
@@ -37,15 +41,9 @@ dl[class]:not(.option-list, .field-list, .footnote, .glossary, .simple) {
     border-bottom: 1px solid var(--bz-sig-border-color);
     padding: .35rem .7rem;
     margin-bottom: .5rem;
-    background: linear-gradient(
-      180deg,
-      color-mix(in oklab, var(--bz-sig-table-head-background-color) 100%, white 1%) 0%,
-      var(--bz-sig-table-head-background-color) 50%,
-      color-mix(in oklab, var(--bz-sig-table-head-background-color) 100%, black 1%) 100%
-    );
 
     &:first-child {
-      border-radius: calc(var(--bz-border-radius) * 0.5) calc(var(--bz-border-radius) * 0.5) 0 0;
+      border-radius: calc(var(--bz-border-radius) / 2) calc(var(--bz-border-radius) / 2) 0 0;
     }
   }
 }
@@ -58,14 +56,14 @@ dl[class]:not(.option-list, .field-list, .footnote, .glossary, .simple):not(
 }
 
 dl > dt > a:has(.viewcode-link) {
+  position: sticky;
   user-select: none;
   z-index: 1;
-  position: sticky;
   right: -.5rem;
-  margin-right: -.5rem;
-  padding: .25rem .5rem;
   left: calc(100% - 1.65rem);
-  background-color: var(--bz-sig-background-color);
+  padding: .25rem .5rem;
+  margin-right: -.5rem;
+  background-color: oklch(from var(--bz-sig-background-color) calc(l - 0.006) c h);
 
   span {
     position: absolute;
@@ -83,12 +81,14 @@ dl > dt > a:has(.viewcode-link) {
     width: 1.15rem;
   }
 
-  &::after, &::after {
+  &::after {
     content: "source";
     position: absolute;
     opacity: 0;
     right: 0;
-    transition: opacity ease-in-out .15s, right ease-in-out .15s;
+    transition:
+      opacity var(--bz-transition-normal) var(--bz-transition-ease),
+      right var(--bz-transition-normal) var(--bz-transition-ease);
   }
 
   &:hover::after, &:focus::after {
@@ -103,6 +103,8 @@ dl > dt > a:has(.viewcode-link) {
 }
 
 dt.sig {
+  --bz-surface: var(--bz-sig-background-color);
+
   display: block;
   position: relative;
   overflow: auto;
@@ -116,12 +118,6 @@ dt.sig {
   margin: 1.25rem 0 .75rem;
   border: 1px solid var(--bz-sig-border-color);
   border-top: 8px solid color-mix(in oklab, var(--bz-sig-accent-color) 25%, transparent);
-  background: linear-gradient(
-    180deg,
-    color-mix(in oklab, var(--bz-sig-background-color) 100%, white 1%) 0%,
-    var(--bz-sig-background-color) 50%,
-    color-mix(in oklab, var(--bz-sig-background-color) 100%, black 1%) 100%
-  );
 
   dl {
     margin: 0;
@@ -130,11 +126,11 @@ dt.sig {
 
   a:has(.viewcode-link) {
     opacity: 0;
-    transition: opacity ease-in-out .15s;
+    transition: opacity var(--bz-transition-normal) var(--bz-transition-ease);
   }
 
   &:hover a:has(.viewcode-link) {
-    opacity: 1;
+    opacity: 0.9;
   }
 
   dl dd {

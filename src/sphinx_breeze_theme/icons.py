@@ -9,5 +9,7 @@ ICONS = loads((Path(__file__).parent / "theme/breeze/static/icons.json").read_te
 
 def render_icon(name: str, size: str, default: str = "link") -> str:
     """Get the SVG icon by name and size."""
-    icon = ICONS.get(name, ICONS.get(default))
-    return icon.get(size, icon.get("24", icon.get("16", "")))
+    icon = ICONS.get(name) or ICONS.get(default)
+    if icon is None:
+        return ""
+    return icon.get(size) or icon.get("24") or icon.get("16") or ""

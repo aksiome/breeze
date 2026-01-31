@@ -1,0 +1,44 @@
+.rounded {
+  border-radius: var(--bz-border-radius-full)!important;
+}
+
+.centered {
+  text-align: center;
+}
+
+.align-default {
+  width: 100%;
+}
+
+.align-default, .align-left {
+  text-align: left;
+}
+
+.align-right {
+  text-align: right;
+}
+
+.align-center {
+  text-align: center;
+}
+
+img.align-center,
+figure.align-center,
+object.align-center,
+.figure.align-center {
+  display: block;
+  margin-inline: auto;
+}
+
+:root[data-theme="dark"] .only-light,
+:root[data-theme="light"] .only-dark {
+  position: absolute;
+  z-index: -1;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  visibility: hidden;
+}

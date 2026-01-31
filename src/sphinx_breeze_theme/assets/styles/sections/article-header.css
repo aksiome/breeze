@@ -31,6 +31,8 @@
 
   svg {
     display: block;
+    height: 1em;
+    color: var(--bz-color-muted);
   }
 }
 
