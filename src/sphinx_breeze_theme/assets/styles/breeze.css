@@ -57,6 +57,7 @@
 @import "./utilities/tooltip.css" layer(utilities);
 
 @import "./extensions/design.css";
+@import "./extensions/mermaid.css";
 @import "./extensions/copybutton.css";
 @import "./extensions/readthedocs.css";
 @import "./extensions/treeview.css";

@@ -61,6 +61,7 @@
 .bz-header-main,
 .bz-repo-stats a,
 .code-block-caption,
+.mermaid-container-fullscreen,
 .sd-card,
 .topic,
 aside.sidebar,
@@ -85,6 +86,7 @@ p.sidebar-title {
 }
 
 .admonition,
+.mermaid-container-fullscreen,
 .sd-card,
 .topic,
 blockquote,

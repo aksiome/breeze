@@ -1,0 +1,35 @@
+:root {
+  --bz-mermaid-modal-background-color: color-mix(in oklab, var(--bz-color-surface-5) 85%, transparent);
+}
+
+:root[data-theme=dark] {
+  --bz-mermaid-modal-background-color: color-mix(in oklab, var(--bz-color-surface-2) 90%, transparent);
+}
+
+.mermaid-container {
+  position: relative;
+}
+
+.mermaid-fullscreen-btn,
+.mermaid-fullscreen-close {
+  position: absolute;
+  box-shadow: var(--bz-shadow-sm)!important;
+
+  &:hover {
+    transform: none!important;
+  }
+}
+
+.mermaid-fullscreen-modal {
+  width: 100vw!important;
+  backdrop-filter: blur(.4rem) saturate(125%) brightness(1.025);
+  background-color: var(--bz-overlay-background-color)!important;
+}
+
+.mermaid-container-fullscreen {
+  --bz-surface: var(--bz-mermaid-modal-background-color);
+
+  width: clamp(20rem, 90vw, 100rem)!important;
+  height: clamp(20rem, 90vh, 100rem)!important;
+  box-shadow: var(--bz-shadow-lg)!important;
+}

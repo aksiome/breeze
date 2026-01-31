@@ -58,6 +58,7 @@ docs = [
   "sphinx-copybutton",
   "sphinx-design",
   "sphinx-treeview ; python_version >= '3.11'",
+  "sphinxcontrib-mermaid",
 ]
 
 [project.entry-points]
