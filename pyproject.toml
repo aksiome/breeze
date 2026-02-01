@@ -12,7 +12,7 @@ requires-python = ">=3.10"
 license = { text = "MPL-2.0" }
 dependencies = [
   "sphinx>=8.0",
-  "sphinxext-opengraph",
+  "sphinxext-opengraph[social-cards]",
   "beautifulsoup4",
   "docutils",
   "emoji",
@@ -54,12 +54,24 @@ Issues = "https://github.com/aksiome/breeze/issues"
 
 [dependency-groups]
 docs = [
-  "myst-parser",
-  "sphinx-copybutton",
-  "sphinx-design",
-  "sphinx-togglebutton",
-  "sphinx-treeview ; python_version >= '3.11'",
-  "sphinxcontrib-mermaid",
+  "click-extra[sphinx]>=7.4.0",
+  "jupyter-sphinx>=0.5.3",
+  "myst-parser>=5.0.0",
+  "nbsphinx>=0.9.8",
+  "numpy>=2.4.2",
+  "numpydoc>=1.7.0",
+  "sphinx-click>=6.2.0",
+  "sphinx-contributors>=0.2.7",
+  "sphinx-copybutton>=0.5.2",
+  "sphinx-datatables>=0.5.0",
+  "sphinx-design>=0.7.0",
+  "sphinx-docsearch>=0.3.0",
+  "sphinx-sitemap>=2.9.0",
+  "sphinx-togglebutton>=0.4.4",
+  "sphinx-treeview>=1.1.1",
+  "sphinxcontrib-mermaid>=2.0.0",
+  "sphinxcontrib-video>=0.4.1",
+  "sphinxcontrib-youtube>=1.4.1",
 ]
 
 [project.entry-points]
@@ -75,9 +87,7 @@ commands = ["npm install", "npm run build"]
 allow_zero_version = true
 major_on_zero = false
 commit_message = "chore(release): {version}"
-version_variables = [
-  "src/sphinx_breeze_theme/__init__.py:__version__"
-]
+version_variables = ["src/sphinx_breeze_theme/__init__.py:__version__"]
 
 [tool.semantic_release.changelog]
 template_dir = ".github/templates"
@@ -87,6 +97,18 @@ exclude_commit_patterns = ["^chore"]
 changelog_file = "CHANGELOG.md"
 
 [tool.semantic_release.commit_parser_options]
-allowed_tags = ["feat", "fix", "ui", "docs", "chore", "style", "refactor", "perf", "ci", "build", "test"]
+allowed_tags = [
+  "chore",
+  "ci",
+  "docs",
+  "feat",
+  "fix",
+  "i18n",
+  "perf",
+  "refactor",
+  "style",
+  "test",
+  "ui",
+]
 minor_tags = ["feat"]
-patch_tags = ["fix", "ui"]
+patch_tags = ["fix", "i18n", "ui"]

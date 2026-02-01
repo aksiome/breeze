@@ -15,26 +15,21 @@ All notable changes to this project will be documented in this file.
 - Bundle theme fonts for consistent typography
   ([`0d005e5`](https://github.com/aksiome/breeze/commit/0d005e510e5781db0ceadc4661e736683108535e))
 
-### 🐛 Bug Fixes
-
-- **a11y**: Add aria labels to navigation elements and adjust colors
-  ([`9f64981`](https://github.com/aksiome/breeze/commit/9f64981609715fa3e7e6df20c0e314091f2ccff7))
-- Default emojis_sidebar_nav to false for consistency
-  ([`2470948`](https://github.com/aksiome/breeze/commit/2470948da455484dcf22a6bf91838f8fde47d33d))
-
-### 🎨 Styling
+### 🎨 Appearance
 
 - Apply frosted glass effect to tiles
   ([`fa6ff53`](https://github.com/aksiome/breeze/commit/fa6ff5379b5c05a79f94fd4efc0d0822ec94a7f2))
 - **layout**: Increase spacing between header and content
   ([`47e1866`](https://github.com/aksiome/breeze/commit/47e18666a7cfe2490773086c482dad17e137a0e4))
 
-### ♻️ Refactoring
+### 🪲 Bug fixes
 
-- Rename source_url to source_edit_url for clarity
-  ([`48c5db0`](https://github.com/aksiome/breeze/commit/48c5db0b1dcc3a88a4b03af65fe0b781bf0da18e))
+- **a11y**: Add aria labels to navigation elements and adjust colors
+  ([`9f64981`](https://github.com/aksiome/breeze/commit/9f64981609715fa3e7e6df20c0e314091f2ccff7))
+- Default emojis_sidebar_nav to false for consistency
+  ([`2470948`](https://github.com/aksiome/breeze/commit/2470948da455484dcf22a6bf91838f8fde47d33d))
 
-### 📚 Documentation
+### 📖 Documentation
 
 - Restructure user guide
   ([`ce4bd80`](https://github.com/aksiome/breeze/commit/ce4bd80229cfd5632f174b6889ccb92c4a66ff37))
@@ -46,43 +41,43 @@ All notable changes to this project will be documented in this file.
 - Update external links known domains
   ([`e14c24c`](https://github.com/aksiome/breeze/commit/e14c24c79e710d3caff596b1234a4226cb2d0aca))
 
-### 🐛 Bug Fixes
-
-- **sidebar**: Correct chevron alignment
-  ([`c3c2878`](https://github.com/aksiome/breeze/commit/c3c2878586e79bbbd5f091182b4601faafff2e81))
-
-### 🎨 Styling
+### 🎨 Appearance
 
 - **api**: Scrollable signature blocks and source icon
   ([`e090e4a`](https://github.com/aksiome/breeze/commit/e090e4ae8c7371f0c3467f9e1165efd20e469b4b))
 - **layout**: Slightly improve the frosted glass effect
   ([`35d0c51`](https://github.com/aksiome/breeze/commit/35d0c5148bc01b65e122a15c38edf2b0241ddc38))
 
-### 📚 Documentation
+### 🪲 Bug fixes
+
+- **sidebar**: Correct chevron alignment
+  ([`c3c2878`](https://github.com/aksiome/breeze/commit/c3c2878586e79bbbd5f091182b4601faafff2e81))
+
+### 📖 Documentation
 
 - Improve readme structure and visuals
   ([`bc23101`](https://github.com/aksiome/breeze/commit/bc231018d6e4fe78ba8dba49764817d44fe61c2b))
 
 ## v0.7.3 (2026-01-26)
 
-### 🐛 Bug Fixes
+### 🪲 Bug fixes
 
 - Header separator z-index
   ([`1171ada`](https://github.com/aksiome/breeze/commit/1171ada3df2f44c40923f0c6429a181df05c3cb2))
 
 ## v0.7.2 (2026-01-26)
 
-### 🐛 Bug Fixes
-
-- **breadcrumbs**: Prevent overflow on large paths
-  ([`338a284`](https://github.com/aksiome/breeze/commit/338a284ae4c3bbc02c2f431c9babfac0679c0ac0))
-
-### 🎨 Styling
+### 🎨 Appearance
 
 - **layout**: Add frosted glass effect
   ([`43da22d`](https://github.com/aksiome/breeze/commit/43da22d7fb75387ff56870b02008f5c8052c770b))
 
-### 📚 Documentation
+### 🪲 Bug fixes
+
+- **breadcrumbs**: Prevent overflow on large paths
+  ([`338a284`](https://github.com/aksiome/breeze/commit/338a284ae4c3bbc02c2f431c9babfac0679c0ac0))
+
+### 📖 Documentation
 
 - Add edit this page component
   ([`c1cda1c`](https://github.com/aksiome/breeze/commit/c1cda1c730baa238fc72e64a3bd5bd7ce3827b1f))
@@ -91,7 +86,7 @@ All notable changes to this project will be documented in this file.
 
 ## v0.7.1 (2026-01-26)
 
-### 🐛 Bug Fixes
+### 🪲 Bug fixes
 
 - Type hint causing build failure
   ([`9a3fa82`](https://github.com/aksiome/breeze/commit/9a3fa8239751a0c2887ccfa892d620d8b46dd90a))
@@ -107,19 +102,19 @@ All notable changes to this project will be documented in this file.
 - **layout**: Add hide-header-tabs page option
   ([`eeb6bde`](https://github.com/aksiome/breeze/commit/eeb6bdee3e63525e7ed0bf5eb28e8fc8f20c9340))
 
-### 🐛 Bug Fixes
-
-- **ui**: Show mobile burger icon when tabs are disabled
-  ([`57697d1`](https://github.com/aksiome/breeze/commit/57697d10aaea6eeb10d47d9a931f9939ca52ddd2))
-
-### 🎨 Styling
+### 🎨 Appearance
 
 - **theme**: Adjust light theme colors
   ([`c021dac`](https://github.com/aksiome/breeze/commit/c021dac70880c3a93a44ac300d3df1daf20a4275))
 - **table**: Add small padding to better center the scrollbar on wide tables
   ([`1e00066`](https://github.com/aksiome/breeze/commit/1e00066bf2a5e2e9f3f6c81a63b99308bea27e02))
 
-### 📚 Documentation
+### 🪲 Bug fixes
+
+- **ui**: Show mobile burger icon when tabs are disabled
+  ([`57697d1`](https://github.com/aksiome/breeze/commit/57697d10aaea6eeb10d47d9a931f9939ca52ddd2))
+
+### 📖 Documentation
 
 - Fix include path errors
   ([`a07d232`](https://github.com/aksiome/breeze/commit/a07d2329b159baebdf9a116dfc191ea2a4d26075))
@@ -128,7 +123,7 @@ All notable changes to this project will be documented in this file.
 
 ## v0.6.1 (2026-01-23)
 
-### 🎨 Styling
+### 🎨 Appearance
 
 - **sphinx-design**: Update badges and dropdown colors to match the theme
   ([`d96c301`](https://github.com/aksiome/breeze/commit/d96c301124c22bc0112f44e17952083d3d9f32b8))
@@ -139,7 +134,7 @@ All notable changes to this project will be documented in this file.
 - **layout**: Spacing and size tweaks
   ([`b7fad54`](https://github.com/aksiome/breeze/commit/b7fad5424de53f32364f88e1928c145b7822b646))
 
-### 📚 Documentation
+### 📖 Documentation
 
 - Minor layout and naming tweaks
   ([`c7abd8e`](https://github.com/aksiome/breeze/commit/c7abd8e1274dfb4f7d913b6a3fc775ae85512626))
@@ -155,7 +150,7 @@ All notable changes to this project will be documented in this file.
 - Add hide-sidebar-[primary|secondary] option
   ([`72f63ef`](https://github.com/aksiome/breeze/commit/72f63ef9d5ad1be36d6858d29629fe20b37e0cde))
 
-### 🐛 Bug Fixes
+### 🪲 Bug fixes
 
 - Rename breadcrumb to breadcrumbs
   ([`4e8081c`](https://github.com/aksiome/breeze/commit/4e8081c9fcc8496731a9c26eb503b6b0311d562b))
@@ -164,35 +159,35 @@ All notable changes to this project will be documented in this file.
 
 ## v0.5.5 (2025-11-02)
 
-### 🐛 Bug Fixes
+### 🪲 Bug fixes
 
 - Sphinx treeview version dependency
   ([`8ead4c5`](https://github.com/aksiome/breeze/commit/8ead4c53b942ad95bee0e13a752d3ccb3eb15c4c))
 
 ## v0.5.4 (2025-11-02)
 
-### 🐛 Bug Fixes
+### 🪲 Bug fixes
 
 - Rtd config for real and add project metadata
   ([`f22d5b5`](https://github.com/aksiome/breeze/commit/f22d5b56099cdb60f38f40f5e76ec962341da47e))
 
 ## v0.5.3 (2025-11-02)
 
-### 🐛 Bug Fixes
+### 🪲 Bug fixes
 
 - Update python version in rtd configuration
   ([`36ed1d4`](https://github.com/aksiome/breeze/commit/36ed1d4bf4fbb721150dd9d8f856ade1304228fe))
 
 ## v0.5.2 (2025-10-30)
 
-### 🐛 Bug Fixes
+### 🪲 Bug fixes
 
 - Build with lower sphinx versions
   ([`4cd5b6b`](https://github.com/aksiome/breeze/commit/4cd5b6b053e9526fef6fe24e9f9cddfcb91e2ade))
 
 ## v0.5.1 (2025-10-30)
 
-### 🐛 Bug Fixes
+### 🪲 Bug fixes
 
 - Improve layout and components spacing
   ([`adbd94a`](https://github.com/aksiome/breeze/commit/adbd94a9b017145fc602f86676295c83061b77e1))
@@ -206,14 +201,14 @@ All notable changes to this project will be documented in this file.
 
 ## v0.4.2 (2025-10-26)
 
-### 🐛 Bug Fixes
+### 🪲 Bug fixes
 
 - Content min height when not using tabs
   ([`a9c77ab`](https://github.com/aksiome/breeze/commit/a9c77abd492351ff76d05cff3bb3aa844c1ce4bb))
 
 ## v0.4.1 (2025-10-26)
 
-### 🐛 Bug Fixes
+### 🪲 Bug fixes
 
 - Small style issues (api, sidebar, and header without tabs)
   ([`150d7c9`](https://github.com/aksiome/breeze/commit/150d7c9fa4cb3685ce710a7e313886b30cb2937f))
@@ -227,7 +222,7 @@ All notable changes to this project will be documented in this file.
 - Style the edit this page component
   ([`052a62c`](https://github.com/aksiome/breeze/commit/052a62ccce142c26a6addd563daebdc2d7db1089))
 
-### 🐛 Bug Fixes
+### 🪲 Bug fixes
 
 - Vanilla pre style
   ([`555aed8`](https://github.com/aksiome/breeze/commit/555aed897b1fc68e2af6bae0f3851c318cb65819))
@@ -238,14 +233,14 @@ All notable changes to this project will be documented in this file.
 
 ## v0.3.2 (2025-10-26)
 
-### 🐛 Bug Fixes
+### 🪲 Bug fixes
 
 - Ensure main navigation collapses to a single toctree
   ([`0585da7`](https://github.com/aksiome/breeze/commit/0585da7c3c0a05a3e8929fe36e795c710211b66c))
 
 ## v0.3.1 (2025-10-24)
 
-### 🐛 Bug Fixes
+### 🪲 Bug fixes
 
 - Page title emoji stripping
   ([`9a7af9f`](https://github.com/aksiome/breeze/commit/9a7af9fa0018e6744f333a87d971e13cd160a2bd))
@@ -259,21 +254,21 @@ All notable changes to this project will be documented in this file.
 
 ## v0.2.3 (2025-10-22)
 
-### 🐛 Bug Fixes
+### 🪲 Bug fixes
 
 - Wrong sphinx design text color
   ([`9c4d2c0`](https://github.com/aksiome/breeze/commit/9c4d2c032179890417195ee9b485f5842ced64c4))
 
 ## v0.2.2 (2025-10-21)
 
-### 🐛 Bug Fixes
+### 🪲 Bug fixes
 
 - Style ethical ad components
   ([`851b15b`](https://github.com/aksiome/breeze/commit/851b15b96f580652ea057605102eca7634afc554))
 
 ## v0.2.1 (2025-10-21)
 
-### 🐛 Bug Fixes
+### 🪲 Bug fixes
 
 - Start styling rtd components
   ([`0c0bd9d`](https://github.com/aksiome/breeze/commit/0c0bd9d567b4fbb65d44700415ad055989808870))
@@ -285,31 +280,31 @@ All notable changes to this project will be documented in this file.
 - Cleanup and stabilize css variable names
   ([`fce183b`](https://github.com/aksiome/breeze/commit/fce183b298bdede502b2c400420b9047741200d4))
 
-### 📚 Documentation
+### 📖 Documentation
 
 - Fix lang switcher links
   ([`081ddbc`](https://github.com/aksiome/breeze/commit/081ddbcd7294365e68969c765fa807a2f5835f5c))
 
 ## v0.1.2 (2025-10-05)
 
-### 🐛 Bug Fixes
+### 🪲 Bug fixes
 
 - Secondary sidebar padding with scrollbar
   ([`be76082`](https://github.com/aksiome/breeze/commit/be76082f4040357311dc97f9a9e2b5e50d6573c4))
 
-### 📚 Documentation
+### 📖 Documentation
 
 - Fix index grid responsiveness
   ([`60d982b`](https://github.com/aksiome/breeze/commit/60d982b8c269caea3c2bffbdaf6a96f6e29f3168))
 
 ## v0.1.1 (2025-09-27)
 
-### 🐛 Bug Fixes
+### 🪲 Bug fixes
 
 - Setup the correct version switcher
   ([`ebab69c`](https://github.com/aksiome/breeze/commit/ebab69cd17e81feb445e87ff483d6ce76c462910))
 
-### 📚 Documentation
+### 📖 Documentation
 
 - Include the changelog
   ([`943eb48`](https://github.com/aksiome/breeze/commit/943eb489b74d1925ed8ed8e77827162ded3961d9))
@@ -323,7 +318,7 @@ All notable changes to this project will be documented in this file.
 - Add ethical-ads and edit-this-page components
   ([`f3fa574`](https://github.com/aksiome/breeze/commit/f3fa574d2fc3fd4a327fa08c78486962a05c1dec))
 
-### 🐛 Bug Fixes
+### 🪲 Bug fixes
 
 - Avoid broken label link when sidebar is not rendered
   ([`56389fb`](https://github.com/aksiome/breeze/commit/56389fb198df5186967b79c13f428eed6c85f917))
@@ -332,47 +327,14 @@ All notable changes to this project will be documented in this file.
 - Logo and text vertical alignment
   ([`05c538e`](https://github.com/aksiome/breeze/commit/05c538eda3f96a26b0a8b9fdbb202e420461c6b5))
 
-### 🎨 Styling
-
-- Improve code tabs and footer
-  ([`c46210f`](https://github.com/aksiome/breeze/commit/c46210fa08b3359d15e51e7707ef6078edb65f61))
-
 ## v0.0.1 (2025-09-25)
 
-### 🐛 Bug Fixes
+### 🪲 Bug fixes
 
 - Preserve current page when switching versions
   ([`7db3831`](https://github.com/aksiome/breeze/commit/7db3831be11ca03c51f53a87631e83f613d6f4bc))
 - Unify component and option names
   ([`52544cb`](https://github.com/aksiome/breeze/commit/52544cb440a592cc8697a6e4b2eceb6ae9439461))
-
-### 🎨 Styling
-
-- Improve sphinx design tabs
-  ([`84247ab`](https://github.com/aksiome/breeze/commit/84247ab9bf83103f2b8bfe2f810dd9a20941b446))
-- Improve blockquote appearance
-  ([`2b2df28`](https://github.com/aksiome/breeze/commit/2b2df2812bb1eac080f0567a55311a4171741f82))
-- Align left by default
-  ([`af8cf7b`](https://github.com/aksiome/breeze/commit/af8cf7b6fd7f933f76b3e81b59ea7c85e699d19e))
-- Add thead border bottom
-  ([`a4a95fe`](https://github.com/aksiome/breeze/commit/a4a95fea73a7e4ef7da67964384ff5bc19ddbb17))
-- Apply link styling to the whole footer
-  ([`34f11d5`](https://github.com/aksiome/breeze/commit/34f11d551e2e7fc1a32534c15bccfab04f3ca966))
-- Fix rubric display
-  ([`844e424`](https://github.com/aksiome/breeze/commit/844e424c43c6275edeb46979f77e976815cb84ae))
-- Fix logo alignment
-  ([`def1396`](https://github.com/aksiome/breeze/commit/def139622839df814dba8fe064f0971887a64755))
-- Fix hr border
-  ([`54c88eb`](https://github.com/aksiome/breeze/commit/54c88eba69d4efd0741691743f22431b10072cdd))
-- Increase h1 margin bottom
-  ([`554f737`](https://github.com/aksiome/breeze/commit/554f73764c98ecc3fa499f48321695dcd34705bf))
-- Simplify table and card border radius
-  ([`32d61be`](https://github.com/aksiome/breeze/commit/32d61be0816162360a68604b72040019c6fb5315))
-
-### ♻️ Refactoring
-
-- Improve layout and ts components
-  ([`0413dcd`](https://github.com/aksiome/breeze/commit/0413dcdbfca9e52a9a00893efaa6cb5be6f62538))
 
 ## v0.0.0 (2025-09-21)
 

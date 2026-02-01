@@ -11,12 +11,10 @@ All notable changes to this project will be documented in this file.
 {#- Map internal type names to display names - order matters for changelog sections #}
 {%- set sections = [
     ("features", "✨ Features"),
-    ("bug fixes", "🐛 Bug Fixes"),
-    ("ui", "🎨 Styling"),
-    ("code style", "🎨 Styling"),
-    ("refactoring", "♻️ Refactoring"),
-    ("performance improvements", "⚡ Performance"),
-    ("documentation", "📚 Documentation"),
+    ("ui", "🎨 Appearance"),
+    ("bug fixes", "🪲 Bug fixes"),
+    ("i18n", "🌍 Translations"),
+    ("documentation", "📖 Documentation"),
 ] %}
 {%- for type_key, section_title in sections %}
 {%- if type_key in release.elements %}
