@@ -32,3 +32,14 @@
     transition-delay: 500ms;
   }
 }
+
+.bz-footer [data-tooltip] {
+  &::after {
+    top: auto;
+    bottom: 125%;
+  }
+
+  &:hover:not(:active, :focus, :focus-visible, :focus-within)::after {
+    transform: translateX(-50%) translateY(-0.75rem);
+  }
+}
