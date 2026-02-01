@@ -4,6 +4,39 @@ All notable changes to this project will be documented in this file.
 
 <!-- version list -->
 
+## v0.10.0 (2026-02-01)
+
+### ✨ Features
+
+- Add sphinx-contributors support
+  ([`e6da568`](https://github.com/aksiome/breeze/commit/e6da568c8e787f7486484c65c8f6c45a7cb2a954))
+- Add numpydoc support
+  ([`06babc2`](https://github.com/aksiome/breeze/commit/06babc26ee4ce753c7242d2d472497580819dd93))
+- Add sphinx-togglebutton support
+  ([`1dff45d`](https://github.com/aksiome/breeze/commit/1dff45d74fea28885cb5d2ce5b98ba60dc227b47))
+- Add sphinxcontrib-mermaid support
+  ([`291f9f3`](https://github.com/aksiome/breeze/commit/291f9f325001a62ff05d1fba8259c3b6b4858b16))
+- **repo-stats**: Improve long repository name handling
+  ([`85b8294`](https://github.com/aksiome/breeze/commit/85b82943071715e323da2afb43816057ba78a116))
+- **fonts**: Refine typography for improved readability
+  ([`1e28fe5`](https://github.com/aksiome/breeze/commit/1e28fe5e59777f34761f10fac89fdb7b0c0aa95c))
+
+### 🪲 Bug fixes
+
+- Move tooltip up for elements inside the footer
+  ([`2d33ae0`](https://github.com/aksiome/breeze/commit/2d33ae0d9b49e33757da3c32c7c3b090b9d64b13))
+
+### 📖 Documentation
+
+- Consolidate extensions into their own section
+  ([`c45e3de`](https://github.com/aksiome/breeze/commit/c45e3de1e9c3f847b991b5481f52defec8232bbf))
+- Better components slots defaults and collapse entries into tabs
+  ([`015c12f`](https://github.com/aksiome/breeze/commit/015c12f4b0b38fd9dda313843191137f2b1c57f2))
+- Add sphinx-copybutton
+  ([`3c7a983`](https://github.com/aksiome/breeze/commit/3c7a9832192d3827e842e53279becad2c38a53c1))
+- Add theme markup page
+  ([`3fcd8fd`](https://github.com/aksiome/breeze/commit/3fcd8fdbc96fe45aa7dcd3fa600f1b07909af4f1))
+
 ## v0.9.0 (2026-01-29)
 
 ### ✨ Features
