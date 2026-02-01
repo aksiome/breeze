@@ -3,7 +3,7 @@ dl[class]:not(.option-list, .field-list, .footnote, .glossary, .simple) {
     clear: right;
   }
 
-  > dd, > dd > p {
+  > dd, > dd > p:not(.rubric), > dd > div.citation-list {
     padding-left: clamp(0.35rem, 0.3rem + 0.25vw, 0.5rem);
   }
 

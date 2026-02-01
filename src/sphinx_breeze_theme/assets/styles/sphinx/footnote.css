@@ -18,3 +18,16 @@ aside.footnote > span {
   font-weight: 600;
   padding-right: .25rem;
 }
+
+div.citation > span {
+  float: left;
+}
+
+div.citation > p {
+  margin-left: 4rem;
+}
+
+aside.footnote > p:last-of-type,
+div.citation > p:last-of-type {
+  margin-bottom: 0;
+}

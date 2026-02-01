@@ -55,6 +55,7 @@ p, blockquote {
 
 main a {
   color: var(--bz-link-color);
+  font-variant-numeric: tabular-nums;
   text-decoration: underline;
   text-underline-offset: 4px;
 
