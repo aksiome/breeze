@@ -94,6 +94,7 @@ Scales smoothly for large documentation sets with intuitive navigation.
 
 user_guide/index
 contributing/index
+extensions/index
 kitchen-sink/index
 changelog
 ```

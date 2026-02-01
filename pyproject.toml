@@ -56,6 +56,7 @@ Issues = "https://github.com/aksiome/breeze/issues"
 docs = [
   "click-extra[sphinx]>=7.4.0",
   "jupyter-sphinx>=0.5.3",
+  "linkify-it-py>=2.0.3",
   "myst-parser>=5.0.0",
   "nbsphinx>=0.9.8",
   "sphinx-click>=6.2.0",

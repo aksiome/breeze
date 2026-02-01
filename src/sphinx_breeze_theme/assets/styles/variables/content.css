@@ -205,11 +205,11 @@
   --bz-admonition-deprecated-icon: var(--bz-icon-warn-circle);
   --bz-admonition-error-color: var(--bz-color-red);
   --bz-admonition-error-icon: var(--bz-icon-failure);
-  --bz-admonition-hint-color: var(--bz-color-green);
+  --bz-admonition-hint-color: var(--bz-color-cyan);
   --bz-admonition-hint-icon: var(--bz-icon-lightbulb);
   --bz-admonition-important-color: var(--bz-color-orange);
   --bz-admonition-important-icon: var(--bz-icon-warn-circle);
-  --bz-admonition-note-color: var(--bz-color-cyan);
+  --bz-admonition-note-color: var(--bz-color-blue);
   --bz-admonition-note-icon: var(--bz-icon-info);
   --bz-admonition-seealso-color: var(--bz-color-green);
   --bz-admonition-seealso-icon: var(--bz-icon-arrow-uturn-right);

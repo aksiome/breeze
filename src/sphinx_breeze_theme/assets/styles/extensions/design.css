@@ -119,6 +119,26 @@
   border-color: var(--sd-color-contrast, var(--bz-color-surface-5))!important;
 }
 
+.sd-container,
+.sd-container-fluid,
+.sd-container-lg,
+.sd-container-md,
+.sd-container-sm,
+.sd-container-xl {
+  padding-left: 0;
+  padding-right: 0;
+
+  .sd-container,
+  .sd-container-fluid,
+  .sd-container-lg,
+  .sd-container-md,
+  .sd-container-sm,
+  .sd-container-xl {
+    padding-left: var(--sd-gutter-x, 0.75rem);
+    padding-right: var(--sd-gutter-x, 0.75rem);
+  }
+}
+
 details.sd-dropdown summary.sd-summary-title {
   padding: .35em .6em .35em 1em;
 

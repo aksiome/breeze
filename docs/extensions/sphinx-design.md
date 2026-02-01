@@ -1,8 +1,13 @@
 # sphinx-design
 
-## Badges
+Sphinx extension for designing beautiful, screen-size responsive web components.
 
-{bdg}`plain badge`
+- **Documentation**: https://sphinx-design.readthedocs.io/
+- **Source Code**: https://github.com/executablebooks/sphinx-design
+
+## Example
+
+### Badges
 
 {bdg-primary}`primary`
 {bdg-secondary}`secondary`
@@ -11,6 +16,7 @@
 {bdg-warning}`warning`
 {bdg-danger}`danger`
 {bdg-muted}`muted`
+{bdg}`plain badge`
 
 {bdg-primary-line}`primary-line`
 {bdg-secondary-line}`secondary-line`
@@ -20,17 +26,9 @@
 {bdg-danger-line}`danger-line`
 {bdg-muted-line}`muted-line`
 
-## Buttons
+---
 
-::::{grid} auto
-:gutter: 2
-
-:::{grid-item}
-```{button-link} https://example.com
-Plain button
-```
-:::
-::::
+### Buttons
 
 ::::{grid} auto
 :gutter: 2
@@ -75,6 +73,11 @@ danger
 ```{button-link} https://example.com
 :color: muted
 muted
+```
+:::
+:::{grid-item}
+```{button-link} https://example.com
+Plain button
 ```
 :::
 ::::
@@ -133,8 +136,46 @@ muted-outline
 :::
 ::::
 
+---
 
-## Card
+### Tabs
+
+::::{tab-set}
+
+:::{tab-item} Label1
+Content 1
+:::
+
+:::{tab-item} Label2
+Content 2
+:::
+
+:::{tab-item} Label3
+Content 3
+:::
+
+:::{tab-item} Label4
+Content 4
+:::
+
+::::
+
+#### Tabbed code
+
+````{tab-set-code}
+
+```{code-block} python
+a = 1;
+```
+
+```{code-block} javascript
+const a = 1;
+```
+````
+
+---
+
+### Card
 
 :::{card} Card Title
 
@@ -153,7 +194,7 @@ Footer
 
 (cards-clickable)=
 
-### Clickable Cards
+#### Clickable Cards
 
 Using the `link` and `link-type` options, you can turn an entire card into a clickable link. Try hovering over then clicking on the cards below:
 
@@ -172,7 +213,9 @@ The entire card can be clicked to navigate to <https://example.com>.
 The entire card can be clicked to navigate to the `cards-clickable` reference target.
 :::
 
-## Dropdown
+---
+
+### Dropdown
 
 :::{dropdown} Dropdown title
 Dropdown content
@@ -184,7 +227,7 @@ Dropdown content
 Dropdown content
 :::
 
-### Styled dropdown
+#### Styled dropdown
 
 :::{dropdown} Primary dropdown title
 :color: primary
@@ -233,39 +276,3 @@ Dropdown content
 Dropdown content
 :::
 ::::
-
-
-## Tabs
-
-::::{tab-set}
-
-:::{tab-item} Label1
-Content 1
-:::
-
-:::{tab-item} Label2
-Content 2
-:::
-
-:::{tab-item} Label3
-Content 3
-:::
-
-:::{tab-item} Label4
-Content 4
-:::
-
-::::
-
-### Tabbed code
-
-````{tab-set-code}
-
-```{code-block} python
-a = 1;
-```
-
-```{code-block} javascript
-const a = 1;
-```
-````

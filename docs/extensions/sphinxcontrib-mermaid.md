@@ -1,5 +1,12 @@
 # sphinxcontrib-mermaid
 
+Sphinx extension that allows you to embed Mermaid graphs in your documents.
+
+- **Documentation**: https://sphinxcontrib-mermaid-demo.readthedocs.io/
+- **Source Code**: https://github.com/mgaitan/sphinxcontrib-mermaid
+
+## Example
+
 :::{mermaid}
   sequenceDiagram
       participant Alice
