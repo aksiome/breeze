@@ -59,5 +59,6 @@
 @import "./extensions/design.css";
 @import "./extensions/mermaid.css";
 @import "./extensions/copybutton.css";
+@import "./extensions/togglebutton.css";
 @import "./extensions/readthedocs.css";
 @import "./extensions/treeview.css";

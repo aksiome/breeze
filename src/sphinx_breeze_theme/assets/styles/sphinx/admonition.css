@@ -44,14 +44,20 @@ p.admonition-title {
 
   display: flex;
   align-items: center;
-  line-height: 1;
-  font-weight: 500;
-  font-size: var(--bz-admonition-title-font-size);
-  font-family: var(--bz-admonition-title-font-family);
   margin: -1rem -.9rem;
   margin-bottom: 0;
   padding: .5rem;
   gap: .4rem;
+  line-height: 1;
+  font-weight: 500;
+  font-size: var(--bz-admonition-title-font-size);
+  font-family: var(--bz-admonition-title-font-family);
+  color: color-mix(in oklab, oklch(
+    from var(--bz-admonition-accent-color)
+    calc(l * var(--bz-admonition-title-text-light))
+    calc(c * var(--bz-admonition-title-text-chroma))
+    calc(h - 10)
+  ), var(--bz-color-text));
 }
 
 p.topic-title {

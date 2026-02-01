@@ -24,6 +24,7 @@ extensions = [
     "myst_parser",
     "sphinx_copybutton",
     "sphinx_design",
+    "sphinx_togglebutton",
     "sphinx_treeview",
     "sphinxcontrib.mermaid",
 ]

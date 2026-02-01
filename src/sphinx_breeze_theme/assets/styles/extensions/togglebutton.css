@@ -1,0 +1,48 @@
+.admonition.dropdown .admonition-title:hover {
+  --bz-surface: color-mix(in oklab, var(--bz-admonition-accent-color) 32%, transparent);
+}
+
+button.toggle-button {
+  display: flex;
+  color: currentColor;
+  font-family: inherit;
+}
+
+details.toggle-details {
+  --bz-shadow: var(--bz-shadow-sm);
+  --bz-surface: var(--bz-topic-background-color);
+
+  margin-block: 1.5rem;
+  border-left: 4px solid var(--bz-color-primary);
+  border-radius: var(--bz-border-radius);
+}
+
+details.toggle-details summary {
+  background-color: color-mix(in oklab, var(--bz-color-outline), transparent 15%);
+  border-radius: var(--bz-border-radius);
+  border: none;
+  margin-bottom: 0;
+  padding: .325rem;
+
+  &:hover {
+    background-color: var(--bz-color-outline);
+  }
+}
+
+details.toggle-details[open] summary {
+  border-radius: var(--bz-border-radius) var(--bz-border-radius) 0 0;
+}
+
+.toggle-details__container {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 1rem;
+
+  :first-child {
+    margin-top: 0;
+  }
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}

@@ -57,6 +57,7 @@ docs = [
   "myst-parser",
   "sphinx-copybutton",
   "sphinx-design",
+  "sphinx-togglebutton",
   "sphinx-treeview ; python_version >= '3.11'",
   "sphinxcontrib-mermaid",
 ]
