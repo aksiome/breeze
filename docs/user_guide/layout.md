@@ -64,12 +64,12 @@ Configure which components appear in each slot via `html_theme_options`:
 ```python
 html_theme_options = {
     "header_start": ["header-brand.html", "version-switcher.html"],
-    "header_end": ["search-button.html", "theme-switcher.html"],
+    "header_end": ["search-button.html", "lang-switcher.html", "theme-switcher.html", "external-links.html"],
     "sidebar_primary": ["sidebar-nav.html"],
     "sidebar_secondary": ["sidebar-toc.html", "repo-stats.html", "edit-this-page.html", "sidebar-ethical-ads.html"],
     "article_header": ["breadcrumbs.html"],
     "article_footer": ["related-pages.html"],
-    "footer": ["footer-copyright.html"],
+    "footer": ["footer-copyright.html", "external-links.html"],
 }
 ```
 

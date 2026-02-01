@@ -4,10 +4,10 @@ Display an "Edit this page" link allowing readers to contribute fixes directly o
 
 ## Configuration
 
-Configure edit links via `html_context` in `conf.py`. Breeze supports GitHub, GitLab, and Bitbucket out of the box.
+Configure edit links via `html_context` in `conf.py`. This component supports GitHub, GitLab, and Bitbucket out of the box.
 
-### GitHub
-
+::::{tab-set}
+:::{tab-item} GitHub
 ```python
 html_context = {
     "github_user": "your-username",
@@ -16,9 +16,8 @@ html_context = {
     "doc_path": "docs",
 }
 ```
-
-### GitLab
-
+:::
+:::{tab-item} GitLab
 ```python
 html_context = {
     "gitlab_user": "your-username",
@@ -27,9 +26,8 @@ html_context = {
     "doc_path": "docs",
 }
 ```
-
-### Bitbucket
-
+:::
+:::{tab-item} Bitbucket
 ```python
 html_context = {
     "bitbucket_user": "your-username",
@@ -38,6 +36,8 @@ html_context = {
     "doc_path": "docs",
 }
 ```
+:::
+::::
 
 ## Configuration options
 
@@ -50,7 +50,7 @@ html_context = {
 
 ## Custom source URL
 
-For self-hosted instances or other providers, use a custom URL pattern with `%s` as placeholder for the file path:
+For self-hosted instances or other providers, use a custom URL pattern with `%s` as placeholder:
 
 ```python
 html_context = {
@@ -59,3 +59,7 @@ html_context = {
 ```
 
 The `%s` placeholder is replaced with the full path to the source file (e.g., `user_guide/quickstart.md`).
+
+## Shared configuration
+
+If you're already using the [repo-stats](repo-stats.md) component, the edit this page component will automatically use the same values. No additional configuration needed.
