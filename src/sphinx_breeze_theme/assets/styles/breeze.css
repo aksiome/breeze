@@ -60,5 +60,6 @@
 @import "./extensions/mermaid.css";
 @import "./extensions/copybutton.css";
 @import "./extensions/togglebutton.css";
+@import "./extensions/contributors.css";
 @import "./extensions/readthedocs.css";
 @import "./extensions/treeview.css";

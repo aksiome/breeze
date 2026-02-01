@@ -23,12 +23,21 @@ extensions = [
     "sphinx.ext.todo",
     "sphinx.ext.viewcode",
     # External stuff
+    "click_extra.sphinx",
+    "jupyter_sphinx",
     "myst_parser",
+    "nbsphinx",
+    "sphinx_click",
+    "sphinx_contributors",
     "sphinx_copybutton",
+    "sphinx_datatables",
     "sphinx_design",
+    "sphinx_sitemap",
     "sphinx_togglebutton",
     "sphinx_treeview",
     "sphinxcontrib.mermaid",
+    "sphinxcontrib.video",
+    "sphinxcontrib.youtube",
 ]
 
 # -- Options for Markdown files ----------------------------------------------
@@ -63,6 +72,7 @@ html_theme = "breeze"
 html_title = "Breeze"
 html_logo = "_static/logo.png"
 html_favicon = "_static/logo.png"
+html_baseurl = "https://sphinx-breeze-theme.readthedocs.io/"
 
 html_theme_options = {
     "external_links": [
