@@ -1,7 +1,7 @@
 .bz-header-main {
   position: relative;
   display: flex;
-  z-index: 1001;
+  z-index: 200;
   overflow-x: clip;
   align-items: center;
   justify-content: space-between;

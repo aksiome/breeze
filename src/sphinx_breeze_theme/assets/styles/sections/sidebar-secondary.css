@@ -1,7 +1,7 @@
 .bz-sidebar-secondary {
   position: fixed;
   display: block;
-  z-index: 10001;
+  z-index: 400;
   visibility: hidden;
   scrollbar-width: thin;
   overflow-wrap: anywhere;

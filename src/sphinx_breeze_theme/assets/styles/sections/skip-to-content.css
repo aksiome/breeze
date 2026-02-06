@@ -1,7 +1,7 @@
 .bz-skip-to-content {
   position: fixed;
   display: flex;
-  z-index: 10000;
+  z-index: 1000;
   align-items: center;
   justify-content: center;
   top: 0;

@@ -1,7 +1,7 @@
 .bz-article-header {
   position: sticky;
   display: flex;
-  z-index: 500;
+  z-index: 100;
   overflow-x: hidden;
   align-items: center;
   justify-content: space-between;

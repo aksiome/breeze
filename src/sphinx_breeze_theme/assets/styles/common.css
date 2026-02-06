@@ -10,7 +10,6 @@
   background-color: var(--bz-page-background-color);
   scroll-padding-top: calc(var(--bz-header-height) + var(--bz-header-tabs-height));
   scroll-behavior: smooth;
-  overflow-y: scroll;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -23,9 +22,9 @@
     0.5px 0.5px 0 #00000022;
 }
 
-.bz-header-separator {
+.bz-header-hr {
   position: sticky;
-  z-index: 999;
+  z-index: 198;
   border: none;
   height: 9px;
   margin: -8px 0 0 0;
@@ -47,7 +46,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 10000;
+  z-index: 399;
   backdrop-filter: blur(.1rem);
   background-color: var(--bz-overlay-background-color);
   transition:

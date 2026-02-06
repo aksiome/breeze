@@ -1,7 +1,7 @@
 .bz-back-to-top {
   position: fixed;
   display: flex;
-  z-index: 999;
+  z-index: 100;
   left: 50vw;
   bottom: -3rem;
   translate: -50%;

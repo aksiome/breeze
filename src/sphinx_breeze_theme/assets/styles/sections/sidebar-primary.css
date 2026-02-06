@@ -1,7 +1,7 @@
 .bz-sidebar-primary {
   position: fixed;
   display: flex;
-  z-index: 10001;
+  z-index: 400;
   visibility: hidden;
   overflow-wrap: anywhere;
   overflow-y: auto;
