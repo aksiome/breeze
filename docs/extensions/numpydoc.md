@@ -2,8 +2,8 @@
 
 Sphinx extension that provides support for the Numpy docstring format in Sphinx.
 
-- **Documentation**: https://numpydoc.readthedocs.io/
-- **Source Code**: https://github.com/numpy/numpydoc
+- **Documentation**: [https://numpydoc.readthedocs.io/](https://numpydoc.readthedocs.io/)
+- **Source Code**: [https://github.com/numpy/numpydoc](https://github.com/numpy/numpydoc)
 
 ## Example
 

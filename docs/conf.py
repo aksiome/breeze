@@ -6,7 +6,7 @@ import os
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "Breeze"
-copyright = "2025, Aksiome"
+copyright = "2026, Aksiome"
 author = "Aksiome"
 
 # -- General configuration ---------------------------------------------------
@@ -32,13 +32,25 @@ extensions = [
     "sphinx_copybutton",
     "sphinx_datatables",
     "sphinx_design",
+    "sphinx_docsearch",
     "sphinx_sitemap",
     "sphinx_togglebutton",
     "sphinx_treeview",
+    "sphinxcontrib.jquery",
     "sphinxcontrib.mermaid",
     "sphinxcontrib.video",
     "sphinxcontrib.youtube",
 ]
+
+docsearch_app_id = "LYBKXP1U1X"
+docsearch_api_key = "fa3393543a6155addafd0fbd2e63c366"
+docsearch_index_name = "Sphinx Breeze Theme Documentation"
+
+nbsphinx_requirejs_path = ""
+jupyter_sphinx_require_url = ""
+jupyter_sphinx_thebelab_config = {
+    "requestKernel": True,
+}
 
 # -- Options for Markdown files ----------------------------------------------
 # https://myst-parser.readthedocs.io/en/latest/sphinx/reference.html
@@ -47,7 +59,6 @@ myst_enable_extensions = [
     "colon_fence",
     "deflist",
     "fieldlist",
-    "linkify",
     "substitution",
 ]
 myst_heading_anchors = 3

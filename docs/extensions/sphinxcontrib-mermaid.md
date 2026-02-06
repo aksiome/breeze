@@ -2,8 +2,8 @@
 
 Sphinx extension that allows you to embed Mermaid graphs in your documents.
 
-- **Documentation**: https://sphinxcontrib-mermaid-demo.readthedocs.io/
-- **Source Code**: https://github.com/mgaitan/sphinxcontrib-mermaid
+- **Documentation**: [https://sphinxcontrib-mermaid-demo.readthedocs.io/](https://sphinxcontrib-mermaid-demo.readthedocs.io/)
+- **Source Code**: [https://github.com/mgaitan/sphinxcontrib-mermaid](https://github.com/mgaitan/sphinxcontrib-mermaid)
 
 ## Example
 

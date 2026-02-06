@@ -2,8 +2,8 @@
 
 Sphinx extension for designing beautiful, screen-size responsive web components.
 
-- **Documentation**: https://sphinx-design.readthedocs.io/
-- **Source Code**: https://github.com/executablebooks/sphinx-design
+- **Documentation**: [https://sphinx-design.readthedocs.io/](https://sphinx-design.readthedocs.io/)
+- **Source Code**: [https://github.com/executablebooks/sphinx-design](https://github.com/executablebooks/sphinx-design)
 
 ## Example
 

@@ -2,8 +2,8 @@
 
 Sphinx extension to add "toggle button" elements to sections of your page.
 
-- **Documentation**: https://sphinx-togglebutton.readthedocs.io/
-- **Source Code**: https://github.com/executablebooks/sphinx-togglebutton
+- **Documentation**: [https://sphinx-togglebutton.readthedocs.io/](https://sphinx-togglebutton.readthedocs.io/)
+- **Source Code**: [https://github.com/executablebooks/sphinx-togglebutton](https://github.com/executablebooks/sphinx-togglebutton)
 
 ## Example
 

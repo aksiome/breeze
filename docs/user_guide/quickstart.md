@@ -71,4 +71,4 @@ html_theme = "breeze"
 ::::
 :::::
 
-Your documentation is now styled with Breeze!  
+Your documentation is now styled with Breeze!

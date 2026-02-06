@@ -7,7 +7,7 @@ hide-sidebar-secondary: true
 
 ```{toctree}
 :caption: Getting Started
-:titlesonly:
+:hidden:
 
 quickstart
 markup
@@ -16,7 +16,7 @@ layout
 
 ```{toctree}
 :caption: Customisation
-:titlesonly:
+:hidden:
 
 customisation/announcement
 customisation/branding

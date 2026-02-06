@@ -2,8 +2,8 @@
 
 Sphinx extension that helps you recognize the people who have contributed to an open-source project.
 
-- **Documentation**: https://sphinx-contributors.readthedocs.io/
-- **Source Code**: https://github.com/dgarcia360/sphinx-contributors
+- **Documentation**: [https://sphinx-contributors.readthedocs.io/](https://sphinx-contributors.readthedocs.io/)
+- **Source Code**: [https://github.com/dgarcia360/sphinx-contributors](https://github.com/dgarcia360/sphinx-contributors)
 
 ## Example
 

@@ -2,8 +2,8 @@
 
 Sphinx extension that adds a "copy" button to code blocks in Sphinx.
 
-- **Documentation**: https://sphinx-copybutton.readthedocs.io/
-- **Source Code**: https://github.com/executablebooks/sphinx-copybutton
+- **Documentation**: [https://sphinx-copybutton.readthedocs.io/](https://sphinx-copybutton.readthedocs.io/)
+- **Source Code**: [https://github.com/executablebooks/sphinx-copybutton](https://github.com/executablebooks/sphinx-copybutton)
 
 ## Example
 

@@ -5,7 +5,8 @@ hide-sidebar-secondary: true
 # 🧩 Extensions
 
 ```{toctree}
-:titlesonly:
+:caption: Extensions
+:hidden:
 :glob:
 
 *

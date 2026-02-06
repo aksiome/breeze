@@ -93,8 +93,8 @@ Scales smoothly for large documentation sets with intuitive navigation.
 :hidden:
 
 user_guide/index
-contributing/index
+examples/index
 extensions/index
-kitchen-sink/index
+contributing/index
 changelog
 ```
