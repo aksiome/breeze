@@ -8,17 +8,20 @@ export default defineConfig({
     outDir: 'src/sphinx_breeze_theme/theme/breeze/static',
     emptyOutDir: false,
     cssCodeSplit: false,
+    assetsInlineLimit: 0,
     rollupOptions: {
       input: 'src/sphinx_breeze_theme/assets/scripts/breeze.ts',
       output: {
-        format: 'iife',  // ← Key change: generates self-executing function
-        entryFileNames: 'scripts/[name].js',
-        chunkFileNames: 'scripts/[name].js',
+        format: 'iife',
+        entryFileNames: 'scripts/breeze.js',
         assetFileNames: (assetInfo) => {
+          if (assetInfo.names?.some(name => /\.css$/.test(name))) {
+            return 'styles/breeze.css';
+          }
           if (assetInfo.names?.some(name => /\.(woff2?|ttf|eot)$/.test(name))) {
             return 'fonts/[name].[ext]';
           }
-          return 'styles/[name].[ext]';
+          return '[name].[ext]';
         }
       }
     }
