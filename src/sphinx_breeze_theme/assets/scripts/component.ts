@@ -1,4 +1,3 @@
-
 interface Component<T extends HTMLElement> {
   selector: string;
   init: (el: T) => (() => void) | void;

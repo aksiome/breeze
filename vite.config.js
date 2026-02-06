@@ -7,9 +7,11 @@ export default defineConfig({
   build: {
     outDir: 'src/sphinx_breeze_theme/theme/breeze/static',
     emptyOutDir: false,
+    cssCodeSplit: false,
     rollupOptions: {
       input: 'src/sphinx_breeze_theme/assets/scripts/breeze.ts',
       output: {
+        format: 'iife',  // ← Key change: generates self-executing function
         entryFileNames: 'scripts/[name].js',
         chunkFileNames: 'scripts/[name].js',
         assetFileNames: (assetInfo) => {
