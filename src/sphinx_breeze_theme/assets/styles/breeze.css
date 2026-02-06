@@ -58,6 +58,7 @@
 
 @import "./extensions/design.css";
 @import "./extensions/mermaid.css";
+@import "./extensions/docsearch.css";
 @import "./extensions/copybutton.css";
 @import "./extensions/togglebutton.css";
 @import "./extensions/contributors.css";

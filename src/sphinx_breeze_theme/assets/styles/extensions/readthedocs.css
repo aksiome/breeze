@@ -21,6 +21,7 @@
   --readthedocs-search-result-active-background-color: var(--bz-color-surface-5);
   --readthedocs-search-result-subheading-color: var(--bz-color-muted);
   --readthedocs-search-result-heading-color: var(--bz-color-muted);
+  --readthedocs-search-backdrop-color: var(--bz-overlay-background-color);
 }
 
 #ethical-ad-placement {

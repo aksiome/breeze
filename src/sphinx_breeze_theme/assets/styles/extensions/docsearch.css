@@ -1,0 +1,93 @@
+:root, :root[data-theme="dark"] {
+  --docsearch-background-color: var(--bz-color-surface-5);
+  --docsearch-container-background: var(--bz-overlay-background-color);
+  --docsearch-focus-color: var(--bz-color-muted);
+  --docsearch-footer-background: var(--bz-color-surface-2);
+  --docsearch-highlight-color: var(--bz-color-primary-5);
+  --docsearch-hit-background: var(--bz-color-surface-5);
+  --docsearch-hit-color: var(--bz-color-text);
+  --docsearch-hit-highlight-color: color-mix(in oklab, var(--bz-color-primary), var(--docsearch-hit-background) 85%);
+  --docsearch-icon-color: var(--bz-color-muted);
+  --docsearch-key-background: transparent;
+  --docsearch-key-color: var(--bz-search-button-kbd-color);
+  --docsearch-modal-background: var(--bz-color-surface-3);
+  --docsearch-muted-color: var(--bz-color-muted);
+  --docsearch-primary-color: var(--bz-color-primary);
+  --docsearch-search-button-background: var(--bz-search-button-background-color);
+  --docsearch-search-button-text-color: var(--bz-search-button-color);
+  --docsearch-searchbox-focus-background: var(--bz-color-surface-4);
+  --docsearch-secondary-text-color: var(--bz-color-muted);
+  --docsearch-soft-primary-color: color-mix(in oklab, var(--bz-color-primary), transparent 90%);
+  --docsearch-subtle-color: var(--bz-search-button-border-color);
+  --docsearch-text-color: var(--bz-color-text);
+}
+
+.DocSearch-Button {
+  height: auto;
+  padding: 0;
+  border: none;
+  background: none;
+  border-radius: var(--bz-border-radius-full);
+  font-family: var(--bz-search-button-font-family);
+  font-size: var(--bz-search-button-font-size);
+
+  &:hover {
+    border-color: var(--bz-search-button-border-color-hover);
+  }
+
+  span {
+    font-size: 1em;
+  }
+
+  .DocSearch-Search-Icon {
+    height: 1em;
+    width: 1em;
+  }
+
+  .DocSearch-Button-Placeholder {
+    font-size: .9em;
+    padding-inline: 0;
+  }
+
+  @media (width > 48rem) {
+    padding-block: .2rem;
+    padding-inline: .6rem;
+    border: 1px solid var(--docsearch-subtle-color);
+    background-color: var(--docsearch-search-button-background);
+
+    .DocSearch-Search-Icon {
+      margin-right: .35rem;
+    }
+  }
+}
+
+.DocSearch-Button-Keys {
+  background-color: var(--bz-search-button-kbd-background-color);
+  border: 1px solid var(--bz-search-button-kbd-border-color);
+  border-radius: calc(var(--bz-border-radius) / 2);
+  padding-inline: .3rem;
+  border-bottom-width: 3px;
+  border-right-width: 2px;
+  margin-left: 1.1rem;
+  min-width: auto;
+  opacity: .75;
+
+  .DocSearch-Button-Key--ctrl::after {
+    content: "+";
+    font-size: .8em;
+  }
+
+  .DocSearch-Button-Key {
+    height: auto;
+    width: auto;
+    margin: 0;
+    padding: 0;
+    border: none;
+    opacity: 1;
+
+    svg {
+      height: 1.3em;
+      margin-inline: -4.75px;
+    }
+  }
+}
