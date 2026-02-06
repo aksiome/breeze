@@ -12,6 +12,7 @@ from sphinx.application import Sphinx
 from sphinx.builders.dirhtml import DirectoryHTMLBuilder
 
 from sphinx_breeze_theme import icons, links, pygments, toctree, utils
+from sphinx_breeze_theme import opengraph  # noqa: F401  # monkey-patches sphinxext.opengraph
 
 THEME_PATH = (Path(__file__).parent / "theme" / "breeze").resolve()
 
@@ -22,15 +23,15 @@ def setup(app: Sphinx) -> dict[str, Any]:
 
     app.setup_extension("sphinxext.opengraph")
 
+    app.add_html_theme("breeze", str(THEME_PATH))
+    app.add_css_file("styles/breeze.css", 900)
+    app.add_js_file("scripts/breeze.js", 900, "defer")
+
     for name, default in [
         ("pygments_dark_style", "github-dark-high-contrast"),
         ("pygments_light_style", "a11y-high-contrast-light"),
     ]:
         app.add_config_value(name, default, "env", [str])
-
-    app.add_html_theme("breeze", str(THEME_PATH))
-    app.add_css_file("styles/breeze.css", 700)
-    app.add_js_file("scripts/breeze.js", 700, "defer")
 
     app.add_post_transform(utils.TableWrapper)
 
@@ -78,39 +79,17 @@ def _on_html_page_context(
 
     # Strip emojis from title unless explicitly enabled
     if context.get("title") and context.get("theme_emojis_title", "").lower() != "true":
-        context["title"] = replace_emoji(context["title"])
+        context["title"] = replace_emoji(context["title"]).strip()
 
-    _inject_readthedocs_env(context)
-    _remove_duplicate_css(context)
     _fix_dirhtml_canonical_url(app, pagename, context)
+    _inject_readthedocs_env(context)
     _parse_template_slots(context)
+    _remove_duplicate_css(context)
 
 
 def _on_build_finished(app: Sphinx, exception: Exception | None = None) -> None:
     if exception is None:
         pygments.overwrite_pygments_css(app)
-
-
-def _inject_readthedocs_env(context: dict[str, Any]) -> None:
-    """Inject Read the Docs environment variables into the template context.
-
-    See: https://docs.readthedocs.io/en/stable/reference/environment-variables.html
-    """
-    context["READTHEDOCS"] = environ.get("READTHEDOCS", False) == "True"
-    if context["READTHEDOCS"]:
-        for key, value in environ.items():
-            if key.startswith("READTHEDOCS_"):
-                context[key] = value
-
-
-def _remove_duplicate_css(context: dict[str, Any]) -> None:
-    """Remove duplicate theme CSS file entry added by Sphinx."""
-    css_files = context.get("css_files", [])
-    for i, asset in enumerate(css_files):
-        asset_path = getattr(asset, "filename", str(asset))
-        if asset_path.endswith("sphinx-breeze-theme.css"):
-            del css_files[i]
-            break
 
 
 def _fix_dirhtml_canonical_url(
@@ -129,6 +108,18 @@ def _fix_dirhtml_canonical_url(
     ):
         target = app.builder.get_target_uri(pagename)
         context["pageurl"] = app.config.html_baseurl + target
+
+
+def _inject_readthedocs_env(context: dict[str, Any]) -> None:
+    """Inject Read the Docs environment variables into the template context.
+
+    See: https://docs.readthedocs.io/en/stable/reference/environment-variables.html
+    """
+    context["READTHEDOCS"] = environ.get("READTHEDOCS", False) == "True"
+    if context["READTHEDOCS"]:
+        for key, value in environ.items():
+            if key.startswith("READTHEDOCS_"):
+                context[key] = value
 
 
 def _parse_template_slots(context: dict[str, Any]) -> None:
@@ -154,3 +145,13 @@ def _parse_template_slots(context: dict[str, Any]) -> None:
             if isinstance(templates, str)
             else templates
         )
+
+
+def _remove_duplicate_css(context: dict[str, Any]) -> None:
+    """Remove duplicate theme CSS file entry added by Sphinx."""
+    css_files = context.get("css_files", [])
+    for i, asset in enumerate(css_files):
+        asset_path = getattr(asset, "filename", str(asset))
+        if asset_path.endswith("sphinx-breeze-theme.css"):
+            del css_files[i]
+            break
