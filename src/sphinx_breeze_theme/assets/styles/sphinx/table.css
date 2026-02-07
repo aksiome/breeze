@@ -39,7 +39,7 @@ table.docutils :is(th, td) {
 }
 
 table.docutils thead tr:last-child th {
-  border-bottom: 2px solid color-mix(in oklab,var(--bz-table-accent-color) 25%,transparent);
+  border-bottom: 3px solid color-mix(in oklab,var(--bz-table-accent-color) 25%,transparent);
 }
 
 table.docutils tr:first-child :is(th, td) {
@@ -102,6 +102,7 @@ table.docutils caption {
   color: var(--bz-table-caption-color);
   font-size: var(--bz-table-caption-font-size);
   font-family: var(--bz-table-caption-font-family);
+  border-bottom: 1px solid var(--bz-table-border-color);
   padding: .5rem .625rem;
 }
 

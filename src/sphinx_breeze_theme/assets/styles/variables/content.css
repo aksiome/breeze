@@ -225,7 +225,7 @@
   --bz-admonition-versionremoved-icon: var(--bz-icon-warn-circle);
   --bz-admonition-warning-color: var(--bz-color-orange);
   --bz-admonition-warning-icon: var(--bz-icon-warn-triangle);
-  --bz-admonition-title-font-size: inherit;
+  --bz-admonition-title-font-size: var(--bz-size-xs);
   --bz-admonition-title-font-family: inherit;
 
   --bz-code-color: var(--bz-color-code);
@@ -326,9 +326,9 @@
   --bz-table-accent-color: var(--bz-color-primary);
   --bz-table-border-color: var(--bz-color-outline);
   --bz-table-caption-color: var(--bz-color-muted);
-  --bz-table-background-color: var(--bz-color-surface-2);
+  --bz-table-background-color: color-mix(in oklab, var(--bz-color-surface-3), var(--bz-color-surface-2));
   --bz-table-head-color: var(--bz-color-text);
-  --bz-table-head-background-color: color-mix(in oklab, var(--bz-color-surface-3), var(--bz-color-surface-2));
+  --bz-table-head-background-color: var(--bz-color-surface-2);
   --bz-table-odd-color: var(--bz-color-text);
   --bz-table-odd-background-color: var(--bz-color-surface-4);
   --bz-table-even-color: var(--bz-color-text);

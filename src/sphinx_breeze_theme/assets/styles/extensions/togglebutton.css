@@ -6,6 +6,17 @@ button.toggle-button {
   display: flex;
   color: currentColor;
   font-family: inherit;
+  border-radius: var(--bz-border-radius);
+  padding: 0 .1rem 0 .4rem;
+
+  .tb-icon {
+    height: 1.25em;
+    width: 1.25em;
+  }
+
+  &:focus-visible {
+    outline: 1px solid;
+  }
 }
 
 details.toggle-details {
