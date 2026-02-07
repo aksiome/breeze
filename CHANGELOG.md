@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 <!-- version list -->
 
+## v0.11.1 (2026-02-07)
+
+### 🪲 Bug fixes
+
+- **a11y**: Adjust nbsphinx color contrast
+  ([`bc03e04`](https://github.com/aksiome/breeze/commit/bc03e04b24b56b4bb663752146e045c80fc2aa51))
+
 ## v0.11.0 (2026-02-07)
 
 ### ✨ Features
