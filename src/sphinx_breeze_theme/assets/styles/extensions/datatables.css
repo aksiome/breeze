@@ -1,0 +1,90 @@
+div.container.table:has(div.dt-container) {
+  overflow-x: hidden;
+}
+
+table.dataTable {
+  th,
+  td {
+    border: revert-layer !important;
+    font-weight: revert-layer !important;
+  }
+
+  > tbody > tr {
+    background-color: revert-layer !important;
+  }
+}
+
+div.dt-container > div.dt-layout-row {
+  margin: 0;
+
+  &.dt-layout-table {
+    overflow-x: auto;
+  }
+
+  &:not(.dt-layout-table) {
+    color: var(--bz-color-muted);
+    font-size: var(--bz-size-sm);
+    border-top: 1px solid var(--bz-table-border-color);
+    padding: 0.5rem;
+  }
+
+  &:first-child {
+    border-top: none;
+    border-bottom: 1px solid var(--bz-table-border-color);
+  }
+
+  .dt-input {
+    border: 1px solid var(--bz-table-border-color);
+    background-color: oklch(
+      from var(--bz-table-background-color) calc(l + 0.03) c h
+    );
+  }
+
+  .dt-length,
+  .dt-search {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .dt-paging > nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.125rem;
+  }
+
+  .dt-info {
+    font-size: var(--bz-size-xs);
+  }
+
+  .dt-paging-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 1.5rem;
+    min-width: 1.5rem;
+    padding: 0;
+    border-radius: calc(var(--bz-border-radius) / 2);
+    border: none !important;
+    color: var(--bz-color-text) !important;
+
+    &.current {
+      color: var(--bz-color-primary) !important;
+      background: none !important;
+      text-shadow: var(--bz-bold-text-shadow);
+    }
+
+    &:not(.disabled):hover {
+      color: var(--bz-color-primary) !important;
+      background: oklch(
+        from var(--bz-table-background-color) calc(l - 0.04) c h
+      ) !important;
+    }
+  }
+}
+
+div.dt-container .dt-paging .dt-paging-button.disabled,
+div.dt-container .dt-paging .dt-paging-button.disabled:hover,
+div.dt-container .dt-paging .dt-paging-button.disabled:active {
+  color: var(--bz-color-muted) !important;
+}

@@ -326,8 +326,9 @@
   --bz-table-accent-color: var(--bz-color-primary);
   --bz-table-border-color: var(--bz-color-outline);
   --bz-table-caption-color: var(--bz-color-muted);
+  --bz-table-background-color: var(--bz-color-surface-2);
   --bz-table-head-color: var(--bz-color-text);
-  --bz-table-head-background-color: var(--bz-color-surface-2);
+  --bz-table-head-background-color: color-mix(in oklab, var(--bz-color-surface-3), var(--bz-color-surface-2));
   --bz-table-odd-color: var(--bz-color-text);
   --bz-table-odd-background-color: var(--bz-color-surface-4);
   --bz-table-even-color: var(--bz-color-text);
@@ -396,6 +397,7 @@
 
   --bz-sidebar-title-background-color: var(--bz-color-surface-3);
 
+  --bz-table-background-color: var(--bz-color-surface-2);
   --bz-table-head-background-color: var(--bz-color-surface-3);
   --bz-table-odd-background-color: color-mix(in oklab, var(--bz-color-surface-4), var(--bz-color-surface-5));
   --bz-table-even-background-color: var(--bz-color-surface-4);

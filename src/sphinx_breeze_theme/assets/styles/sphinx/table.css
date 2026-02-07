@@ -1,10 +1,10 @@
 div.container.table {
   overflow-x: auto;
   margin-top: .75rem;
-  margin-bottom: 1.5rem;
-  padding-inline: .2rem;
-  padding-bottom: .5rem;
-  margin-inline: -0.1rem;
+  margin-bottom: 2rem;
+  border: 1px solid var(--bz-table-border-color);
+  border-radius: calc(var(--bz-border-radius) / 2);
+  background-color: var(--bz-table-background-color);
 }
 
 table.docutils {
@@ -13,7 +13,6 @@ table.docutils {
   text-align: left;
   vertical-align: top;
   border-spacing: 0;
-  border-collapse: separate;
   overflow-wrap: break-word;
 }
 
@@ -26,8 +25,8 @@ table.docutils :is(thead, tbody) {
 }
 
 table.docutils :is(th, td) {
-  border-bottom: 1px solid var(--bz-table-border-color);
-  border-right: 1px solid var(--bz-table-border-color);
+  border-top: 1px solid var(--bz-table-border-color);
+  border-left: 1px solid var(--bz-table-border-color);
   padding: .5rem .625rem;
 
   :first-child {
@@ -44,27 +43,27 @@ table.docutils thead tr:last-child th {
 }
 
 table.docutils tr:first-child :is(th, td) {
-  border-top: 1px solid var(--bz-table-border-color);
+  border-top: none;
 }
 
 table.docutils :is(th, td):first-child {
-  border-left: 1px solid var(--bz-table-border-color);
+  border-left: none;
 }
 
 table.docutils tr:first-child :where(td, th):first-child {
-  border-top-left-radius: 0.25rem;
+  border-top-left-radius: calc(var(--bz-border-radius) / 2);
 }
 
 table.docutils tr:first-child :where(td, th):last-child {
-  border-top-right-radius: 0.25rem;
+  border-top-right-radius: calc(var(--bz-border-radius) / 2);
 }
 
 table.docutils tbody tr:last-child :where(td, th):first-child {
-  border-bottom-left-radius: 0.25rem;
+  border-bottom-left-radius: calc(var(--bz-border-radius) / 2);
 }
 
 table.docutils tbody tr:last-child :where(td, th):last-child {
-  border-bottom-right-radius: 0.25rem;
+  border-bottom-right-radius: calc(var(--bz-border-radius) / 2);
 }
 
 table.docutils:has(thead) tbody tr:first-child :where(td, th):first-child {
@@ -83,7 +82,7 @@ table.docutils thead {
 table.docutils th {
   font-size: var(--bz-table-head-font-size);
   font-family: var(--bz-table-head-font-family);
-  font-weight: 700;
+  font-weight: 550;
 }
 
 table.docutils tbody tr {
