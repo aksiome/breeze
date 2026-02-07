@@ -10,8 +10,15 @@ div.nboutput.container:not(.nblast.container) div.output_area {
   margin-top: 5px;
 }
 
-div.nboutput.container div.prompt:has(+ div.output_area .math) {
-  padding-top: calc(7px + .5rem);
+div.nboutput.container div.prompt {
+
+  &:has(+ div.output_area :is(iframe, table)) {
+    padding-top: 7px;
+  }
+
+  &:has(+ div.output_area .math) {
+    padding-top: calc(7px + .5rem);
+  }
 }
 
 div.nbinput.container div.input_area {
@@ -47,6 +54,9 @@ div.nboutput.container div.output_area.stderr {
   thead {
     color: var(--bz-table-head-color);
     background-color: var(--bz-table-head-background-color);
+    tr:last-child th {
+      border-bottom: 3px solid color-mix(in oklab,var(--bz-table-accent-color) 25%,transparent);
+    }
   }
 
   th, td {
@@ -74,4 +84,12 @@ div.nboutput.container div.output_area.stderr {
     color: var(--bz-table-even-color);
     background-color: var(--bz-table-even-background-color);
   }
+}
+
+div.nbinput.container div.prompt pre, div.nbinput.container div.prompt pre > code {
+  color: var(--sd-color-info-contrast);
+}
+
+div.nboutput.container div.prompt pre, div.nboutput.container div.prompt pre > code {
+  color: var(--sd-color-warning-contrast);
 }
