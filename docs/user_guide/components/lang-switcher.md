@@ -38,12 +38,12 @@ For Read the Docs hosted documentation, use environment variables for dynamic ve
 ```python
 import os
 
-version = os.environ.get("READTHEDOCS_VERSION", "latest")
+version_slug = os.environ.get("READTHEDOCS_VERSION", "latest")
 
 html_context = {
     "languages": [
-        ("English", f"/en/{version}/%s/", "en"),
-        ("Français", f"/fr/{version}/%s/", "fr"),
+        ("English", f"/en/{version_slug}/%s/", "en"),
+        ("Français", f"/fr/{version_slug}/%s/", "fr"),
     ],
 }
 ```

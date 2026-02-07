@@ -9,7 +9,7 @@ Sphinx extension to add "toggle button" elements to sections of your page.
 
 ### Collapse admonitions
 
-:::{note} Click the title to toggle
+:::{admonition} Click the title to toggle
 :class: dropdown
 
 This title was made into a dropdown admonition by adding `:class: dropdown` to it.

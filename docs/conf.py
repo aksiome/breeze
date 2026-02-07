@@ -6,7 +6,7 @@ import os
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = "Breeze"
-copyright = "2026, Aksiome"
+copyright = "%Y, Aksiome"
 author = "Aksiome"
 
 # -- General configuration ---------------------------------------------------
@@ -99,7 +99,7 @@ html_theme_options = {
 
 # -- Options for theme development -------------------------------------------
 
-version = os.environ.get("READTHEDOCS_VERSION", "latest")
+version_slug = os.environ.get("READTHEDOCS_VERSION", "latest")
 
 templates_path = ["_templates"]
 
@@ -111,11 +111,11 @@ html_context = {
     "github_repo": "breeze",
     "github_version": "main",
     "doc_path": "docs",
-    "current_version": version,
-    "version_switcher": "https://raw.githubusercontent.com/aksiome/breeze/refs/heads/main/docs/_static/switcher.json",
+    "version_slug": version_slug,
+    "version_switcher_url": "https://raw.githubusercontent.com/aksiome/breeze/refs/heads/main/docs/_static/switcher.json",
     "languages": [
-        ("English", f"/en/{version}/%s/", "en"),
-        ("Français", f"/fr/{version}/%s/", "fr"),
-        ("中文", f"/zh/{version}/%s/", "zh"),
+        ("English", f"/en/{version_slug}/%s/", "en"),
+        ("Français", f"/fr/{version_slug}/%s/", "fr"),
+        ("中文", f"/zh/{version_slug}/%s/", "zh"),
     ],
 }
