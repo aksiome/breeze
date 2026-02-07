@@ -58,6 +58,7 @@ docs = [
   "jupyter-sphinx>=0.5.3",
   "myst-parser>=5.0.0; python_version >= '3.11'",
   "nbsphinx>=0.9.8",
+  "pandas>=3.0.0",
   "sphinx-click>=6.2.0",
   "sphinx-contributors>=0.2.7",
   "sphinx-copybutton>=0.5.2",

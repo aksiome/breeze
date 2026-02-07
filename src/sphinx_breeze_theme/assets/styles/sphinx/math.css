@@ -9,8 +9,11 @@ span.math {
 
 div.math {
   display: flex;
-  flex-direction: row-reverse;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+
+  > span.eqno {
+    align-self: flex-start;
+  }
 
   mjx-container {
     flex-grow: 1;

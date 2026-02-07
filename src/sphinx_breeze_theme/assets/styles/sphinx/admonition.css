@@ -56,7 +56,7 @@ p.admonition-title {
     from var(--bz-admonition-accent-color)
     calc(l * var(--bz-admonition-title-text-light))
     calc(c * var(--bz-admonition-title-text-chroma))
-    calc(h - 10)
+    calc(h - 7)
   ), var(--bz-color-text));
 }
 

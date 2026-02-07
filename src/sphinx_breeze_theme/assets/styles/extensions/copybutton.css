@@ -9,8 +9,6 @@ button.copybtn {
   color: var(--copybtn-color);
   border-color: var(--copybtn-border-color);
   background-color: var(--copybtn-background-color);
-  top: .5rem;
-  right: .5rem;
 }
 
 .highlight button.copybtn:hover {

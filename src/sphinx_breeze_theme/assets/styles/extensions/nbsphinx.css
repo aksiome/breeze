@@ -1,0 +1,77 @@
+div.nblast.container {
+  padding-top: 5px;
+}
+
+div.nbinput.container, div.nboutput.container {
+  gap: 5px;
+}
+
+div.nboutput.container:not(.nblast.container) div.output_area {
+  margin-top: 5px;
+}
+
+div.nboutput.container div.prompt:has(+ div.output_area .math) {
+  padding-top: calc(7px + .5rem);
+}
+
+div.nbinput.container div.input_area {
+  border: none;
+
+  div.highlight, div.literal-block-wrapper, [class*="highlight-"] {
+    border-radius: 4px;
+
+    pre {
+      border: revert-layer;
+      border-radius: 4px;
+    }
+  }
+}
+
+div.nboutput.container div.output_area.stderr {
+  background-color: color-mix(in oklab, var(--bz-color-red) 16%, transparent);
+
+  pre {
+    color: color-mix(in oklab, oklch(
+      from var(--bz-color-red)
+      calc(l * var(--bz-admonition-title-text-light))
+      calc(c * var(--bz-admonition-title-text-chroma))
+      calc(h - 7)
+    ), var(--bz-color-text));
+  }
+}
+
+.jp-RenderedHTMLCommon table, div.rendered_html table {
+  table-layout: auto;
+  width: 100%;
+
+  thead {
+    color: var(--bz-table-head-color);
+    background-color: var(--bz-table-head-background-color);
+  }
+
+  th, td {
+    border: 1px solid var(--bz-table-border-color);
+    padding: .5rem .625rem;
+  }
+
+  th {
+    font-size: var(--bz-table-head-font-size);
+    font-family: var(--bz-table-head-font-family);
+    font-weight: 550;
+  }
+
+  tbody tr {
+    font-size: var(--bz-table-font-size);
+    font-family: var(--bz-table-font-family);
+  }
+
+  tbody tr:nth-child(odd) {
+    color: var(--bz-table-odd-color);
+    background-color: var(--bz-table-odd-background-color);
+  }
+
+  tbody tr:nth-child(even) {
+    color: var(--bz-table-even-color);
+    background-color: var(--bz-table-even-background-color);
+  }
+}
