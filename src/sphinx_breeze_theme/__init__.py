@@ -67,7 +67,6 @@ def _on_html_page_context(
     context["toc"] = utils.insert_zero_width_space(toc)
 
     # Add navigation and link helpers
-    context["js_tag"] = utils.replace_js_tag(context["js_tag"])
     context["toctree"] = toctree.create_custom_toctree(app, pagename)
     context["edit_link"] = links.create_edit_link(pagename, context)
     context["lang_link"] = links.create_lang_link(pagename)

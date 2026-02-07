@@ -2,14 +2,13 @@
 
 {% set title = _('Search') %}
 
-{%- block scripts %}
-  <meta name="robots" content="noindex" />
-  {{- script() }}
+{%- block extrahead -%}
   <script defer src="{{ pathto('_static/searchtools.js', 1) }}"></script>
   <script defer src="{{ pathto('_static/language_data.js', 1) }}"></script>
   <script defer src="{{ pathto('searchindex.js', 1) }}"></script>
-  {%- include 'partials/theme-mode-scripts.html' -%}
-{%- endblock %}
+  <meta name="robots" content="noindex" />
+  {%- include "partials/extra-head.html" -%}
+{%- endblock -%}
 
 {% block main %}
   <h1 id="search-documentation">{{ _('Search') }}</h1>

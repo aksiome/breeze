@@ -9,7 +9,12 @@ try:
     _original_create = _social_cards.create_social_card
 
     def _create_social_card_no_emoji(
-        config_social, site_name, page_title, description, *args, **kwargs
+        config_social,
+        site_name,
+        page_title,
+        description,
+        *args,
+        **kwargs,
     ):
         """Wrap create_social_card to strip emojis that can't be rendered."""
         return _original_create(

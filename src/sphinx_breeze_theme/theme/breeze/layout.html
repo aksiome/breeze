@@ -1,47 +1,99 @@
-{%- extends "basic/layout.html" -%}
+<!DOCTYPE html>
+<html{% if language is not none %} lang="{{ language }}"{% endif %} data-content_root="{{ content_root }}">
+<head>
+  <meta charset="utf-8">
+  {{- metatags -}}
 
-{%- block css -%}
-  {{ super() }}
-  <noscript>
-    <style>
-      .bz-js-only { display: none !important; }
-    </style>
-  </noscript>
-  {% if meta and "content-width" in meta %}
-    <style>
-      #bz-main-content { max-width: {{ meta["content-width"] }}; }
-    </style>
+  {%- if READTHEDOCS -%}
+    <meta name="readthedocs-addons-api-version" content="1" />
   {%- endif -%}
-{%- endblock css -%}
 
-{%- block scripts -%}
-  {{- script() }}
-  {%- include 'partials/theme-mode-scripts.html' -%}
-{%- endblock scripts -%}
+  {%- block htmltitle -%}
+    {%- if not docstitle -%}
+      <title>{{ title|striptags|e }}</title>
+    {%- elif pagename == root_doc -%}
+      <title>{{ docstitle|striptags|e }}</title>
+    {%- else -%}
+      <title>{{ title|striptags|e }} - {{ docstitle|striptags|e }}</title>
+    {%- endif -%}
+  {%- endblock -%}
 
-{%- block extrahead -%}
-  <meta name="docsearch:language" content="{{ language }}"/>
-  <meta name="docsearch:version" content="{{ version }}" />
-  {%- if last_updated %}<meta name="docbuild:last-update" content="{{ last_updated | e }}"/>{%- endif %}
-  {%- if READTHEDOCS -%}<meta name="readthedocs-addons-api-version" content="1" />{%- endif -%}
-  {%- include "partials/extra-head.html" -%}
-{%- endblock extrahead -%}
+  {%- if favicon_url -%}
+    <link rel="icon" href="{{ favicon_url|e }}">
+  {%- endif -%}
 
-{%- block header -%}
+  {%- block canonicalurl -%}
+    {%- if meta and meta.canonical_url -%}
+      <link rel="canonical" href="{{ meta.canonical_url|e }}">
+    {%- elif pageurl -%}
+      <link rel="canonical" href="{{ pageurl|e }}">
+    {%- endif -%}
+  {%- endblock -%}
+
+  {%- block linktags -%}
+    {%- if hasdoc('about') -%}
+      <link rel="author" title="{{ _('About these documents') }}" href="{{ pathto('about') }}">
+    {%- endif -%}
+    {%- if hasdoc('genindex') -%}
+      <link rel="index" title="{{ _('Index') }}" href="{{ pathto('genindex') }}">
+    {%- endif -%}
+    {%- if hasdoc('search') -%}
+      <link rel="search" title="{{ _('Search') }}" href="{{ pathto('search') }}">
+    {%- endif -%}
+    {%- if hasdoc('copyright') -%}
+      <link rel="copyright" title="{{ _('Copyright') }}" href="{{ pathto('copyright') }}">
+    {%- endif -%}
+    {%- if next -%}
+      <link rel="next" title="{{ next.title|striptags|e }}" href="{{ next.link|e }}">
+    {%- endif -%}
+    {%- if prev -%}
+      <link rel="prev" title="{{ prev.title|striptags|e }}" href="{{ prev.link|e }}">
+    {%- endif -%}
+  {%- endblock -%}
+
+  <script data-cfasync="false">(function(){
+    const m = localStorage.getItem("breeze-mode") || "{{ theme_default_mode }}";
+    const d = document.documentElement.dataset;
+    d.mode = m;
+    d.theme = m === "auto"
+      ? (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")
+      : m;
+  })();
+  </script>
+
+  {%- block css -%}
+    {%- for css in css_files -%}
+      {{ css_tag(css) }}
+    {%- endfor -%}
+    {%- if meta and "content-width" in meta -%}
+      <style>#bz-main-content { max-width: {{ meta["content-width"] }}; }</style>
+    {%- endif -%}
+  {%- endblock -%}
+
+  {%- block scripts -%}
+    {%- for js in script_files -%}
+      {%- set attrs = js.attributes | default({}) -%}
+      {%- if "defer" in attrs or "async" in attrs -%}
+        {{- js_tag(js) }}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endblock -%}
+
+  {%- block extrahead -%}
+    {%- include "partials/extra-head.html" -%}
+  {%- endblock -%}
+</head>
+<body>
   {# A button hidden by default to help assistive devices quickly jump to main content #}
   {# ref: https://www.youtube.com/watch?v=VUR0I5mqq7I #}
-  <div class="bz-skip-to-content">
-    <a href="#bz-main-content">{{ _("Skip to main content") }}</a>
-  </div>
+  <div class="bz-skip-to-content"><a href="#bz-main-content">{{ _("Skip to main content") }}</a></div>
+
   {%- include "sections/announcement.html" -%}
   {%- include "sections/header-main.html" -%}
   {%- if theme_header_tabs | tobool -%}
     {%- include "sections/header-tabs.html" -%}
   {%- endif -%}
   <hr class="bz-header-hr">
-{%- endblock header -%}
-
-{%- block content -%}
   <div class="bz-content">
     {%- include "sections/sidebar-primary.html" -%}
     <main id="bz-main-content">
@@ -53,10 +105,8 @@
       {%- endblock main -%}
     </main>
   </div>
-{%- endblock content -%}
-
-{%- block footer -%}
   {%- include "sections/footer.html" -%}
+
   <a href="#" class="bz-back-to-top">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
       <path d="m5 12 7-7 7 7"/><path d="M12 19V5"/>
@@ -67,9 +117,16 @@
   <label class="bz-overlay bz-overlay-secondary" for="bz-sidebar-secondary"></label>
   <input type="checkbox" name="bz-sidebar-primary" id="bz-sidebar-primary" aria-label="{{ _('Toggle section navigation') }}">
   <input type="checkbox" name="bz-sidebar-secondary" id="bz-sidebar-secondary" aria-label="{{ _('Toggle table of contents') }}">
-  {%- include "partials/extra-foot.html" -%}
-{%- endblock footer -%}
 
-{%- block relbar1 -%}{%- endblock -%}
-{%- block relbar2 -%}{%- endblock -%}
-{%- block sidebarsourcelink -%}{%- endblock -%}
+  {%- block body_scripts -%}
+    {%- for js in script_files -%}
+      {%- set attrs = js.attributes | default({}) -%}
+      {%- if "defer" not in attrs and "async" not in attrs -%}
+        {{- js_tag(js) }}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endblock -%}
+
+  {%- include "partials/extra-foot.html" -%}
+</body>
+</html>

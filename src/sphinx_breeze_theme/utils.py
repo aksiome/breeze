@@ -1,5 +1,4 @@
-from functools import wraps
-from typing import Any, Callable
+from typing import Any
 
 import emoji
 from bs4 import BeautifulSoup
@@ -37,19 +36,6 @@ def set_default_config(app: Sphinx, key: str, value: Any) -> None:
 def render_fragment(builder: StandaloneHTMLBuilder, node: nodes.Element) -> str:
     """Render the given node as an HTML fragment, using the builder provided."""
     return builder.render_partial(node)["fragment"]
-
-
-def replace_js_tag(js_tag: Callable[..., str]) -> Callable[..., str]:
-    """Add 'defer' to script tags lacking 'defer' or 'async' attributes."""
-    @wraps(js_tag)
-    def wrapper(js):
-        script = js_tag(js)
-        return script.replace("<script ", "<script defer ", 1) if (
-            script.startswith("<script ")
-            and "src=" in script
-            and not any(attr in script for attr in {"defer", "async"})
-        ) else script.replace('defer="defer"', "defer").replace('async="async"', "async")
-    return wrapper
 
 
 def simplify_page_toc(html: str) -> str:
