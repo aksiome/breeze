@@ -4,6 +4,38 @@ All notable changes to this project will be documented in this file.
 
 <!-- version list -->
 
+## v0.11.0 (2026-02-07)
+
+### ✨ Features
+
+- Add sphinx-click and nbsphinx support
+  ([`1828ed5`](https://github.com/aksiome/breeze/commit/1828ed55746c2debb5f9f5a0efc67bd3c87f962b))
+- **theme**: Rename version config variables for clarity
+  ([`8c7354c`](https://github.com/aksiome/breeze/commit/8c7354cc2634515bbebd6b154ae1fe0b7d0b2bba))
+- Add sphinx-datatables support
+  ([`9674b86`](https://github.com/aksiome/breeze/commit/9674b861be58826428f10923f7d4c8396c67083a))
+- Add sphinx-docsearch support
+  ([`977788d`](https://github.com/aksiome/breeze/commit/977788d9fc380208afa070f8d098d1eca2e85e3d))
+
+### 🎨 Appearance
+
+- **styles**: Minor design refinements and consistency improvements
+  ([`802d9bf`](https://github.com/aksiome/breeze/commit/802d9bf878ed490a972928ae6c140fe589228656))
+
+### 🪲 Bug fixes
+
+- **vite**: Output separate breeze.css and disable asset inlining
+  ([`f654b53`](https://github.com/aksiome/breeze/commit/f654b5395f8c5ff5ad6685fcbd17f0223d7b7a1f))
+- **theme**: Wrap js in an iife to avoid global scope pollution
+  ([`4a0c3be`](https://github.com/aksiome/breeze/commit/4a0c3bebca08747941dec7e82a3113881927bed8))
+- **opengraph**: Strip emojis for reliable social card rendering
+  ([`19a07cf`](https://github.com/aksiome/breeze/commit/19a07cf5feb01c5ebe83c29a7c543c6055239b08))
+
+### 📖 Documentation
+
+- Reorganize toctree for clearer structure
+  ([`215a891`](https://github.com/aksiome/breeze/commit/215a891746d12bba4b071b33547d818f884d61d6))
+
 ## v0.10.0 (2026-02-01)
 
 ### ✨ Features
