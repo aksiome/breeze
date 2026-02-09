@@ -51,9 +51,7 @@ docsearch_index_name = "Sphinx Breeze Theme Documentation"
 
 nbsphinx_requirejs_path = ""
 jupyter_sphinx_require_url = ""
-jupyter_sphinx_thebelab_config = {
-    "requestKernel": True,
-}
+
 
 # -- Options for Markdown files ----------------------------------------------
 # https://myst-parser.readthedocs.io/en/latest/sphinx/reference.html

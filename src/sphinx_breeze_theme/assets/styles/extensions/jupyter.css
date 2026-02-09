@@ -1,0 +1,183 @@
+:root {
+  --jp-icon-search: none;
+  --jp-ui-select-caret: none;
+
+  --jp-border-width: 1px;
+  --jp-border-color0: oklch(from var(--bz-color-outline) l c h / 0.1);
+  --jp-border-color1: oklch(from var(--bz-color-outline) l c h / 0.2);
+  --jp-border-color2: oklch(from var(--bz-color-outline) l c h / 0.3);
+  --jp-border-color3: oklch(from var(--bz-color-outline) l c h / 0.4);
+
+  --jp-ui-font-size0: var(--bz-size-xs);
+  --jp-ui-font-size1: var(--bz-size-sm);
+  --jp-ui-font-size2: var(--bz-size-md);
+  --jp-ui-font-size3: var(--bz-size-lg);
+  --jp-ui-icon-font-size: var(--bz-size-xs);
+  --jp-ui-font-family: var(--bz-font-sans);
+  --jp-ui-font-color0: var(--bz-color-text);
+  --jp-ui-font-color1: var(--bz-color-text);
+  --jp-ui-font-color2: var(--bz-color-muted);
+  --jp-ui-font-color3: var(--bz-color-muted);
+  --jp-ui-inverse-font-color0: var(--bz-color-white-5);
+  --jp-ui-inverse-font-color1: var(--bz-color-white-4);
+  --jp-ui-inverse-font-color2: var(--bz-color-white-3);
+  --jp-ui-inverse-font-color3: var(--bz-color-white-2);
+
+  --jp-content-font-size: var(--bz-size-sm);
+  --jp-content-line-height: 1.5;
+  --jp-content-font-color0: var(--bz-color-text);
+  --jp-content-font-color1: var(--bz-color-text);
+  --jp-content-font-color2: var(--bz-color-muted);
+  --jp-content-font-color3: var(--bz-color-muted);
+  --jp-code-font-size: var(--bz-size-sm);
+  --jp-code-line-height: 1.307;
+  --jp-code-padding: 5px;
+  --jp-code-font-family: var(--bz-font-monospace);
+
+  --jp-layout-color0: var(--bz-color-surface-5);
+  --jp-layout-color1: var(--bz-color-surface-4);
+  --jp-layout-color2: var(--bz-color-surface-1);
+  --jp-layout-color3: oklch(from var(--bz-color-outline) l c h / 0.3);
+
+  --jp-brand-color0: var(--bz-color-primary-1);
+  --jp-brand-color1: var(--bz-color-primary-2);
+  --jp-brand-color2: var(--bz-color-primary-3);
+  --jp-brand-color3: var(--bz-color-primary-4);
+
+  --jp-accent-color0: var(--bz-color-secondary-1);
+  --jp-accent-color1: var(--bz-color-secondary-2);
+  --jp-accent-color2: var(--bz-color-secondary-3);
+  --jp-accent-color3: var(--bz-color-secondary-4)
+
+  --jp-warn-color0: var(--bz-color-orange-5);
+  --jp-warn-color1: var(--bz-color-orange-4);
+  --jp-warn-color2: var(--bz-color-orange-3);
+  --jp-warn-color3: var(--bz-color-orange-2);
+
+  --jp-error-color0: var(--bz-color-red-5);
+  --jp-error-color1: var(--bz-color-red-4);
+  --jp-error-color2: var(--bz-color-red-3);
+  --jp-error-color3: var(--bz-color-red-2);
+
+  --jp-success-color0: var(--bz-color-green-5);
+  --jp-success-color1: var(--bz-color-green-4);
+  --jp-success-color2: var(--bz-color-green-3);
+  --jp-success-color3: var(--bz-color-green-2);
+
+  --jp-info-color0: var(--bz-color-cyan-5);
+  --jp-info-color1: var(--bz-color-cyan-4);
+  --jp-info-color2: var(--bz-color-cyan-3);
+  --jp-info-color3: var(--bz-color-cyan-2);
+
+  --jp-widgets-dropdown-arrow: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="black"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/></svg>') !important;
+}
+
+:root[data-theme="dark"] {
+  --jp-layout-color2: var(--bz-color-surface-3);
+  --jp-layout-color3: oklch(from var(--bz-color-outline) l c h / 0.3);
+
+  --jp-widgets-dropdown-arrow: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/></svg>') !important;
+}
+
+
+div.jupyter_container {
+  border-radius: var(--bz-border-radius);
+  background-color: var(--bz-code-block-background-color);
+  border: 1px solid var(--bz-code-block-border-color);
+  margin-block: 1.5rem;
+  box-shadow: none;
+
+  div.stderr {
+    background-color: color-mix(in oklab, var(--bz-color-red) 16%, transparent);
+
+    pre {
+      background: none;
+      color: color-mix(
+        in oklab,
+        oklch(
+          from var(--bz-color-red)
+            calc(l * var(--bz-admonition-title-text-light))
+            calc(c * var(--bz-admonition-title-text-chroma)) calc(h - 7)
+        ),
+        var(--bz-color-text)
+      );
+    }
+  }
+
+  div.code_cell {
+    border: none;
+    background: none;
+
+    .highlight {
+      background: none;
+    }
+
+    pre {
+      background: revert-layer;
+      padding: revert-layer;
+    }
+  }
+
+  div.cell_output:has(*) {
+    padding: 0.75rem;
+    background-color: var(--bz-page-background-color);
+
+    .widget-subarea {
+      padding-bottom: 0.5rem;
+    }
+
+    .highlight {
+      background: var(--bz-topic-background-color);
+      border-radius: calc(var(--bz-border-radius) / 2);
+    }
+
+    img {
+      margin-block: 0;
+    }
+  }
+
+  > div:first-child {
+    border-radius: var(--bz-border-radius) var(--bz-border-radius) 0 0;
+    border-bottom: 1px solid var(--bz-code-block-border-color);
+  }
+
+  > div:last-child {
+    border-radius: 0 0 var(--bz-border-radius) var(--bz-border-radius);
+  }
+}
+
+.jupyter-button:active,
+.jupyter-button.mod-active,
+.jupyter-button:hover:enabled,
+.jupyter-button:focus:enabled {
+  box-shadow: none !important;
+}
+
+.jupyter-button i.fa {
+  font-size: 0.8em;
+}
+
+.widget-slider .noUi-target,
+.jupyter-widget-slider .noUi-target {
+  background: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.jupyter-widget-Collapse-header:hover {
+  background-color: var(--jp-layout-color2) !important;
+}
+
+.jupyter-widget-Collapse-open > .jupyter-widget-Collapse-header {
+  background-color: var(--jp-layout-color2) !important;
+}
+
+.jupyter-widgets.widget-tab > .p-TabBar .p-TabBar-tab.p-mod-current:before,
+.jupyter-widgets.jupyter-widget-tab
+  > .p-TabBar
+  .p-TabBar-tab.p-mod-current:before,
+.jupyter-widgets.jupyter-widget-tab
+  > .lm-TabBar
+  .lm-TabBar-tab.lm-mod-current:before {
+  top: calc(-1 * var(--jp-border-width) - 1px) !important;
+}

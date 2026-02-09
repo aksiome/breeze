@@ -50,7 +50,7 @@
   }
 
   details:open {
-    margin-top: .325rem;
+    margin-block: .25rem .375rem;
 
     > summary::after {
       transform: rotate(90deg);
