@@ -4,6 +4,15 @@ All notable changes to this project will be documented in this file.
 
 <!-- version list -->
 
+## v0.12.0 (2026-02-09)
+
+### ✨ Features
+
+- **theme**: Rename version_slug to version_id
+  ([`7393d70`](https://github.com/aksiome/breeze/commit/7393d701d38f6a99aea3f53323a2ff4ca5233a38))
+- Add jupyter-sphinx support
+  ([`79ade20`](https://github.com/aksiome/breeze/commit/79ade20736097d20cd24b8ff96d0ac31f753d2fb))
+
 ## v0.11.1 (2026-02-07)
 
 ### 🪲 Bug fixes
