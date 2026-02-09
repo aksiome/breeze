@@ -8,14 +8,14 @@ Configure the version switcher via `html_context` in `conf.py`:
 
 ```python
 html_context = {
-    "version_slug": "v2.0",
+    "version_id": "v2.0",
     "version_switcher_url": "https://example.com/docs/_static/switcher.json",
 }
 ```
 
 | Key | Description |
 |-----|-------------|
-| `version_slug` | The currently displayed version |
+| `version_id` | The currently displayed version |
 | `version_switcher_url` | URL to the JSON file containing version data |
 
 ## Version JSON format
@@ -48,7 +48,7 @@ Each version object accepts:
 | Key | Description |
 |-----|-------------|
 | `name` | Display name in dropdown |
-| `version` | Version identifier (matches `version_slug`) |
+| `version` | Version identifier (matches `version_id`) |
 | `url` | Base URL for this version |
 | `preferred` | Optional. Mark as the recommended version |
 
@@ -59,10 +59,10 @@ For Read the Docs, use environment variables:
 ```python
 import os
 
-version_slug = os.environ.get("READTHEDOCS_VERSION", "latest")
+version_id = os.environ.get("READTHEDOCS_VERSION", "latest")
 
 html_context = {
-    "version_slug": version_slug,
+    "version_id": version_id,
     "version_switcher_url": "https://raw.githubusercontent.com/org/repo/main/docs/_static/switcher.json",
 }
 ```
