@@ -36,6 +36,7 @@ extensions = [
     "sphinx_datatables",
     "sphinx_design",
     "sphinx_docsearch",
+    "sphinx_gallery.gen_gallery",
     "sphinx_sitemap",
     "sphinx_togglebutton",
     "sphinx_treeview",
@@ -45,13 +46,14 @@ extensions = [
     "sphinxcontrib.youtube",
 ]
 
-docsearch_app_id = "LYBKXP1U1X"
-docsearch_api_key = "fa3393543a6155addafd0fbd2e63c366"
-docsearch_index_name = "Sphinx Breeze Theme Documentation"
+exclude_patterns = [
+    "_build",
+    "_gallery/GALLERY_HEADER.rst",
+    "extensions/sphinx-gallery/*.ipynb",
+]
 
 nbsphinx_requirejs_path = ""
 jupyter_sphinx_require_url = ""
-
 
 # -- Options for Markdown files ----------------------------------------------
 # https://myst-parser.readthedocs.io/en/latest/sphinx/reference.html
@@ -64,6 +66,23 @@ myst_enable_extensions = [
 ]
 myst_heading_anchors = 3
 todo_include_todos = True
+
+# -- Sphinx-docsearch options ------------------------------------------------
+# https://sphinx-docsearch.readthedocs.io/configuration.html
+
+docsearch_app_id = "LYBKXP1U1X"
+docsearch_api_key = "fa3393543a6155addafd0fbd2e63c366"
+docsearch_index_name = "Sphinx Breeze Theme Documentation"
+
+# -- Sphinx-gallery options --------------------------------------------------
+# https://sphinx-gallery.github.io/stable/configuration.html
+
+sphinx_gallery_conf = {
+    "examples_dirs": "_gallery",
+    "gallery_dirs": "extensions/sphinx-gallery",
+    "within_subsection_order": "FileNameSortKey",
+    "expected_failing_examples": ["_gallery/plot_06_failing.py"],
+}
 
 # -- Sphinx-copybutton options -----------------------------------------------
 # Exclude copy button from appearing over notebook cell numbers by using :not()
@@ -85,7 +104,7 @@ html_theme = "breeze"
 html_title = "Breeze"
 html_logo = "_static/logo.png"
 html_favicon = "_static/logo.png"
-html_baseurl = "https://sphinx-breeze-theme.readthedocs.io/"
+html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "http://localhost/")
 
 html_theme_options = {
     "external_links": [

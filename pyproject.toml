@@ -65,6 +65,7 @@ docs = [
   "sphinx-datatables>=1.0.0",
   "sphinx-design>=0.7.0; python_version >= '3.11'",
   "sphinx-docsearch>=0.3.0",
+  "sphinx-gallery>=0.20.0",
   "sphinx-sitemap>=2.9.0",
   "sphinx-togglebutton>=0.4.4",
   "sphinx-treeview>=1.1.1; python_version >= '3.11'",

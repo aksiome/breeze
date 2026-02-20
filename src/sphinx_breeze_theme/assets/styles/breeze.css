@@ -56,14 +56,15 @@
 @import "./utilities/user.css" layer(utilities);
 @import "./utilities/tooltip.css" layer(utilities);
 
+@import "./extensions/contributors.css";
+@import "./extensions/copybutton.css";
+@import "./extensions/datatables.css";
 @import "./extensions/design.css";
+@import "./extensions/docsearch.css";
+@import "./extensions/gallery.css";
+@import "./extensions/jupyter.css";
 @import "./extensions/mermaid.css";
 @import "./extensions/nbsphinx.css";
-@import "./extensions/jupyter.css";
-@import "./extensions/datatables.css";
-@import "./extensions/docsearch.css";
-@import "./extensions/copybutton.css";
-@import "./extensions/togglebutton.css";
-@import "./extensions/contributors.css";
 @import "./extensions/readthedocs.css";
+@import "./extensions/togglebutton.css";
 @import "./extensions/treeview.css";

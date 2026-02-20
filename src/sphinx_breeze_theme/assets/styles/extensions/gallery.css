@@ -1,0 +1,53 @@
+:root[data-theme="light"], :root[data-theme="dark"] {
+  --sg-text-color: var(--bz-color-text);
+  --sg-background-color: var(--bz-page-background-color);
+  --sg-code-background-color: var(--bz-code-block-background-color);
+
+  --sg-tooltip-foreground: var(--bz-color-text);
+  --sg-tooltip-background: var(--bz-color-surface-5);
+  --sg-tooltip-border: var(--bz-color-outline) transparent;
+
+  --sg-pytb-foreground: var(--bz-color-text);
+  --sg-download-a-background-color: var(--sd-color-primary);
+  --sg-download-a-background-image: none;
+  --sg-download-a-border-color: 1px solid var(--sd-color-primary);
+  --sg-download-a-color: var(--sd-color-primary-text);
+  --sg-download-a-hover-background-color: var(--sd-color-primary-highlight);
+  --sg-download-a-hover-box-shadow-1: transparent;
+  --sg-download-a-hover-box-shadow-2: transparent;
+}
+
+.sphx-glr-thumbcontainer {
+  --bz-shadow: var(--bz-shadow-sm);
+  --bz-surface: var(--bz-topic-background-color);
+
+  border: 1px solid var(--bz-topic-border-color);
+  overflow: hidden;
+}
+
+.sphx-glr-thumbcontainer:hover {
+  border: 1px solid var(--bz-color-primary);
+}
+
+.sphx-glr-script-out .highlight {
+  border-radius: calc(var(--bz-border-radius) / 2);
+}
+
+.sphx-glr-script-out .highlight pre {
+  background: color-mix(in oklab, var(--bz-code-block-border-color), transparent 65%);
+  border-radius: calc(var(--bz-border-radius) / 2);
+  border: 1px solid var(--bz-code-block-border-color);
+  padding: .5rem;
+}
+
+.sphx-glr-script-out.highlight-pytb .highlight pre {
+  background-color: color-mix(in oklab, var(--bz-color-red) 7%, transparent);
+  border: 1px solid color-mix(in oklab, var(--bz-color-red) 30%, transparent);
+  border-radius: calc(var(--bz-border-radius) / 2);
+  margin: revert-layer;
+  padding: .5rem;
+}
+
+div.sphx-glr-download code.download {
+  color: inherit;
+}

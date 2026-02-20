@@ -24,6 +24,8 @@ def serve(session):
             "cmd /c npm run build",
             "--watch=src/",
             "--ignore=src/sphinx_breeze_theme/theme/breeze/static/",
+            "--ignore=docs/extensions/sphinx-gallery/",
+            "--ignore=docs/sg_execution_times.rst",
             "--open-browser",
             "-T",
             "-a",
