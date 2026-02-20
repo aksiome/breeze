@@ -6,8 +6,8 @@
   --bz-border-radius-full: calc(infinity * 1px);
   --bz-border-radius: 0.5rem;
 
-  --bz-admonition-title-text-light: 0.6;
-  --bz-admonition-title-text-chroma: 2.5;
+  --bz-text-light: 0.6;
+  --bz-text-chroma: 2.5;
 
   --bz-bold-text-shadow: 0.03em 0 0 currentColor, -0.03em 0 0 currentColor;
   --bz-thin-text-shadow: 0.001em 0 0 currentColor, -0.001em 0 0 currentColor;
@@ -35,6 +35,6 @@
 }
 
 :root[data-theme=dark] {
-  --bz-admonition-title-text-light: 1.4;
-  --bz-admonition-title-text-chroma: 0.75;
+  --bz-text-light: 1.4;
+  --bz-text-chroma: 0.75;
 }

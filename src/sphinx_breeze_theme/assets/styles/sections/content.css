@@ -21,12 +21,14 @@
   min-width: 0;
   max-width: 72rem;
   margin-inline: auto;
-  padding-block: 3rem;
+  padding-block: 2rem;
   overflow-wrap: anywhere;
 
   @media (width > 75rem) {
     flex: 1;
     column-gap: clamp(2rem, 0.833rem + 1.667vw, 2.5rem);
+    padding-block: 3rem;
+
     &:has(.bz-sidebar-secondary *) {
       display: grid;
       grid-template-columns: 1fr auto;
@@ -46,6 +48,7 @@
 .bz-article-main {
   min-width: 0;
   grid-area: article;
+  position: relative;
 }
 
 .bz-article-header {

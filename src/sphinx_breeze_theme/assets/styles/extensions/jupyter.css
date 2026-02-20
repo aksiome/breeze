@@ -73,12 +73,18 @@
 }
 
 :root[data-theme="dark"] {
-  --jp-layout-color2: var(--bz-color-surface-3);
-  --jp-layout-color3: oklch(from var(--bz-color-outline) l c h / 0.3);
+  --jp-layout-color2: var(--bz-color-surface-5);
+  --jp-layout-color3: oklch(from var(--bz-color-outline) l c h / 0.25);
 
   --jp-widgets-dropdown-arrow: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="white"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"/></svg>') !important;
 }
 
+
+.widget-select > select option:checked,
+.jupyter-widget-select > select option:checked {
+  color: inherit;
+  background-color: var(--jp-layout-color3);
+}
 
 div.jupyter_container {
   border-radius: var(--bz-border-radius);
@@ -87,8 +93,14 @@ div.jupyter_container {
   margin-block: 1.5rem;
   box-shadow: none;
 
+  .output {
+    margin-block: 0;
+  }
+
   div.stderr {
-    background-color: color-mix(in oklab, var(--bz-color-red) 16%, transparent);
+    background-color: color-mix(in oklab, var(--bz-color-red) 7%, transparent);
+    border: 1px solid color-mix(in oklab, var(--bz-color-red) 30%, transparent);
+    border-radius: calc(var(--bz-border-radius) / 2);
 
     pre {
       background: none;
@@ -96,8 +108,8 @@ div.jupyter_container {
         in oklab,
         oklch(
           from var(--bz-color-red)
-            calc(l * var(--bz-admonition-title-text-light))
-            calc(c * var(--bz-admonition-title-text-chroma)) calc(h - 7)
+            calc(l * var(--bz-text-light))
+            calc(c * var(--bz-text-chroma)) calc(h - 7)
         ),
         var(--bz-color-text)
       );
@@ -120,15 +132,16 @@ div.jupyter_container {
 
   div.cell_output:has(*) {
     padding: 0.75rem;
-    background-color: var(--bz-page-background-color);
+    background-color: color-mix(in oklab, var(--bz-page-background-color) 60%, var(--bz-code-block-background-color));
 
     .widget-subarea {
       padding-bottom: 0.5rem;
     }
 
     .highlight {
-      background: var(--bz-topic-background-color);
+      background: color-mix(in oklab, var(--bz-code-block-border-color), transparent 65%);
       border-radius: calc(var(--bz-border-radius) / 2);
+      border: 1px solid var(--bz-code-block-border-color);
     }
 
     img {

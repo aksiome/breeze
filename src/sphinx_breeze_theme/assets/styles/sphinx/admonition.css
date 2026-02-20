@@ -54,8 +54,8 @@ p.admonition-title {
   font-family: var(--bz-admonition-title-font-family);
   color: color-mix(in oklab, oklch(
     from var(--bz-admonition-accent-color)
-    calc(l * var(--bz-admonition-title-text-light))
-    calc(c * var(--bz-admonition-title-text-chroma))
+    calc(l * var(--bz-text-light))
+    calc(c * var(--bz-text-chroma))
     calc(h - 7)
   ), var(--bz-color-text));
 }

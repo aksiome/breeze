@@ -40,15 +40,23 @@
     max-height: calc(100vh - var(--bz-header-height));
     padding-bottom: var(--bz-header-tabs-height);
     width: var(--bz-sidebar-primary-width);
-    top: calc(var(--bz-header-height) - 1rem);
+    top: var(--bz-header-height);
     background: none;
 
     > :first-child {
-      padding-top: 3rem;
+      padding-top: 2rem;
     }
 
     > :last-child {
       padding-bottom: 1rem;
+    }
+  }
+
+  @media (width > 75rem) {
+    top: calc(var(--bz-header-height) - 1rem);
+
+    > :first-child {
+      padding-top: 3rem;
     }
   }
 }

@@ -35,13 +35,15 @@ div.nbinput.container div.input_area {
 }
 
 div.nboutput.container div.output_area.stderr {
-  background-color: color-mix(in oklab, var(--bz-color-red) 16%, transparent);
+  background-color: color-mix(in oklab, var(--bz-color-red) 7%, transparent);
+  border: 1px solid color-mix(in oklab, var(--bz-color-red) 30%, transparent);
+  border-radius: calc(var(--bz-border-radius) / 2);
 
   pre {
     color: color-mix(in oklab, oklch(
       from var(--bz-color-red)
-      calc(l * var(--bz-admonition-title-text-light))
-      calc(c * var(--bz-admonition-title-text-chroma))
+      calc(l * var(--bz-text-light))
+      calc(c * var(--bz-text-chroma))
       calc(h - 7)
     ), var(--bz-color-text));
   }

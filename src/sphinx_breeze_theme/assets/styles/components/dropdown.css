@@ -1,8 +1,7 @@
 .bz-dropdown {
-  z-index: 300;
   position: relative;
-  padding-bottom: 0.5rem;
-  margin-bottom: -0.5rem;
+  padding-bottom: 0.75rem;
+  margin-bottom: -0.75rem;
   font-size: var(--bz-dropdown-font-size);
   font-family: var(--bz-dropdown-font-family);
 
@@ -33,9 +32,11 @@
     --bz-surface: color-mix(in oklab, var(--bz-dropdown-background-color), transparent 5%);
 
     opacity: 0;
+    z-index: 10;
+    list-style: none;
     width: max-content;
     position: absolute;
-    margin-top: 0.5rem;
+    margin-top: 0.75rem;
     visibility: hidden;
     padding: 0.4rem;
     border-radius: var(--bz-border-radius);

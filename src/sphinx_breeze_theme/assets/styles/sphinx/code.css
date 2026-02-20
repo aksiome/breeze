@@ -23,7 +23,7 @@ p + div:is([class*="highlight-"], .literal-block-wrapper) {
   margin-top: 0;
 }
 
-div:where([class*="highlight-"]:not(:last-child), .literal-block-wrapper:not(:last-child)) {
+div:where([class*="highlight-"], .literal-block-wrapper) {
   margin-block: 1.5rem;
 }
 

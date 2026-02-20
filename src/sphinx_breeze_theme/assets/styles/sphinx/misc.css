@@ -24,7 +24,7 @@ img, figure, object, .figure {
   display: inline-block;
 }
 
-[class^="toctree-"] a.reference.external:after {
+[class^="toctree-"] a.reference.external::after {
   content: "";
   display: inline-block;
   vertical-align: middle;

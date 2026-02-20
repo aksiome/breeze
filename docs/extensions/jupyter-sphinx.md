@@ -2,8 +2,8 @@
 
 Sphinx extension that executes embedded code in a Jupyter kernel and embeds outputs in the document.
 
-- **Documentation**: [jupyter-sphinx.readthedocs.io](https://jupyter-sphinx.readthedocs.io/)
-- **Source Code**: [github.com/jupyter/jupyter-sphinx](https://github.com/jupyter/jupyter-sphinx)
+- **Documentation**: [https://jupyter-sphinx.readthedocs.io/](https://jupyter-sphinx.readthedocs.io/)
+- **Source Code**: [https://github.com/jupyter/jupyter-sphinx](https://github.com/jupyter/jupyter-sphinx)
 
 ```{eval-rst}
 
