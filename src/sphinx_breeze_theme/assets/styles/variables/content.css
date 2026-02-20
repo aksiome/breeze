@@ -122,6 +122,15 @@
   --bz-lang-switcher-color-hover: var(--bz-link-color-hover);
   --bz-lang-switcher-font-size: 1rem;
 
+  --bz-page-actions-background: color-mix(in oklab, var(--bz-color-surface-4), var(--bz-color-surface-3));
+  --bz-page-actions-background-hover: var(--bz-color-surface-3);
+  --bz-page-actions-color: var(--bz-link-color);
+  --bz-page-actions-color-hover: var(--bz-link-color-hover);
+  --bz-page-actions-border-color: var(--bz-color-outline);
+  --bz-page-actions-icon-color: var(--bz-color-muted);
+  --bz-page-actions-font-size: var(--bz-size-sm);
+  --bz-page-actions-font-family: inherit;
+
   --bz-related-pages-icon-color: var(--bz-link-color);
   --bz-related-pages-icon-color-hover: var(--bz-link-color-hover);
   --bz-related-pages-label-color: var(--bz-link-color);

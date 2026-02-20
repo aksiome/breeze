@@ -107,6 +107,9 @@ html_favicon = "_static/logo.png"
 html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "http://localhost/")
 
 html_theme_options = {
+    "page_actions_ai_chatgpt": True,
+    "page_actions_ai_claude": True,
+    "page_actions_ai_perplexity": True,
     "external_links": [
         {
             "name": "Support me",

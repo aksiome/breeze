@@ -1,3 +1,7 @@
+---
+hide-page-actions: true
+---
+
 # 🛠️ Changelog
 
 ```{include} ../CHANGELOG.md

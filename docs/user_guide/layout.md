@@ -137,6 +137,7 @@ Hide specific components on individual pages:
 ---
 hide-breadcrumbs: true
 hide-related-pages: true
+hide-page-actions: true
 ---
 ```
 :::
@@ -144,6 +145,7 @@ hide-related-pages: true
 ```rst
 :hide-breadcrumbs: true
 :hide-related-pages: true
+:hide-page-actions: true
 ```
 :::
 ::::

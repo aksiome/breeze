@@ -21,6 +21,7 @@ def _get_styles(formatter: "HtmlFormatter[str]", prefix: str) -> Iterator[str]:
 
 
 def get_pygments_stylesheet(light_style: str, dark_style: str) -> str:
+    """Generate a combined stylesheet with light and dark syntax highlighting styles."""
     light_formatter = PygmentsBridge.html_formatter(style=light_style)
     dark_formatter = PygmentsBridge.html_formatter(style=dark_style)
 
@@ -34,6 +35,7 @@ def get_pygments_stylesheet(light_style: str, dark_style: str) -> str:
 
 
 def overwrite_pygments_css(app: Sphinx) -> None:
+    """Overwrite Sphinx's pygments.css with light/dark theme support."""
     pygments_css = Path(app.builder.outdir) / "_static" / "pygments.css"
     pygments_css.parent.mkdir(exist_ok=True)
     pygments_css.write_text(get_pygments_stylesheet(

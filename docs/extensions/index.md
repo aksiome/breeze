@@ -1,4 +1,5 @@
 ---
+hide-page-actions: true
 hide-sidebar-secondary: true
 ---
 

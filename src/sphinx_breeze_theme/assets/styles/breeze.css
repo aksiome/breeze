@@ -45,6 +45,7 @@
 @import "./components/footer-copyright.css" layer(components);
 @import "./components/header-brand.css" layer(components);
 @import "./components/lang-switcher.css" layer(components);
+@import "./components/page-actions.css" layer(components);
 @import "./components/related-pages.css" layer(components);
 @import "./components/repo-stats.css" layer(components);
 @import "./components/search-button.css" layer(components);

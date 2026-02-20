@@ -21,25 +21,20 @@ def setup(app: Sphinx) -> dict[str, Any]:
     """Entry point for sphinx theming."""
     app.require_sphinx("8.0")
 
-    app.setup_extension("sphinxext.opengraph")
-
     app.add_html_theme("breeze", str(THEME_PATH))
     app.add_css_file("styles/breeze.css", 900)
     app.add_js_file("scripts/breeze.js", 900, "defer")
 
-    for name, default in [
-        ("pygments_dark_style", "github-dark-high-contrast"),
-        ("pygments_light_style", "a11y-high-contrast-light"),
-    ]:
-        app.add_config_value(name, default, "env", [str])
+    app.add_config_value("pygments_light_style", "a11y-high-contrast-light", "env", [str])
+    app.add_config_value("pygments_dark_style", "github-dark-high-contrast", "env", [str])
 
+    app.setup_extension("sphinxext.opengraph")
     app.add_post_transform(utils.TableWrapper)
+    app.config.templates_path.append(str(THEME_PATH / "components"))
 
     app.connect("builder-inited", _on_builder_inited)
     app.connect("html-page-context", _on_html_page_context)
     app.connect("build-finished", _on_build_finished)
-
-    app.config.templates_path.append(str(THEME_PATH / "components"))
 
     return {
         "parallel_read_safe": True,
@@ -49,6 +44,7 @@ def setup(app: Sphinx) -> dict[str, Any]:
 
 
 def _on_builder_inited(app: Sphinx) -> None:
+    """Set default configuration values and process theme options."""
     utils.set_default_config(app, "html_permalinks_icon", "#")
     utils.set_default_config(app, "python_maximum_signature_line_length", 60)
     opts = app.config.html_theme_options
@@ -62,6 +58,7 @@ def _on_html_page_context(
     context: dict[str, Any],
     doctree: nodes.document,
 ) -> None:
+    """Inject custom context variables and utilities into templates."""
     # Enhance table of contents
     toc = utils.simplify_page_toc(context.get("toc", ""))
     context["toc"] = utils.insert_zero_width_space(toc)
@@ -87,6 +84,7 @@ def _on_html_page_context(
 
 
 def _on_build_finished(app: Sphinx, exception: Exception | None = None) -> None:
+    """Generate final assets after the build completes successfully."""
     if exception is None:
         pygments.overwrite_pygments_css(app)
 
