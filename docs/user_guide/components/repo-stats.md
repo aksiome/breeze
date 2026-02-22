@@ -36,3 +36,19 @@ html_context = {
 ## Shared configuration
 
 If you're already using the [edit-this-page](edit-this-page.md) component, the repo stats component will automatically use the same values. No additional configuration needed.
+
+## Styling
+
+Customize the component appearance with CSS variables:
+
+```css
+:root {
+  --bz-repo-stats-background: color-mix(in oklab, var(--bz-color-surface-4), var(--bz-color-surface-3));
+  --bz-repo-stats-background-hover: var(--bz-color-surface-3);
+  --bz-repo-stats-border-color: var(--bz-color-outline);
+  --bz-repo-stats-color: var(--bz-color-text);
+  --bz-repo-stats-color-variant: var(--bz-color-muted);
+  --bz-repo-stats-font-size: var(--bz-size-sm);
+  --bz-repo-stats-font-family: inherit;
+}
+```
