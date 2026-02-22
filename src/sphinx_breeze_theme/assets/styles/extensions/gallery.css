@@ -34,7 +34,7 @@
 }
 
 .sphx-glr-script-out .highlight pre {
-  background: color-mix(in oklab, var(--bz-code-block-border-color), transparent 65%);
+  background: color-mix(in oklab,var(--bz-code-block-border-color), var(--bz-code-block-background-color));
   border-radius: calc(var(--bz-border-radius) / 2);
   border: 1px solid var(--bz-code-block-border-color);
   padding: .5rem;

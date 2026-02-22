@@ -17,9 +17,14 @@
   .sphinx-contributors_list {
     display: grid;
     padding: 0;
-    gap: 1rem;
+    gap: 2rem;
     justify-content: start;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+
+  .sphinx-contributors_contributor__image {
+    max-width: 100%;
+    border-radius: var(--bz-border-radius-full);
   }
 
   .sphinx-contributors_contributor {

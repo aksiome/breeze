@@ -63,6 +63,10 @@
 
 .sd-card {
   --bz-surface: var(--sd-color-card-background);
+
+  &:focus-within {
+    outline: 1px solid;
+  }
 }
 
 .sd-outline-primary, .sd-btn-outline-primary {
@@ -141,6 +145,10 @@
 
 details.sd-dropdown summary.sd-summary-title {
   padding: .35em .6em .35em 1em;
+
+  &:focus-within {
+    outline: 1px solid;
+  }
 
   &.sd-bg-primary {
     --bz-surface: color-mix(in oklab, var(--sd-color-primary) 70%, transparent);

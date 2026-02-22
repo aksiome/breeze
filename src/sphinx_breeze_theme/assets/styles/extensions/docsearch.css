@@ -35,6 +35,10 @@
     border-color: var(--bz-search-button-border-color-hover);
   }
 
+  &:focus-within {
+    outline: 2px solid;
+  }
+
   span {
     font-size: 1em;
   }
