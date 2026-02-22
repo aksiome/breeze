@@ -63,3 +63,16 @@ The `%s` placeholder is replaced with the full path to the source file (e.g., `u
 ## Shared configuration
 
 If you're already using the [repo-stats](repo-stats.md) component, the edit this page component will automatically use the same values. No additional configuration needed.
+
+## Styling
+
+Customize the link appearance with CSS variables:
+
+```css
+:root {
+  --bz-edit-this-page-color: var(--bz-link-color);
+  --bz-edit-this-page-color-hover: var(--bz-link-color-hover);
+  --bz-edit-this-page-font-size: inherit;
+  --bz-edit-this-page-font-family: inherit;
+}
+```
