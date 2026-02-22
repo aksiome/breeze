@@ -28,7 +28,7 @@ extensions = [
     # External stuff
     "click_extra.sphinx",
     "jupyter_sphinx",
-    "myst_parser",
+    "myst_nb",
     "nbsphinx",
     "sphinx_click",
     "sphinx_contributors",
@@ -53,6 +53,7 @@ exclude_patterns = [
 ]
 
 nbsphinx_requirejs_path = ""
+nbsphinx_custom_formats = {".cipynb": ["nbformat.reads", {"as_version": 4}]}
 jupyter_sphinx_require_url = ""
 
 # -- Options for Markdown files ----------------------------------------------

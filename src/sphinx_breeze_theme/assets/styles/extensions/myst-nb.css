@@ -1,0 +1,195 @@
+div.cell {
+  border-radius: var(--bz-border-radius);
+  background-color: var(--bz-code-block-background-color);
+  border: 1px solid var(--bz-code-block-border-color);
+  margin-block: 1.5rem;
+
+  &:has(div.cell_output *) > div:first-child {
+    border-bottom: 1px solid var(--bz-code-block-border-color);
+  }
+
+  > div:first-child {
+    border-radius: var(--bz-border-radius) var(--bz-border-radius) 0 0;
+  }
+
+  > div:last-child {
+    border-radius: 0 0 var(--bz-border-radius) var(--bz-border-radius);
+  }
+
+  div.cell_input {
+    border: none;
+    background: none;
+  }
+
+  div.cell_output {
+    margin: 0;
+    padding: 0;
+
+    > :first-child {
+      margin-top: 0;
+    }
+
+    .output.traceback {
+      background: none;
+      border: none;
+    }
+
+    .output.stderr {
+      background-color: color-mix(
+        in oklab,
+        var(--bz-color-red) 7%,
+        transparent
+      );
+      border: 1px solid
+        color-mix(in oklab, var(--bz-color-red) 30%, transparent);
+      border-radius: calc(var(--bz-border-radius) / 2);
+      padding: 0;
+
+      .highlight {
+        background: none;
+
+        pre {
+          border: none;
+          color: color-mix(
+            in oklab,
+            oklch(
+              from var(--bz-color-red) calc(l * var(--bz-text-light))
+                calc(c * var(--bz-text-chroma)) calc(h - 7)
+            ),
+            var(--bz-color-text)
+          );
+        }
+      }
+    }
+  }
+
+  div.cell_output:has(*) {
+    overflow-x: auto;
+    padding: 0.75rem;
+    background-color: color-mix(
+      in oklab,
+      var(--bz-page-background-color) 75%,
+      var(--bz-code-block-background-color)
+    );
+
+    .highlight {
+      background: color-mix(
+        in oklab,
+        var(--bz-code-block-border-color),
+        var(--bz-code-block-background-color)
+      );
+      border-radius: calc(var(--bz-border-radius) / 2);
+
+      pre {
+        background: none;
+        padding: 0.325rem;
+        border-radius: calc(var(--bz-border-radius) / 2);
+        border: 1px solid var(--bz-code-block-border-color);
+      }
+    }
+  }
+
+  div.cell_output table {
+    table-layout: auto;
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      color: var(--bz-table-head-color);
+      background-color: var(--bz-table-head-background-color);
+
+      tr:last-child th {
+        border-bottom: 3px solid
+          color-mix(in oklab, var(--bz-table-accent-color) 25%, transparent);
+      }
+    }
+
+    th,
+    td {
+      border: 1px solid var(--bz-table-border-color);
+      padding: 0.5rem 0.625rem;
+      background-color: inherit;
+      color: inherit;
+    }
+
+    th {
+      font-size: var(--bz-table-head-font-size);
+      font-family: var(--bz-table-head-font-family);
+      font-weight: 550;
+      text-align: left;
+    }
+
+    tbody tr {
+      font-size: var(--bz-table-font-size);
+      font-family: var(--bz-table-font-family);
+    }
+
+    tbody tr:nth-child(odd) {
+      color: var(--bz-table-odd-color);
+      background-color: var(--bz-table-odd-background-color);
+    }
+
+    tbody tr:nth-child(even) {
+      color: var(--bz-table-even-color);
+      background-color: var(--bz-table-even-background-color);
+    }
+  }
+
+  &:has(details) {
+    border: none;
+    > .cell_output,
+    > .cell_input {
+      border: 1px solid var(--bz-code-block-border-color);
+    }
+  }
+
+  details.hide[open] > summary ~ * {
+    animation: none;
+  }
+
+  details {
+    --bz-admonition-accent-color: var(--bz-color-gray);
+
+    margin: 0;
+    border-left: none;
+
+    .cell_input,
+    .cell_output {
+      border: 1px solid var(--bz-code-block-border-color);
+      margin-inline: -0.9rem !important;
+      margin-bottom: -1.6rem !important;
+    }
+
+    .cell_input pre {
+      border-radius: 0;
+    }
+
+    &:has(.cell_output) .cell_input {
+      margin-bottom: -1px !important;
+    }
+  }
+
+  summary {
+    cursor: pointer;
+    outline: none !important;
+
+    &:focus-within p {
+      outline: 1px solid;
+      outline-offset: -1px;
+      border-radius: var(--bz-border-radius);
+    }
+  }
+
+  &.tag_remove-input {
+    border: none !important;
+    background: none;
+    border-radius: 0;
+
+    div.cell_output {
+      border: none !important;
+      background: none;
+      border-radius: 0;
+      padding: 0;
+    }
+  }
+}

@@ -65,6 +65,7 @@
 @import "./extensions/gallery.css";
 @import "./extensions/jupyter.css";
 @import "./extensions/mermaid.css";
+@import "./extensions/myst-nb.css";
 @import "./extensions/nbsphinx.css";
 @import "./extensions/readthedocs.css";
 @import "./extensions/togglebutton.css";
