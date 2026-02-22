@@ -20,7 +20,7 @@ div.highlight, div.literal-block-wrapper, [class*="highlight-"] {
 }
 
 p + div:is([class*="highlight-"], .literal-block-wrapper) {
-  margin-top: 0;
+  margin-top: .5rem;
 }
 
 div:where([class*="highlight-"], .literal-block-wrapper) {
@@ -47,7 +47,7 @@ div.code-block-caption + div {
 .highlight span.linenos {
   position: absolute;
   display: inline-block;
-  opacity: 0.95;
+  opacity: 0.95!important;
   left: 1px;
   width: 2.5rem;
   text-align: right;

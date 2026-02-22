@@ -75,3 +75,7 @@ span.highlighted {
 button:not(:disabled) {
   cursor: pointer;
 }
+
+summary:focus-visible {
+  outline: auto;
+}
