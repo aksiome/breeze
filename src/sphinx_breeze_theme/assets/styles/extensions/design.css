@@ -64,7 +64,7 @@
 .sd-card {
   --bz-surface: var(--sd-color-card-background);
 
-  &:focus-within {
+  &.sd-card-hover:focus-within {
     outline: 1px solid;
   }
 }
@@ -146,7 +146,7 @@
 details.sd-dropdown summary.sd-summary-title {
   padding: .35em .6em .35em 1em;
 
-  &:focus-within {
+  &:focus-visible {
     outline: 1px solid;
   }
 

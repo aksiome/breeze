@@ -173,7 +173,7 @@ div.cell {
     cursor: pointer;
     outline: none !important;
 
-    &:focus-within p {
+    &:focus-visible p {
       outline: 1px solid;
       outline-offset: -1px;
       border-radius: var(--bz-border-radius);
