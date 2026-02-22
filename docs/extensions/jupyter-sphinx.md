@@ -347,4 +347,43 @@ Use ``jupyter-input`` and ``jupyter-output`` for non-executed code samples:
 .. jupyter-output::
 
     hello, world!
-```
+
+Rich Outputs
+------------
+
+HTML
+^^^^
+
+.. jupyter-execute::
+
+    from IPython.display import HTML
+
+    HTML("""
+    <div style="padding: 1rem; border: 2px solid #3b82f6; border-radius: 8px;">
+        <strong>Custom HTML</strong>
+        <p>Rendered HTML output from IPython.display.</p>
+    </div>
+    """)
+
+Images
+^^^^^^
+
+.. jupyter-execute::
+
+    from IPython.display import Image
+
+    Image(url="https://picsum.photos/400/400", width=400)
+
+DataFrames
+^^^^^^^^^^
+
+.. jupyter-execute::
+
+    import pandas as pd
+
+    data = {
+        "Name": ["Alice", "Bob", "Charlie"],
+        "Score": [95, 87, 92],
+        "Grade": ["A", "B+", "A-"]
+    }
+    pd.DataFrame(data)
