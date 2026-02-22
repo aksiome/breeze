@@ -1,4 +1,4 @@
-# 📱 Theme Layout
+# 📱 Theme layout
 
 Breeze provides a flexible layout system with configurable component slots.
 
@@ -92,6 +92,7 @@ issue to discuss the intended usage.
 | `footer-copyright.html` | Copyright notice |
 | `header-brand.html` | Logo and site title |
 | [`lang-switcher.html`](components/lang-switcher.md) | Language selector dropdown |
+| [`page-actions.html`](components/page-actions.md) | Copy page, view source, AI integration |
 | `related-pages.html` | Previous/next page links |
 | [`repo-stats.html`](components/repo-stats.md) | Repository stars and forks |
 | `search-button.html` | Search trigger button |
