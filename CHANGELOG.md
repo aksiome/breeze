@@ -4,6 +4,49 @@ All notable changes to this project will be documented in this file.
 
 <!-- version list -->
 
+## v0.13.0 (2026-02-22)
+
+### ✨ Features
+
+- Add page-actions component
+  ([`8a3e7e9`](https://github.com/aksiome/breeze/commit/8a3e7e9f242d0f647d3dae21aeb9146b2df01a22))
+- Add light/dark logo support
+  ([`e6f33e0`](https://github.com/aksiome/breeze/commit/e6f33e085cf93d36b8ab9a361506e6eda200e13f))
+- Add invert-dark and invert-light utility classes
+  ([`35a9837`](https://github.com/aksiome/breeze/commit/35a9837e02680a53d258bf992ec14b945409c095))
+- Add myst-nb extension support
+  ([`19e0a5d`](https://github.com/aksiome/breeze/commit/19e0a5db05d95fcc67474285e6a017aff0728c29))
+- Add click-extra support
+  ([`8a82931`](https://github.com/aksiome/breeze/commit/8a82931a71c4773911f2e2073a7b42fa5174425e))
+- Add page actions component
+  ([`49427cb`](https://github.com/aksiome/breeze/commit/49427cb511b4d0c2a1ee23d463ca825562fb73a5))
+- Add sphinx-gallery support
+  ([`9345365`](https://github.com/aksiome/breeze/commit/93453652a59b950195970dbec1435c0416093bcf))
+
+### 🎨 Appearance
+
+- **styles**: Update sphinx content styles
+  ([`6d05435`](https://github.com/aksiome/breeze/commit/6d05435c29739318ddfa1ac20f9e182632dbafcd))
+- **styles**: Update extension styles
+  ([`7f2b1ba`](https://github.com/aksiome/breeze/commit/7f2b1ba5395c9b43518c7feb8f148aa1d6ed30a6))
+- **styles**: Minor design refinements
+  ([`db22e8c`](https://github.com/aksiome/breeze/commit/db22e8c9156d9d0dd1c96f594971476ea6418a1a))
+
+### 📖 Documentation
+
+- Update repo-stats styling
+  ([`a301186`](https://github.com/aksiome/breeze/commit/a301186d97a020d3d37762d58378325aa078f256))
+- Update edit-this-page styling
+  ([`b520db1`](https://github.com/aksiome/breeze/commit/b520db1ed76272997664507236d00a583567001e))
+- Update user guide index
+  ([`035e76a`](https://github.com/aksiome/breeze/commit/035e76a9d6cb8747375ec311d64f4f0c911dc5c5))
+- Add contributing guide
+  ([`8e73c9c`](https://github.com/aksiome/breeze/commit/8e73c9c0d28f66b64cc091da3c4f7bd7a0132aa5))
+- Add accessibility page
+  ([`3604860`](https://github.com/aksiome/breeze/commit/3604860ee88b7bdacd2550313224fc48f6c56b2f))
+- Expand jupyter-sphinx examples
+  ([`569bcb4`](https://github.com/aksiome/breeze/commit/569bcb49688f49d1f6c2ee0479f8e2542ba00c62))
+
 ## v0.12.0 (2026-02-09)
 
 ### ✨ Features

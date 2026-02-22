@@ -1,6 +1,6 @@
 """A modern Sphinx documentation theme."""
 
-__version__ = "0.12.0"
+__version__ = "0.13.0"
 
 from os import environ
 from pathlib import Path
