@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 <!-- version list -->
 
+## v0.13.1 (2026-02-22)
+
+### 🪲 Bug fixes
+
+- **a11y**: Show focus outline on keyboard navigation only
+  ([`e6f5bce`](https://github.com/aksiome/breeze/commit/e6f5bce4a293068b0bbffac13831cb5f50b55cd8))
+
 ## v0.13.0 (2026-02-22)
 
 ### ✨ Features
