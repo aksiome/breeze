@@ -17,8 +17,10 @@ Show or hide content based on the active theme. See [Light and dark mode](custom
 |-------|-------------|
 | `.only-light` | Only visible in light mode |
 | `.only-dark` | Only visible in dark mode |
+| `.invert-light` | Inverts colors in light mode |
+| `.invert-dark` | Inverts colors in dark mode |
 
-### Example
+### Show/Hide example
 
 Display different images for each theme:
 
@@ -43,3 +45,30 @@ Display different images for each theme:
 ```
 :::
 ::::
+
+### Invert example
+
+Automatically invert an image's colors based on the theme. Useful for simple graphics, diagrams, or logos that work well when inverted.
+
+::::{tab-set}
+:::{tab-item} MyST
+````
+```{image} diagram.png
+:class: invert-dark
+```
+````
+:::
+:::{tab-item} RST
+```rst
+.. image:: diagram.png
+   :class: invert-dark
+```
+:::
+::::
+
+**Demo:** This image inverts in dark mode (toggle theme to see the effect):
+
+```{image} https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/959px-QR_code_for_mobile_English_Wikipedia.svg.png
+:class: invert-dark
+:width: 150px
+```

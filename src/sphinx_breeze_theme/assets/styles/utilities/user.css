@@ -38,3 +38,8 @@ object.align-center,
   overflow: hidden;
   visibility: hidden;
 }
+
+:root[data-theme="dark"] img.invert-dark,
+:root[data-theme="light"] img.invert-light {
+  filter: invert(1);
+}
