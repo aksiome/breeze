@@ -12,6 +12,25 @@ html_logo = "_static/logo.png"
 
 The logo appears in the header alongside your site title.
 
+### Light and dark logos
+
+Use different logos for light and dark themes via `html_theme_options`:
+
+```python
+html_theme_options = {
+    "light_logo": "logo-light.png",
+    "dark_logo": "logo-dark.png",
+}
+```
+
+| Option | Description |
+|--------|-------------|
+| `light_logo` | Logo shown in light mode |
+| `dark_logo` | Logo shown in dark mode |
+
+Both options support local paths (relative to `_static/`) or full URLs.
+If only one is set, the other falls back to `html_logo`.
+
 ## Site Title
 
 Set the site title with `html_title`:

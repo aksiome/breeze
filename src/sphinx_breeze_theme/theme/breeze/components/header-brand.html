@@ -1,6 +1,15 @@
-<a class="bz-header-brand" href="{{ pathto(master_doc) }}">
-  {%- if logo_url -%}
-  <img src="{{ logo_url }}" alt="{{ _('Site Logo') }}" />
+{%- macro render_logo(src, classname='') -%}
+  {%- if src and src.startswith(('https://', 'http://')) -%}
+    <img class="{{ classname }}" src="{{ src }}" alt="{{ project }}" />
+  {%- elif src -%}
+    <img class="{{ classname }}" src="{{ pathto('_static/' + src, 1) }}" alt="{{ project }}" />
+  {%- elif logo_url -%}
+    <img class="{{ classname }}" src="{{ logo_url }}" alt="{{ project }}" />
   {%- endif -%}
+{%- endmacro -%}
+
+<a class="bz-header-brand" href="{{ pathto(master_doc) }}">
+  {{ render_logo(theme_light_logo, 'only-light') }}
+  {{ render_logo(theme_dark_logo, 'only-dark') }}
   <span>{{ docstitle if docstitle else project }}</span>
 </a>
