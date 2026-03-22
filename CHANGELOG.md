@@ -4,6 +4,22 @@ All notable changes to this project will be documented in this file.
 
 <!-- version list -->
 
+## v0.13.2 (2026-03-22)
+
+### 🪲 Bug fixes
+
+- **styles**: Fix page-actions button height alignment
+  ([`19da688`](https://github.com/aksiome/breeze/commit/19da6884e76e9d6c30549966f0eacdd609a40472))
+
+### 📖 Documentation
+
+- Change toctree from hidden to titlesonly
+  ([`3dd04cb`](https://github.com/aksiome/breeze/commit/3dd04cb3bbac3ccef3213873297f2b2a10821d6d))
+- Use local qr code image in markup guide
+  ([`7c3d3f5`](https://github.com/aksiome/breeze/commit/7c3d3f58c0ceedcc830a305b029469e2a47cbe04))
+- Add theme origin story and update tagline
+  ([`08a7270`](https://github.com/aksiome/breeze/commit/08a7270d914f29f30f97b85ad6baf82def043857))
+
 ## v0.13.1 (2026-02-22)
 
 ### 🪲 Bug fixes
