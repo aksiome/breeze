@@ -10,7 +10,7 @@ content-width: 64rem
 
 # Sphinx Breeze Theme
 
-A clean, modern, customizable Sphinx documentation theme.
+A breath of fresh air for your Sphinx documentation
 
 ::::{grid}
 :gutter: 3
@@ -23,7 +23,7 @@ A clean, modern, customizable Sphinx documentation theme.
 :class: sd-rounded-pill
 :shadow:
 
-🚀 Get Started
+🚀 Get started
 ```
 :::
 :::{grid-item}
@@ -42,44 +42,49 @@ A clean, modern, customizable Sphinx documentation theme.
 :gutter: 3
 
 :::{grid-item-card}
-✨ Modern Design
+✨ Modern design
 ^^^
-Deliver clean, contemporary styling that makes your documentation look sleek and approachable.  
+Deliver clean, contemporary styling that makes your documentation look sleek and approachable 
 :::
 
 :::{grid-item-card}
-📱 Responsive Layouts
+📱 Responsive layouts
 ^^^ 
-Adapts seamlessly to any device, keeping your content readable and easy to navigate.  
+Adapts seamlessly to any device, keeping your content readable and easy to navigate
 :::
 
 :::{grid-item-card}
-🌗 Light & Dark Mode
+🌗 Light & dark mode
 ^^^
-Let readers switch between light and dark viewing modes effortlessly.  
+Let readers switch between light and dark viewing modes effortlessly
 :::
 
 :::{grid-item-card}
-🎨 Customizable Styles
+🎨 Customizable styles
 ^^^
-Adjust colors and styles using CSS variables to fit your project or brand.  
+Adjust colors and styles using CSS variables to fit your project or brand
 :::
 
 :::{grid-item-card}
-🧩 Flexible Layouts
+🧩 Flexible layouts
 ^^^
-Choose from multiple page arrangements to present your content your way.  
+Choose from multiple page arrangements to present your content your way
 :::
 
 :::{grid-item-card}
-🌐 Made for Scale
+🌐 Made for scale
 ^^^
-Scales smoothly for large documentation sets with intuitive navigation.  
+Scales smoothly for large documentation sets with intuitive navigation
 :::
 ::::
 
+## 💡 Why Breeze?
 
-## Showcases
+Breeze was built from scratch with a focus on generous spacing and clean typography. A lot of Sphinx themes can feel a bit cramped, so Breeze aims to give your content more room to breathe.
+
+The name comes from the Minecraft Breeze mob, since this game is what got me into programming.
+
+## 🌟 Showcases
 
 :::{list-table}
 *   - ```{image} https://docs.mcbookshelf.dev/en/latest/_static/logo-bookshelf.png

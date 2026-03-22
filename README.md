@@ -5,7 +5,7 @@
 <h1 align="center">Sphinx Breeze Theme</h1>
 
 <p align="center">
-  <strong>A clean and modern Sphinx theme with polished API docs</strong>
+  <strong>A breath of fresh air for your Sphinx documentation</strong>
 </p>
 
 <p align="center">
@@ -31,6 +31,12 @@
 
 
 ## Why Breeze?
+
+Breeze was built from scratch with a focus on generous spacing and clean typography. A lot of Sphinx themes can feel a bit cramped, so Breeze aims to give your content more room to breathe.
+
+The name comes from the Minecraft Breeze mob, since this game is what got me into programming.
+
+### Features
 
 - **Clear and readable** — Tuned typography and spacing that lets your content breathe
 - **Polished API docs** — First-class autodoc styling that's easy to navigate
