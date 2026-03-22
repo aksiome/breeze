@@ -68,7 +68,7 @@ Automatically invert an image's colors based on the theme. Useful for simple gra
 
 **Demo:** This image inverts in dark mode (toggle theme to see the effect):
 
-```{image} https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/QR_code_for_mobile_English_Wikipedia.svg/959px-QR_code_for_mobile_English_Wikipedia.svg.png
+```{image} /_images/qr-code.png
 :class: invert-dark
 :width: 150px
 ```
