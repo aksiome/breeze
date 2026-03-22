@@ -11,7 +11,7 @@ Start with the [Quickstart](quickstart.md) guide to get up and running, then exp
 
 ```{toctree}
 :caption: Getting Started
-:hidden:
+:titlesonly:
 
 quickstart
 markup
@@ -21,7 +21,7 @@ layout
 
 ```{toctree}
 :caption: Customisation
-:hidden:
+:titlesonly:
 
 customisation/announcement
 customisation/branding

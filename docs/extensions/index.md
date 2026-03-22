@@ -11,7 +11,7 @@ Browse the list below to see supported extensions and any theme-specific configu
 
 ```{toctree}
 :caption: Extensions
-:hidden:
+:titlesonly:
 
 click-extra
 jupyter-sphinx

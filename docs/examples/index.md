@@ -22,7 +22,7 @@ It has exactly one goal: to be a good checklist of things to stylise within Sphi
 
 ```{toctree}
 :caption: Kitchen Sink
-:hidden:
+:titlesonly:
 :glob:
 
 kitchen-sink/*
