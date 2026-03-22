@@ -19,6 +19,7 @@
     display: flex;
     align-items: center;
     gap: 0.25rem;
+    height: 100%;
     padding: 0.35rem;
     background: none;
     border: none;
@@ -36,6 +37,7 @@
   }
 
   > button {
+    height: auto;
     padding-inline: 0.625rem;
     font-size: var(--bz-page-actions-font-size);
     border-right: 1px solid var(--bz-page-actions-border-color);
